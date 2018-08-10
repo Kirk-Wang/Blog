@@ -12,9 +12,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "commitmsg": "validate-commit-msg",
-    "commit": "git-cz",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "commit": "git-cz"
   },
   "config": {
     "commitizen": {
@@ -31,7 +29,7 @@
     "@types/react": "^16.4.9",
     "@types/react-dom": "^16.0.7",
     "commitizen": "^2.10.1",
-    "conventional-changelog-cli": "^2.0.1",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "typescript": "^3.0.1",
     "validate-commit-msg": "^2.14.0"
