@@ -1,5 +1,18 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": "@blueprintjs/tslint-config",
+  "rules": {
+    "file-header": {
+      "options": [
+        "Copyright Kirk Technologies."]
+    },
+    // TODO: test dependencies are only declared at root but used in all packages.
+    "no-implicit-dependencies": false,
+    // TODO: Currently, a lot of chai assertions are not written as proper statements.
+    "no-unused-expression": false,
+    "ordered-imports": false,
+    "jsx-boolean-value": false,
+    "no-submodule-imports": false
+  },
   "linterOptions": {
     "exclude": [
       "config/**/*.js",

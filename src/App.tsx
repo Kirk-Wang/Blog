@@ -1,22 +1,22 @@
-import * as React from 'react';
-import './App.css';
+/**
+ *  Copyright Kirk Technologies.
+ */
 
-import logo from './logo.svg';
+import * as React from "react";
+import { Admin, Resource } from "react-admin";
+import jsonServerProvider from "ra-data-json-server";
+import PostIcon from "@material-ui/icons/Book";
+import UserIcon from "@material-ui/icons/Group";
+import { PostList, PostEdit, PostCreate } from "./Post";
+import { UserList } from "./User";
+import { Dashboard } from "./Dashboard";
+import { authProvider } from "./authProvider";
 
-class App extends React.Component {
-  public render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 
-export default App;
+export const App = () => (
+    <Admin dashboard={Dashboard} dataProvider={dataProvider} authProvider={authProvider}>
+        <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
+        <Resource name="users" list={UserList} icon={UserIcon} />
+    </Admin>
+);

@@ -1,4 +1,4 @@
-# React-Admin-App
+git# React-Admin-App
 
 ## 使用 React-Admin 开发中后台应用
 
@@ -32,3 +32,9 @@ npm start
 * chore: 改变构建流程、或者增加依赖库、工具等
 * revert: 回滚到上一个版本
 
+### tslint
+采用 [@blueprintjs/tslint-config](https://www.npmjs.com/package/@blueprintjs/tslint-config) 规则
+
+![](https://cloud.githubusercontent.com/assets/464822/20228152/d3f36dc2-a804-11e6-80ff-51ada2d13ea7.png)
+
+### 小试牛刀
