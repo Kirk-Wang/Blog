@@ -1,4 +1,4 @@
-git# React-Admin-App
+# React-Admin-App
 
 ## 使用 React-Admin 开发中后台应用
 
@@ -39,5 +39,5 @@ npm start
 
 ### React-Admin demo 分析
 
-#### demo E-R 图
-![](./demo-json-e-r.jpeg)
+#### demo E-R 图
+![](./demo-json-er.jpg)
