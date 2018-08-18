@@ -42,36 +42,51 @@ npm start
 #### demo E-R 图
 ![](./demo-json-er.jpg)
 
-#### 准备数据
-[fetch-mock](https://github.com/wheresrhys/fetch-mock)：当使用 fetch 时，模拟返回一个 http request 的 response。
+#### 准备数据
+[fetch-mock](https://github.com/wheresrhys/fetch-mock)：当使用 fetch 时，模拟返回一个 http request 的 response。
 
-示例：（详细用法可以参考[fetch-mock's quickstart](http://www.wheresrhys.co.uk/fetch-mock/quickstart)）
+[FakeRest](https://github.com/marmelab/FakeRest)：拦截一个 AJAX 调用到一个基于 JSON 数据伪造的 REST 服务器。在 Sinon.js（针对 XMLHTTPRequest）或 fetch-mock（针对 fetch）之上使用它来测试浏览器端的 JavaScript REST 客户端（例如单页应用程序），而无需服务器。
+
+Fake Rest Server 示例代码（[在线 demo](./docs/examples/fetch.html)）
 
 ```js
-const fetchMock = require('fetch-mock');
-
-// hack native(fetch) implementation
-fetchMock.mock('http://example.com', () => {
-    return {
-        hello: 'world!'
-    };
+// 初始化一个伪造的 Rest Server
+var restServer = new FakeRest.FetchServer('http://fakeapi');
+// 为 Rest Server 提供数据
+restServer.init({
+    'authors': [
+        { id: 0, first_name: 'Leo', last_name: 'Tolstoi' },
+        { id: 1, first_name: 'Jane', last_name: 'Austen' }
+    ],
+    'books': [
+        { id: 0, author_id: 0, title: 'Anna Karenina' },
+        { id: 1, author_id: 0, title: 'War and Peace' },
+        { id: 2, author_id: 1, title: 'Pride and Prejudice' },
+        { id: 3, author_id: 1, title: 'Sense and Sensibility' }
+    ]
 });
+// 打印 fetch 日志，它默认是关闭的
+restServer.toggleLogging();
 
-async function mockRequest() {
-    let res = await fetch('http://example.com');
-    console.log(res);
-    // restore fetch() to its native implementation 
-    fetchMock.restore();
-    console.log('---------------Unmatched--------------');
-    res = await fetch('http://example.com');
-    console.log(res);
-}
+// 使用 restServer 作为 fetch mock
+fetchMock.mock(/^http\:\/\/fakeapi/, restServer.getHandler())
 
-mockRequest();
-```
+// 现在查询这个伪造的 REST server
+fetch('http://fakeapi/authors?range=%5B0,1%5D')
+    .then(res => res.text())
+    .then(res => document.getElementById('req1').value = res);
 
-可以通过运行以下命令查看效果：
+fetch('http://fakeapi/books/3')
+    .then(res => res.text())
+    .then(res => document.getElementById('req2').value = res);
 
-```sh
-node third-example/fetch-mock.js
+fetch('http://fakeapi/books', {
+        method: 'POST',
+        body: JSON.stringify({ author_id: 1, title: 'Emma' })
+    })
+    .then(res => res.text())
+    .then(res => document.getElementById('req3').value = res);
+
+// 恢复原生 fetch 功能
+fetchMock.restore();
 ```
