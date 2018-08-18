@@ -12,6 +12,7 @@ export const UserList = (props: any) => (
             <TextField source="name" />
             <TextField source="username" />
             <EmailField source="email" />
+            <TextField source="address.street" />
         </Datagrid>
     </List>
 );

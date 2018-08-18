@@ -37,13 +37,7 @@ npm start
 
 ![](https://cloud.githubusercontent.com/assets/464822/20228152/d3f36dc2-a804-11e6-80ff-51ada2d13ea7.png)
 
-### 小试牛刀
+### React-Admin demo 分析
 
-#### [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
-
-#### JSONPlaceholder 数据 E-R 图
-
-![](./e-r.jpg)
-
-#### Todo
-1. Users CRUD
+#### demo E-R 图
+![](./demo-json-e-r.jpeg)
