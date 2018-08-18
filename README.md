@@ -41,3 +41,37 @@ npm start
 
 #### demo E-R 图
 ![](./demo-json-er.jpg)
+
+#### 准备数据
+[fetch-mock](https://github.com/wheresrhys/fetch-mock)：当使用 fetch 时，模拟返回一个 http request 的 response。
+
+示例：（详细用法可以参考[fetch-mock's quickstart](http://www.wheresrhys.co.uk/fetch-mock/quickstart)）
+
+```js
+const fetchMock = require('fetch-mock');
+
+// hack native(fetch) implementation
+fetchMock.mock('http://example.com', () => {
+    return {
+        hello: 'world!'
+    };
+});
+
+async function mockRequest() {
+    let res = await fetch('http://example.com');
+    console.log(res);
+    // restore fetch() to its native implementation 
+    fetchMock.restore();
+    console.log('---------------Unmatched--------------');
+    res = await fetch('http://example.com');
+    console.log(res);
+}
+
+mockRequest();
+```
+
+可以通过运行以下命令查看效果：
+
+```sh
+node third-example/fetch-mock.js
+```
