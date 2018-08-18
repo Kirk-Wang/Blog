@@ -47,7 +47,7 @@ npm start
 
 [FakeRest](https://github.com/marmelab/FakeRest)：拦截一个 AJAX 调用到一个基于 JSON 数据伪造的 REST 服务器。在 Sinon.js（针对 XMLHTTPRequest）或 fetch-mock（针对 fetch）之上使用它来测试浏览器端的 JavaScript REST 客户端（例如单页应用程序），而无需服务器。
 
-Fake Rest Server 示例代码（[在线 demo](./docs/examples/fetch.html)）
+Fake Rest Server 示例代码（[demo](https://o-o.ren/react-admin-app/examples/fetch.html) | [demo source](./docs/examples/fetch.html)）
 
 ```js
 // 初始化一个伪造的 Rest Server
