@@ -3,9 +3,10 @@
  */
 
 import * as React from "react";
-import { List, Datagrid, DateField, NumberField, BooleanField } from "react-admin";
+import { List, Datagrid, DateField, NumberField, BooleanField, EditButton } from "react-admin";
 import { CustomerLinkField } from "./CustomerLinkField";
 import { ColoredNumberField } from "./ColoredNumberField";
+import { SegmentsField } from "./SegmentsField";
 
 export const CustomerList = (props: any) => (
     <List {...props}>
@@ -16,6 +17,8 @@ export const CustomerList = (props: any) => (
             <ColoredNumberField source="total_spent" options={{ style: "currency", currency: "USD" }} />
             <DateField source="latest_purchase" showTime />
             <BooleanField source="has_newsletter" label="News." />
+            <SegmentsField label="Segments" />
+            <EditButton />
         </Datagrid>
     </List>
 );

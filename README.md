@@ -133,3 +133,5 @@ export const ColoredNumberField = colored(NumberField);
 ```
 7. 从 react-admin 导出 DateField 组件，用来展示 Latest purchase(last_purchase)。指定 showTime，用来显示时分秒。
 8. 从 react-admin 导出 BooleanField 组件，用来展示 News.(has_newsletter)。
+9. 加入自定义组件 SegmentsField。包裹 material-ui 的 Chip 组件。
+10. 从 react-admin 导出 EditButton 组件，用来路由到编辑视图。
