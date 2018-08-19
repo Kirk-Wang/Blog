@@ -106,4 +106,16 @@ fetchMock.restore();
 2. 通过 E-R 图，我知道这个 customer field 展示组件由三个数据字段（avatar，first_name，last_name）组成。并且是一个 a 链接，指向 Edit 视图。因此这个自定义组件可以设计成这样：
 ![](./docs/images/CustomerLinkField.jpg)
 3. 自定义组件（FullNameField）中，有用到[recompose/pure](https://github.com/acdlite/recompose/blob/e1b5359fc611a2eb8df94cd6c39b709e16294156/src/packages/recompose/pure.js)（用它来做一个高阶处理，使用 shallowEqual() 方法在高阶组件 shouldComponentUpdate 中决定组件是否执行 render）。[Recompose](https://github.com/acdlite/recompose) 是一个用于创建函数式组件和高阶组件的 React 工具库。
-
+4. 从 react-admin 导出 DateField 组件，用来展示 Last seen(last_seen)。并指明 type 是 date。
+5. 从 react-admin 导出 NumberField 组件，用来展示 Orders(nb_commands)。
+6. 使用自定义组件 ColoredNumberField 展示 Total spent(total_spent)。使用 material-ui 提供的 withStyles 方法修复官方 demo 中 ColoredNumberField 金额大于 500 不飘红的问题。
+```jsx
+const Colored = withStyles(fieldStyles)(
+        ({ classes, ...props }: any) =>
+            props.record[props.source] > 500 ? (
+                <WrappedComponent {...props} className={classes.color} />
+            ) : (
+                <WrappedComponent {...props} />
+            ),
+    );
+```
