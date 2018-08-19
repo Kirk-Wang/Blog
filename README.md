@@ -1,6 +1,6 @@
 # React-Admin-App
 
-## 使用 React-Admin 开发中后台应用
+## 使用 React-Admin 实战中后台应用
 
 ### 初始化项目（create-react-app，这里采用 TS)
 
@@ -110,28 +110,59 @@ fetchMock.restore();
 5. 从 react-admin 导出 NumberField 组件，用来展示 Orders(nb_commands)。
 6. 使用自定义组件 ColoredNumberField 展示 Total spent(total_spent)。使用 material-ui 提供的 withStyles 方法修复官方 demo 中 ColoredNumberField 金额大于 500 不飘红的问题。
 ```jsx
-const colored = (WrappedComponent: any) => {
-    /*
-    const Colored: any = (props: any) =>
-        props.record[props.source] > 500 ? <WrappedComponent {...props} /> : <WrappedComponent {...props} />; */
-
-    const Colored = withStyles(fieldStyles)(
+    withStyles(fieldStyles)(
         ({ classes, ...props }: any) =>
             props.record[props.source] > 500 ? (
                 <WrappedComponent {...props} className={classes.color} />
             ) : (
                 <WrappedComponent {...props} />
-            ),
-    );
-
-    Colored.displayName = `Colored(${WrappedComponent.displayName})`;
-
-    return Colored;
-};
-
-export const ColoredNumberField = colored(NumberField);
+            ));
 ```
 7. 从 react-admin 导出 DateField 组件，用来展示 Latest purchase(last_purchase)。指定 showTime，用来显示时分秒。
 8. 从 react-admin 导出 BooleanField 组件，用来展示 News.(has_newsletter)。
 9. 加入自定义组件 SegmentsField。包裹 material-ui 的 Chip 组件。
 10. 从 react-admin 导出 EditButton 组件，用来路由到编辑视图。
+
+#### i18n（国际化）
+对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
+
+1. 安装语言包：
+```sh
+npm install --save ra-language-chinese ra-language-english
+```
+2. src 下新增 i18n 文件夹，新增 en.ts 和 cn.ts
+--
+en.ts
+```js
+import english from "ra-language-english";
+
+export const englishMessages = {
+    ...english,
+    pos: {},
+};
+```
+cn.ts
+```js
+import chinese from "ra-language-chinese";
+
+export const chineseMessages = {
+    ...chinese,
+    pos: {},
+};
+```
+3. App.tsx 引入文件并配置：
+```jsx
+import { englishMessages } from "./i18n/en";
+import { chineseMessages } from "./i18n/cn";
+
+const messages = {
+    cn: chineseMessages,
+    en: englishMessages,
+};
+
+const i18nProvider = (locale: string) => messages[locale];
+
+<Admin dataProvider={dataProvider} locale="cn" i18nProvider={i18nProvider}>
+    <Resource list={CustomerList} name="customers" />
+</Admin>
+```

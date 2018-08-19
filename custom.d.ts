@@ -10,4 +10,4 @@ declare module "fakerest";
 declare module "fetch-mock";
 declare module "chance";
 declare module "ra-language-english";
-declare module "ra-language-french";
+declare module "ra-language-chinese";

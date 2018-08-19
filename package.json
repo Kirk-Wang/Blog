@@ -7,6 +7,8 @@
     "date-fns": "^1.29.0",
     "md5": "^2.2.1",
     "ra-data-simple-rest": "^2.2.0",
+    "ra-language-chinese": "^2.0.4",
+    "ra-language-english": "^2.2.0",
     "react": "^16.4.2",
     "react-admin": "^2.2.0",
     "react-dom": "^16.4.2",
