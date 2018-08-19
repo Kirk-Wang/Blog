@@ -3,20 +3,23 @@
  */
 
 import * as React from "react";
+import simpleRestProvider from "ra-data-simple-rest";
 import { Admin, Resource } from "react-admin";
-import jsonServerProvider from "ra-data-json-server";
-import PostIcon from "@material-ui/icons/Book";
-import UserIcon from "@material-ui/icons/Group";
-import { PostList, PostEdit, PostCreate } from "./Post";
-import { UserList } from "./User";
-import { Dashboard } from "./Dashboard";
-import { authProvider } from "./authProvider";
+import { fakeServer } from "./fakeServer";
+import { CustomerList } from "./Customers";
 
-const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
+const dataProvider = simpleRestProvider("http://api.fakeserver.com");
 
-export const App = () => (
-    <Admin dashboard={Dashboard} dataProvider={dataProvider} authProvider={authProvider}>
-        <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
-        <Resource name="users" list={UserList} icon={UserIcon} />
-    </Admin>
-);
+export class App extends React.Component {
+    public componentWillMount() {
+        fakeServer();
+    }
+
+    public render() {
+        return (
+            <Admin title="React-Admin-App" dataProvider={dataProvider}>
+                <Resource list={CustomerList} name="customers" />
+            </Admin>
+        );
+    }
+}

@@ -39,8 +39,8 @@ npm start
 
 ### React-Admin demo 分析
 
-#### demo E-R 图
-![](./demo-json-er.jpg)
+#### React-Admin 相关基本概念
+* React-Admin：一个前端框架，主要用来构建 Admin App（中后台应用程序）。他采用 React 生态系统中最优秀的库（[material-ui](https://material-ui.com/), [redux](https://redux.js.org/), [redux-form](https://redux-form.com/7.3.0/), [redux-saga](https://redux-saga.js.org/), [react-router](https://reacttraining.com/react-router/), [recompose](https://github.com/acdlite/recompose), [reselect](https://github.com/reduxjs/reselect)）构建而成。这些库基本都在 1w+ 以上。React-Admin 真正糅合了它们，并且它拥有完善的测试用例，仓库基本每天都更新。
 
 #### 数据服务器伪造
 [fetch-mock](https://github.com/wheresrhys/fetch-mock)：当使用 fetch 时，模拟返回一个 http request 的 response。
@@ -90,3 +90,16 @@ fetch('http://fakeapi/books', {
 // 恢复原生 fetch 功能
 fetchMock.restore();
 ```
+
+#### demo 数据生成
+
+我这里直接将 [data-generator](https://github.com/marmelab/react-admin/tree/master/examples/data-generator) 改造成一个 typescript 版本。放到 src 下。
+
+#### demo 前端数据 E-R 图
+![](./docs/images/demo-json-er.jpg)
+
+
+#### Customers List [UI界面分析](https://marmelab.com/react-admin-demo/#/customers)
+* 要展示的字段
+![](./docs/images/customers-list-field.jpg)
+

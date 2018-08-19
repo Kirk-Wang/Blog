@@ -11,7 +11,8 @@
     "no-unused-expression": false,
     "ordered-imports": false,
     "jsx-boolean-value": false,
-    "no-submodule-imports": false
+    "no-submodule-imports": false,
+    "object-literal-sort-keys": false
   },
   "linterOptions": {
     "exclude": [

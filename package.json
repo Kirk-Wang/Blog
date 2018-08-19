@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ra-data-json-server": "^2.2.0",
+    "chance": "^1.0.16",
+    "date-fns": "^1.29.0",
+    "md5": "^2.2.1",
+    "ra-data-simple-rest": "^2.2.0",
     "react": "^16.4.2",
     "react-admin": "^2.2.0",
     "react-dom": "^16.4.2",
