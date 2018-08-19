@@ -39,7 +39,7 @@ npm start
 
 ### React-Admin demo 分析
 
-#### React-Admin 相关基本概念
+#### React-Admin 相关基本概念
 * React-Admin：一个前端框架，主要用来构建 Admin App（中后台应用程序）。他采用 React 生态系统中最优秀的库（[material-ui](https://material-ui.com/), [redux](https://redux.js.org/), [redux-form](https://redux-form.com/7.3.0/), [redux-saga](https://redux-saga.js.org/), [react-router](https://reacttraining.com/react-router/), [recompose](https://github.com/acdlite/recompose), [reselect](https://github.com/reduxjs/reselect)）构建而成。这些库基本都在 1w+ 以上。React-Admin 真正糅合了它们，并且它拥有完善的测试用例，仓库基本每天都更新。
 
 #### 数据服务器伪造
@@ -103,3 +103,5 @@ fetchMock.restore();
 * 要展示的字段
 ![](./docs/images/customers-list-field.jpg)
 
+1. 通过 E-R 图，我知道这个 customer field 展示组件由三个数据字段（avatar，first_name，last_name）组成。并且是一个 a 链接，指向 Edit 视图。因此这个自定义组件可以设计成这样：
+![](./docs/images/CustomerLinkField.jpg)

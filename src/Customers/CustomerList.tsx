@@ -3,12 +3,13 @@
  */
 
 import * as React from "react";
-import { List, Datagrid, TextField } from "react-admin";
+import { List, Datagrid } from "react-admin";
+import { CustomerLinkField } from "./CustomerLinkField";
 
 export const CustomerList = (props: any) => (
-    <List title="All Customers" {...props}>
+    <List {...props}>
         <Datagrid>
-            <TextField source="id" />
+            <CustomerLinkField />
         </Datagrid>
     </List>
 );
