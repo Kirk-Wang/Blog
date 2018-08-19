@@ -110,7 +110,12 @@ fetchMock.restore();
 5. 从 react-admin 导出 NumberField 组件，用来展示 Orders(nb_commands)。
 6. 使用自定义组件 ColoredNumberField 展示 Total spent(total_spent)。使用 material-ui 提供的 withStyles 方法修复官方 demo 中 ColoredNumberField 金额大于 500 不飘红的问题。
 ```jsx
-const Colored = withStyles(fieldStyles)(
+const colored = (WrappedComponent: any) => {
+    /*
+    const Colored: any = (props: any) =>
+        props.record[props.source] > 500 ? <WrappedComponent {...props} /> : <WrappedComponent {...props} />; */
+
+    const Colored = withStyles(fieldStyles)(
         ({ classes, ...props }: any) =>
             props.record[props.source] > 500 ? (
                 <WrappedComponent {...props} className={classes.color} />
@@ -118,4 +123,13 @@ const Colored = withStyles(fieldStyles)(
                 <WrappedComponent {...props} />
             ),
     );
+
+    Colored.displayName = `Colored(${WrappedComponent.displayName})`;
+
+    return Colored;
+};
+
+export const ColoredNumberField = colored(NumberField);
 ```
+7. 从 react-admin 导出 DateField 组件，用来展示 Latest purchase(last_purchase)。指定 showTime，用来显示时分秒。
+8. 从 react-admin 导出 BooleanField 组件，用来展示 News.(has_newsletter)。
