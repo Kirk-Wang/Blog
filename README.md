@@ -39,7 +39,7 @@ npm start
 
 ### React-Admin demo 分析
 
-#### React-Admin 相关基本概念
+#### React-Admin 相关基本概念
 * React-Admin：一个前端框架，主要用来构建 Admin App（中后台应用程序）。他采用 React 生态系统中最优秀的库（[material-ui](https://material-ui.com/), [redux](https://redux.js.org/), [redux-form](https://redux-form.com/7.3.0/), [redux-saga](https://redux-saga.js.org/), [react-router](https://reacttraining.com/react-router/), [recompose](https://github.com/acdlite/recompose), [reselect](https://github.com/reduxjs/reselect)）构建而成。这些库基本都在 1w+ 以上。React-Admin 真正糅合了它们，并且它拥有完善的测试用例，仓库基本每天都更新。
 
 #### 数据服务器伪造
@@ -99,9 +99,11 @@ fetchMock.restore();
 ![](./docs/images/demo-json-er.jpg)
 
 
-#### Customers List [UI界面分析](https://marmelab.com/react-admin-demo/#/customers)
-* 要展示的字段
+#### Customers List [UI界面分析](https://marmelab.com/react-admin-demo/#/customers)
+1. 要展示的字段
 ![](./docs/images/customers-list-field.jpg)
 
-1. 通过 E-R 图，我知道这个 customer field 展示组件由三个数据字段（avatar，first_name，last_name）组成。并且是一个 a 链接，指向 Edit 视图。因此这个自定义组件可以设计成这样：
+2. 通过 E-R 图，我知道这个 customer field 展示组件由三个数据字段（avatar，first_name，last_name）组成。并且是一个 a 链接，指向 Edit 视图。因此这个自定义组件可以设计成这样：
 ![](./docs/images/CustomerLinkField.jpg)
+3. 自定义组件（FullNameField）中，有用到[recompose/pure](https://github.com/acdlite/recompose/blob/e1b5359fc611a2eb8df94cd6c39b709e16294156/src/packages/recompose/pure.js)（用它来做一个高阶处理，使用 shallowEqual() 方法在高阶组件 shouldComponentUpdate 中决定组件是否执行 render）。[Recompose](https://github.com/acdlite/recompose) 是一个用于创建函数式组件和高阶组件的 React 工具库。
+
