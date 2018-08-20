@@ -122,6 +122,7 @@ fetchMock.restore();
 8. 从 react-admin 导出 BooleanField 组件，用来展示 News.(has_newsletter)。
 9. 加入自定义组件 SegmentsField。包裹 material-ui 的 Chip 组件。
 10. 从 react-admin 导出 EditButton 组件，用来路由到编辑视图。
+11. 利用 withStyles 为 list 注入className（这里主要是改变 Orders 的颜色）
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
@@ -131,7 +132,8 @@ fetchMock.restore();
 npm install --save ra-language-chinese ra-language-english
 ```
 2. src 下新增 i18n 文件夹，新增 en.ts 和 cn.ts
---
+
+
 en.ts
 ```js
 import english from "ra-language-english";
