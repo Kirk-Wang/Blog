@@ -122,7 +122,37 @@ fetchMock.restore();
 8. 从 react-admin 导出 BooleanField 组件，用来展示 News.(has_newsletter)。
 9. 加入自定义组件 SegmentsField。包裹 material-ui 的 Chip 组件。
 10. 从 react-admin 导出 EditButton 组件，用来路由到编辑视图。
-11. 利用 withStyles 为 list 注入className（这里主要是改变 Orders 的颜色）
+11. 利用 withStyles 为 list 注入className（这里主要是改变 Orders 的颜色）。
+12. 在 List 视图中设置默认排序字段为 Last seen，并且为降序。
+```jsx
+<List {...props} sort={{ field: 'last_seen', order: 'DESC' }}>
+...
+</List>
+```
+13. 设置 List 的每页显示条数
+```jsx
+<List {...props} perPage={25}>
+...
+</List>
+```
+14. 添加 Filter 用来过滤数据。
+```jsx
+// 从 react-admin 导出，主要用来处理过滤相关的逻辑和 UI 展示（按钮或者是表单）
+<Filter {...props}>
+    {/* 
+        从 react-admin 导出，用于输入（text，email，url，password）。
+        "q"，利用 API 提供的全文功能进行搜索
+        alwaysOn，表示这个过滤始终显示在界面上
+    */}
+    <TextInput label="pos.search" source="q" alwaysOn />
+    {/* 从 react-admin 导出，用于渲染一个标准的浏览器 Date Picker */}
+    <DateInput source="last_seen_gte" />
+    {/* 从 react-admin 导出，用于渲染一个下拉列表，允许你在 true，false，null 之间选择 */}
+    <NullableBooleanInput source="has_ordered" />
+    <NullableBooleanInput source="has_newsletter" defaultValue />
+    <SegmentInput />
+</Filter>
+```
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
