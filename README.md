@@ -143,6 +143,7 @@ fetchMock.restore();
         从 react-admin 导出，用于输入（text，email，url，password）。
         "q"，利用 API 提供的全文功能进行搜索
         alwaysOn，表示这个过滤始终显示在界面上
+        这个 pos.search 表示多语言的配置。查看 src/i18n/cn.ts
     */}
     <TextInput label="pos.search" source="q" alwaysOn />
     {/* 从 react-admin 导出，用于渲染一个标准的浏览器 Date Picker */}
