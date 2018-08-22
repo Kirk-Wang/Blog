@@ -154,6 +154,22 @@ fetchMock.restore();
     <SegmentInput />
 </Filter>
 ```
+15. 自定义 SegmentsInput 过滤字段
+```jsx
+export const SegmentInput = compose(
+    translate,
+    withStyles(styles),
+)(({ classes, translate: trans, ...rest }: any) => (
+    <SelectInput
+        {...rest}
+        choices={segments.map((segment: any) => ({
+            id: segment.id,
+            name: trans(segment.name),
+        }))}
+        className={classes.input}
+    />
+));
+```
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：

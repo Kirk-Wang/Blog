@@ -19,6 +19,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { CustomerLinkField } from "./CustomerLinkField";
 import { ColoredNumberField } from "./ColoredNumberField";
 import { SegmentsField } from "./SegmentsField";
+import { SegmentInput } from "./SegmentInput";
 
 const listStyles = {
     nb_commands: { color: "purple" },
@@ -30,6 +31,7 @@ const ListFilter = (props: any) => (
         <DateInput source="last_seen_gte" />
         <NullableBooleanInput source="has_ordered" />
         <NullableBooleanInput source="has_newsletter" defaultValue />
+        <SegmentInput />
     </Filter>
 );
 

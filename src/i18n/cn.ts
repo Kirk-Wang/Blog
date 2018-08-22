@@ -13,6 +13,22 @@ export const chineseMessages = {
         customers: {
             fields: {
                 last_seen_gte: "Visited Since",
+                groups: "Segments",
+            },
+        },
+        segments: {
+            name: "Segments",
+            fields: {
+                customers: "Customers",
+                name: "Name",
+            },
+            data: {
+                compulsive: "Compulsive",
+                collector: "Collector",
+                ordered_once: "Ordered once",
+                regular: "Regular",
+                returns: "Returns",
+                reviewer: "Reviewer",
             },
         },
     },
