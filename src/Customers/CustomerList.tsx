@@ -40,7 +40,11 @@ export const CustomerList = withStyles(listStyles)(({ classes, ...props }) => (
         <Datagrid>
             <CustomerLinkField />
             <DateField source="last_seen" type="date" />
-            <NumberField source="nb_commands" label="Orders" className={classes.nb_commands} />
+            <NumberField
+                source="nb_commands"
+                label="resources.customers.fields.commands"
+                className={classes.nb_commands}
+            />
             <ColoredNumberField source="total_spent" options={{ style: "currency", currency: "USD" }} />
             <DateField source="latest_purchase" showTime />
             <BooleanField source="has_newsletter" label="News." />
