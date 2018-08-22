@@ -170,6 +170,46 @@ export const SegmentInput = compose(
     />
 ));
 ```
+16. 有的小伙伴可能不太理解 [recompose/compose](https://github.com/acdlite/recompose/blob/master/src/packages/recompose/compose.js)，但它又非常重要，我这里举个例子来让你秒懂这个工具函数：
+```js
+const compose = (...funcs) =>
+  funcs.reduce((a, b) => (...args) => a(b(...args)), arg => arg)
+
+/**
+ * 
+ * const props = {} // 初始对象
+ * 
+ * const fStart = props => props // 原始函数，对于对象，只是简单的返回
+ * 
+ * const fName = props => ({...props, name: 'Kirk'}) // 让 props 具有 name 
+ * fName(props) --> { name: 'Kirk' }
+ * 
+ * const fAge = props => ({...props, age: 12}) // 让 props 具有 age 
+ * fAge(props) --> { age: 12 }
+ * 
+ * const fSex = props => ({...props, sex: 'M'}) // 让 props 具有 sex
+ * fSex(props) --> { sex: 'M' }
+ * 
+ * props --> {} 因为是解构，所以不会改变初始对象
+ * 
+ * const fCompose = props => fStart(fName(fAge(fSex(props)))) // 组合
+ * fCompose(props) --> { sex: 'M', age: 12, name: 'Kirk' }
+ * 
+ * const fCompose2 = props => fStart(fSex(fAge(fName(props)))) // fStart( 这里面函数包函数顺序无关 )
+ * fCompose2(props) --> { sex: 'M', age: 12, name: 'Kirk' }
+ * 
+ * 所以按照 reduce 函数的执行顺序，我们可以做
+ * const fReduce = [ fName, fSex, fAge ].reduce( 
+ *      (funcA, funcB) => props => funcA(funcB(props)) 
+ *          第一个参数，每次执行返回一个函数(props => ehancer(props))，作为下一次的 funA, 直到结束。 
+ *          最终的结果也就是返回一个函数(props => ehancer(props))
+ *      , fStart // 第二个参数，需要增强的原始函数
+ *  )
+ * 
+ * fReduce(props) --> { sex: 'M', age: 12, name: 'Kirk' }
+ * 
+ */
+```
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
