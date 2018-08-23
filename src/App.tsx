@@ -8,7 +8,7 @@ import { Admin, Resource } from "react-admin";
 import { englishMessages } from "./i18n/en";
 import { chineseMessages } from "./i18n/cn";
 import { fakeServer } from "./fakeServer";
-import { CustomerList } from "./Customers";
+import { CustomerList, CustomerEdit } from "./Customers";
 
 const dataProvider = simpleRestProvider("http://api.fakeserver.com");
 
@@ -27,7 +27,10 @@ export class App extends React.Component {
     public render() {
         return (
             <Admin title="React-Admin-App" dataProvider={dataProvider} locale="cn" i18nProvider={i18nProvider}>
-                <Resource list={CustomerList} name="customers" />
+                <Resource list={CustomerList} edit={CustomerEdit} name="customers" />
+                <Resource name="commands" />
+                <Resource name="reviews" />
+                <Resource name="products" />
             </Admin>
         );
     }

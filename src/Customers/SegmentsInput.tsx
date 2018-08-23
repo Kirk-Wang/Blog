@@ -7,7 +7,7 @@ import { translate, SelectArrayInput } from "react-admin";
 
 import { segments } from "../segments/data";
 
-const SegmentsInput = ({ translate: trans, addField, ...rest }: any) => (
+export const SegmentsInput = translate(({ translate: trans, addField, ...rest }: any) => (
     <SelectArrayInput
         {...rest}
         choices={segments.map((segment: any) => ({
@@ -15,11 +15,9 @@ const SegmentsInput = ({ translate: trans, addField, ...rest }: any) => (
             name: trans(segment.name),
         }))}
     />
-);
+));
 
-export const TranslatedSegmentsInput = translate(SegmentsInput);
-
-TranslatedSegmentsInput.defaultProps = {
+SegmentsInput.defaultProps = {
     addField: true,
     source: "groups",
 };

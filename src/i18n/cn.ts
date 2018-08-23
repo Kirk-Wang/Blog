@@ -17,6 +17,13 @@ export const chineseMessages = {
                 commands: "Orders",
                 total_spent: "Total spent",
             },
+            tabs: {
+                identity: "Identity",
+                address: "Address",
+                orders: "Orders",
+                reviews: "Reviews",
+                stats: "Stats",
+            },
         },
         segments: {
             name: "Segments",
