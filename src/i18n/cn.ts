@@ -15,6 +15,7 @@ export const chineseMessages = {
                 last_seen_gte: "Visited Since",
                 groups: "Segments",
                 commands: "Orders",
+                total_spent: "Total spent",
             },
         },
         segments: {

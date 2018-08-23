@@ -12,7 +12,8 @@
     "ordered-imports": false,
     "jsx-boolean-value": false,
     "no-submodule-imports": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "blueprint-html-components": false
   },
   "linterOptions": {
     "exclude": [

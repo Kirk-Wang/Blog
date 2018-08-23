@@ -211,6 +211,15 @@ const compose = (...funcs) =>
  */
 ```
 
+17. 列表响应式支持，从 react-admin 包中导出 Responsive 组件
+```jsx
+// 这个组件主要利用 @material-ui/core/withWidth 高阶组件传入的 width 属性来做适配
+<Responsive xsmall={<Xsmall />} small={<Small />} medium={<Medium />} large={<Large />}>
+...
+</Responsive>
+```
+
+
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
 
