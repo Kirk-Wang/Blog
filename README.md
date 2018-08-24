@@ -222,8 +222,12 @@ const compose = (...funcs) =>
 #### Customers 编辑视图
 1. 通过从 react-admin 导出的 EditButton 轻松可以路由到 Edit 视图组件。EditButton 组件为您封装好了一切，这是因为它包含 从 react-router-dom 导出的 Link 组件。
 ```jsx
-
+<Edit>
+....
+<Edit/>
 ```
+
+![](./docs/images/CustomerEdit.png)
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
