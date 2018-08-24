@@ -98,6 +98,20 @@ fetchMock.restore();
 #### demo 前端数据 E-R 图
 ![](./docs/images/demo-json-er.jpg)
 
+#### customers 的 Resource 组件
+```jsx
+ <Resource
+        icon={CustomerIcon}
+        list={CustomerList}
+        create={CustomerCreate}
+        edit={CustomerEdit}
+        name="customers"
+    />
+```
+#### 在 material-ui 导出一个 Icon
+```jsx
+export { default as CustomerIcon } from "@material-ui/icons/Person";
+```
 
 #### Customers List [UI界面分析](https://marmelab.com/react-admin-demo/#/customers)
 1. 要展示的字段
@@ -218,6 +232,7 @@ const compose = (...funcs) =>
 ...
 </Responsive>
 ```
+
 
 #### Customers 创建视图
 1. 当 Resource 组件具有 create 属性后，在顶部会出现一个新建按钮：
