@@ -219,6 +219,40 @@ const compose = (...funcs) =>
 </Responsive>
 ```
 
+#### Customers 创建视图
+1. 当 Resource 组件具有 create 属性后，在顶部会出现一个新建按钮：
+```jsx
+ <Resource list={CustomerList} create={CustomerCreate} edit={CustomerEdit} name="customers" />
+ ...
+ </Resource>
+```
+2. 通过从 react-admin 导出的 Create 视图组件，然后在里面配置一些基础的 Input 组件。几分钟之内就能搞定这个页面。
+```jsx
+<Create {...props}>
+    <TabbedForm>
+        <FormTab label="resources.customers.tabs.identity">
+            <TextInput source="first_name" formClassName={classes.first_name} />
+            <TextInput source="last_name" formClassName={classes.last_name} />
+            <TextInput
+                type="email"
+                source="email"
+                validation={{ email: true }}
+                fullWidth={true}
+                formClassName={classes.email}
+            />
+            <DateInput source="birthday" />
+        </FormTab>
+        <FormTab label="resources.customers.tabs.address">
+            <LongTextInput source="address" formClassName={classes.address} />
+            <TextInput source="zipcode" formClassName={classes.zipcode} />
+            <TextInput source="city" formClassName={classes.city} />
+        </FormTab>
+    </TabbedForm>
+</Create>
+```
+组件结构图
+![](./docs/images/CustomerCreate.png)
+
 #### Customers 编辑视图
 1. 通过从 react-admin 导出的 EditButton 轻松可以路由到 Edit 视图组件。EditButton 组件为您封装好了一切，这是因为它包含 从 react-router-dom 导出的 Link 组件。
 ```jsx
