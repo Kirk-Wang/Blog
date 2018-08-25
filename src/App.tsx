@@ -10,7 +10,7 @@ import { chineseMessages } from "./i18n/cn";
 import { fakeServer } from "./fakeServer";
 import { CustomerList, CustomerEdit, CustomerCreate, CustomerIcon } from "./customers";
 import { CommandList, CommandIcon, CommandEdit } from "./commands";
-import { ProductList } from "./products";
+import { ProductList, ProductCreate } from "./products";
 import { Segments, SegmentsIcon } from "./segments";
 
 const dataProvider = simpleRestProvider("http://api.fakeserver.com");
@@ -45,8 +45,9 @@ export class App extends React.Component {
                     name="commands"
                     options={{ label: "Orders" }}
                 />
-                <Resource name="products" list={ProductList} />
+                <Resource name="products" list={ProductList} create={ProductCreate} />
                 <Resource name="reviews" />
+                <Resource name="categories" />
             </Admin>
         );
     }
