@@ -280,8 +280,11 @@ const compose = (...funcs) =>
 #### Segments 内部组件
 ![](./docs/images/Segments.png)
 
-#### Command(Order) List 内部组件
+#### CommandList(Orders) 内部组件
 ![](./docs/images/command-list.png)
+
+#### CommandEdit 内部组件
+![](./docs/images/CommandEdit.png)
 
 
 #### i18n（国际化）

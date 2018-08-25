@@ -41,7 +41,7 @@ export const MobileGrid: any = withStyles(listStyles)(
                         title={
                             <div className={classes.cardTitleContent}>
                                 <span>
-                                    {translate("resources.commands.name", 1)}
+                                    {trans("resources.commands.name", 1)}
                                     :&nbsp;
                                     <TextField record={data[id]} source="reference" />
                                 </span>
@@ -51,17 +51,17 @@ export const MobileGrid: any = withStyles(listStyles)(
                     />
                     <CardContent className={classes.cardContent}>
                         <span className={classes.cardContentRow}>
-                            {translate("resources.customers.name", 1)}
+                            {trans("resources.customers.name", 1)}
                             :&nbsp;
                             <CustomerReferenceField record={data[id]} basePath={basePath} />
                         </span>
                         <span className={classes.cardContentRow}>
-                            {translate("resources.reviews.fields.date")}
+                            {trans("resources.reviews.fields.date")}
                             :&nbsp;
                             <DateField record={data[id]} source="date" showTime />
                         </span>
                         <span className={classes.cardContentRow}>
-                            {translate("resources.commands.fields.basket.total")}
+                            {trans("resources.commands.fields.basket.total")}
                             :&nbsp;
                             <NumberField
                                 record={data[id]}
@@ -71,12 +71,12 @@ export const MobileGrid: any = withStyles(listStyles)(
                             />
                         </span>
                         <span className={classes.cardContentRow}>
-                            {translate("resources.commands.fields.status")}
+                            {trans("resources.commands.fields.status")}
                             :&nbsp;
                             <TextField source="status" record={data[id]} />
                         </span>
                         <span className={classes.cardContentRow}>
-                            {translate("resources.commands.fields.returned")}
+                            {trans("resources.commands.fields.returned")}
                             :&nbsp;
                             <BooleanField record={data[id]} source="returned" />
                         </span>
