@@ -3,12 +3,9 @@
  */
 
 import * as React from "react";
-import { List, ReferenceInput, Filter, TextInput, SelectInput, NumberInput, translate } from "react-admin";
-import Chip from "@material-ui/core/Chip";
+import { List, ReferenceInput, Filter, TextInput, SelectInput, NumberInput } from "react-admin";
 
 import { GridList } from "./GridList";
-
-const QuickFilter = translate(({ label, translate: trans }: any) => <Chip>{trans(label)}</Chip>);
 
 export const ProductFilter = (props: any) => (
     <Filter {...props}>
@@ -20,7 +17,6 @@ export const ProductFilter = (props: any) => (
         <NumberInput source="width_lte" />
         <NumberInput source="height_gte" />
         <NumberInput source="height_lte" />
-        <QuickFilter label="resources.products.fields.stock_lte" source="stock_lte" defaultValue={10} />
     </Filter>
 );
 
