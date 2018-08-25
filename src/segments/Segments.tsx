@@ -14,7 +14,7 @@ import { translate, ViewTitle } from "react-admin";
 import { LinkToRelatedCustomers } from "./LinkToRelatedCustomers";
 import { segments } from "./data";
 
-export const SegmentList = translate(({ translate: trans }: any) => (
+export const Segments = translate(({ translate: trans }: any) => (
     <Card>
         <ViewTitle title={trans("resources.segments.name")} />
         <Table>
