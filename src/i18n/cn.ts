@@ -62,7 +62,7 @@ export const chineseMessages = {
             },
         },
         products: {
-            name: "产品",
+            name: "产品（海报）",
             fields: {
                 category_id: "Category",
                 height_gte: "Min height",

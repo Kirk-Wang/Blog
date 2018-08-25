@@ -14,8 +14,9 @@ import {
     required,
 } from "react-admin";
 import RichTextInput from "ra-input-rich-text";
+import withStyles from "@material-ui/core/styles/withStyles";
 
-const createStyles = {
+export const createStyles = {
     stock: { width: "5em" },
     price: { width: "5em" },
     width: { width: "5em" },
@@ -23,8 +24,6 @@ const createStyles = {
     height: { width: "5em" },
     heightFormGroup: { display: "inline-block", marginLeft: 32 },
 };
-
-import withStyles from "@material-ui/core/styles/withStyles";
 
 export const ProductCreate = withStyles(createStyles)(({ classes, ...props }) => (
     <Create {...props}>
