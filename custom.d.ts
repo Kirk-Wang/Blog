@@ -11,3 +11,5 @@ declare module "fetch-mock";
 declare module "chance";
 declare module "ra-language-english";
 declare module "ra-language-chinese";
+declare module "react-router-dom";
+declare module "@material-ui/core/Button";
