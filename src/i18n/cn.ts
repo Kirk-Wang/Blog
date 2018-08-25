@@ -11,6 +11,7 @@ export const chineseMessages = {
     },
     resources: {
         customers: {
+            name: "客户",
             fields: {
                 last_seen_gte: "Visited Since",
                 groups: "Segments",
@@ -26,7 +27,7 @@ export const chineseMessages = {
             },
         },
         segments: {
-            name: "Segments",
+            name: "客户分组",
             fields: {
                 customers: "Customers",
                 name: "Name",
@@ -38,6 +39,26 @@ export const chineseMessages = {
                 regular: "Regular",
                 returns: "Returns",
                 reviewer: "Reviewer",
+            },
+        },
+        commands: {
+            name: "订单",
+            fields: {
+                basket: {
+                    delivery: "Delivery",
+                    reference: "Reference",
+                    quantity: "Quantity",
+                    sum: "Sum",
+                    tax_rate: "Tax Rate",
+                    total: "Total",
+                    unit_price: "Unit Price",
+                },
+                customer_id: "Customer",
+                date_gte: "Passed Since",
+                date_lte: "Passed Before",
+                total_gte: "Min amount",
+                status: "Status",
+                returned: "Returned",
             },
         },
     },
