@@ -295,6 +295,11 @@ const compose = (...funcs) =>
 #### ProductEdit 内部组件
 ![](./docs/images/ProductEdit.png)
 
+#### CategoryList 内部组件
+![](./docs/images/CategoryList.png)
+
+#### CategoryEdit 内部组件
+![](./docs/images/CategoryEdit.png)
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
