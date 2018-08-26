@@ -12,6 +12,7 @@ import { CustomerList, CustomerEdit, CustomerCreate, CustomerIcon } from "./cust
 import { CommandList, CommandIcon, CommandEdit } from "./commands";
 import { ProductList, ProductCreate, ProductEdit, ProductIcon } from "./products";
 import { Segments, SegmentsIcon } from "./segments";
+import { CategoryList, CategoryIcon, CategoryEdit } from "./categories";
 
 const dataProvider = simpleRestProvider("http://api.fakeserver.com");
 
@@ -52,8 +53,8 @@ export class App extends React.Component {
                     create={ProductCreate}
                     edit={ProductEdit}
                 />
+                <Resource icon={CategoryIcon} name="categories" list={CategoryList} edit={CategoryEdit} />
                 <Resource name="reviews" />
-                <Resource name="categories" />
             </Admin>
         );
     }

@@ -85,5 +85,11 @@ export const chineseMessages = {
                 reviews: "Reviews",
             },
         },
+        categories: {
+            name: "分类",
+            fields: {
+                products: "Products",
+            },
+        },
     },
 };
