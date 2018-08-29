@@ -14,6 +14,10 @@ import { ProductList, ProductCreate, ProductEdit, ProductIcon } from "./products
 import { Segments, SegmentsIcon } from "./segments";
 import { CategoryList, CategoryIcon, CategoryEdit } from "./categories";
 import { ReviewIcon, ReviewList, ReviewEdit } from "./reviews";
+import { Menu } from "./Menu";
+import { customRoutes } from "./routes";
+import { sagas } from "./sagas";
+import { themeReducer } from "./themeReducer";
 
 const dataProvider = simpleRestProvider("http://api.fakeserver.com");
 
@@ -31,7 +35,16 @@ export class App extends React.Component {
 
     public render() {
         return (
-            <Admin title="React-Admin-App" dataProvider={dataProvider} locale="cn" i18nProvider={i18nProvider}>
+            <Admin
+                title="React-Admin-App"
+                dataProvider={dataProvider}
+                customReducers={{ theme: themeReducer }}
+                customSagas={sagas}
+                menu={Menu}
+                locale="cn"
+                customRoutes={customRoutes}
+                i18nProvider={i18nProvider}
+            >
                 <Resource
                     icon={CustomerIcon}
                     list={CustomerList}
