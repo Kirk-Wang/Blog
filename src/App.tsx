@@ -18,6 +18,7 @@ import { Menu } from "./Menu";
 import { customRoutes } from "./routes";
 import { sagas } from "./sagas";
 import { themeReducer } from "./themeReducer";
+import { AppLayout } from "./Layout";
 
 const dataProvider = simpleRestProvider("http://api.fakeserver.com");
 
@@ -44,6 +45,7 @@ export class App extends React.Component {
                 locale="cn"
                 customRoutes={customRoutes}
                 i18nProvider={i18nProvider}
+                appLayout={AppLayout}
             >
                 <Resource
                     icon={CustomerIcon}
