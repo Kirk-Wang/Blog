@@ -7,6 +7,8 @@
 
 ### 本次实战Demo（Typescirpt + 中文支持）
 [演示程序](https://o-o.ren/react-admin-app/demo/)
+---
+[GitHub](https://github.com/Kirk-Wang/react-admin-app)
 
 ### 初始化项目（create-react-app，这里采用 TS)
 
