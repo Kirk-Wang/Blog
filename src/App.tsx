@@ -37,7 +37,7 @@ export class App extends React.Component {
     public render() {
         return (
             <Admin
-                title="React-Admin-App"
+                title="使用 React-Admin 实战中后台应用"
                 dataProvider={dataProvider}
                 customReducers={{ theme: themeReducer }}
                 customSagas={sagas}

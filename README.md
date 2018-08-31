@@ -2,6 +2,12 @@
 
 ## 使用 React-Admin 实战中后台应用
 
+### 官方项目和Demo
+[React-Admin](https://github.com/marmelab/react-admin)--[Demo](https://marmelab.com/react-admin-demo/)
+
+### 本次实战Demo（Typescirpt + 中文支持）
+[演示程序](https://o-o.ren/react-admin-app/demo/)
+
 ### 初始化项目（create-react-app，这里采用 TS)
 
 ```sh
