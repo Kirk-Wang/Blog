@@ -242,3 +242,38 @@ export default (customReducers, locale, messages) =>
  * 把它们合并起来变成一个具有它们所有改变 state 能力的函数 --> (state, action) => nextState
  */
 ```
+执行 reducer({}, { type: 'increment' })，实际上就是执行[这段代码](https://github.com/reduxjs/redux/blob/e63c36a4185d1a31d8b7abcba974016fc984b306/src/combineReducers.js#L145)：
+```jsx
+export default function combineReducers(reducers) {
+    // 一眼看出它是一个标准的 Redux Reducer ---> (state, action) => nextState
+    return function combination(state = {}, action) {
+        // ....省略一些错误处理代码
+
+        // 状态有无改变标志位
+        let hasChanged = false
+        // 创建一个空的 state, 如果 hasChanged 为真，则返回它
+        const nextState = {}
+        // 遍历合并过的 reducer
+        for (let i = 0; i < finalReducerKeys.length; i++) {
+            // 拿到 reducer key
+            const key = finalReducerKeys[i]
+            // 得到这个 key 所对应的 reducer，key 与实际 reducer 的函数名不一定相同
+            const reducer = finalReducers[key]
+            // 得到这个 key 所对应的当前 state
+            const previousStateForKey = state[key]
+            // 通过 reducer 处理，得到当前 key 的下一次 state
+            const nextStateForKey = reducer(previousStateForKey, action)
+            // 错误处理
+            if (typeof nextStateForKey === 'undefined') {
+                const errorMessage = getUndefinedStateErrorMessage(key, action)
+                throw new Error(errorMessage)
+            }
+            // 给当前 key 赋值 state
+            nextState[key] = nextStateForKey
+            // 判断是否有 reducer 改变了 state
+            hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+        }
+        // 有改变 state, 返回 nextState，没有就返回 state
+        return hasChanged ? nextState : state
+    }
+```
