@@ -222,7 +222,9 @@ export default (customReducers, locale, messages) =>
         ...customReducers,
     });
 ```
+
 ![](../images/appReducer.png)
+
 在这里，我们首先来聊一下这个 combineReducers。它是由 Redux 提供的一个辅助函数。作用是把一个由多个不同 reducer 函数作为 value 的 object，合并成一个最终的 reducer 函数，然后就可以对这个 reducer 调用 createStore 方法。看一个 Redux 官方的测试用例，来秒懂一下：
 ```js
  it('returns a composite reducer that maps the state keys to given reducers', () => {
