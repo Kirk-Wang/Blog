@@ -244,7 +244,6 @@ export default (customReducers, locale, messages) =>
 ```
 执行 reducer({}, { type: 'increment' })，实际上就是执行[这段代码](https://github.com/reduxjs/redux/blob/e63c36a4185d1a31d8b7abcba974016fc984b306/src/combineReducers.js#L145)：
 ```jsx
-export default function combineReducers(reducers) {
     // 一眼看出它是一个标准的 Redux Reducer ---> (state, action) => nextState
     return function combination(state = {}, action) {
         // ....省略一些错误处理代码
