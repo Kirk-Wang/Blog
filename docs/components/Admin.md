@@ -190,4 +190,5 @@ const CoreAdmin = ({
     ...
 }
 ```
+![](./docs/images/CoreAdmin.png)
 相关文档，可以查看 [Admin]](https://marmelab.com/react-admin/Admin.html)
