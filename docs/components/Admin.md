@@ -205,4 +205,5 @@ import defaultMessages from 'ra-language-english';
 
 export default () => defaultMessages;
 ```
-我们发现它是直接返回一个箭头函数，调用函数直接返回 react-admin 所支持的英文语言包 [ra-language-english](https://github.com/marmelab/react-admin/tree/master/packages/ra-language-english)。
+我们发现它是直接返回一个箭头函数，调用函数直接返回 react-admin 所支持的英文语言包 [ra-language-english](https://github.com/marmelab/react-admin/tree/master/packages/ra-language-english)。
+
