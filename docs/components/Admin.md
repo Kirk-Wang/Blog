@@ -199,10 +199,10 @@ const CoreAdmin = ({
 ```js
 const messages = i18nProvider(locale);
 ```
-1. 分析下这个默认的 i18nProvider(defaultI18nProvider)：
+1. 分析下这个默认的 i18nProvider(defaultI18nProvider)：
 ```js
 import defaultMessages from 'ra-language-english';
 
 export default () => defaultMessages;
 ```
-我们发现它是直接返回一个箭头函数，调用函数直接返回 react-admin 所支持的英文语言包 [ra-language-english] (https://github.com/marmelab/react-admin/tree/master/packages/ra-language-english)。
+我们发现它是直接返回一个箭头函数，调用函数直接返回 react-admin 所支持的英文语言包 [ra-language-english](https://github.com/marmelab/react-admin/tree/master/packages/ra-language-english)。
