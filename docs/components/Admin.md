@@ -146,4 +146,48 @@ export default withContext(
 ```
 
 通过上面代码，我们知道这是一个函数式组件（Functional Components) ，他接受如下属性：
-
+```jsx
+const CoreAdmin = ({
+    // 自定义布局
+    appLayout,
+    // 自定义身份验证策略
+    authProvider,
+    // 子组件
+    children,
+    // 自定义 Redux Reducer
+    customReducers = {},
+    // 自定义 Redux Saga
+    customSagas = [],
+    // 自定义路由
+    customRoutes = [],
+    // 仪表盘
+    dashboard,
+    // 历史记录
+    history,
+    // 目前已废弃，自定义菜单
+    menu, // deprecated, use a custom layout instead
+    // 可以用来自定义 Not Found
+    catchAll,
+    // 唯一必需的属性，它必须是一个返回一个promise的函数
+    dataProvider,
+    // 国际化，用来做多语言切换
+    i18nProvider = defaultI18nProvider,
+    // 自定义主题
+    theme,
+    // 自定义标题，默认是 React Admin
+    title = 'React Admin',
+    // 资源加载 loading
+    loading,
+    // 登录页
+    loginPage,
+    // 注销按钮
+    logoutButton,
+    // 初始 Redux State
+    initialState,
+    // 本地化，默认是英文
+    locale = 'en',
+}) => {
+    ...
+}
+```
+相关文档，可以查看 [Admin]](https://marmelab.com/react-admin/Admin.html)
