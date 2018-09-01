@@ -205,5 +205,40 @@ import defaultMessages from 'ra-language-english';
 
 export default () => defaultMessages;
 ```
-我们发现它是直接返回一个箭头函数，调用函数直接返回 react-admin 所支持的英文语言包 [ra-language-english](https://github.com/marmelab/react-admin/tree/master/packages/ra-language-english)。
+我们发现它是直接返回一个箭头函数，调用函数直接返回 react-admin 所支持的英文语言包 [ra-language-english](https://github.com/marmelab/react-admin/tree/master/packages/ra-language-english)。具体内容大家自行点开查看。
 
+### 创建 App Reducer
+```js
+const appReducer = createAppReducer(customReducers, locale, messages);
+```
+它是一个如下函数：
+```js
+export default (customReducers, locale, messages) =>
+    combineReducers({
+        admin,
+        i18n: i18nReducer(locale, messages),
+        form: formReducer,
+        routing: routerReducer,
+        ...customReducers,
+    });
+```
+在这里，我们首先来聊一下这个 combineReducers。它是由 Redux 提供的一个辅助函数。作用是把一个由多个不同 reducer 函数作为 value 的 object，合并成一个最终的 reducer 函数，然后就可以对这个 reducer 调用 createStore 方法。看一个 Redux 官方的测试用例，来秒懂一下：
+```js
+ it('returns a composite reducer that maps the state keys to given reducers', () => {
+      const reducer = combineReducers({
+        counter: (state = 0, action) =>
+          action.type === 'increment' ? state + 1 : state,
+        stack: (state = [], action) =>
+          action.type === 'push' ? [...state, action.value] : state
+      })
+
+      const s1 = reducer({}, { type: 'increment' })
+      expect(s1).toEqual({ counter: 1, stack: [] })
+      const s2 = reducer(s1, { type: 'push', value: 'a' })
+      expect(s2).toEqual({ counter: 1, stack: ['a'] })
+    })
+/**
+ * 通俗点说，就是有一堆这样的函数 --> (state, action) => nextState
+ * 把它们合并起来变成一个具有它们所有改变 state 能力的函数 --> (state, action) => nextState
+ */
+```
