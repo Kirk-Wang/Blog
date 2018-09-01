@@ -1,7 +1,7 @@
 # React-Admin-App
 
 ## 核心组件及源码分析
-* [<Admin /> 源码解析](./docs/components/Admin.md)
+* [Admin 组件源码解析](./docs/components/Admin.md)
 
 ## 使用 React-Admin 实战中后台应用
 
