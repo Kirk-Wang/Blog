@@ -246,7 +246,7 @@ export default (customReducers, locale, messages) =>
  */
 ```
 执行 reducer({}, { type: 'increment' })，实际上就是执行[这段代码](https://github.com/reduxjs/redux/blob/e63c36a4185d1a31d8b7abcba974016fc984b306/src/combineReducers.js#L145)：
-```jsx
+```js
     // 一眼看出它是一个标准的 Redux Reducer ---> (state, action) => nextState
     return function combination(state = {}, action) {
         // ....省略一些错误处理代码
@@ -280,8 +280,33 @@ export default (customReducers, locale, messages) =>
     }
 ```
 
-### 处理注销动作时，所有状态 reset
-```jsx
+### 处理注销动作时，所有状态 reset，这个操作比较风骚
+```js
     const resettableAppReducer = (state, action) =>
         appReducer(action.type !== USER_LOGOUT ? state : undefined, action);
 ```
+### Redux-Saga--->>[中文文档](https://redux-saga-in-chinese.js.org/)
+```js
+const saga = function* rootSaga() {
+    yield all(
+        [
+            adminSaga(dataProvider, authProvider, i18nProvider),
+            ...customSagas,
+        ].map(fork)
+    );
+};
+```
+
+从这里入手我们将知道，整个 React-Admin 的所有 Saga，用它们来处理一切的副作用：
+![](../images/rootSaga.png)
+
+```js
+const sagaMiddleware = createSagaMiddleware();
+```
+
+这个，就是创造一个 Redux 中间件函数。类似于这样的一个函数，当然里面的逻辑是比较复杂的：
+
+```js
+store => next => action => {}
+```
+
