@@ -279,3 +279,9 @@ export default (customReducers, locale, messages) =>
         return hasChanged ? nextState : state
     }
 ```
+
+### 处理注销动作时，所有状态 reset
+```jsx
+    const resettableAppReducer = (state, action) =>
+        appReducer(action.type !== USER_LOGOUT ? state : undefined, action);
+```
