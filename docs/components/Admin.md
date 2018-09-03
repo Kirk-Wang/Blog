@@ -311,3 +311,12 @@ store => next => action => {}
 ```
 
 通过它去劫持 action 并处理。
+
+### History
+```js
+import createHistory from 'history/createHashHistory';
+
+const routerHistory = history || createHistory();
+```
+
+这里用的默认是 [createHashHistory](https://github.com/ReactTraining/history/blob/master/modules/createHashHistory.js)
