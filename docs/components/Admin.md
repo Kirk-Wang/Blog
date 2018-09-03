@@ -393,9 +393,31 @@ sagaMiddleware.run(saga);
 const logout = authProvider ? createElement(logoutButton) : null;
 ```
 
+### Provider 组件
+react-redux 到底干了啥，我们先不管，我们现在只看 Provider 组件，以下是它源码：
 
+```js
+export function createProvider(storeKey = 'store') {
+    const subscriptionKey = `${storeKey}Subscription`
+    class Provider extends Component {
+        getChildContext() {
+          return { [storeKey]: this[storeKey], [subscriptionKey]: null }
+        }
 
+        constructor(props, context) {
+          super(props, context)
+          this[storeKey] = props.store;
+        }
 
+        render() {
+          return Children.only(this.props.children)
+        }
+    }
+    ...
+    return Provider
+}
+export default createProvider()
+```
 
 
 
