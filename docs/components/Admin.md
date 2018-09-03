@@ -377,6 +377,17 @@ compose(
 
 在这里已经做了 devToolsExtension() 的处理，所以我们可以直接安装一个 Chrome 插件( [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) ) 来查看我们的每一次 dispatch。
 
+### runSaga
+
+启动 Saga，因为 sagas 是一些个 generator function，所以不会自己调用 `.next()`，也就是自动执行。所以需要一个函数来帮忙。
+
+```js
+sagaMiddleware.run(saga);
+```
+
+
+
+
 
 
 
