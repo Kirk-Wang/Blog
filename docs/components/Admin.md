@@ -324,3 +324,61 @@ const routerHistory = history || createHistory();
 ```
 
 这里用的默认是 [createHashHistory](https://github.com/ReactTraining/history/blob/master/modules/createHashHistory.js)
+
+### store
+
+这里引用[ redux 中文文档](http://cn.redux.js.org/docs/api/createStore.html) 对它的解释（详情自行参考文档）：
+
+#### `createStore(reducer, [preloadedState], enhancer)`
+
+创建一个 Redux [store](Store.md) 来以存放应用中所有的 state。  
+应用中应有且仅有一个 store。
+
+##### 参数
+
+1. `reducer` *(Function)*: 接收两个参数，分别是当前的 state 树和要处理的 action，返回新的 state 树。
+
+2. [`preloadedState`] *(any)*: 初始时的 state。
+在同构应用中，你可以决定是否把服务端传来的 state 水合（hydrate）后传给它，或者从之前保存的用户会话中恢复一个传给它。如果你使用 `combineReducers` 创建 `reducer`，它必须是一个普通对象，与传入的 keys 保持同样的结构。否则，你可以自由传入任何 `reducer` 可理解的内容。
+
+3. `enhancer` *(Function)*: Store enhancer 是一个组合 store creator 的高阶函数，返回一个新的强化过的 store creator。这与 middleware 相似，它也允许你通过复合函数改变 store 接口。
+
+```jsx
+const store = createStore(
+    resettableAppReducer,
+    initialState,
+    compose(
+        applyMiddleware(sagaMiddleware, routerMiddleware(routerHistory)),
+        typeof window !== 'undefined' && window.devToolsExtension
+            ? window.devToolsExtension()
+            : f => f
+    )
+);
+```
+
+我们现在看看这段代码就很清晰了，这里我们主要来解释一下这段代码：
+
+```js
+compose(
+        applyMiddleware(sagaMiddleware, routerMiddleware(routerHistory)),
+        typeof window !== 'undefined' && window.devToolsExtension
+            ? window.devToolsExtension()
+            : f => f
+    )
+/*
+ * componse 我们知道它是将多个具有不同功能的函数通过 reduce 组合为一个函数，方便我们使用
+ * 由于在 redux 中的参数 enhancer 必须长成这样（可以翻看源码得知）：
+ * createStore => (...args) => { ... }
+ * 所以执行 compose 一定返回这样式的函数。
+ * 所以 applyMiddleware(sagaMiddleware, routerMiddleware(routerHistory)) , window.devToolsExtension() 应该也是返回上面的一样的函数
+ * middleware 前面已经说了是这样子：store => next => action => {}
+ */
+```
+
+在这里已经做了 devToolsExtension() 的处理，所以我们可以直接安装一个 Chrome 插件( [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) ) 来查看我们的每一次 dispatch。
+
+
+
+
+
+
