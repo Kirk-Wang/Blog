@@ -385,6 +385,13 @@ compose(
 sagaMiddleware.run(saga);
 ```
 
+### logoutButton
+
+有提供 authProvider，就会显示注销按钮。
+
+```jsx
+const logout = authProvider ? createElement(logoutButton) : null;
+```
 
 
 
