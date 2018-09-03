@@ -304,13 +304,13 @@ const saga = function* rootSaga() {
 const sagaMiddleware = createSagaMiddleware();
 ```
 
-这个，就是创造一个 Redux 中间件函数。类似于这样的一个函数，当然里面的逻辑是比较复杂的：
+这个，就是创造一个 Redux 中间件函数。类似于这样的一个函数，当然里面的逻辑是比较复杂的：
 
 ```js
 store => next => action => {}
 ```
 
-通过它去劫持 action 并处理。
+通过它去劫持 action 并处理。
 
 ### History
 ```js
