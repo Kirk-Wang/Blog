@@ -312,6 +312,10 @@ store => next => action => {}
 
 通过它去劫持 action 并处理。
 
+这里推荐一篇好文，[Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)。附一张里面的图（清晰的描述了执行流程）：
+
+![](https://gw.alipayobjects.com/zos/rmsportal/fkpkHBwmTAJtjgyDhMto.png)
+
 ### History
 ```js
 import createHistory from 'history/createHashHistory';
