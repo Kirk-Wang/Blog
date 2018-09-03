@@ -310,3 +310,4 @@ const sagaMiddleware = createSagaMiddleware();
 store => next => action => {}
 ```
 
+通过它去劫持 action 并处理。
