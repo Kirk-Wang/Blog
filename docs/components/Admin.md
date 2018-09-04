@@ -405,6 +405,7 @@ react-redux 到底干了啥，我们先不管，我们现在只看 Provider 组�
  * shouldComponentUpdate(nextProps, nextState, nextContext)
  * componentWillUpdate(nextProps, nextState, nextContext)
  * componentDidUpdate(prevProps, prevState, prevContext)
+ * 当state或者props更新时getChildContext方法会被调用。
 */
 
 export function createProvider(storeKey = 'store') {
@@ -439,6 +440,49 @@ export default createProvider()
 这个组件使用了 React 中的 Context;在有些场景中，你不想要向下每层都手动地传递你需要的 props。这就需要强大的 context API了。
 
 通过在 Provider（context提供者）中添加 childContextTypes 和 getChildContext ，React 会向下自动传递参数，任何组件只要在它的子组件中，就能通过定义 contextTypes 来获取参数。如果 contextTypes 没有定义，那么 context 将会是个空对象。具体请查看[legacy-context](https://react.docschina.org/docs/legacy-context.html)
+
+### TranslationProvider
+创建一个可用于其子元素的翻译上下文，必须在Redux应用程序中调用。这个组件在 context 中提供 translate 和 locale 属性。方便子组件访问。
+
+```js
+const MyApp = () => (
+    <Provider store={store}>
+        <TranslationProvider locale="fr" messages={messages}>
+          <!-- Child components go here -->
+         </TranslationProvider>
+      </Provider>
+);
+```
+
+这个组件会单独分析
+
+### ConnectedRouter，Switch，Route
+ConnectedRouter 看下面代码，就秒懂了（路由改变时，同步状态到 store）：
+
+```js
+handleLocationChange = (location, action) => {
+    this.store.dispatch({
+      type: LOCATION_CHANGE,
+      payload: {
+        location,
+        action
+      }
+    });
+  };
+
+componentWillMount() {
+    if (!isSSR)
+      // 利用 history.listen 方法
+      this.unsubscribeFromHistory = history.listen(this.handleLocationChange);
+    this.handleLocationChange(history.location);
+  }
+```
+
+这三个组件，大家可参看[react-router 文档](https://react-router.docschina.org/web/guides/philosophy)，查看详细用法。
+
+### CoreAdminRouter
+这个组件单独分析
+
 
 
 
