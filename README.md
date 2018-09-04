@@ -2,6 +2,7 @@
 
 ## 核心组件及源码分析
 * [Admin 组件源码解析](./docs/components/Admin.md)
+* [CoreAdminRouter 组件源码分析](./docs/components/CoreAdminRouter.md)
 
 ## 使用 React-Admin 实战中后台应用
 
