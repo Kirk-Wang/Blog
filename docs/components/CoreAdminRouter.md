@@ -44,3 +44,7 @@ render() {
     return null;
 }
 ```
+
+#### CoreAdminRouter 被传进来了如下属性：
+
+![](../images/CoreAdminRouter-Props.png)
