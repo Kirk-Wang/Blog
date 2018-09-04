@@ -414,6 +414,10 @@ export function createProvider(storeKey = 'store') {
         }
     }
     ...
+    Provider.childContextTypes = {
+        [storeKey]: storeShape.isRequired,
+        [subscriptionKey]: subscriptionShape,
+    }
     return Provider
 }
 export default createProvider()
