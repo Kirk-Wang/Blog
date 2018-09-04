@@ -397,10 +397,22 @@ const logout = authProvider ? createElement(logoutButton) : null;
 react-redux 到底干了啥，我们先不管，我们现在只看 Provider 组件，以下是它源码：
 
 ```js
+/**
+ * 在生命周期函数中引用Context
+ * 如果在一个组件中定义了contextTypes，那么下面这些生命周期函数中将会接收到额外的参数，即context对象:
+ * constructor(props, context)
+ * componentWillReceiveProps(nextProps, nextContext)
+ * shouldComponentUpdate(nextProps, nextState, nextContext)
+ * componentWillUpdate(nextProps, nextState, nextContext)
+ * componentDidUpdate(prevProps, prevState, prevContext)
+*/
+
 export function createProvider(storeKey = 'store') {
     const subscriptionKey = `${storeKey}Subscription`
     class Provider extends Component {
         getChildContext() {
+          // return { store: this.store, storeSubscription: null }
+          // 被包裹的子组件，随时随地从 context 中拿到 store
           return { [storeKey]: this[storeKey], [subscriptionKey]: null }
         }
 
