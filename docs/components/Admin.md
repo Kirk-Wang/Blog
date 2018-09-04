@@ -418,10 +418,12 @@ export function createProvider(storeKey = 'store') {
 
         constructor(props, context) {
           super(props, context)
+          // 直接将传入的 store，挂载当前 store 上
           this[storeKey] = props.store;
         }
 
         render() {
+          // 返回children中仅有的子级。否则抛出异常。
           return Children.only(this.props.children)
         }
     }
