@@ -422,6 +422,9 @@ export function createProvider(storeKey = 'store') {
 }
 export default createProvider()
 ```
+这个组件使用了 React 中的 Context;在有些场景中，你不想要向下每层都手动地传递你需要的 props。这就需要强大的 context API了。
+
+通过在 Provider（context提供者）中添加 childContextTypes 和 getChildContext ，React 会向下自动传递参数，任何组件只要在它的子组件中，就能通过定义 contextTypes 来获取参数。如果 contextTypes 没有定义，那么 context 将会是个空对象。具体请查看[legacy-context](https://react.docschina.org/docs/legacy-context.html)
 
 
 
