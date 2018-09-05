@@ -1,6 +1,6 @@
 ### 一步一步调试 React-Admin 源码
 
-可能有的小伙伴不太清楚在现有项目中如何调试 react-admin 源码，我这里稍稍说一下：（大神请飘过^_^）
+可能有的小伙伴不太清楚在现有项目中如何调试 react-admin 源码，我这里稍稍说一下：（大神请飘过^_^）
 
 ```sh
 git clone https://github.com/marmelab/react-admin.git
