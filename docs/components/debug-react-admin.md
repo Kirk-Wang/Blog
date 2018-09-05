@@ -25,4 +25,18 @@ OK，现在打开 Chrome，进入 http://localhost:8080
 
 F12，我们找到其中的 ra-core 包的源码，下个断点，刷新页面，妥妥的：
 
-点击，进入小视频 --> [![debug-react-admin]()](https://streamable.com/s/3evkg/tzvjqb)
+1. 单击 Edit
+
+![](../images/debug-step-1.png)
+
+2. 进入断点
+
+![](../images/debug-step-2.png)
+
+3. 继续执行
+
+![](../images/debug-step-3.png)
+
+4. 进入编辑视图
+
+![](../images/debug-step-4.png)
