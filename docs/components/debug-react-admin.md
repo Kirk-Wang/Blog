@@ -25,4 +25,4 @@ OK，现在打开 Chrome，进入 http://localhost:8080
 
 F12，我们找到其中的 ra-core 包的源码，下个断点，刷新页面，妥妥的：
 
-[![debug-react-admin](//cdn-b-east.streamable.com/image/3evkg.jpg?token=YWJW2dLndBmoXqUuZq0sTQ&expires=1536160645)](https://streamable.com/s/3evkg/tzvjqb)
+点击，进入小视频 --> [![debug-react-admin]()](https://streamable.com/s/3evkg/tzvjqb)
