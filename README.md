@@ -1,7 +1,7 @@
 # React-Admin-App
 
 ## 核心组件及源码分析
-* [调试 React-Admin](./docs/components/React-Admin.md)
+* [一步一步调试 React-Admin 源码](./docs/components/debug-react-admin.md)
 * [Admin 组件源码解析](./docs/components/Admin.md)
 * [CoreAdminRouter 组件源码分析](./docs/components/CoreAdminRouter.md)
 
