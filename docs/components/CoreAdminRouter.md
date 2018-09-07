@@ -57,7 +57,9 @@ describe('<AdminRouter>', () => {
         authProvider: () => Promise.resolve(),
         customRoutes: [],
     };
+    // 使用 Resource 组件作为常规的子级。
     describe('With resources as regular children', () => {
+        // 是否应该渲染具有 registration context 的所有 Resource 组件。
         it('should render all resources with a registration context', () => {
             const wrapper = shallow(
                 <CoreAdminRouter {...defaultProps}>
@@ -77,8 +79,6 @@ describe('<AdminRouter>', () => {
     });
 });
 ```
-
-上面测试用例，使用 Resource 组件作为常规的子级。是否应该渲染具有 registration context 的所有 Resource 组件。
 
 这里，看一段 CoreAdminRouter 的源码，就很清晰了：
 
@@ -109,3 +109,42 @@ const resources = wrapper.find('Connect(Resource)');
 ```
 
 这句的意思，可以参看这个 issue，[shallow - Cannot see `connect`ed child component](https://github.com/airbnb/enzyme/issues/589)
+
+这个测试用例主要是查看 shallow 后的 Resource 是否具有 context 属性。
+
+---
+
+```jsx
+// 使用从一个函数返回的 Resource 组件作为 children
+describe('With resources returned from a function as children', () => {
+    // 是否应该渲染具有 registration context 的所有 Resource 组件。
+    it('should render all resources with a registration context', async () => {
+        const wrapper = shallow(
+            <CoreAdminRouter {...defaultProps}>
+                {() => [
+                    <Resource key="posts" name="posts" />,
+                    <Resource key="comments" name="comments" />,
+                    null,
+                ]}
+            </CoreAdminRouter>
+        );
+
+        // 由于 authProvider 调用而需要 Timeout
+        await new Promise(resolve => {
+            setTimeout(resolve, 10);
+        });
+
+        wrapper.update();
+        const resources = wrapper.find('Connect(Resource)');
+        assert.equal(resources.length, 2);
+        assert.deepEqual(
+            resources.map(resource => resource.prop('context')),
+            ['registration', 'registration']
+        );
+    });
+});
+```
+
+这里会在 componentWillMount 执行一些异步的操作：
+
+initializeResources -> initializeResourcesAsync -> await authProvider(AUTH_GET_PERMISSIONS)
