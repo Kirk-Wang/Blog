@@ -98,10 +98,10 @@ React.Children.map
 
 React.Children.map(children, function[(thisArg)]) 
 
-在包含在 children 里的每个子级上调用函数，调用的函数的 this 设置为 thisArg 。 如果 children 是一个嵌套的对象或数组，它将被遍历。如果 children 是 null 或 undefined ，返回 null 或 undefined 而不是一个空数组。
+在包含在 children 里的每个子级上调用函数，调用的函数的 this 设置为 thisArg 。 如果 children 是一个嵌套的对象或数组，它将被遍历。如果 children 是 null 或 undefined ，返回 null 或 undefined 而不是一个空数组。
 
 React.cloneElement(element,[props],[...children])
 
-以 element 作为起点，克隆并返回一个新的React元素(React Element)。生成的元素将会拥有原始元素props与新props的浅合并。新的子级会替换现有的子级。来自原始元素的 key 和 ref 将会保留。也就是说这里克隆出来的 Resource 组件拥有 key 和 context 属性。
+以 element 作为起点，克隆并返回一个新的React元素(React Element)。生成的元素将会拥有原始元素props与新props的浅合并。新的子级会替换现有的子级。来自原始元素的 key 和 ref 将会保留。也就是说这里克隆出来的 Resource 组件拥有 key 和 context 属性。
 
 
