@@ -145,6 +145,6 @@ describe('With resources returned from a function as children', () => {
 });
 ```
 
-这里会在 componentWillMount 执行一些异步的操作：
+这里会在 CoreAdminRouter 组件 componentWillMount 中执行一些异步的操作（authProvider 必需提供）：
 
 initializeResources -> initializeResourcesAsync -> await authProvider(AUTH_GET_PERMISSIONS)
