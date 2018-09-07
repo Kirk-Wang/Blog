@@ -104,4 +104,8 @@ React.cloneElement(element,[props],[...children])
 
 以 element 作为起点，克隆并返回一个新的React元素(React Element)。生成的元素将会拥有原始元素props与新props的浅合并。新的子级会替换现有的子级。来自原始元素的 key 和 ref 将会保留。也就是说这里克隆出来的 Resource 组件拥有 key 和 context 属性。
 
+```jsx
+const resources = wrapper.find('Connect(Resource)');
+```
 
+这句的意思，可以参看这个 issue，[shallow - Cannot see `connect`ed child component](https://github.com/airbnb/enzyme/issues/589)
