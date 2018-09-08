@@ -186,3 +186,30 @@ initializeResources -> initializeResourcesAsync -> await authProvider(AUTH_GET_P
         assert.equal(routes.at(1).prop('path'), '/custom2');
     });
 ```
+
+这里看个 simple 项目调用的例子：
+
+```jsx
+<Admin
+    authProvider={authProvider}
+    dataProvider={dataProvider}
+    customRoutes={[
+        <Route
+            exact
+            path="/custom"
+            component={CustomRouteNoLayout}
+            noLayout
+        />,
+        <Route exact path="/custom2" component={CustomRouteLayout} />,
+    ]}
+>
+...
+</Admin>
+```
+
+没有 noLayout 时的渲染：
+![](../images/customer-routes-no-layout.png)
+
+有 Layout 时的渲染：
+![](../images/customer-routers-app-layout.png)
+
