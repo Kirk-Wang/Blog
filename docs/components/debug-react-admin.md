@@ -1,6 +1,6 @@
-### 调试 React-Admin 源码，看清框架的本质
+### 调试 [React-Admin](https://github.com/marmelab/react-admin.git) 源码，看清框架的本质
 
-[Github](https://github.com/Kirk-Wang/react-admin-app/blob/master/docs/components/debug-react-admin.md)
+[Github](https://github.com/Kirk-Wang/react-admin-app/blob/master/docs/components/debug-react-admin.md)，文章同步到这里。
 
 无论如何，要想彻底用好一个框架，除了看文档，最重要的还是要看它的源码。
 
