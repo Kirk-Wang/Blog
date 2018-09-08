@@ -50,7 +50,7 @@ yarn add @babel/preset-env -D
 yarn start
 ```
 
-继续报错，继续根据错误提示，安装包并把它添加到 .babelrc，然后启动：
+继续报错，继续根据错误提示，安装包并把它添加到 .babelrc，然后启动：
 
 ![](../images/debug/debug-3.png)
 
@@ -60,11 +60,11 @@ yarn add @babel/plugin-proposal-export-default-from -D
 yarn start
 ```
 
-额，这里还是报上面的错……我这里直接移动 .babelrc 配置到 webpack.config.js 的 babel-loader 的 options 选项中：
+额，这里还是报上面的错……我这里直接移动 .babelrc 配置到 webpack.config.js 的 babel-loader 的 options 选项中：
 
 ![](../images/debug/debug-4.png)
 
-这下没有报之前的错了，但报了另外一个错了，我们根据提示解决一下：
+这下没有报之前的错了，但报了另外一个错了，我们根据提示解决一下：
 
 ![](../images/debug/debug-5.png)
 
@@ -74,7 +74,7 @@ yarn add @babel/plugin-proposal-export-namespace-from -D
 yarn start
 ```
 
-添加这个插件到 babel-loader 中：
+添加这个插件到 babel-loader 中：
 
 ```js
 ...
@@ -96,7 +96,7 @@ use: {
 ...
 ```
 
-然后，`yarn start`，终于运行成功了：
+然后，`yarn start`，终于运行成功了：
 
 ![](../images/debug/debug-6.png)
 
