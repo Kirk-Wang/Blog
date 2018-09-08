@@ -148,3 +148,41 @@ describe('With resources returned from a function as children', () => {
 这里会在 CoreAdminRouter 组件 componentWillMount 中执行一些异步的操作（authProvider 必需提供）：
 
 initializeResources -> initializeResourcesAsync -> await authProvider(AUTH_GET_PERMISSIONS)
+
+----
+
+```jsx
+ // 是否渲染不需要 layout 的自定义路由
+ it('should render the custom routes which do not need a layout', () => {
+        const Bar = () => <div>Bar</div>;
+
+        const wrapper = shallow(
+            <CoreAdminRouter
+                customRoutes={[
+                    <Route
+                        key="custom"
+                        noLayout
+                        exact
+                        path="/custom"
+                        render={() => <div>Foo</div>}
+                    />,
+                    <Route
+                        key="custom2"
+                        noLayout
+                        exact
+                        path="/custom2"
+                        component={Bar}
+                    />,
+                ]}
+                location={{ pathname: '/custom' }}
+            >
+                <Resource name="posts" />
+                <Resource name="comments" />
+            </CoreAdminRouter>
+        );
+
+        const routes = wrapper.find('Route');
+        assert.equal(routes.at(0).prop('path'), '/custom');
+        assert.equal(routes.at(1).prop('path'), '/custom2');
+    });
+```
