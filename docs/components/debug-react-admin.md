@@ -1,5 +1,7 @@
 ### 调试 React-Admin 源码，看清框架的本质
 
+[Github](https://github.com/Kirk-Wang/react-admin-app/blob/master/docs/components/debug-react-admin.md)
+
 无论如何，要想彻底用好一个框架，除了看文档，最重要的还是要看它的源码。
 
 这里我记录下我对它的一个调试过程：
@@ -96,7 +98,7 @@ use: {
 ...
 ```
 
-然后，`yarn start`，终于运行成功了：
+然后，`yarn start`，终于运行成功了：
 
 ![](../images/debug/debug-6.png)
 
