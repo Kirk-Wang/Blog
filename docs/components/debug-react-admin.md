@@ -64,7 +64,7 @@ yarn start
 
 ![](../images/debug/debug-4.png)
 
-这下没有报之前的错了，但报了另外一个错了，我们根据提示解决一下：
+这下没有报之前的错了，但报了另外一个错了，我们根据提示解决一下：
 
 ![](../images/debug/debug-5.png)
 
