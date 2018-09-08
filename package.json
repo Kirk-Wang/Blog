@@ -34,6 +34,7 @@
     }
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
     "@blueprintjs/tslint-config": "^1.5.0",
     "@types/classnames": "^2.2.6",
     "@types/jest": "^23.3.1",
