@@ -2,7 +2,8 @@
 
 ## 核心组件及源码分析
 * [调试 React-Admin 源码，看清框架的本质](./docs/components/debug-react-admin.md)
-* [Admin 组件源码解析](./docs/components/Admin.md)
+* [React-Admin 架构分析：Admin 组件功能及实现原理全面解析](./docs/components/core-admin.md)
+* [Admin 组件源码解析](./docs/components/Admin.md)，（过时）
 * [CoreAdminRouter 组件源码分析](./docs/components/CoreAdminRouter.md)
 
 ## 小插曲
