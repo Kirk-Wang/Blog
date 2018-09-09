@@ -213,3 +213,26 @@ initializeResources -> initializeResourcesAsync -> await authProvider(AUTH_GET_P
 有 Layout 时的渲染：
 ![](../images/customer-routers-app-layout.png)
 
+
+appLayout 部分的处理代码，比较简单：
+
+```jsx
+createElement(appLayout, {
+    children: (
+        <RoutesWithLayout
+            catchAll={catchAll}
+            children={childrenToRender} // eslint-disable-line react/no-children-prop
+            customRoutes={customRoutes.filter(
+                route => !route.props.noLayout
+            )}
+            dashboard={dashboard}
+            title={title}
+        />
+    ),
+    dashboard,
+    logout,
+    menu,
+    theme,
+    title,
+})
+```
