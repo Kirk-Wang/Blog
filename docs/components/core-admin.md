@@ -10,6 +10,12 @@
 
 ```sh
 npx create-react-app hello-react-admin
+
 cd hello-react-admin
-npm start
+
+yarn start // 默认你已经安装了 yarn 
 ```
+
+然后脚手架会为你自动在浏览器（我这里是 google chrome ）中打开 [http://localhost:3000](http://localhost:3000)。如果没有，你也可以自己打开这个地址。你将看到如下界面：
+
+![](../images/core-admin/1.png)
