@@ -20,7 +20,7 @@ yarn start // 默认你已经安装了 yarn
 
 ![](../images/core-admin/1.png)
 
-#### 安装 React-Admin，引入 Admin 组件：
+#### 安装 React-Admin，引入 Admin 组件：
 
 ```sh
 yarn add react-admin
