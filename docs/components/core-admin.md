@@ -39,6 +39,6 @@ export default () => (<Admin/>);
 
 ![](../images/core-admin/2.png)
 
-它明确的告诉了我们，`<Admin />` 必须要一个 `dataProvider` 属性才能正常的工作。然后 dataProvider 还必须是一个函数：
+它明确的告诉了我们，`<Admin />` 必须要一个 `dataProvider` 属性才能正常的工作。然后 dataProvider 还必须是一个函数：
 
 看过[官方DataProviders文档](https://marmelab.com/react-admin/DataProviders.html)的同学都知道它是数据的来源。这里我们主要关注 <Admin/> 是如何处理这个属性的。
