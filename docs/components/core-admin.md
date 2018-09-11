@@ -81,7 +81,7 @@ yarn start
 
 ![](../images/core-admin/4.png)
 
-根据文档，我们知到 `<Resource>` 需要 `name` 和 `list` 属性才能显示出列表，我们给它加上（注意看文档）：
+根据文档，我们知到 `<Resource>` 需要 `name` 和 `list` 属性才能显示出列表，我们给它加上（注意看文档）：
 
 ```jsx
 import React from 'react';
@@ -120,9 +120,9 @@ OK，让我们进入下一小节。
 
 #### `Admin` 组件是如何处理 `dataProvider` 属性的？
 
-`React-Admin` 暴露出来的 `Admin` 组件其实是在这个项目的 `ra-core` 包中，里面的 `CoreAdmin.js` 的 `CoreAdmin` 组件才是它的真身。
+`React-Admin` 暴露出来的 `Admin` 组件其实是在这个项目的 `ra-core` 包中，里面的 `CoreAdmin.js` 的 `CoreAdmin` 组件才是它的真身。
 
-1. 首先，`CoreAdmin` 组件会在它的构造函数中对这个 `dataProvider` 属性做一个必要的检测（发现如果 `props` 里面没有 `dataProvider` 的话就直接 throw 一个 Error）：
+1. 首先，`CoreAdmin` 组件会在它的构造函数中对这个 `dataProvider` 属性做一个必要的检测（发现如果 `props` 里面没有 `dataProvider` 的话就直接 throw 一个 Error）：
 
 ```js
 if (!props.dataProvider) {
@@ -131,4 +131,4 @@ React-admin requires a valid dataProvider function to work.`);
     }
 ```
 
-也就是我们在上面看到的错误。
+也就是我们在上面看到的错误。
