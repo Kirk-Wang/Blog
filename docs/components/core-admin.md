@@ -132,7 +132,7 @@ React-admin requires a valid dataProvider function to work.`);
     }
 ```
 
-也就是我们在上面看到的错误。有意思的是在这个文件中，它并没有对他做其它的一些处理。而是将它传递到了 `createAdminStore.js` 暴露出的函数中进行处理，然后又将它传递到 `sideEffects` 文件中暴露的 `adminSaga` 中进行处理。然后它又将 `dataProvider` 传递进专门负责 `fetch` 的 `Saga` 中。到这里我们又似乎明白了，所谓的数据提供者肯定和 `AJAX` 请求是息息相关的。
+也就是我们在上面看到的错误。有意思的是在这个文件中，它并没有对 `dataProvider` 做其它的一些处理，而是将它传递到了 `createAdminStore.js` 暴露出的函数中进行处理，然后又将它传递到 `sideEffects` 文件中暴露的 `adminSaga` 中进行处理。然后它又将 `dataProvider` 传递进专门负责 `fetch` 的 `Saga` 中。到这里我们又似乎明白了，所谓的数据提供者肯定和 `AJAX` 请求是息息相关的。
 
 这里我看看 `dataProvider` 被传递的流程：
 
