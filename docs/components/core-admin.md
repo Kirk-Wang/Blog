@@ -1,10 +1,10 @@
 ### React-Admin 架构分析：全面解析 Admin 组件功能及实现原理
 
-用好 React-Admin，其实就是用好它暴露出来的 Admin 组件。它的实现可以说就是整个 react-admin 项目架构的实现。
+用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。
 
-接下来会逐一讲解它的每一个属性，以及 Admin 组件用它们做了什么❓（文章很长，请自备瓜子^_^）
+接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓（文章很长，请自备瓜子^_^）
 
-#### 首先，我们需要把 Admin 组件跑起来：
+#### 首先，我们需要把 `Admin` 组件跑起来：
 
 1. 这里选用 [Create React App](https://github.com/facebook/create-react-app) 作为基础脚手架。OK，我们快速用它创建一个 App：
 
@@ -113,4 +113,22 @@ export default App;
 
 ![](../images/core-admin/5.png)
 
-接下来，我们就要分析为什么只需这几行代码，React-Admin 就能完成一个完整的信息列表展示（导出，排序，分页等）。Admin 组件到底帮我们干了什么（它里面的代码到底是咋写的）？
+接下来，我们就要分析为什么只需这几行代码，`React-Admin` 就能完成一个完整的信息列表展示（导出，排序，分页等）。`Admin` 组件到底帮我们干了什么（它里面的代码到底是咋写的）？
+
+OK，让我们进入下一小节。
+
+
+#### `Admin` 组件是如何处理 `dataProvider` 属性的？
+
+`React-Admin` 暴露出来的 `Admin` 组件其实是在这个项目的 `ra-core` 包中，里面的 `CoreAdmin.js` 的 `CoreAdmin` 组件才是它的真身。
+
+1. 首先，`CoreAdmin` 组件会在它的构造函数中对这个 `dataProvider` 属性做一个必要的检测（发现如果 `props` 里面没有 `dataProvider` 的话就直接 throw 一个 Error）：
+
+```js
+if (!props.dataProvider) {
+    throw new Error(`Missing dataProvider prop.
+React-admin requires a valid dataProvider function to work.`);
+    }
+```
+
+也就是我们在上面看到的错误。
