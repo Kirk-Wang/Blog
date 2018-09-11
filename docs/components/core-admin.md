@@ -4,7 +4,7 @@
 
 接下来会逐一讲解它的每一个属性，以及 Admin 组件用它们做了什么❓（文章很长，请自备瓜子^_^）
 
-#### 首先，我们需要把 <Admin/> 组件跑起来：
+#### 首先，我们需要把 Admin 组件跑起来：
 
 1. 这里选用 [Create React App](https://github.com/facebook/create-react-app) 作为基础脚手架。OK，我们快速用它创建一个 App：
 
@@ -26,19 +26,46 @@ yarn start // 默认你已经安装了 yarn
 yarn add react-admin
 ```
 
-进入 `src/App.js`，我们引入我们期待已久的 `<Admin/>` ：
+进入 `src/App.js`，我们引入我们期待已久的 `<Admin>` ：
 
 ```jsx
 import React from 'react';
 import { Admin } from 'react-admin';
 
-export default () => (<Admin/>);
+export default () => <Admin/>;
 ```
 
 然后，我们运行起来，发现报了如下错：
 
 ![](../images/core-admin/2.png)
 
-它明确的告诉了我们，`<Admin/>` 必须要一个 `dataProvider` 属性才能正常的工作。然后 dataProvider 还必须是一个函数：
+它明确的告诉了我们，`<Admin>` 必须要一个 `dataProvider` 属性才能正常的工作。然后 dataProvider 还必须是一个函数：
 
-看过[官方DataProviders文档](https://marmelab.com/react-admin/DataProviders.html)的同学都知道它是数据的来源。这里我们主要关注 `<Admin/>` 是如何处理这个属性的。
+看过[官方DataProviders文档](https://marmelab.com/react-admin/DataProviders.html)的同学都知道它是数据的来源。这里我们主要关注 `<Admin>` 是如何处理这个属性的。
+
+我们按照 [官方教程](https://marmelab.com/react-admin/Tutorial.html) 的说明为 `<Admin>` 加上一个 `dataProvider` 属性：
+
+```jsx
+// in src/App.js
+import React from 'react';
+import { Admin, Resource } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+
+const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
+const App = () => <Admin dataProvider={dataProvider} />;
+
+export default App;
+```
+
+添加包并运行：
+
+```sh
+yarn add ra-data-json-server
+
+yarn start
+```
+
+虽然没有报错，但我们看到如下提示，`<Admin>` 必须至少要一个 `<Resource>` 作为子组件。
+
+![](../images/core-admin/3.png)
+
