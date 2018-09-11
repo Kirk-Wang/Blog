@@ -69,7 +69,7 @@ yarn start
 
 ![](../images/core-admin/3.png)
 
-这里我们按照教程文档给它加入 Resource 组件：
+这里我们按照教程文档给它加入 Resource 组件：
 
 ```jsx
 <Admin dataProvider={dataProvider}>
@@ -77,6 +77,40 @@ yarn start
 </Admin>
 ```
 
-终于看到一条蓝色的 bar 了：
+终于看到一条蓝色的 bar 了：
 
 ![](../images/core-admin/4.png)
+
+根据文档，我们知到 `<Resource>` 需要 `name` 和 `list` 属性才能显示出列表。我们给它加上（注意看文档）：
+
+```jsx
+import React from 'react';
+import { Admin, Resource, List, Datagrid, TextField } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+
+const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
+
+const PostList = (props) => (
+  <List {...props}>
+      <Datagrid>
+          <TextField source="id" />
+          <TextField source="title" />
+          <TextField source="body" />
+      </Datagrid>
+  </List>
+);
+
+const App = () => (
+  <Admin dataProvider={dataProvider}>
+    <Resource name="posts" list={PostList} />
+  </Admin>
+);
+
+export default App;
+```
+
+我重新进入 [http://localhost:3000](http://localhost:3000) ，发现会自动进入 [http://localhost:3000/#/posts](http://localhost:3000/#/posts) 这个路由，一个完整的列表页就展现了出来（仅仅只需要几行代码而已）：
+
+![](../images/core-admin/5.png)
+
+接下来，我们就要分析为什么只需要这几行代码，React-Admin 就能完成一个完整的信息列表展示（导出，排序，分页等）。Admin 组件到底帮我们干了什么（它里面的代码到底是咋写的）？
