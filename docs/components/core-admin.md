@@ -132,4 +132,56 @@ React-admin requires a valid dataProvider function to work.`);
     }
 ```
 
-也就是我们在上面看到的错误。有意思的是在这个文件中，它并没有对他做其它的一些处理。而是将它传递到了 `createAdminStore.js` 中的 `createAdminStore` 函数中进行处理，然后又将它传递到 `sideEffects` 文件中暴露的 `adminSaga` 中进行处理。然后它又将 `dataProvider` 传递进专门负责 `fetch` 的 `Saga` 中。到这里我们又似乎明白了，所谓的数据提供者肯定和 `AJAX` 请求是息息相关的。
+也就是我们在上面看到的错误。有意思的是在这个文件中，它并没有对他做其它的一些处理。而是将它传递到了 `createAdminStore.js` 暴露出的函数中进行处理，然后又将它传递到 `sideEffects` 文件中暴露的 `adminSaga` 中进行处理。然后它又将 `dataProvider` 传递进专门负责 `fetch` 的 `Saga` 中。到这里我们又似乎明白了，所谓的数据提供者肯定和 `AJAX` 请求是息息相关的。
+
+这里我看看 `dataProvider` 被传递的流程：
+
+```js
+// step1: packages/ra-core/src/CoreAdmin.js
+<Provider
+      store={createAdminStore({
+          ...this.props, // 这个 props 里面就有 dataProvider
+          history: this.history,
+      })}
+  >
+      {this.renderCore()}
+</Provider>
+
+// step2: packages/ra-core/src/createAdminStore.js
+const saga = function* rootSaga() {
+    yield all(
+        [
+            adminSaga(dataProvider, authProvider, i18nProvider),
+            ...customSagas,
+        ].map(fork)
+    );
+};
+
+// step3: packages/ra-core/src/sideEffect/index.js
+export adminSaga from './admin';
+...
+// other export
+
+// step4: packages/ra-core/src/sideEffect/admin.js
+export default (dataProvider, authProvider, i18nProvider) =>
+    function* admin() {
+        yield all([
+            ...
+            fetch(dataProvider)(),
+            ...
+        ]);
+    };
+
+// step5: packages/ra-core/src/sideEffect/fetch.js
+const fetch = dataProvider => {
+    return function* watchFetch() {
+        // 终于看到 takeEvery 了
+        yield takeEvery(takeFetchAction, handleFetch, dataProvider);
+    };
+};
+
+export function* handleFetch(dataProvider, action) {
+  // 这里是如何调用 dataProvider 函数，又是如何处理成功和失败的 action 的相关逻辑，我们稍后分析
+}
+
+```
