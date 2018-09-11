@@ -48,7 +48,7 @@ export default () => <Admin/>;
 ```jsx
 // in src/App.js
 import React from 'react';
-import { Admin, Resource } from 'react-admin';
+import { Admin } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 
 const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
@@ -69,3 +69,14 @@ yarn start
 
 ![](../images/core-admin/3.png)
 
+这里我们按照教程文档给它加入 Resource 组件：
+
+```jsx
+<Admin dataProvider={dataProvider}>
+    <Resource />
+</Admin>
+```
+
+终于看到一条蓝色的 bar 了：
+
+![](../images/core-admin/4.png)
