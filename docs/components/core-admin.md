@@ -125,10 +125,11 @@ OK，让我们进入下一小节。
 1. 首先，`CoreAdmin` 组件会在它的构造函数中对这个 `dataProvider` 属性做一个必要的检测（发现如果 `props` 里面没有 `dataProvider` 的话就直接 throw 一个 Error）：
 
 ```js
+// packages/ra-core/src/CoreAdmin.js
 if (!props.dataProvider) {
     throw new Error(`Missing dataProvider prop.
 React-admin requires a valid dataProvider function to work.`);
     }
 ```
 
-也就是我们在上面看到的错误。
+也就是我们在上面看到的错误。有意思的是在这个文件中，它并没有对他做其它的一些处理。而是将它传递到了 `createAdminStore.js` 中的 `createAdminStore` 函数中进行处理，然后又将它传递到 `sideEffects` 文件中暴露的 `adminSaga` 中进行处理。然后它又将 `dataProvider` 传递进专门负责 `fetch` 的 `Saga` 中。到这里我们又似乎明白了，所谓的数据提供者肯定和 `AJAX` 请求是息息相关的。
