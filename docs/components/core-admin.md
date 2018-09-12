@@ -207,7 +207,7 @@ const fetch = dataProvider => {
 };
 ```
 
-这里我们可以理解为，当我们 `dispatch` 一个 `action` 对象时，如果里面有 `meta` 属性并且里面包含 `fetch` 属性，那么就执行 `handleFetch` 方法，并把`dataProvider` 和这个符合要求的 `action` 给传进去进行下一步处理。
+这里我们可以理解为，当我们 `dispatch` 一个 `action` 对象时，如果里面有 `meta` 属性并且里面包含 `fetch` 属性，那么就执行 `handleFetch` 方法，并把`dataProvider` 和这个符合要求的 `action` 给传进去进行下一步处理。
 
 
 
