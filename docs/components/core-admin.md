@@ -185,3 +185,18 @@ export function* handleFetch(dataProvider, action) {
 }
 
 ```
+
+#### 快速理解下 [Redux-Saga](https://github.com/redux-saga/redux-saga)，大家可以阅读 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)
+
+1. 它是什么？
+
+在这里，你可以理解为它就是 `Redux` 的一个中间件。主要是为了更优雅地 管理 `Redux` 应用程序中的 副作用（`Side Effects`）。
+
+2. 什么是 `Side Effects`?
+
+映射在 Javascript 程序中，Side Effects 主要指的就是：异步网络请求、本地读取 localStorage/Cookie 等外界操作。
+
+3. 这里 `takeEvery` 是什么意思？
+
+它就是监控一个 `redux` 的 `action`，当我们 `dispatch` 这个 `takeFetchAction` 时，它就会执行 `handleFetch` 方法。并且把这个 `dataProvider` 和 `takeFetchAction` 作为参数传进去。
+
