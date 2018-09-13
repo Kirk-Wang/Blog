@@ -181,7 +181,7 @@ const fetch = dataProvider => {
 };
 
 export function* handleFetch(dataProvider, action) {
-  // 这里是如何调用 dataProvider 函数，又是如何处理成功和失败的 action 的相关逻辑，我们稍后分析
+  ...work saga
 }
 
 ```
@@ -209,5 +209,7 @@ const fetch = dataProvider => {
 
 这里我们可以理解为，当我们 `dispatch` 一个 `action` 对象时，如果里面有 `meta` 属性并且里面包含 `fetch` 属性，那么就执行 `handleFetch` 方法，并把`dataProvider` 和这个符合要求的 `action` 给传进去进行下一步处理。
 
+4. 放一张 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga) 里面的图，非常清晰了解释了当 `dispatch` 一个 `action` 后，`Redux-Saga` 都干了那些事儿：
 
+![](https://gw.alipayobjects.com/zos/rmsportal/fkpkHBwmTAJtjgyDhMto.png)
 
