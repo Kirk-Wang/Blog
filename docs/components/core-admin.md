@@ -319,3 +319,5 @@ RA/FETCH_START
 RA/CRUD_GET_LIST_SUCCESS
 RA/FETCH_END
 ```
+
+![](../images/core-admin/6.png)
