@@ -219,8 +219,7 @@ const fetch = dataProvider => {
 
 这里是上面的 List 组件里面的代码：
 
-```js 
-// 
+```js
 // packages/ra-ui-materialui/src/list/List.js
 const List = props => (
     <ListController {...props}>
@@ -229,4 +228,25 @@ const List = props => (
 );
 ```
 
-这里我们重点关注下 `<ListController>`，它是 `RA/CRUD_GET_LIST` action 的发起者。
+这里我们重点关注下 `<ListController>`，它是 `RA/CRUD_GET_LIST` `action` 的发起者。
+
+我们来看看这个 `action`：
+
+```js
+export const CRUD_GET_LIST = 'RA/CRUD_GET_LIST';
+
+export const crudGetList = (resource, pagination, sort, filter) => ({
+    type: CRUD_GET_LIST,
+    payload: { pagination, sort, filter },
+    meta: {
+        resource,
+        fetch: GET_LIST,
+        onFailure: {
+            notification: {
+                body: 'ra.notification.http_error',
+                level: 'warning',
+            },
+        },
+    },
+});
+```
