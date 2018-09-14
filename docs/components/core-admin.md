@@ -209,7 +209,24 @@ const fetch = dataProvider => {
 
 这里我们可以理解为，当我们 `dispatch` 一个 `action` 对象时，如果里面有 `meta` 属性并且里面包含 `fetch` 属性，那么就执行 `handleFetch` 方法，并把`dataProvider` 和这个符合要求的 `action` 给传进去进行下一步处理。
 
-4. 放一张 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga) 里面的图，非常清晰了解释了当 `dispatch` 一个 `action` 后，`Redux-Saga` 都干了那些事儿：
+4. 放一张 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga) 里面的图，非常清晰的解释了当 `dispatch` 一个 `action` 后，`Redux-Saga` 都干了那些事儿：
 
 ![](https://gw.alipayobjects.com/zos/rmsportal/fkpkHBwmTAJtjgyDhMto.png)
 
+#### 我们看看 React-Admin 是如何触发这个 `fetchSaga` 的？
+
+1. 首先，我们来找找 `dispatch` 这个关键字。我们并没见到 `dispatch` 满天飞的情况。这要感谢 `react-redux`：
+
+这里是上面的 List 组件里面的代码：
+
+```js 
+// 
+// packages/ra-ui-materialui/src/list/List.js
+const List = props => (
+    <ListController {...props}>
+        {controllerProps => <ListView {...props} {...controllerProps} />}
+    </ListController>
+);
+```
+
+这里我们重点关注下 `<ListController>`，它是 `RA/CRUD_GET_LIST` action 的发起者。
