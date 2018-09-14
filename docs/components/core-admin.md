@@ -273,15 +273,49 @@ function bindActionCreator(actionCreator, dispatch) {
 
 4. 在 `ListController` 组件中，调用 `connect` 时，在 `mapDispatchTopProps` 参数上传入一个对象，在这个函数内部就会为每一个值为 `action creator` 的做 `bindActionCreator` 的操作。
 
+5. `ListController` 是如何调用的：
+
 ```js
-connect(
-    mapStateToProps,
-    {
-        crudGetList: crudGetListAction,
-        changeListParams: changeListParamsAction,
-        setSelectedIds: setListSelectedIdsAction,
-        toggleItem: toggleListItemAction,
-        push: pushAction,
+export class ListController extends Component {
+    ...
+    componentDidMount() {
+        this.updateData();
     }
-),
+
+    updateData(query) {
+        ...
+        this.props.crudGetList(
+            this.props.resource,
+            pagination,
+            { field: sort, order },
+            { ...filter, ...permanentFilter }
+        );
+        ...
+    }
+}
+export default compose(
+    connect(
+        mapStateToProps,
+        {
+            crudGetList: crudGetListAction,
+        }
+    ),
+    ...
+)(ListController);
+```
+
+通过 `connect` 组件，我们的 `action creator` (crudGetList)，变成了如下样子：
+
+```js
+(...args) => dispatch(crudGetList(...args))
+```
+
+所以我们在调用的时候，就直接触发这个 `fetchSaga`，分发了如下一些个与 `fetch` 相关的 `action`：
+
+```js
+RA/CRUD_GET_LIST
+RA/CRUD_GET_LIST_LOADING
+RA/FETCH_START
+RA/CRUD_GET_LIST_SUCCESS
+RA/FETCH_END
 ```
