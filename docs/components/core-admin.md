@@ -259,4 +259,15 @@ O__O "…，发现这更像是一个 `action creater`。
 type ActionCreator = (...args: any) => Action | AsyncAction
 ```
 
-3. `bindActionCreators`
+3. `bindActionCreators` 就是把一个 `value` 为不同 `action creator` 的对象，转成拥有同名 `key` 的对象。同时使用 `dispatch` 对每个 `action creator` 进行包装，以便可以直接调用它们。
+
+这里我直接放一端 `bindActionCreator` 的代码，大家就秒懂了：
+
+```js
+// node_modules/redux/src/bindActionCreators.js
+
+function bindActionCreator(actionCreator, dispatch) {
+  return (...args) => dispatch(actionCreator(...args))
+}
+```
+
