@@ -181,10 +181,19 @@ const fetch = dataProvider => {
 };
 
 export function* handleFetch(dataProvider, action) {
-  ...work saga
+ ...
+  let response = yield call(
+        dataProvider,
+        restType,
+        meta.resource,
+        payload
+    );
+...
 }
 
 ```
+
+小伙伴们，看到这里，应该也就理解 `dataProvider` 的作用了吧。
 
 #### 快速理解下 [Redux-Saga](https://github.com/redux-saga/redux-saga)，大家可以阅读 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)
 
