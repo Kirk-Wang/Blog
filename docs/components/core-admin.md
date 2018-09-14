@@ -261,7 +261,7 @@ type ActionCreator = (...args: any) => Action | AsyncAction
 
 3. `bindActionCreators` 就是把一个 `value` 为不同 `action creator` 的对象，转成拥有同名 `key` 的对象。同时使用 `dispatch` 对每个 `action creator` 进行包装，以便可以直接调用它们。
 
-这里我直接放一端 `bindActionCreator` 的代码，大家就秒懂了：
+这里我直接放一段 `bindActionCreator` 的代码，大家就秒懂了：
 
 ```js
 // node_modules/redux/src/bindActionCreators.js
@@ -271,3 +271,17 @@ function bindActionCreator(actionCreator, dispatch) {
 }
 ```
 
+4. 在 `ListController` 组件中，调用 `connect` 时，在 `mapDispatchTopProps` 参数上传入一个对象，在这个函数内部就会为每一个值为 `action creator` 的做 `bindActionCreator` 的操作。
+
+```js
+connect(
+    mapStateToProps,
+    {
+        crudGetList: crudGetListAction,
+        changeListParams: changeListParamsAction,
+        setSelectedIds: setListSelectedIdsAction,
+        toggleItem: toggleListItemAction,
+        push: pushAction,
+    }
+),
+```
