@@ -250,3 +250,13 @@ export const crudGetList = (resource, pagination, sort, filter) => ({
     },
 });
 ```
+
+O__O "…，发现这更像是一个 `action creater`。
+
+2. `Action Creator` 就是一个创建 action 的函数。不要混淆 action 和 action creator 这两个概念。Action 是一个信息的负载，而 action creator 是一个创建 action 的工厂。调用 `action creator` 只会生产 `action`，但不分发。你需要调用 `store` 的 `dispatch` 函数才会引起变化。
+
+```js
+type ActionCreator = (...args: any) => Action | AsyncAction
+```
+
+3. `bindActionCreators`
