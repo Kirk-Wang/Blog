@@ -333,7 +333,7 @@ RA/FETCH_END
 
 #### `handleFetch` 与 `dataProvider`
 
-接下来我们详细分析下这个 `Worker Saga`
+1. 接下来我们详细分析下这个 `Worker Saga`
 
 ```js
 export function* handleFetch(dataProvider, action) {
@@ -348,3 +348,12 @@ export function* handleFetch(dataProvider, action) {
 }
 ```
 
+2. `call` 是什么？
+
+`call` 方法用来创建 `effect` 对象，被称作是 effect factory。
+
+3. `yield` 是什么?
+
+`yield`  语法将 `effect` 对象 传给 `sagaMiddleware`，被解释执行，并返回值。
+
+这里的 `call effect` 表示执行 `dataProvider` ，又因为它的返回值是 promise，为了等待异步结果返回，`handleFetch` 函数会暂时处于 `阻塞` 状态。
