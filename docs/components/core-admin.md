@@ -330,3 +330,21 @@ RA/FETCH_END
 ```
 
 ![](../images/core-admin/6.png)
+
+#### `handleFetch` 与 `dataProvider`
+
+接下来我们详细分析下这个 `Worker Saga`
+
+```js
+export function* handleFetch(dataProvider, action) {
+ ...
+  let response = yield call(
+        dataProvider,
+        restType,
+        meta.resource,
+        payload
+    );
+...
+}
+```
+
