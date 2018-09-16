@@ -5,17 +5,13 @@
 [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com)
 
 ## 核心组件及源码分析
-* [调试 React-Admin 源码，看清框架的本质](./docs/components/debug-react-admin.md)
-* React-Admin 架构分析：全面解析 Admin 组件功能及实现原理
+1. [调试 React-Admin 源码，看清框架的本质](./docs/components/debug-react-admin.md)
 
-    用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。
+2. 用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓
+    * [React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性](./docs/components/core-admin-data-provider.md)
 
-    接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓
-
-    1. [`Admin` 组件是如何处理 `dataProvider` 属性的？](./docs/components/core-admin-data-provider.md)
-
-* [Admin 组件源码解析](./docs/components/Admin.md)
-* [CoreAdminRouter 组件源码分析](./docs/components/CoreAdminRouter.md)
+3. [Admin 组件源码解析](./docs/components/Admin.md)（有些旧）
+4. [CoreAdminRouter 组件源码分析](./docs/components/CoreAdminRouter.md)（有些旧）
 
 ## 小插曲
 
