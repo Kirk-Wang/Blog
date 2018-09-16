@@ -382,5 +382,6 @@ export const DELETE_MANY = 'DELETE_MANY';
 ...
 ```
 
+ 关于如何写一个[dataProvider](https://marmelab.com/react-admin/DataProviders.html)，文档非常详细，大家自行翻看。
 
 
