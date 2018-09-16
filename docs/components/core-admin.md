@@ -357,3 +357,5 @@ export function* handleFetch(dataProvider, action) {
 `yield`  语法将 `effect` 对象 传给 `sagaMiddleware`，被解释执行，并返回值。
 
 这里的 `call effect` 表示执行 `dataProvider` ，又因为它的返回值是 promise，为了等待异步结果返回，`handleFetch` 函数会暂时处于 `阻塞` 状态。
+
+4. `dataProvider` 就是根据不同的 `restType`(GET_LIST) 对不同的 `resource`(posts) 做真正的 `fetch`。
