@@ -358,11 +358,13 @@ export function* handleFetch(dataProvider, action) {
 
 这里的 `call effect` 表示执行 `dataProvider` ，又因为它的返回值是 promise，为了等待异步结果返回，`handleFetch` 函数会暂时处于 `阻塞` 状态。
 
-4. `dataProvider` 就是根据不同的 `restType`(GET_LIST) 对不同的 `resource`(posts) 做真正的 `fetch`。
+4. `dataProvider` 就是根据不同的 `restType`(GET_LIST) 对不同的 `resource`(posts)和它所带的 `payload` 做真正的 `fetch`。
 
 目前 `react-admin` 围绕着(CRUD)出抽象出九种 `restType`：
 
 ![](../images/core-admin/7.png)
+
+每一种的应用场景，我们可以单独一节来分析。
 
 源码：
 
