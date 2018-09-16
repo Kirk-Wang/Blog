@@ -1,8 +1,10 @@
-### React-Admin 架构分析：全面解析 Admin 组件功能及实现原理
+### React-Admin 架构分析： `Admin` 组件是如何处理 `dataProvider` 属性的？
 
-用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。
+为什么需要 `dataProvider`?
 
-接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓（文章很长，请自备瓜子^_^）
+不同的系统，一定会存在不同的 `API` 风格。作为一个尽可能通用的中后台框架，抽象出一层去适配数据到一种固定的数据格式规范是必须的。
+
+[dataProvider](https://marmelab.com/react-admin/DataProviders.html) 使用文档，大家自行翻看。
 
 #### 首先，我们需要把 `Admin` 组件跑起来：
 
@@ -18,7 +20,7 @@ yarn start // 默认你已经安装了 yarn
 
 然后脚手架会为你自动在浏览器（我这里是 google chrome ）中打开 [http://localhost:3000](http://localhost:3000)。如果没有，你也可以自己打开这个地址。你将看到如下界面：
 
-![](../images/core-admin/1.png)
+![](../images/core-admin-data-provider/1.png) 
 
 #### 安装 React-Admin，引入 Admin 组件：
 
@@ -37,7 +39,7 @@ export default () => <Admin/>;
 
 然后，我们运行起来，发现报了如下错：
 
-![](../images/core-admin/2.png)
+![](../images/core-admin-data-provider/2.png)
 
 它明确的告诉了我们，`<Admin>` 必须要一个 `dataProvider` 属性才能正常的工作。然后 dataProvider 还必须是一个函数：
 
@@ -67,7 +69,7 @@ yarn start
 
 虽然没有报错，但我们看到如下提示，`<Admin>` 必须至少要一个 `<Resource>` 作为子组件。
 
-![](../images/core-admin/3.png)
+![](../images/core-admin-data-provider/3.png)
 
 这里我们按照教程文档给它加入 Resource 组件：
 
@@ -79,7 +81,7 @@ yarn start
 
 终于看到一条蓝色的 bar 了：
 
-![](../images/core-admin/4.png)
+![](../images/core-admin-data-provider/4.png)
 
 根据文档，我们知到 `<Resource>` 需要 `name` 和 `list` 属性才能显示出列表，我们给它加上（注意看文档）：
 
@@ -111,14 +113,14 @@ export default App;
 
 我重新进入 [http://localhost:3000](http://localhost:3000) ，发现会自动进入 [http://localhost:3000/#/posts](http://localhost:3000/#/posts) 这个路由，一个完整的列表页就展现了出来（仅仅只需要几行代码而已）：
 
-![](../images/core-admin/5.png)
+![](../images/core-admin-data-provider/5.png)
 
 接下来，我们就要分析为什么只需这几行代码，`React-Admin` 就能完成一个完整的信息列表展示（导出，排序，分页等）。`Admin` 组件到底帮我们干了什么（它里面的代码到底是咋写的）？
 
 OK，让我们进入下一小节。
 
 
-#### `Admin` 组件是如何处理 `dataProvider` 属性的？
+#### 真身 `CoreAdmin`
 
 `React-Admin` 暴露出来的 `Admin` 组件其实是在这个项目的 `ra-core` 包中，里面的 `CoreAdmin.js` 的 `CoreAdmin` 组件才是它的真身。
 
@@ -329,7 +331,7 @@ RA/CRUD_GET_LIST_SUCCESS
 RA/FETCH_END
 ```
 
-![](../images/core-admin/6.png)
+![](../images/core-admin-data-provider/6.png)
 
 #### `handleFetch` 与 `dataProvider`
 
@@ -362,7 +364,7 @@ export function* handleFetch(dataProvider, action) {
 
 目前 `react-admin` 围绕着(CRUD)出抽象出九种 `restType`：
 
-![](../images/core-admin/7.png)
+![](../images/core-admin-data-provider/7.png)
 
 每一种的应用场景，我们可以单独一节来分析。
 
@@ -382,6 +384,5 @@ export const DELETE_MANY = 'DELETE_MANY';
 ...
 ```
 
- 关于如何写一个[dataProvider](https://marmelab.com/react-admin/DataProviders.html)，文档非常详细，大家自行翻看。
 
 
