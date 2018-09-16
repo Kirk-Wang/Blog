@@ -1,4 +1,4 @@
-### React-Admin 架构分析： `Admin` 组件是如何处理 `dataProvider` 属性的？
+### React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性
 
 为什么需要 `dataProvider`?
 
