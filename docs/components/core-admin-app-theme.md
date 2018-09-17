@@ -22,3 +22,5 @@ const theme = createMuiTheme({
 });
 ```
 
+![](../images/core-admin-app-theme/1.png) 
+
