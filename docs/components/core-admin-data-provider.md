@@ -1,5 +1,7 @@
 ### React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性
 
+[示例项目-hello-react-admin](https://github.com/Kirk-Wang/hello-react-admin)
+
 为什么需要 `dataProvider`?
 
 不同的系统，一定会存在不同的 `API` 风格。作为一个尽可能通用的中后台框架，抽象出一层去适配数据到一种固定的数据格式规范是必须的。
