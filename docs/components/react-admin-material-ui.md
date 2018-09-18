@@ -129,3 +129,27 @@ palette: {
   },
 },
 ```
+
+此示例说明了如何重新创建默认调色板值：
+
+```js
+import { createMuiTheme } from '@material-ui/core/styles';
+import indigo from '@material-ui/core/colors/indigo';
+import pink from '@material-ui/core/colors/pink';
+import red from '@material-ui/core/colors/red';
+
+// 以下所有键都是可选的。
+// 我们尽力提供一个很好的默认值。
+const theme = createMuiTheme({
+  palette: {
+    primary: indigo,
+    secondary: pink,
+    error: red,
+    // 使用 `getContrastText()` 来最大化背景和文本之间的对比度。
+    contrastThreshold: 3, // 对比阈值
+    // 用于在其色调调色板中将颜色的亮度移动大约两个索引。
+    // 例如，从红色500转换到红色300或红色700。
+    tonalOffset: 0.2, // 色调偏移
+  },
+});
+```
