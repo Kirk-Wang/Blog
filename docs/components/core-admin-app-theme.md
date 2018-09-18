@@ -26,9 +26,9 @@ const theme = createMuiTheme({
 
 #### 如何使用 `theme` 自定义 `Material-UI`？
 
-[官方 Themes 文档](https://material-ui.com/customization/themes/)，截止目前是 Material-UI v3.1.0 版。
+[官方 Themes 文档](https://material-ui.com/customization/themes/)，截止目前是 Material-UI v3.1.0 版。
 
-根据文档：如果我们要自定义主题，需要用到它提供的一个高阶组件 `MuiThemeProvider`。但这个是可选的，每个 `Material-UI` 自带一套默认的主题。
+根据文档：如果我们要自定义主题，需要用到它提供的一个高阶组件 `MuiThemeProvider`。但这个是可选的，每个 `Material-UI` 自带一套默认的主题。
 
 
 
