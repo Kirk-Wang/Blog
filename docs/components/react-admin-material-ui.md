@@ -198,6 +198,273 @@ const theme = createMuiTheme({
 
 #### 颜色工具
 
-Need inspiration? The Material Design team has built an awesome [palette configuration tool](/style/color#color-tool) to help you.
-
 需要灵感？ Material Design团队构建了一个非常棒的[调色板配置工具](https://material-ui.com/style/color#color-tool)来帮助您。
+
+### 类型 (明 /暗 主题)
+
+您可以通过将 `type` 设置为 `dark` 来使主题变暗。
+虽然它只是单个属性值更改，但在内部它会修改以下键的值：
+
+- `palette.text`
+- `palette.divider`
+- `palette.background`
+- `palette.action`
+
+```js
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
+```
+
+[DartTheme](https://github.com/mui-org/material-ui/blob/master/docs/src/pages/customization/themes/DarkTheme.js)
+
+### 排版
+
+一次太多的 type sizes 和 styles 会破坏任何布局。
+主题提供了一组 **有限的 type sizes**，它们与 layout grid 一起很好地协同工作。
+这些 sizes 用于各个组件。
+
+请查看以下有关更改默认值的示例，例如字体系列。
+如果您想了解有关排版的更多信息，可以查看[排版部分](/style/typography)。
+
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/j4z35rq6jw)
+
+### Typography - Font family
+
+```js
+const theme = createMuiTheme({
+  typography: {
+    // Use the system font instead of the default Roboto font.
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
+});
+```
+
+### Typography - Font size
+
+Material-UI uses `rem` units for the font size.
+The browser `<html>` element default font size is `16px`, but browsers have an option to change this value,
+so `rem` units allow us to accommodate the user's settings, resulting in a much better user experience.
+Users change font size settings for all kinds of reasons, from poor eyesight to choosing optimum settings
+for devices that can be vastly different in size and viewing distance.
+
+To change the font-size of Material-UI you can provide a `fontSize` property.
+The default value is `14px`.
+
+```js
+const theme = createMuiTheme({
+  typography: {
+    // In Japanese the characters are usually larger.
+    fontSize: 12,
+  },
+});
+```
+
+The computed font size by the browser follows this mathematical equation:
+
+![font-size](/static/images/font-size.gif)
+<!-- https://latex.codecogs.com/gif.latex?computed&space;=&space;specification&space;\frac{typography.fontSize}{14}&space;\frac{html&space;font&space;size}{typography.htmlFontSize} -->
+
+### Typography - HTML font size
+
+You might want to change the `<html>` element default font size. For instance, when using the [10px simplification](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/).
+We provide a `htmlFontSize` theme property for this use case.
+It's telling Material-UI what's the font-size on the `<html>` element is.
+It's used to adjust the `rem` value so the calculated font-size always match the specification.
+
+```js
+const theme = createMuiTheme({
+  typography: {
+    // Tell Material-UI what's the font-size on the html element is.
+    htmlFontSize: 10,
+  },
+});
+```
+
+```css
+html {
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+```
+
+*You need to apply the above CSS on the html element of this page to see the below demo rendered correctly*
+
+{{"demo": "pages/customization/themes/FontSizeTheme.js"}}
+
+### Other variables
+
+In addition to the palette, dark and light types, and typography, the theme normalizes implementation by providing many more default values, such as breakpoints, shadows, transitions, etc.
+You can check out the [default theme section](/customization/default-theme) to view the default theme in full.
+
+### Custom variables
+
+When using Material-UI's [styling solution](/customization/css-in-js) with your own components,
+you can also take advantage of the theme.
+It can be convenient to add additional variables to the theme so you can use them everywhere.
+For instance:
+
+{{"demo": "pages/customization/themes/CustomStyles.js"}}
+
+## Customizing all instances of a component type
+
+### CSS
+
+When the configuration variables aren't powerful enough, you can take advantage of the
+`overrides` key of the `theme` to potentially change every single **style** injected by Material-UI into the DOM.
+That's a really powerful feature.
+
+```js
+const theme = createMuiTheme({
+  overrides: {
+    MuiButton: { // Name of the component ⚛️ / style sheet
+      root: { // Name of the rule
+        color: 'white', // Some CSS
+      },
+    },
+  },
+});
+```
+
+{{"demo": "pages/customization/themes/OverridesCss.js"}}
+
+The list of these customization points for each component is documented under the **Component API** section.
+For instance, you can have a look at the [Button](/api/button#css-api).
+Alternatively, you can always have a look at the [implementation](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js).
+
+### Properties
+
+You can also apply properties on all the instances of a component type.
+We expose a `props` key in the `theme` for this use case.
+
+```js
+const theme = createMuiTheme({
+  props: {
+    // Name of the component ⚛️
+    MuiButtonBase: {
+      // The properties to apply
+      disableRipple: true, // No more ripple, on the whole application 💣!
+    },
+  },
+});
+```
+
+{{"demo": "pages/customization/themes/OverridesProperties.js"}}
+
+## Accessing the theme in a component
+
+You might need to access the theme variables inside your React components.
+Let's say you want to display the value of the primary color, you can use the `withTheme()` higher-order component to do so. Here is an example:
+
+{{"demo": "pages/customization/themes/WithTheme.js"}}
+
+## Nesting the theme
+
+The theming solution is very flexible, as you can nest multiple theme providers.
+This can be really useful when dealing with different area of your application that have distinct appearance from each other.
+
+{{"demo": "pages/customization/themes/Nested.js"}}
+
+#### A note on performance
+
+The performance implications of nesting the `MuiThemeProvider` component are linked to JSS's work behind the scenes.
+The main point to understand is that we cache the injected CSS with the following tuple `(styles, theme)`.
+- `theme`: If you provide a new theme at each render, a new CSS object will be computed and injected. Both for UI consistency and performance, it's better to render a limited number of theme objects.
+- `styles`: The larger the styles object is, the more work is needed.
+
+## API
+
+### `MuiThemeProvider`
+
+This component takes a `theme` property, and makes the `theme` available down the React tree thanks to React context.
+It should preferably be used at **the root of your component tree**.
+
+You can see the full properties API in [this dedicated page](/api/mui-theme-provider).
+
+#### Examples
+
+```jsx
+import React from 'react';
+import { render } from 'react-dom';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Root from './Root';
+
+const theme = createMuiTheme();
+
+function App() {
+  return (
+    <MuiThemeProvider theme={theme}>
+      <Root />
+    </MuiThemeProvider>
+  );
+}
+
+render(<App />, document.querySelector('#app'));
+```
+
+### `createMuiTheme(options) => theme`
+
+Generate a theme base on the options received.
+
+#### Arguments
+
+1. `options` (*Object*): Takes an incomplete theme object and adds the missing parts.
+
+#### Returns
+
+`theme` (*Object*): A complete, ready to use theme object.
+
+#### Examples
+
+```js
+import { createMuiTheme } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: purple,
+    secondary: green,
+  },
+  status: {
+    danger: 'orange',
+  },
+});
+```
+
+### `withTheme()(Component) => Component`
+
+Provide the `theme` object as a property of the input component so it can be used
+in the render method.
+
+#### Arguments
+
+1. `Component`: The component that will be wrapped.
+
+#### Returns
+
+`Component`: The new component created.
+
+#### Examples
+
+```js
+import { withTheme } from '@material-ui/core/styles';
+
+function MyComponent(props) {
+  return <div>{props.theme.direction}</div>;
+}
+
+export default withTheme()(MyComponent);
+```
