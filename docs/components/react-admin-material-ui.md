@@ -255,7 +255,7 @@ const theme = createMuiTheme({
 
 ### 排版 - 字体大小
 
-Material-UI使用`rem`单位表示字体大小。
+Material-UI 使用 `rem` 单位表示字体大小。
 浏览器 `<html>` 元素的默认字体大小是 `16px` ，但浏览器可以选择更改此值，所以 `rem` 单元允许我们适应用户的设置，从而带来更好的用户体验。用户可以出于各种原因更改字体大小设置，从视力不佳到为大小和观看距离差异很大的设备选择最佳设置。
 
 要更改 Material-UI 的字体大小，您可以提供 `fontSize` 属性。默认值为 `14px`。
@@ -273,17 +273,16 @@ const theme = createMuiTheme({
 
 ![font-size](https://material-ui.com/static/images/font-size.gif)
 
-### Typography - HTML font size
+### 排版 - HTML 字体大小
 
-You might want to change the `<html>` element default font size. For instance, when using the [10px simplification](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/).
-We provide a `htmlFontSize` theme property for this use case.
-It's telling Material-UI what's the font-size on the `<html>` element is.
-It's used to adjust the `rem` value so the calculated font-size always match the specification.
+您可能想要更改 `<html>` 元素的默认字体大小。 例如，[简单使用 `10px`](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/) 时。
+我们为这个用例提供了一个 `htmlFontSize` 主题属性。它告诉 Material-UI `<html>` 元素的字体大小是多少。
+它用于调整 `rem` 值，因此计算出的字体大小始终与规范匹配。
 
 ```js
 const theme = createMuiTheme({
   typography: {
-    // Tell Material-UI what's the font-size on the html element is.
+    // 告诉 Material-UI html 元素的字体大小是什么。
     htmlFontSize: 10,
   },
 });
