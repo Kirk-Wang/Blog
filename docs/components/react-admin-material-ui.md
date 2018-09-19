@@ -153,3 +153,30 @@ const theme = createMuiTheme({
   },
 });
 ```
+
+**直接提供颜色**
+
+如果您想提供更多自定义颜色，您可以创建自己的颜色对象，或直接为部分或全部意图的 key 提供颜色：
+
+```js
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      // light: 将从 palette.primary.main 计算,
+      main: '#ff4400',
+      // dark: 将从 palette.primary.main 计算,
+      // contrastText: 将计算与 palette.primary.main 对比
+    },
+    secondary: {
+      light: '#0066ff',
+      main: '#0044ff',
+      // dark: 将从palette.secondary.main计算,
+      contrastText: '#ffcc00',
+    },
+    // error: 将使用默认颜色
+  },
+});
+```
+
