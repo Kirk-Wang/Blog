@@ -192,6 +192,6 @@ const theme = createMuiTheme({
 
 请注意，`contrastThreshold` 遵循非线性曲线。
 
-示例[https://codesandbox.io/s/489mq5m089]
+[示例](https://codesandbox.io/s/489mq5m089)
 
-<iframe src="https://codesandbox.io/embed/489mq5m089" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/489mq5m089)
