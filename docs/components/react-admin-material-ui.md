@@ -195,3 +195,9 @@ const theme = createMuiTheme({
 [示例](https://codesandbox.io/s/489mq5m089)
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/489mq5m089)
+
+#### 颜色工具
+
+Need inspiration? The Material Design team has built an awesome [palette configuration tool](/style/color#color-tool) to help you.
+
+需要灵感？ Material Design团队构建了一个非常棒的[调色板配置工具](https://material-ui.com/style/color#color-tool)来帮助您。
