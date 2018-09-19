@@ -313,27 +313,26 @@ html {
 
 ### CSS
 
-When the configuration variables aren't powerful enough, you can take advantage of the
-`overrides` key of the `theme` to potentially change every single **style** injected by Material-UI into the DOM.
-That's a really powerful feature.
+当配置变量不满足需求时，你可以利用 `theme` 的 `overrides` 键来改变 Material-UI 注入到 DOM 中的每一个 **style**。
+这是一个非常强大的功能。
 
 ```js
 const theme = createMuiTheme({
   overrides: {
-    MuiButton: { // Name of the component ⚛️ / style sheet
-      root: { // Name of the rule
-        color: 'white', // Some CSS
+    MuiButton: { // 组件的名称 ⚛️ / style sheet
+      root: { // 规则的名称
+        color: 'white', // 一些 CSS
       },
     },
   },
 });
 ```
 
-{{"demo": "pages/customization/themes/OverridesCss.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6298l8pz3)
 
-The list of these customization points for each component is documented under the **Component API** section.
-For instance, you can have a look at the [Button](/api/button#css-api).
-Alternatively, you can always have a look at the [implementation](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js).
+每个组件的这些自定义点列表都记录在 **Component API** 部分下。
+例如，你可以看看[按钮](https://material-ui.com/api/button#css-api)。
+或者，您可以随时查看[实现源码](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js)
 
 ### Properties
 
