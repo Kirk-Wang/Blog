@@ -294,25 +294,22 @@ html {
 }
 ```
 
-*You need to apply the above CSS on the html element of this page to see the below demo rendered correctly*
+*您需要在此页面的html元素上应用上述CSS，以查看正确呈现的以下演示*
 
-{{"demo": "pages/customization/themes/FontSizeTheme.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n7049n123m)
 
-### Other variables
+### 其他变量
 
-In addition to the palette, dark and light types, and typography, the theme normalizes implementation by providing many more default values, such as breakpoints, shadows, transitions, etc.
-You can check out the [default theme section](/customization/default-theme) to view the default theme in full.
+除了调色板（palette），暗色（dark）和亮色（light）类型以及排版（typography）外，主题还通过提供更多默认值（例如断点（breakpoints），阴影（shadows），过渡（transitions）等）来规范化实现。
+您可以查看[默认主题部分](https://material-ui.com/customization/default-theme)以完整查看默认主题。
 
-### Custom variables
+### 自定义变量
 
-When using Material-UI's [styling solution](/customization/css-in-js) with your own components,
-you can also take advantage of the theme.
-It can be convenient to add additional variables to the theme so you can use them everywhere.
-For instance:
+将 Material-UI 的 [样式解决方案](https://material-ui.com/customization/css-in-js) 与您自己的组件一起使用时，您也可以利用该主题。可以方便地向主题添加其他变量，以便您可以在任何地方使用它们。例如：
 
-{{"demo": "pages/customization/themes/CustomStyles.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/0x4yj0kw5n)
 
-## Customizing all instances of a component type
+## 自定义组件类型的所有实例
 
 ### CSS
 
