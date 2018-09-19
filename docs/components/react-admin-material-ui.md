@@ -231,12 +231,12 @@ const theme = createMuiTheme({
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/j4z35rq6jw)
 
-### Typography - Font family
+### 排版 - 字体
 
 ```js
 const theme = createMuiTheme({
   typography: {
-    // Use the system font instead of the default Roboto font.
+    // 使用系统字体而不是默认的Roboto字体。
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -253,30 +253,25 @@ const theme = createMuiTheme({
 });
 ```
 
-### Typography - Font size
+### 排版 - 字体大小
 
-Material-UI uses `rem` units for the font size.
-The browser `<html>` element default font size is `16px`, but browsers have an option to change this value,
-so `rem` units allow us to accommodate the user's settings, resulting in a much better user experience.
-Users change font size settings for all kinds of reasons, from poor eyesight to choosing optimum settings
-for devices that can be vastly different in size and viewing distance.
+Material-UI使用`rem`单位表示字体大小。
+浏览器 `<html>` 元素的默认字体大小是 `16px` ，但浏览器可以选择更改此值，所以 `rem` 单元允许我们适应用户的设置，从而带来更好的用户体验。用户可以出于各种原因更改字体大小设置，从视力不佳到为大小和观看距离差异很大的设备选择最佳设置。
 
-To change the font-size of Material-UI you can provide a `fontSize` property.
-The default value is `14px`.
+要更改 Material-UI 的字体大小，您可以提供 `fontSize` 属性。默认值为 `14px`。
 
 ```js
 const theme = createMuiTheme({
   typography: {
-    // In Japanese the characters are usually larger.
+    // 在日语中，字符通常较大。
     fontSize: 12,
   },
 });
 ```
 
-The computed font size by the browser follows this mathematical equation:
+浏览器计算出的字体大小遵循以下数学公式：
 
-![font-size](/static/images/font-size.gif)
-<!-- https://latex.codecogs.com/gif.latex?computed&space;=&space;specification&space;\frac{typography.fontSize}{14}&space;\frac{html&space;font&space;size}{typography.htmlFontSize} -->
+![font-size](https://material-ui.com/static/images/font-size.gif)
 
 ### Typography - HTML font size
 
