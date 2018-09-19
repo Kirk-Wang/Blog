@@ -180,3 +180,16 @@ const theme = createMuiTheme({
 });
 ```
 
+如上例所示，如果意图对象包含使用任何 `main`，`light`，`dark` 或 `contrastText` 键的自定义颜色，则这些映射如下：
+
+- 如果省略 `dark` 和/或 `light` 键，它们的值将根据 `tonalOffset` 值从 `main` 计算得出。
+
+- 如果省略 `contrastText`，它的值将被计算为与 `main` 形成对比，根据 `conttrastThreshold` 值。
+
+可以根据需要自定义 `tonalOffset` 和 `contrastThreshold` 值。
+`tonalOffset` 的值越高，`light` 的计算值越亮，`dark` 越暗。
+`contrastThreshold` 的值越大，背景颜色被认为是光的点，并且给出一个暗的 `contrastText`。
+
+请注意，`contrastThreshold` 遵循非线性曲线。
+
+示例[https://github.com/mui-org/material-ui/blob/master/docs/src/pages/customization/themes/Palette.js]
