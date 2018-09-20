@@ -305,7 +305,7 @@ html {
 
 ### 自定义变量
 
-将 Material-UI 的 [样式解决方案](https://material-ui.com/customization/css-in-js) 与您自己的组件一起使用时，您也可以利用该主题。可以方便地向主题添加其他变量，以便您可以在任何地方使用它们。例如：
+将 Material-UI 的 [样式解决方案](https://material-ui.com/customization/css-in-js) 与您自己的组件一起使用时，您也可以利用该主题。可以方便地向主题添加其他变量，以便您可以在任何地方使用它们。例如：
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/0x4yj0kw5n)
 
@@ -313,7 +313,7 @@ html {
 
 ### CSS
 
-当配置变量不满足需求时，你可以利用 `theme` 的 `overrides` 键来改变 Material-UI 注入到 DOM 中的每一个 **style**。
+当配置变量不满足需求时，你可以利用 `theme` 的 `overrides` 键来改变 Material-UI 注入到 DOM 中的每一个 **style**。
 这是一个非常强大的功能。
 
 ```js
