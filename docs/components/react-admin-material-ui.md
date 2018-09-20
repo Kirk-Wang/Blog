@@ -332,58 +332,58 @@ const theme = createMuiTheme({
 
 每个组件的这些自定义点列表都记录在 **Component API** 部分下。
 例如，你可以看看[按钮](https://material-ui.com/api/button#css-api)。
-或者，您可以随时查看[实现源码](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js)
+或者，您可以随时查看[实现源码](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js)
 
-### Properties
+### 属性
 
-You can also apply properties on all the instances of a component type.
-We expose a `props` key in the `theme` for this use case.
+您还可以在一个组件类型的所有实例上应用属性。
+我们在这个用例的 `theme` 中公开了一个 `props` 键。
 
 ```js
 const theme = createMuiTheme({
   props: {
-    // Name of the component ⚛️
+    // 组件的名称 ⚛️
     MuiButtonBase: {
-      // The properties to apply
+      // 要应用的属性
       disableRipple: true, // No more ripple, on the whole application 💣!
     },
   },
 });
 ```
 
-{{"demo": "pages/customization/themes/OverridesProperties.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2o4zjwrp4n)
 
-## Accessing the theme in a component
+## 访问组件中的主题
 
-You might need to access the theme variables inside your React components.
-Let's say you want to display the value of the primary color, you can use the `withTheme()` higher-order component to do so. Here is an example:
+您可能需要访问React组件中的主题变量。
+假设您要显示 primary color 的值，可以使用 `withTheme()` 高阶组件来执行此操作。 这是一个例子：
 
-{{"demo": "pages/customization/themes/WithTheme.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/8nv0x0xx3l)
 
-## Nesting the theme
+## 嵌套主题
 
-The theming solution is very flexible, as you can nest multiple theme providers.
-This can be really useful when dealing with different area of your application that have distinct appearance from each other.
+主题解决方案非常灵活，因为您可以嵌套多个主题提供程序。
+在处理具有彼此明显外观的应用程序的不同区域时，这非常有用。
 
-{{"demo": "pages/customization/themes/Nested.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/w7v5xzv6y5)
 
-#### A note on performance
+#### 关于性能的说明
 
-The performance implications of nesting the `MuiThemeProvider` component are linked to JSS's work behind the scenes.
-The main point to understand is that we cache the injected CSS with the following tuple `(styles, theme)`.
-- `theme`: If you provide a new theme at each render, a new CSS object will be computed and injected. Both for UI consistency and performance, it's better to render a limited number of theme objects.
-- `styles`: The larger the styles object is, the more work is needed.
+嵌套 `MuiThemeProvider` 组件的性能影响与 JSS 在幕后的工作相关联。
+要理解的要点是我们使用以下元组 `(styles, theme)` 来缓存注入的 CSS。
+- `theme`: 如果在每个渲染中提供新主题，则将计算并注入新的 CSS 对象。对于 UI 一致性和性能，最好渲染有限数量的主题对象。
+- `styles`: 样式对象越大，所需的工作就越多。
 
 ## API
 
 ### `MuiThemeProvider`
 
-This component takes a `theme` property, and makes the `theme` available down the React tree thanks to React context.
-It should preferably be used at **the root of your component tree**.
+该组件接受一个 `theme` 属性，并通过 React 上下文使 `theme` 在 React 树下可用。
+它最好使用在 **组件树的根上**。
 
-You can see the full properties API in [this dedicated page](/api/mui-theme-provider).
+您可以在[这个专用页面](https://material-ui.com/api/mui-theme-provider)中看到完整的属性 API。
 
-#### Examples
+#### 示例
 
 ```jsx
 import React from 'react';
@@ -406,17 +406,17 @@ render(<App />, document.querySelector('#app'));
 
 ### `createMuiTheme(options) => theme`
 
-Generate a theme base on the options received.
+根据接收到的选项生成主题。
 
-#### Arguments
+#### 参数
 
-1. `options` (*Object*): Takes an incomplete theme object and adds the missing parts.
+1. `options` (*Object*): 获取一个不完整的主题对象并添加缺少的部分。
 
-#### Returns
+#### 返回
 
-`theme` (*Object*): A complete, ready to use theme object.
+`theme` (*Object*): 一个完整的，准备使用的主题对象。
 
-#### Examples
+#### 示例
 
 ```js
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -436,18 +436,17 @@ const theme = createMuiTheme({
 
 ### `withTheme()(Component) => Component`
 
-Provide the `theme` object as a property of the input component so it can be used
-in the render method.
+提供 `theme` 对象作为输入组件的属性，以便它可以在 render 方法中使用。
 
-#### Arguments
+#### 参数
 
-1. `Component`: The component that will be wrapped.
+1. `Component`: 要包装的组件。
 
-#### Returns
+#### 返回
 
-`Component`: The new component created.
+`Component`: 创建的新组件。
 
-#### Examples
+#### 示例
 
 ```js
 import { withTheme } from '@material-ui/core/styles';
