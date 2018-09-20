@@ -383,7 +383,7 @@ const theme = createMuiTheme({
 
 您可以在[这个专用页面](https://material-ui.com/api/mui-theme-provider)中看到完整的属性 API。
 
-#### 示例
+#### 示例
 
 ```jsx
 import React from 'react';
@@ -416,7 +416,7 @@ render(<App />, document.querySelector('#app'));
 
 `theme` (*Object*): 一个完整的，准备使用的主题对象。
 
-#### 示例
+#### 示例
 
 ```js
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -446,7 +446,7 @@ const theme = createMuiTheme({
 
 `Component`: 创建的新组件。
 
-#### 示例
+#### 示例
 
 ```js
 import { withTheme } from '@material-ui/core/styles';
