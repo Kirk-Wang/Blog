@@ -1,4 +1,4 @@
-### React-Admin 架构分析：Material-UI 主题定制详解
+# React-Admin 架构分析：Material-UI 主题定制详解
 
 [示例项目-hello-react-admin](https://github.com/Kirk-Wang/hello-react-admin)
 
@@ -457,3 +457,13 @@ function MyComponent(props) {
 
 export default withTheme()(MyComponent);
 ```
+
+# 重写
+
+<p class="description">由于组件可以在不同的上下文中使用，因此Material-UI支持从最特定到最通用的不同类型的定制需求。</p>
+
+1. [对一次性情况的特定变化](#1-specific-variation-for-a-one-time-situation)
+1. [一次性情况下的动态变化](#2-dynamic-variation-for-a-one-time-situation)
+1. [组件的特定变化](#3-specific-variation-of-a-component) re-used in different contexts
+1. [Material Design的变化](#4-material-design-variations) such as with the button component
+1. [全局主题变化](#5-global-theme-variation)
