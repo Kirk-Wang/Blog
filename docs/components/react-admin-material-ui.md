@@ -481,22 +481,18 @@ export default withTheme()(MyComponent);
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m4o52vn0kp)
 
-### Overriding with classes
+### 通过 classes 重写
 
-When the `className` property isn't enough, and you need to access deeper elements, you can take advantage of the `classes` property to customize all the CSS injected by Material-UI for a given component.
-The list of  classes for each
-component is documented in the **Component API** section.
-For instance, you can have a look at the [Button CSS API](/api/button#css-api).
-Alternatively, you can always look at the [implementation details](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js).
+当 `className` 属性不够，并且您需要访问更深层的元素时，您可以利用 `classes` 属性来自定义 Material-UI 为给定组件注入的所有 CSS。
+每个组件的 classes 列表都记录在 **Component API** 部分中。
+例如，您可以查看[Button CSS API](https://material-ui.com/api/button#css-api).
+或者，您可以随时查看[实现细节](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js).
 
-This example also uses `withStyles()` (see above), but here, `ClassesNesting` is using `Button`'s `classes` prop to
-provide an object that maps the **names of classes to override** (keys) to the **CSS class names to apply** (values).
-The component's existing classes will continue to be injected, so it is only necessary to provide the specific styles
-you wish to add or override.
+这个例子也使用 `withStyles()`（见上文），但是在这里，`ClassesNesting` 使用 `Button` 的 `classes` 属性来提供一个对象，该对象映射 classes 的 key 名来覆盖 Button 的 CSS 类名。组件的现有类将继续注入，因此只需要提供您希望添加或覆盖的特定样式。
 
-Notice that in addition to the button styling, the button label's capitalization has been changed:
+请注意，除按钮样式外，按钮标签的大小写也已更改：
 
-{{"demo": "pages/customization/overrides/ClassesNesting.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4w6px2nrq4)
 
 #### Shorthand
 
