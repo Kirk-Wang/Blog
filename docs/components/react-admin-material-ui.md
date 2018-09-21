@@ -518,13 +518,12 @@ const StyledButton = withStyles({
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vq9jxq7qx5)
 
-#### Internal states
+#### 内部状态
 
-Aside from accessing nested elements, the `classes` property can be used to customize the internal states of Material-UI components.
-The components internal states, like `:hover`, `:focus`, `disabled` and `selected`, are styled with a higher CSS specificity.
-[Specificity is a weight](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) that is applied to a given CSS declaration.
-In order to override the components internal states, **you need to increase specificity**.
-Here is an example with the `disable` state and the button component:
+除了访问嵌套元素之外，`classes` 属性还可用于自定义 Material-UI 组件的内部状态。
+组件内部状态，如 `:hover` ，`:focus` ，`disabled` 和 `selected`，具有更高的 CSS 优先级。
+[优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)就是分配给指定的 CSS 声明的一个权重，为了覆盖组件内部状态，**需要增加优先级**。
+以下是 `disable` 状态和按钮组件的示例：
 
 ```css
 .classes-state-root {
@@ -547,9 +546,9 @@ Here is an example with the `disable` state and the button component:
 
 ```
 
-#### Use `$ruleName` to reference a local rule within the same style sheet
+#### 使用 `$ruleName` 引用同一样式表中的本地规则
 
-The [jss-nested](https://github.com/cssinjs/jss-nested) plugin (available by default) can make the process of increasing specificity easier.
+[jss-nested](https://github.com/cssinjs/jss-nested) 插件（默认情况下可用）可以使增加优先级的过程更容易。
 
 ```js
 const styles = {
@@ -562,7 +561,7 @@ const styles = {
 };
 ```
 
-compiles to:
+编译为：
 
 ```css
 .root-x.disable-x {
@@ -570,27 +569,27 @@ compiles to:
 }
 ```
 
-{{"demo": "pages/customization/overrides/ClassesState.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1z31z7rolj)
 
-### Overriding with inline-style
+### 覆写内联样式
 
-The second way to override the style of a component is to use the **inline-style** approach.
-Every component provides a `style` property.
-These properties are always applied to the root element.
+覆盖组件样式的第二种方法是使用 **内联式** 方法。
+每个组件都提供 `style` 属性。
+这些属性始终应用于根元素。
 
-You don't have to worry about CSS specificity as the inline-style takes precedence over the regular CSS.
+您不必担心 CSS 优先级，因为内联样式优先于常规CSS。
 
-{{"demo": "pages/customization/overrides/InlineStyle.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6n2q5ro783)
 
-[When should I use inline-style vs classes?](/getting-started/faq#when-should-i-use-inline-style-vs-classes-)
+[When should I use inline-style vs classes?](https://material-ui.com/getting-started/faq#when-should-i-use-inline-style-vs-classes-)
 
-## 2. Dynamic variation for a one-time situation
+## 2. 一次性情况的动态变化
 
-You have learned how to override the style of the Material-UI components in the previous sections.
-Now, let's see how we can make these overrides dynamic.
-We demonstrate 5 alternatives, each has it's pros and cons.
+您已经学习了如何重写前面部分中的 Material-UI 组件的样式。
+现在，让我们看看我们如何使这些重写动态化。
+我们展示了5种替代方案，每种方案都有其优缺点。
 
-### withStyles property support
+### withStyles 属性支持
 
 ```jsx
 const styles = {
@@ -600,24 +599,24 @@ const styles = {
 };
 ```
 
-This feature isn't ready yet.
-It will come with: [#7633](https://github.com/mui-org/material-ui/issues/7633).
+此功能尚未准备好。
+它会带来：[#7633](https://github.com/mui-org/material-ui/issues/7633).
 
-### Class name branch
+### 类名分支
 
-{{"demo": "pages/customization/overrides/DynamicClassName.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1wv7w31r97)
 
-### CSS variables
+### CSS 变量
 
-{{"demo": "pages/customization/overrides/DynamicCSSVariables.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/j4vxywjz5y)
 
-### Inline-style
+### 内联样式
 
-{{"demo": "pages/customization/overrides/DynamicInlineStyle.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m4popw7rzy)
 
-### Theme nesting
+### 主题嵌套
 
-{{"demo": "pages/customization/overrides/DynamicThemeNesting.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/z63j0wjny4)
 
 ## 3. Specific variation of a component
 
