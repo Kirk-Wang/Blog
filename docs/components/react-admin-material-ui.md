@@ -494,10 +494,10 @@ export default withTheme()(MyComponent);
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4w6px2nrq4)
 
-#### Shorthand
+#### 简写
 
-The above code example can be condensed by using **the same CSS API** as the child component.
-In this example, the `withStyles()` higher-order component is injecting a `classes` property that is used by the [`Button` component](/api/button#css-api).
+上面的代码示例可以通过使用 **与子组件相同的CSS API** 来简练。
+在此示例中，`withStyles()` 高阶组件正在注入 [`Button` 组件](https://material-ui.com/api/button#css-api) 使用的 `classes` 属性。
 
 ```jsx
 const StyledButton = withStyles({
@@ -516,7 +516,7 @@ const StyledButton = withStyles({
 })(Button);
 ```
 
-{{"demo": "pages/customization/overrides/ClassesShorthand.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vq9jxq7qx5)
 
 #### Internal states
 
