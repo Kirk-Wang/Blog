@@ -631,7 +631,6 @@ const styles = {
 The Material Design specification documents different variations of certain components, such as how buttons come in different shapes: [text](https://material.io/design/components/buttons.html#text-button) (AKA "flat"), [contained](https://material.io/design/components/buttons.html#contained-button) (AKA "raised"), [FAB](https://material.io/design/components/buttons-floating-action-button.html) and more.
 Material Design 规范记录了某些组件的不同变体，例如按钮的形状有多种：[文本](https://material.io/design/components/buttons.html#text-button)（AKA“扁平”），[包含](https://material.io/design/components/buttons.html#contained-button)（AKA“凸起”），[FAB](https://material.io/design/components/buttons-floating-action-button.html)等。
 
-Material-UI attempts to implement all of these variations. Please refer to the [Supported Components](/getting-started/supported-components) documentation to find out the current status of all supported Material Design components.
 Material-UI 尝试实现所有这些变化。请参阅[Supported Components](https://material-ui.com/getting-started/supported-components)文档以了解所有支持的Material Design组件的当前状态。
 
 ## 5. Global theme variation
