@@ -12,17 +12,18 @@ Material-UI 旨在为构建动态 UI 提供坚实的基础。
 - [基于组件的样式的未来](https://medium.freecodecamp.org/css-in-javascript-the-future-of-component-based-styling-70b161a79a32)
 - [将SCSS（Sass）转换为CSS-in-JS](https://egghead.io/courses/convert-scss-sass-to-css-in-js)
 
-So, you may have noticed in the demos what *CSS-in-JS* looks like.
-We use the higher-order component created by [`withStyles`](#api)
-to inject an array of styles into the DOM as CSS, using JSS. Here's an example:
+所以，你可能已经在 demo 中注意到了 *CSS-in-JS* 的样子。
+我们使用 [`withStyles`](https://material-ui.com/customization/css-in-js/#api) 创建的高阶组件，使用 JSS 将一组样式作为 CSS 注入到 DOM 中。
+这是一个例子：
 
-{{"demo": "pages/customization/css-in-js/CssInJs.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rwlz3ol99p)
 
 ## JSS
 
-Material-UI's styling solution uses [JSS](https://github.com/cssinjs/jss) at its core.
-It's a [high performance](https://github.com/cssinjs/jss/blob/master/docs/performance.md) JS to CSS compiler which works at runtime and server-side.
+Material-UI 的样式解决方案以 [JSS](https://github.com/cssinjs/jss) 为核心。
+它是一个 [高性能](https://github.com/cssinjs/jss/blob/master/docs/performance.md) 的JS to CSS编译器，可在服务器端运行。
 It is about 8 kB (minified and gzipped) and is extensible via a [plugins](https://github.com/cssinjs/jss/blob/master/docs/plugins.md) API.
+它大约是8 kB（压缩和gzip压缩），并且可以通过 [plugins](https://github.com/cssinjs/jss/blob/master/docs/plugins.md) API进行扩展。
 
 If you end up using this styling solution in your codebase, you're going to need to *learn the API*.
 The best place to start is by looking at the features that each [plugin](http://cssinjs.org/plugins/) provides. Material-UI uses [few of them](#plugins).
