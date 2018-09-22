@@ -22,21 +22,19 @@ Material-UI 旨在为构建动态 UI 提供坚实的基础。
 
 Material-UI 的样式解决方案以 [JSS](https://github.com/cssinjs/jss) 为核心。
 它是一个 [高性能](https://github.com/cssinjs/jss/blob/master/docs/performance.md) 的JS to CSS编译器，可在服务器端运行。
-It is about 8 kB (minified and gzipped) and is extensible via a [plugins](https://github.com/cssinjs/jss/blob/master/docs/plugins.md) API.
 它大约是8 kB（压缩和gzip压缩），并且可以通过 [plugins](https://github.com/cssinjs/jss/blob/master/docs/plugins.md) API进行扩展。
 
-If you end up using this styling solution in your codebase, you're going to need to *learn the API*.
-The best place to start is by looking at the features that each [plugin](http://cssinjs.org/plugins/) provides. Material-UI uses [few of them](#plugins).
-You can always add new plugins if needed with the [`JssProvider`](https://github.com/cssinjs/react-jss#custom-setup) helper.
+如果您最终在代码库中使用此样式解决方案，则需要 *学习API*。
 
-If you wish to build your own instance of `jss` **and** support *rtl* make sure you also include the [jss-rtl](https://github.com/alitaheri/jss-rtl) plugin.
-Check the jss-rtl [readme](https://github.com/alitaheri/jss-rtl#simple-usage) to learn how.
+最好的开始是查看每个 [插件](http://cssinjs.org/plugins/) 提供的功能。 Material-UI 使用的[很少](https://material-ui.com/customization/css-in-js/#plugins)。 如果需要，您可以随时使用 [`JssProvider`](https://github.com/cssinjs/react-jss#custom-setup) 助手添加新插件。
+
+如果您希望构建自己的 `jss` 实例 **并** 支持 *rtl* ，请确保您还包含 [jss-rtl](https://github.com/alitaheri/jss-rtl) 插件。 查看 jss-rtl [自述文件](https://github.com/alitaheri/jss-rtl#simple-usage) 以了解具体方法。
 
 ## Sheets registry
 
-When rendering on the server, you will need to get all rendered styles as a CSS string.
-The `SheetsRegistry` class allows you to manually aggregate and stringify them.
-Read more about [Server Rendering](/guides/server-rendering).
+在服务器上渲染时，您需要将所有渲染样式作为 CSS 字符串。
+`SheetsRegistry` 类允许您手动聚合和 stringify 它们。
+阅读有关[服务器渲染](https://material-ui.com/guides/server-rendering)的更多信息。
 
 {{"demo": "pages/customization/css-in-js/JssRegistry.js", "hideEditButton": true}}
 
