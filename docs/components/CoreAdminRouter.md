@@ -1,4 +1,4 @@
-### CoreAdminRouter 组件源码分析
+# CoreAdminRouter 组件源码分析
 
 首先来看看它在 CoreAdmin 是如何被调用的：
 

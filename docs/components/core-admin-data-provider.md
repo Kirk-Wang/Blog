@@ -1,4 +1,4 @@
-### React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性
+# React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性
 
 [示例项目-hello-react-admin](https://github.com/Kirk-Wang/hello-react-admin)
 
