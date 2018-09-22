@@ -628,16 +628,15 @@ const styles = {
 
 ## 4. Material Design 变化
 
-The Material Design specification documents different variations of certain components, such as how buttons come in different shapes: [text](https://material.io/design/components/buttons.html#text-button) (AKA "flat"), [contained](https://material.io/design/components/buttons.html#contained-button) (AKA "raised"), [FAB](https://material.io/design/components/buttons-floating-action-button.html) and more.
 Material Design 规范记录了某些组件的不同变体，例如按钮的形状有多种：[文本](https://material.io/design/components/buttons.html#text-button)（AKA“扁平”），[包含](https://material.io/design/components/buttons.html#contained-button)（AKA“凸起”），[FAB](https://material.io/design/components/buttons-floating-action-button.html)等。
 
 Material-UI 尝试实现所有这些变化。请参阅[Supported Components](https://material-ui.com/getting-started/supported-components)文档以了解所有支持的Material Design组件的当前状态。
 
-## 5. Global theme variation
+## 5. 全局主题变化
 
-### Theme variables
+### 主题变量
 
-In order to promote consistency between components, and manage the user interface appearance as a whole, Material-UI provides a mechanism to apply global changes by adjusting the [theme configuration variables](/customization/themes#theme-configuration-variables).
+为了促进组件之间的一致性，并管理整个用户界面外观，Material-UI 提供了一种机制，通过调整[主题配置变量](https://material-ui.com/customization/themes#theme-configuration-variables)来应用全局更改。
 
 ### Global theme override
 
