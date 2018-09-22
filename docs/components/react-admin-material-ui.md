@@ -638,16 +638,14 @@ Material-UI 尝试实现所有这些变化。请参阅[Supported Components](htt
 
 为了促进组件之间的一致性，并管理整个用户界面外观，Material-UI 提供了一种机制，通过调整[主题配置变量](https://material-ui.com/customization/themes#theme-configuration-variables)来应用全局更改。
 
-### Global theme override
+### 全球主题重写
 
-Do you want to customize **all the instances** of a component type?
+是否要自定义组件类型的 **所有实例**?
 
-When the configuration variables aren't powerful enough,
-you can take advantage of the `overrides` key of the `theme` to potentially change every single style injected by Material-UI into the DOM.
-Learn more about it in the [themes section](/customization/themes#customizing-all-instances-of-a-component-type) of the documentation.
+当配置变量不够强大时，您可以利用 `theme` 的 `overrides` 键，潜在地改变 Material-UI 注入 DOM 的每一种风格。在文档的[主题部分](https://material-ui.com/customization/themes#customizing-all-instances-of-a-component-type)了解更多。
 
-### Global CSS override
+### 全局 CSS 重写
 
-You can also customize all instances of a component with CSS.
-We expose a `dangerouslyUseGlobalCSS` option to do so.
-Learn more about it in the [CSS in JS section](/customization/css-in-js#global-css) of the documentation. It's very similar to how you would customize Bootstrap.
+您还可以使用 CSS 定制组件的所有实例。
+我们提供了一个 `dangerouslyUseGlobalCSS` 选项。
+在文档的[CSS in JS section](https://material-ui.com/customization/css-in-js#global-css)中了解更多。它非常类似于如何自定义 Bootstrap。
