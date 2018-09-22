@@ -618,19 +618,21 @@ const styles = {
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/z63j0wjny4)
 
-## 3. Specific variation of a component
+## 3. 组件的具体变化
 
-You might need to create a variation of a component and use it in different contexts, for instance a colorful button on your product page, however you probably want to keep your code [*DRY*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+您可能需要创建组件的变量并在不同的上下文中使用它，例如产品页面上的彩色按钮，但是您可能希望保留代码[*DRY*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)。
 
-The best approach is to follow option 1 and then take advantage of the composition power of React by exporting your customized component to use wherever you need it.
+最好的方法是遵循选项1，然后通过导出自定义组件来利用 React 的组合功能，以便在任何需要的地方使用。
 
-{{"demo": "pages/customization/overrides/Component.js", "hideEditButton": true}}
+[demo](https://github.com/mui-org/material-ui/blob/master/docs/src/pages/customization/overrides/Component.js)
 
-## 4. Material Design variations
+## 4. Material Design 变化
 
 The Material Design specification documents different variations of certain components, such as how buttons come in different shapes: [text](https://material.io/design/components/buttons.html#text-button) (AKA "flat"), [contained](https://material.io/design/components/buttons.html#contained-button) (AKA "raised"), [FAB](https://material.io/design/components/buttons-floating-action-button.html) and more.
+Material Design 规范记录了某些组件的不同变体，例如按钮的形状有多种：[文本](https://material.io/design/components/buttons.html#text-button)（AKA“扁平”），[包含](https://material.io/design/components/buttons.html#contained-button)（AKA“凸起”），[FAB](https://material.io/design/components/buttons-floating-action-button.html)等。
 
 Material-UI attempts to implement all of these variations. Please refer to the [Supported Components](/getting-started/supported-components) documentation to find out the current status of all supported Material Design components.
+Material-UI 尝试实现所有这些变化。请参阅[Supported Components](https://material-ui.com/getting-started/supported-components)文档以了解所有支持的Material Design组件的当前状态。
 
 ## 5. Global theme variation
 
