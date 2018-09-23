@@ -30,20 +30,19 @@ Material-UI 的样式解决方案以 [JSS](https://github.com/cssinjs/jss) 为�
 
 如果您希望构建自己的 `jss` 实例 **并** 支持 *rtl* ，请确保您还包含 [jss-rtl](https://github.com/alitaheri/jss-rtl) 插件。 查看 jss-rtl [自述文件](https://github.com/alitaheri/jss-rtl#simple-usage) 以了解具体方法。
 
-## Sheets registry
+## Sheets 注册
 
 在服务器上渲染时，您需要将所有渲染样式作为 CSS 字符串。
 `SheetsRegistry` 类允许您手动聚合和 stringify 它们。
 阅读有关[服务器渲染](https://material-ui.com/guides/server-rendering)的更多信息。
 
-{{"demo": "pages/customization/css-in-js/JssRegistry.js", "hideEditButton": true}}
+[demo](https://github.com/mui-org/material-ui/blob/master/docs/src/pages/customization/css-in-js/JssRegistry.js)
 
-## Sheets manager
+## Sheets 管理器
 
-The sheets manager uses a [reference counting](https://en.wikipedia.org/wiki/Reference_counting) algorithm in order to attach and detach the style sheets only once per (styles, theme) couple.
-This technique provides an important performance boost when re-rendering instances of a component.
+Sheets 管理器使用[引用计数算法]((https://en.wikipedia.org/wiki/Reference_counting))，以便每对（样式，主题）只附加和分离样式表一次。在重新渲染组件的实例时，此技术可提供重要的性能提升。
 
-When only rendering on the client, that's not something you need to be aware of. However, when rendering on the server you do. You can read more about [Server Rendering](/guides/server-rendering).
+当只在客户端上呈现时，这不是您需要注意的事情。但是，在服务器上进行渲染时。 您可以阅读有关[服务器渲染](https://material-ui.com/guides/server-rendering)的更多信息。
 
 ## Class names
 
