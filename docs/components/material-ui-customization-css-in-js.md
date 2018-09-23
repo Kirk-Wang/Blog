@@ -89,9 +89,9 @@ const Button = withStyles(styles, { name: 'button' })(ButtonBase)
 但是，您可能还想重写这些样式，例如使用 styled-components。如果您遇到 CSS 注入顺序问题，JSS 提供了处理这种情况的[机制](https://github.com/cssinjs/jss/blob/master/docs/setup.md#specify-dom-insertion-point)。
 通过调整 HTML head 中的 `insertionPoint` 的位置，可以[控制将 CSS 规则](http://cssinjs.org/js-api/#attach-style-sheets-in-a-specific-order)应用到组件的顺序。
 
-### HTML comment
+### HTML 注释
 
-The simplest approach is to add an HTML comment that determines where JSS will inject the styles:
+最简单的方法是添加一个 HTML 注释，确定 JSS 将注入样式的位置：
 
 ```jsx
 <head>
@@ -108,7 +108,7 @@ import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
 const generateClassName = createGenerateClassName();
 const jss = create({
   ...jssPreset(),
-  // We define a custom insertion point that JSS will look for injecting the styles in the DOM.
+  // 我们定义了一个自定义插入点，JSS将寻找，并在DOM中注入样式。
   insertionPoint: 'jss-insertion-point',
 });
 
@@ -123,12 +123,12 @@ function App() {
 export default App;
 ```
 
-### Other HTML element
+### 其他 HTML 元素
 
-[Create React App](https://github.com/facebook/create-react-app) strips HTML comments when creating the production build.
-To get around the issue, you can provide a DOM element (other than a comment) as the JSS insertion point.
+[Create React App](https://github.com/facebook/create-react-app) 在创建生产版本时删除HTML注释。
+要解决此问题，您可以提供 DOM 元素（注释除外）作为 JSS 插入点。
 
-For example, a `<noscript>` element:
+例如，`<noscript>` 元素：
 
 ```jsx
 <head>
@@ -145,7 +145,7 @@ import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
 const generateClassName = createGenerateClassName();
 const jss = create({
   ...jssPreset(),
-  // We define a custom insertion point that JSS will look for injecting the styles in the DOM.
+  // 我们定义一个自定义插入点，JSS将寻找并在DOM中注入样式。
   insertionPoint: document.getElementById('jss-insertion-point'),
 });
 
@@ -162,8 +162,8 @@ export default App;
 
 ### JS createComment
 
-codesandbox.io prevents the access to the `<head>` element.
-To get around the issue, you can use the JavaScript `document.createComment()` API:
+codesandbox.io 阻止访问 `<head>` 元素。
+要解决这个问题，您可以使用 JavaScript `document.createComment()` API：
 
 ```jsx
 import JssProvider from 'react-jss/lib/JssProvider';
@@ -176,7 +176,7 @@ document.head.insertBefore(styleNode, document.head.firstChild);
 const generateClassName = createGenerateClassName();
 const jss = create({
   ...jssPreset(),
-  // We define a custom insertion point that JSS will look for injecting the styles in the DOM.
+   // 我们定义一个自定义插入点，JSS将寻找并在DOM中注入样式。
   insertionPoint: 'jss-insertion-point',
 });
 
@@ -193,13 +193,13 @@ export default App;
 
 ## JssProvider
 
-react-jss exposes a `JssProvider` component to configure JSS for the underlying child components.
-There are different use cases:
-- Providing a class name generator.
-- [Providing a Sheets registry.](/customization/css-in-js#sheets-registry)
+react-jss 公开了一个 `JssProvider` 组件，为底层子组件配置 JSS。
+有不同的用例：
+- 提供类名生成器。
+- [提供一个 Sheets registry](https://material-ui.com/customization/css-in-js#sheets-registry)
 - Providing a JSS instance. You might want to support [Right-to-left](/guides/right-to-left) or changing the [CSS injection order](/customization/css-in-js#css-injection-order).
-Read [the JSS documentation](http://cssinjs.org/js-api/) to learn more about the options available.
-Here is an example:
+- 提供一个JSS实例。 您可能希望支持[从右到左](https://material-ui.com/guides/right-to-left)或更改 [CSS 注入顺序](https://material-ui.com/customization/css-in-js#css-injection-order)。
+阅读[JSS文档](http://cssinjs.org/js-api/)以了解更多可用选项。下面是一个例子:
 
 ```jsx
 import JssProvider from 'react-jss/lib/JssProvider';
