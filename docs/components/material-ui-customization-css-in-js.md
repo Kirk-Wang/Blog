@@ -62,33 +62,32 @@ Sheets 管理器使用[引用计数算法]((https://en.wikipedia.org/wiki/Refere
 
 如果您不喜欢这种默认行为，您可以更改它。JSS依赖于[类名生成器](http://cssinjs.org/js-api/#generate-your-own-class-names)的概念
 
-### Global CSS
+### 全局 CSS
 
-We provide a custom implementation of the class name generator for Material-UI needs:
-[`createGenerateClassName()`](#creategenerateclassname-options-class-name-generator).
-As well as the option to make the class names **deterministic** with the `dangerouslyUseGlobalCSS` option. When turned on, the class names will look like this:
+我们为Material-UI需求提供了类名生成器的定制实现:
+[`createGenerateClassName()`](https://material-ui.com/customization/css-in-js/#creategenerateclassname-options-class-name-generator)。
+以及使用 `dangerouslyUseGlobalCSS` 来使类名 **确定性** 的选项。打开时，类名将如下所示：
 
 - development: `.MuiAppBar-root`
 - production: `.MuiAppBar-root`
 
-⚠️ **Be cautious when using `dangerouslyUseGlobalCSS`.**
-We provide this option as an escape hatch for quick prototyping.
-Relying on it for code running in production has the following implications:
-- Global CSS is inherently fragile. People use strict methodologies like [BEM](http://getbem.com/introduction/) to workaround the issue.
-- It's harder to keep track of `classes` API changes.
+⚠️ **使用`dangerous ouslyuseglobalcss`时要小心**
+我们提供这个选项作为快速原型设计的逃生舱口。
+在生产环境中运行的代码依赖于它有以下含义:
+- 全局CSS本质上是脆弱的。人们使用像[BEM](http://getbem.com/guidetion/)这样的严格方法来解决这个问题。
+- 很难跟踪 `classes` API 的变化。
 
-⚠️ When using `dangerouslyUseGlobalCSS` standalone (without Material-UI), you should name your style sheets. `withStyles` has a name option for that:
+⚠️ 在单独使用 `dangerouslyUseGlobalCSS` (不包含Material-UI)时，您应该将样式表命名。`withStyles` 有一个 name 的选项:
 ```jsx
 const Button = withStyles(styles, { name: 'button' })(ButtonBase)
 ```
 
-## CSS injection order
+## CSS 注入顺序
 
-The CSS injected by Material-UI to style a component has the highest specificity possible as the `<link>` is injected at the bottom of the `<head>` to ensure the components always render correctly.
+由 Material-UI 注入的 CSS 组件样式具有最高的优先级，它作为 `<link>` 被注入到 `<head>` 的底部来确保组件总是正确呈现。
 
-You might, however, also want to override these styles, for example with styled-components.
-If you are experiencing a CSS injection order issue, JSS [provides a mechanism](https://github.com/cssinjs/jss/blob/master/docs/setup.md#specify-dom-insertion-point) to handle this situation.
-By adjusting the placement of the `insertionPoint` within your HTML head you can [control the order](http://cssinjs.org/js-api/#attach-style-sheets-in-a-specific-order) that the CSS rules are applied to your components.
+但是，您可能还想重写这些样式，例如使用 styled-components。如果您遇到 CSS 注入顺序问题，JSS 提供了处理这种情况的[机制](https://github.com/cssinjs/jss/blob/master/docs/setup.md#specify-dom-insertion-point)。
+通过调整 HTML head 中的 `insertionPoint` 的位置，可以[控制将 CSS 规则](http://cssinjs.org/js-api/#attach-style-sheets-in-a-specific-order)应用到组件的顺序。
 
 ### HTML comment
 
