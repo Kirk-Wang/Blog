@@ -220,11 +220,11 @@ function App() {
 export default App;
 ```
 
-## Plugins
+## 插件
 
-JSS uses the concept of plugins to extend its core, allowing people to cherry-pick the features they need.
-You pay the performance overhead for only what's you are using.
-Given `withStyles` is our internal styling solution, all the plugins aren't available by default. We have added the following list:
+JSS 使用插件的概念来扩展它的核心，允许人们挑选他们需要的特性。
+您只需为所使用的内容支付性能开销。
+由于 `withStyles` 是我们的内部样式解决方案，所有的插件在默认情况下都不可用。我们增加了以下清单:
 - [jss-global](http://cssinjs.org/jss-global/)
 - [jss-nested](http://cssinjs.org/jss-nested/)
 - [jss-camel-case](http://cssinjs.org/jss-camel-case/)
@@ -232,40 +232,37 @@ Given `withStyles` is our internal styling solution, all the plugins aren't avai
 - [jss-vendor-prefixer](http://cssinjs.org/jss-vendor-prefixer/)
 - [jss-props-sort](http://cssinjs.org/jss-props-sort/)
 
-It's a subset of [jss-preset-default](http://cssinjs.org/jss-preset-default/).
-Of course, you are free to add a new plugin. We have one example for the [`jss-rtl` plugin](/guides/right-to-left#3-jss-rtl).
+它是 [jss-preset-default](http://cssinjs.org/jss-preset-default/) 的一个子集。当然，您可以随意添加一个新插件。我们有一个 [jss-rtl插件](https://material-ui.com/guides/right-to-left#3-jss-rtl) 的例子。
 
 ## API
 
 ### `withStyles(styles, [options]) => higher-order component`
 
-Link a style sheet with a component.
-It does not modify the component passed to it; instead, it returns a new component with a `classes` property.
-This `classes` object contains the name of the class names injected in the DOM.
+用一个组件链接一个样式表
+它不修改传递给它的组件；相反，它返回一个带有 `classes` 属性的新组件。
+这个 `classes` 对象包含注入进 DOM 的类名的名称。
 
-Some implementation details that might be interesting to being aware of:
-- It adds a `classes` property so you can override the injected class names from the outside.
-- It adds an `innerRef` property so you can get a reference to the wrapped component. The usage of `innerRef` is identical to `ref`.
-- It forwards *non React static* properties so this HOC is more "transparent".
-For instance, it can be used to defined a `getInitialProps()` static method (next.js).
+一些可能有趣的实现细节：
+- 它添加了一个 `classes` 属性，因此您可以从外部覆盖注入的类名。
+- 它添加了一个 `innerRef` 属性，因此您可以获得对包装组件的引用。`innerRef` 的用法与`ref` 相同。
+- 它转发 *非React静态* 属性，因此这个HOC更 “透明”。
+例如，它可以用于定义 `getInitialProps()` 静态方法（next.js）。
 
-#### Arguments
+#### 参数
 
-1. `styles` (*Function | Object*): A function generating the styles or a styles object.
-It will be linked to the component.
-Use the function signature if you need to have access to the theme. It's provided as the first argument.
+1. `styles` (*Function | Object*): 一个产生样式的函数或着一个样式对象。它将链接到组件。如果您需要访问主题，请使用函数签名。 它是作为第一个参数提供的。
 2. `options` (*Object* [optional]):
-  - `options.withTheme` (*Boolean* [optional]): Defaults to `false`. Provide the `theme` object to the component as a property.
-  - `options.name` (*String* [optional]): The name of the style sheet. Useful for debugging.
-    If the value isn't provided, it will try to fallback to the name of the component.
-  - `options.flip` (*Boolean* [optional]): When set to `false`, this sheet will opt-out the `rtl` transformation. When set to `true`, the styles are inversed. When set to `null`, it follows `theme.direction`.
-  - The other keys are forwarded to the options argument of [jss.createStyleSheet([styles], [options])](http://cssinjs.org/js-api/#create-style-sheet).
+  - `options.withTheme` (*Boolean* [optional]): 默认为“false”。将 `theme` 对象作为属性提供给组件。
+  - `options.name` (*String* [optional]): 样式表的名称。用于调试。
+    如果未提供该值，它将尝试回退到组件的名称。
+  - `options.flip` (*Boolean* [optional]): 设置为 `false` 时，此样式表将选择退出 `rtl` 转换。设置为 `true` 时，样式将反转。当设置为 `null` 时，它遵循 `theme.direction` 。
+  - 其他键被转发到 [jss.createStyleSheet([styles], [options])](http://cssinjs.org/js-api/#create-style-sheet) 的 options 参数。
 
-#### Returns
+#### 返回
 
-`higher-order component`: Should be used to wrap a component.
+`higher-order component`: 应该用来包装一个组件。
 
-#### Examples
+#### 示例
 
 ```jsx
 import { withStyles } from '@material-ui/core/styles';
@@ -285,7 +282,7 @@ class MyComponent extends React.Component {
 export default withStyles(styles)(MyComponent);
 ```
 
-Also, you can use as [decorators](https://babeljs.io/docs/plugins/transform-decorators/) like so:
+此外，您可以使用像这样的[装饰器](https://babeljs.io/docs/plugins/transform-decorators/)：
 
 ```jsx
 import { withStyles } from '@material-ui/core/styles';
@@ -308,18 +305,18 @@ export default MyComponent
 
 ### `createGenerateClassName([options]) => class name generator`
 
-A function which returns [a class name generator function](http://cssinjs.org/js-api#generate-your-own-class-names).
+一个返回[类名生成器函数](http://cssinjs.org/js-api#generate-your-own-class-names)的函数。
 
-#### Arguments
+#### 参数
 
 1. `options` (*Object* [optional]):
-  - `options.dangerouslyUseGlobalCSS` (*Boolean* [optional]): Defaults to `false`. Makes the Material-UI class names deterministic.
-  - `options.productionPrefix` (*String* [optional]): Defaults to `'jss'`. The string used to prefix the class names in production.
-  - `options.seed` (*String* [optional]): Defaults to `''`. The string used to uniquely identify the generator. It can be used to avoid class name collisions when using multiple generators.
+  - `options.dangerouslyUseGlobalCSS` (*Boolean* [optional]): 默认为 `false` 。 使 Material-UI class 名称具有确定性。
+  - `options.productionPrefix` (*String* [optional]): 默认为 `"jss"`。 用于在生产中为类名添加前缀的字符串。
+  - `options.seed` (*String* [optional]): 默认为`''`。用于唯一标识生成器的字符串。当使用多个生成器时，它可用于避免类名冲突。
 
 #### Returns
 
-`class name generator`: The generator should be provided to JSS.
+`class name generator`: 应该向 JSS 提供的生成器。
 
 #### Examples
 
@@ -345,14 +342,15 @@ export default App;
 
 ## Alternative APIs
 
-Do you think that [higher-order components are the new mixins](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)? Rest assured we don't, however because `withStyles()` is a higher-order component, it can be extended with just a **few lines of code** to match different patterns that are all idiomatic React. Here are a couple of examples.
+你认为[高阶组件是新的 mixins](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)吗？请放心，我们不会这样做，但是因为 `withStyles()` 是一个更高阶的组件，所以只需几行代码就可以扩展它，以匹配所有惯用的 React 模式。这里有几个例子。
 
 ### Render props API (+11 lines)
 
 The term [“render prop”](https://reactjs.org/docs/render-props.html) refers to a simple technique for sharing code between React components using a prop whose value is a function.
+术语 [“render prop”](https://reactjs.org/docs/render-props.html) 指的是使用其值为函数的属性，在React组件之间共享代码的简单技术。
 
 ```jsx
-// You will find the `createStyled` implementation in the source of the demo.
+// 您将在 demo 中找到 `createStyled` 实现。
 const Styled = createStyled({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -378,9 +376,9 @@ function RenderProps() {
 }
 ```
 
-{{"demo": "pages/customization/css-in-js/RenderProps.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/qq0rp0p5w4)
 
-You can access the theme the same way you would do it with `withStyles`:
+你可以用与 `withStyles` 同样的方式访问 theme:
 ```js
 const Styled = createStyled(theme => ({
   root: {
@@ -389,15 +387,15 @@ const Styled = createStyled(theme => ({
 }));
 ```
 
-[@jedwards1211](https://github.com/jedwards1211) Has taken the time to move this module into a package: [material-ui-render-props-styles](https://github.com/jcoreio/material-ui-render-props-styles). Feel free to use it.
+[@jedwards1211](https://github.com/jedwards1211) 花时间将这个模块移动到一个包中：[material-ui-render-props-styles](https://github.com/jcoreio/material-ui-render-props-styles)。以便随意使用它。
 
 ### styled-components API (+15 lines)
 
-styled-components's API removes the mapping between components and styles. Using components as a low-level styling construct can be simpler.
+styled-components 的 API 删除了组件和样式之间的映射。使用组件作为 low-level styling construct 可以更简单。
 
 ```jsx
-// You will find the `styled` implementation in the source of the demo.
-// You can even write CSS with https://github.com/cssinjs/jss-template.
+// 您将在 demo 中找到 `styled` 实现。
+// 您甚至可以使用 https://github.com/cssinjs/jss-template 编写 CSS。
 const MyButton = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
   borderRadius: 3,
@@ -413,9 +411,9 @@ function StyledComponents() {
 }
 ```
 
-{{"demo": "pages/customization/css-in-js/StyledComponents.js"}}
+[![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/zr9lmy7z8l)
 
-You can access the theme the same way you would do it with `withStyles`:
+您可以像使用 `withStyles` 一样访问 theme：
 ```js
 const MyButton = styled(Button)(theme => ({
   backgroundColor: theme.palette.background.paper,
