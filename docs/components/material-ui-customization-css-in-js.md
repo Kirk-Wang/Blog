@@ -53,7 +53,6 @@ Sheets 管理器使用[引用计数算法]((https://en.wikipedia.org/wiki/Refere
 }
 ```
 
-Instead, you have to use the `classes` property of a component to override them.
 相反，您必须使用组件的 `classes` 属性来覆盖它们。
 另一方面，由于类名的不确定性，我们可以为开发和生产实现优化。
 它们在开发中很容易调试，在生产中尽可能短:
