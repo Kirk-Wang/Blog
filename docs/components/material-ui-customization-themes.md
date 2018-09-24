@@ -13,18 +13,18 @@
 
 如果您想自定义主题，则需要使用 `MuiThemeProvider` 组件以将主题注入您的应用程序。但是，这是可选的；Material-UI组件带有默认主题。
 
-`MuiThemeProvider`依赖于React的上下文功能将主题传递给组件，因此，您需要确保 `MuiThemeProvider` 是您尝试自定义的组件的父级。您可以在[API部分](#muithemeprovider)中了解更多相关信息。
+`MuiThemeProvider` 依赖于 React 的上下文功能将主题传递给组件，因此，您需要确保 `MuiThemeProvider` 是您尝试自定义的组件的父级。您可以在[API部分](#muithemeprovider)中了解更多相关信息。
 
 ## 主题配置变量
 
 更改主题配置变量是将Material-UI与您的需求相匹配的最有效方法。
 以下部分介绍了最重要的主题变量：
 
-- [Palette](#调色板)
-- [Type (light / dark theme)](#type-light-dark-theme-)
-- [Typography](#typography)
-- [Other variables](#other-variables)
-- [Custom variables](#custom-variables)
+- [调色板（Palette）](#调色板)
+- [类型（Type）（light / dark 主题）](#类型（明/暗主题）)
+- [排版（Typography）](#排版)
+- [其它变量（Other variables）](#其他变量)
+- [自定义变量（Custom variables）](#自定义变量)
 
 ### 调色板
 
@@ -42,13 +42,13 @@
 
 如果您想了解更多有关颜色的信息，你可以查看[颜色部分](https://material-ui.com/style/color)。
 
-#### 自定义调色盘
+#### 自定义调色板
 
 您可以通过在 theme 中包含 `palette` 对象来覆盖默认调色盘值。
 
-如果有任何 [`palette.primary`](/customization/default-theme?expend-path=$.palette.primary)，
-[`palette.secondary`](/customization/default-theme?expend-path=$.palette.secondary) 或者
-[`palette.error`](/customization/default-theme?expend-path=$.palette.error) 的 `意图` 对象被提供，它们将会替换默认的值。
+如果有任何 [`palette.primary`](https://material-ui.com/customization/default-theme/?expend-path=$.palette.primary)，
+[`palette.secondary`](https://material-ui.com/customization/default-theme/?expend-path=$.palette.secondary) 或者
+[`palette.error`](https://material-ui.com/customization/default-theme/?expend-path=$.palette.error) 的 `意图` 对象被提供，它们将会替换默认的值。
 
 意图值可以是 [color](https://material-ui.com/style/color) 对象，也可以是具有以下一个或多个键的对象：
 
@@ -194,7 +194,7 @@ const theme = createMuiTheme({
 
 需要灵感？ Material Design团队构建了一个非常棒的[调色板配置工具](https://material-ui.com/style/color#color-tool)来帮助您。
 
-### 类型 (明 /暗 主题)
+### 类型（明/暗主题）
 
 您可以通过将 `type` 设置为 `dark` 来使主题变暗。
 虽然它只是单个属性值更改，但在内部它会修改以下键的值：
@@ -221,7 +221,7 @@ const theme = createMuiTheme({
 这些 sizes 用于各个组件。
 
 请查看以下有关更改默认值的示例，例如字体系列。
-如果您想了解有关排版的更多信息，可以查看[排版部分](/style/typography)。
+如果您想了解有关排版的更多信息，可以查看[排版部分](https://material-ui.com/style/typography/)。
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/j4z35rq6jw)
 
