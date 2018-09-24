@@ -13,7 +13,7 @@
         * [React-Admin 架构分析：Material-UI 定制 `Themes` 详解](./docs/components/material-ui-customization-themes.md)
         * [React-Admin 架构分析：Material-UI 定制 `Overrides` 详解](./docs/components/material-ui-customization-overrides.md)
         * [React-Admin 架构分析：Material-UI 定制 `CSS in JS` 详解](./docs/components/material-ui-customization-css-in-js.md)
-        * [React-Admin 架构分析：Material-UI 定制 `Default Theme` 详解]
+        * [React-Admin 架构分析：Material-UI 定制 `Default Theme` 详解](./docs/components/material-ui-customization-default-theme.md)
     * [React-Admin 架构分析：`Admin` 组件源码解析之 `theme` 属性](./docs/components/core-admin-app-theme.md)
 
 3. [Admin 组件源码解析](./docs/components/Admin.md)（有些旧）
