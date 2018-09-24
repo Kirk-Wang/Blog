@@ -1,4 +1,4 @@
-# React-Admin 架构分析：Material-UI 定制 `Default Theme` 详解
+# React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档
 
 <p class="description">下面是带有默认值的 theme 对象。</p>
 

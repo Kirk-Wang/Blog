@@ -1,4 +1,4 @@
-# React-Admin 架构分析：Material-UI 定制 `CSS in JS` 详解
+# React-Admin 架构分析：Material-UI 定制之 `CSS in JS` 文档
 
 <p class="description">即使您不使用我们的组件，您也可以利用我们的样式解决方案。</p>
 

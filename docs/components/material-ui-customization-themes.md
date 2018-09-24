@@ -1,4 +1,4 @@
-# React-Admin 架构分析：Material-UI 定制 `Themes` 详解
+# React-Admin 架构分析：Material-UI 定制之 `Themes` 文档
 
 <p class="description">使用我们的主题自定义 Material-UI。 您可以更改颜色，排版等等。</p>
 
