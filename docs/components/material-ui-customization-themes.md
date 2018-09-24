@@ -21,7 +21,7 @@
 以下部分介绍了最重要的主题变量：
 
 - [调色板（Palette）](#调色板)
-- [类型（Type）（light / dark 主题）](#类型-明-暗主题-)
+- [类型（Type）（light / dark 主题）](#类型明暗主题)
 - [排版（Typography）](#排版)
 - [其它变量（Other variables）](#其他变量)
 - [自定义变量（Custom variables）](#自定义变量)
