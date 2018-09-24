@@ -20,13 +20,13 @@
 更改主题配置变量是将Material-UI与您的需求相匹配的最有效方法。
 以下部分介绍了最重要的主题变量：
 
-- [Palette](#palette)
+- [Palette](#调色板)
 - [Type (light / dark theme)](#type-light-dark-theme-)
 - [Typography](#typography)
 - [Other variables](#other-variables)
 - [Custom variables](#custom-variables)
 
-### Palette
+### 调色板
 
 #### Intentions
 
