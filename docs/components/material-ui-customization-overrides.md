@@ -36,7 +36,7 @@
 
 #### 简写
 
-上面的代码示例可以通过使用 **与子组件相同的CSS API** 来简练。
+上面的代码示例可以通过使用 **与子组件相同的 CSS API** 来简练。
 在此示例中，`withStyles()` 高阶组件正在注入 [`Button` 组件](https://material-ui.com/api/button#css-api) 使用的 `classes` 属性。
 
 ```jsx
@@ -121,7 +121,7 @@ const styles = {
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6n2q5ro783)
 
-[When should I use inline-style vs classes?](https://material-ui.com/getting-started/faq#when-should-i-use-inline-style-vs-classes-)
+[什么时候应该使用 inline-style vs classes?](https://material-ui.com/getting-started/faq#when-should-i-use-inline-style-vs-classes-)
 
 ## 2. 一次性情况的动态变化
 
@@ -170,15 +170,15 @@ const styles = {
 
 Material Design 规范记录了某些组件的不同变体，例如按钮的形状有多种：[文本](https://material.io/design/components/buttons.html#text-button)（AKA“扁平”），[包含](https://material.io/design/components/buttons.html#contained-button)（AKA“凸起”），[FAB](https://material.io/design/components/buttons-floating-action-button.html)等。
 
-Material-UI 尝试实现所有这些变化。请参阅[Supported Components](https://material-ui.com/getting-started/supported-components)文档以了解所有支持的Material Design组件的当前状态。
+Material-UI 尝试实现所有这些变化。请参阅 [Supported Components](https://material-ui.com/getting-started/supported-components) 文档以了解所有支持的 Material Design 组件的当前状态。
 
 ## 5. 全局主题变化
 
 ### 主题变量
 
-为了促进组件之间的一致性，并管理整个用户界面外观，Material-UI 提供了一种机制，通过调整[主题配置变量](https://material-ui.com/customization/themes#theme-configuration-variables)来应用全局更改。
+为了促进组件之间的一致性，并管理整个用户界面外观，Material-UI 提供了一种机制，通过调整 [主题配置变量](https://material-ui.com/customization/themes#theme-configuration-variables)来应用全局更改。
 
-### 全球主题重写
+### 全局主题重写
 
 是否要自定义组件类型的 **所有实例**?
 
