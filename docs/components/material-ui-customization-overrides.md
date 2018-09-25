@@ -2,7 +2,7 @@
 
 <p class="description">由于组件可以在不同的上下文中使用，因此 Material-UI 支持从最特定到最通用的不同类型的定制需求。</p>
 
-1. [一次性情况下的特定变化](#1-specific-variation-for-a-one-time-situation)
+1. [一次性情况下的特定变化](#1-一次性情况下的特定变化)
 1. [一次性情况下的动态变化](#2-dynamic-variation-for-a-one-time-situation)
 1. [组件的特定变化](#3-specific-variation-of-a-component) re-used in different contexts
 1. [Material Design的变化](#4-material-design-variations) such as with the button component
@@ -17,7 +17,7 @@
 重写组件样式的第一种方法是使用 **类名**。
 每个组件都提供一个 `className` 属性，该属性总是应用于根元素。
 
-在本例中，我们使用 [`withStyles()`](/customization/css-in-js#withstyles-styles-options-higher-order-component) 高阶组件将自定义样式注入 DOM，并通过`classes` 属性将类名传递给 `ClassNames` 组件。你可以选择其他样式解决方案，甚至是纯 CSS 创建的样式，但一定要考虑[CSS 注入顺序](/customization/css-in-js#css-injection-order)，as the CSS injected into the DOM by Material-UI to style a component has the highest specificity possible since the `<link>` is injected at the bottom of the `<head />` to ensure the components always render correctly.
+在本例中，我们使用 [`withStyles()`](https://material-ui.com/customization/css-in-js/#withstyles-styles-options-higher-order-component) 高阶组件将自定义样式注入 DOM，并通过 `classes` 属性将类名传递给 `ClassNames` 组件。你可以选择其他样式解决方案，甚至是纯 CSS 创建的样式，但一定要考虑[CSS 注入顺序](https://material-ui.com/customization/css-in-js/#css-injection-order)，由于在 `<head />` 的底部注入 `<link>` 以确保组件始终正确呈现，因此由 Material-UI 注入 DOM 以对组件进行样式化的 CSS 具有最高的优先级。
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/m4o52vn0kp)
 
@@ -25,8 +25,8 @@
 
 当 `className` 属性不够，并且您需要访问更深层的元素时，您可以利用 `classes` 属性来自定义 Material-UI 为给定组件注入的所有 CSS。
 每个组件的 classes 列表都记录在 **Component API** 部分中。
-例如，您可以查看[Button CSS API](https://material-ui.com/api/button#css-api).
-或者，您可以随时查看[实现细节](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js).
+例如，您可以查看 [Button CSS API](https://material-ui.com/api/button#css-api)。
+或者，您可以随时查看 [实现细节](https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/Button/Button.js)。
 
 这个例子也使用 `withStyles()`（见上文），但是在这里，`ClassesNesting` 使用 `Button` 的 `classes` 属性来提供一个对象，该对象映射 classes 的 key 名来覆盖 Button 的 CSS 类名。组件的现有类将继续注入，因此只需要提供您希望添加或覆盖的特定样式。
 
