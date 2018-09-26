@@ -22,7 +22,7 @@ Material-UI 旨在为构建动态 UI 提供坚实的基础。
 
 Material-UI 的样式解决方案以 [JSS](https://github.com/cssinjs/jss) 为核心。
 它是一个 [高性能](https://github.com/cssinjs/jss/blob/master/docs/performance.md) 的JS to CSS编译器，可在服务器端运行。
-它大约是8 kB（压缩和gzip压缩），并且可以通过 [plugins](https://github.com/cssinjs/jss/blob/master/docs/plugins.md) API进行扩展。
+它大约是8 kB（minified and gzipped），并且可以通过 [plugins](https://github.com/cssinjs/jss/blob/master/docs/plugins.md) API进行扩展。
 
 如果您最终在代码库中使用此样式解决方案，则需要 *学习API*。
 
@@ -46,7 +46,7 @@ Sheets 管理器使用[引用计数算法]((https://en.wikipedia.org/wiki/Refere
 
 ## 类名
 
-您可能已经注意到，我们的样式解决方案生成的类名是 **非确定性的**，所以你不能指望他们保持不变。以下CSS不会工作:
+您可能已经注意到，我们的样式解决方案生成的类名是 **非确定性的**，所以你不能指望他们保持不变。以下 CSS 不会工作:
 ```css
 .MuiAppBar-root-12 {
   opacity: 0.6
@@ -64,20 +64,20 @@ Sheets 管理器使用[引用计数算法]((https://en.wikipedia.org/wiki/Refere
 
 ### 全局 CSS
 
-我们为Material-UI需求提供了类名生成器的定制实现:
+我们为 Material-UI 需求提供了类名生成器的定制实现:
 [`createGenerateClassName()`](https://material-ui.com/customization/css-in-js/#creategenerateclassname-options-class-name-generator)。
 以及使用 `dangerouslyUseGlobalCSS` 来使类名 **确定性** 的选项。打开时，类名将如下所示：
 
 - development: `.MuiAppBar-root`
 - production: `.MuiAppBar-root`
 
-⚠️ **使用`dangerous ouslyuseglobalcss`时要小心**
+⚠️ **使用 `dangerouslyUseGlobalCSS` 时要小心**
 我们提供这个选项作为快速原型设计的逃生舱口。
 在生产环境中运行的代码依赖于它有以下含义:
-- 全局CSS本质上是脆弱的。人们使用像[BEM](http://getbem.com/guidetion/)这样的严格方法来解决这个问题。
+- 全局 CSS 本质上是脆弱的。人们使用像[BEM](http://getbem.com/guidetion/)这样的严格方法来解决这个问题。
 - 很难跟踪 `classes` API 的变化。
 
-⚠️ 在单独使用 `dangerouslyUseGlobalCSS` (不包含Material-UI)时，您应该将样式表命名。`withStyles` 有一个 name 的选项:
+⚠️ 在单独使用 `dangerouslyUseGlobalCSS` (不包含 Material-UI )时，您应该将样式表命名。`withStyles` 有一个 name 的选项:
 ```jsx
 const Button = withStyles(styles, { name: 'button' })(ButtonBase)
 ```
@@ -91,7 +91,7 @@ const Button = withStyles(styles, { name: 'button' })(ButtonBase)
 
 ### HTML 注释
 
-最简单的方法是添加一个 HTML 注释，确定 JSS 将注入样式的位置：
+最简单的方法是添加一个 HTML 注释，确定 JSS 将要注入样式的位置：
 
 ```jsx
 <head>
@@ -145,7 +145,7 @@ import { createGenerateClassName, jssPreset } from '@material-ui/core/styles';
 const generateClassName = createGenerateClassName();
 const jss = create({
   ...jssPreset(),
-  // 我们定义一个自定义插入点，JSS将寻找并在DOM中注入样式。
+  // 我们定义一个自定义插入点，JSS 将寻找并在 DOM 中注入样式。
   insertionPoint: document.getElementById('jss-insertion-point'),
 });
 
@@ -346,7 +346,6 @@ export default App;
 
 ### Render props API (+11 lines)
 
-The term [“render prop”](https://reactjs.org/docs/render-props.html) refers to a simple technique for sharing code between React components using a prop whose value is a function.
 术语 [“render prop”](https://reactjs.org/docs/render-props.html) 指的是使用其值为函数的属性，在React组件之间共享代码的简单技术。
 
 ```jsx
