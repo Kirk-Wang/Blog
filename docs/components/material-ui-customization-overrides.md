@@ -3,10 +3,10 @@
 <p class="description">由于组件可以在不同的上下文中使用，因此 Material-UI 支持从最特定到最通用的不同类型的定制需求。</p>
 
 1. [一次性情况下的特定变化](#1-一次性情况下的特定变化)
-1. [一次性情况下的动态变化](#2-dynamic-variation-for-a-one-time-situation)
-1. [组件的特定变化](#3-specific-variation-of-a-component) re-used in different contexts
-1. [Material Design的变化](#4-material-design-variations) such as with the button component
-1. [全局主题变化](#5-global-theme-variation)
+1. [一次性情况下的动态变化](#2-一次性情况的动态变化)
+1. [组件的特定变化](#3-组件的特定变化) 在不同的上下文中重复使用
+1. [Material Design的变化](#4-Material-Design-变化) 例如使用按钮组件
+1. [全局主题变化](#5-全局主题变化)
 
 ## 1. 一次性情况下的特定变化
 
@@ -158,7 +158,7 @@ const styles = {
 
 [![Edit Material demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/z63j0wjny4)
 
-## 3. 组件的具体变化
+## 3. 组件的特定变化
 
 您可能需要创建组件的变量并在不同的上下文中使用它，例如产品页面上的彩色按钮，但是您可能希望保留代码[*DRY*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)。
 
@@ -188,4 +188,4 @@ Material-UI 尝试实现所有这些变化。请参阅 [Supported Components](ht
 
 您还可以使用 CSS 定制组件的所有实例。
 我们提供了一个 `dangerouslyUseGlobalCSS` 选项。
-在文档的[CSS in JS section](https://material-ui.com/customization/css-in-js#global-css)中了解更多。它非常类似于如何自定义 Bootstrap。
+在文档的 [CSS in JS section](https://material-ui.com/customization/css-in-js#global-css) 中了解更多。它非常类似于如何自定义 Bootstrap。
