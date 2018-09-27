@@ -59,4 +59,4 @@ const mapStateToProps = state => ({
 
 4. 👀一下它界面结构
 
-![](../images/core-admin-app-layout/1.jpg)
+![](../images/core-admin-app-layout/1.png)
