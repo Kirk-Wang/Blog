@@ -51,6 +51,10 @@ const mapStateToProps = state => ({
 
 `withRouter` HOC：`react-router` 提供的高阶组件。主要功能是当路由渲染时， `withRouter` 会将已经更新的 `match` ， `location` 和 `history` 属性传递给被包裹的组件。
 
-`withStyles` HOC：`material-ui` 提供的高阶组件。主要功能是用它来重写 `material-ui` 各个组件提供的 `CSS API`，改变默认的风格。这里作用是让组件拥有一个 `classes` 属性，它的 `key` 可以被用作组件内元素的 `className` 值。从而制定你想要的界面布局。
+`withStyles` HOC：`material-ui` 提供的高阶组件。主要功能是用它来重写 `material-ui` 各个组件提供的 `CSS API`，改变默认的风格。这里作用是让组件拥有一个 `classes` 属性，它的 `key` 可以被用作组件（Layout）内元素的 `className` 值。从而制定你想要的界面布局。
+
+3. 快速洞悉 `flexbox` 布局。可以参看有酒的[30 分钟学会 Flex 布局](https://zhuanlan.zhihu.com/p/25303493)
+
+![Flex 布局](https://pic3.zhimg.com/v2-54a0fc96ef4f455aefb8ee4bc133291b_1200x500.jpg)
 
 
