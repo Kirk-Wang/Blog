@@ -23,3 +23,7 @@
 ```
 
 `MuiThemeProvider` 是 `material-ui` 提供的上层组件，它被用来在上下文中提供一个 `theme` 的主题对象。
+
+方便所有的 `material-ui` 组件统一定制相同的风格。这个 `theme` 对象具体都有啥，大家可以参看 [Default Theme](https://material-ui.com/customization/default-theme/)
+
+关于的 `material-ui` 定制的一些细节，大家可以参看 [Material-UI 定制](https://github.com/Kirk-Wang/react-admin-app) 。
