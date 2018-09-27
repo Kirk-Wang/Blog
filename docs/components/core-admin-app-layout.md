@@ -26,4 +26,25 @@
 
 方便所有的 `material-ui` 组件统一定制相同的风格。这个 `theme` 对象具体都有哪些 key，大家可以参看 [Default Theme](https://material-ui.com/customization/default-theme/)。
 
-关于的 `material-ui` 定制的一些细节，大家可以参看 [Material-UI 定制](https://github.com/Kirk-Wang/react-admin-app) 。
+关于的 `material-ui` 定制的一些细节，大家可以参看 [Material-UI 定制文档](https://github.com/Kirk-Wang/react-admin-app) 。
+
+2. `EnhancedLayout`，一个由 `connect`，`withRouter`，`withStyles` 高阶组件增强过的 `Layout` 组件。
+
+```js
+const EnhancedLayout = compose(
+    connect(
+        mapStateToProps,
+        {} // Avoid connect passing dispatch in props 这是 react-redux 的一个处理机制，大家可以翻看源码
+    ),
+    withRouter,
+    withStyles(styles)
+)(Layout);
+```
+
+`connect` HOC：注入 `redux state` 到组件中的 `props` 上。 这里只有一个 `open`：
+
+```jsx
+const mapStateToProps = state => ({
+    open: state.admin.ui.sidebarOpen,
+});
+```
