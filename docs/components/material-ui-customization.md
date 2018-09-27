@@ -10,4 +10,6 @@
 * [React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档](https://github.com/Kirk-Wang/react-admin-app/blob/master/docs/components/material-ui-customization-default-theme.md)
 
 
+Material-UI 提供的默认主题对象 [`theme`](https://material-ui.com/customization/default-theme/)
+
 ![](https://github.com/Kirk-Wang/react-admin-app/raw/master/docs/images/core-admin-app-layout/Default+Theme.png)
