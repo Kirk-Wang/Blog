@@ -10,9 +10,9 @@
 
 在 `react-admin` 包中，我们发现 react-admin 默认的 layout 位于 `ra-ui-materialui` 包中。
 
-当前可以在 `packages/ra-ui-materialui/src/layout/Layout.js` 目录下找到源码。
+当前可以在 `packages/ra-ui-materialui/src/layout/Layout.js` 目录下找到源码。
 
-我们来看下它组件🌲：
+我们来看下它组件🌲：
 
 1. 这个文件最终导出的默认组件是 `LayoutWithTheme`，它渲染了如下组件：
 
@@ -24,6 +24,6 @@
 
 `MuiThemeProvider` 是 `material-ui` 提供的上层组件，它被用来在上下文中提供一个 `theme` 的主题对象。
 
-方便所有的 `material-ui` 组件统一定制相同的风格。这个 `theme` 对象具体都有啥，大家可以参看 [Default Theme](https://material-ui.com/customization/default-theme/)
+方便所有的 `material-ui` 组件统一定制相同的风格。这个 `theme` 对象具体都有哪些 key，大家可以参看 [Default Theme](https://material-ui.com/customization/default-theme/)。
 
 关于的 `material-ui` 定制的一些细节，大家可以参看 [Material-UI 定制](https://github.com/Kirk-Wang/react-admin-app) 。
