@@ -57,4 +57,6 @@ const mapStateToProps = state => ({
 
 ![Flex 布局](https://pic3.zhimg.com/v2-54a0fc96ef4f455aefb8ee4bc133291b_1200x500.jpg)
 
+4. 👀一下它界面结构
 
+![](../images/core-admin-app-layout/1.jpg)
