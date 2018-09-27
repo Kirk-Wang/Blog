@@ -28,7 +28,7 @@
 
 关于的 `material-ui` 定制的一些细节，大家可以参看 [Material-UI 定制文档](https://github.com/Kirk-Wang/react-admin-app) 。
 
-2. `EnhancedLayout`，一个由 `connect`，`withRouter`，`withStyles` 高阶组件增强过的 `Layout` 组件。
+2. `EnhancedLayout`，一个由 `connect`，`withRouter`，`withStyles` 高阶组件增强过的 `Layout` 组件。
 
 ```js
 const EnhancedLayout = compose(
@@ -41,10 +41,16 @@ const EnhancedLayout = compose(
 )(Layout);
 ```
 
-`connect` HOC：注入 `redux state` 到组件中的 `props` 上。 这里只有一个 `open`：
+`connect` HOC：`react-redux` 提供的高阶组件。主要功能是注入 `redux state` 到组件中的 `props` 上，并在 `shouldComponentUpdate` 等钩子上做了相关的优化。 这里只有一个 `open`：
 
 ```jsx
 const mapStateToProps = state => ({
     open: state.admin.ui.sidebarOpen,
 });
 ```
+
+`withRouter` HOC：`react-router` 提供的高阶组件。主要功能是当路由渲染时， `withRouter` 会将已经更新的 `match` ， `location` 和 `history` 属性传递给被包裹的组件。
+
+`withStyles` HOC：`material-ui` 提供的高阶组件。主要功能是用它来重写 `material-ui` 各个组件提供的 `CSS API`，改变默认的风格。这里作用是让组件拥有一个 `classes` 属性，它的 `key` 可以被用作组件内元素的 `className` 值。从而制定你想要的界面布局。
+
+
