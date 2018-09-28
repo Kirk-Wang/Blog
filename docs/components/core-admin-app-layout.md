@@ -60,3 +60,17 @@ const mapStateToProps = state => ({
 4. 👀一下它界面结构
 
 ![](../images/core-admin-app-layout/1.png)
+
+4. React 错误处理
+
+什么是错误处理? [两分钟学会 React 16 componentDidCatch 生命周期方法](https://www.zcfy.cc/article/2-minutes-to-learn-react-16s-componentdidcatch-lifecycle-method)
+
+“错误处理指的是React组件中能捕获子组件树中的任何Javascript异常，打印出来，并且展示出备用UI的生命周期方法 从而避免了组件树崩溃。它能在整个渲染及构建dom树的过程中捕获异常” -Dan Abramov
+
+React 16 将提供一个内置函数 `componentDidCatch`，如果 `render()` 函数抛出错误，则会触发该函数。
+
+```jsx
+componentDidCatch(errorMessage, errorInfo) {
+    this.setState({ hasError: true, errorMessage, errorInfo });
+}
+```
