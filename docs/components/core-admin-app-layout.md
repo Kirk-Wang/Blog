@@ -74,3 +74,5 @@ componentDidCatch(errorMessage, errorInfo) {
     this.setState({ hasError: true, errorMessage, errorInfo });
 }
 ```
+
+5. appBar
