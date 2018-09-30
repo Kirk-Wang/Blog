@@ -76,3 +76,11 @@ componentDidCatch(errorMessage, errorInfo) {
 ```
 
 5. appBar
+
+```jsx
+{createElement(appBar, { title, open, logout })}
+```
+
+[react-headroom](https://github.com/KyleAMathews/react-headroom)
+
+React Headroom 是在滚动时显示/隐藏头部的 React 组件。
