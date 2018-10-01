@@ -83,4 +83,4 @@ componentDidCatch(errorMessage, errorInfo) {
 
 [react-headroom](https://github.com/KyleAMathews/react-headroom)
 
-React Headroom 是在滚动时显示/隐藏头部的 React 组件。
+React Headroom 是在滚动时显示/隐藏头部的 React 组件。一个小问题，照样要做到极致。
