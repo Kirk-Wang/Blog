@@ -22,6 +22,8 @@
 
 ## 小插曲
 
+### [CSSINJS](http://cssinjs.org)
+
 ## 使用 React-Admin 实战中后台应用
 
 ### 官方项目和Demo
