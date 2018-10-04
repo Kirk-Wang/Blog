@@ -24,6 +24,10 @@
 
 ### [CSSINJS](http://cssinjs.org)
 
+传统的“关注点分离”（separation of concerns）原则中不推荐我们把 HTML、CSS、JS 混杂一起编写，但是在伴随着前端组件模式的大潮"关注点混合"慢慢成为主流。
+
+[漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
+
 ## 使用 React-Admin 实战中后台应用
 
 ### 官方项目和Demo
