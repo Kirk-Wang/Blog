@@ -5,20 +5,23 @@
 [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com)
 
 ## 核心组件及源码分析
-1. [调试 React-Admin 源码，看清框架的本质](./docs/components/debug-react-admin.md)
+1. [调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
 
 2. 用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓
-    * [React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性](./docs/components/core-admin-data-provider.md)
-    * [React-Admin 架构分析：Material-UI 定制](./docs/components/material-ui-customization.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `Themes` 文档](./docs/components/material-ui-customization-themes.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `Overrides` 文档](./docs/components/material-ui-customization-overrides.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `CSS in JS` 文档](./docs/components/material-ui-customization-css-in-js.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档](./docs/components/material-ui-customization-default-theme.md)
-    * [React-Admin 架构分析：`Admin` 组件源码解析之 `theme` 属性](./docs/components/core-admin-app-theme.md)
-    * [React-Admin 架构分析：`Admin` 组件源码解析之 `appLayout` 属性](./docs/components/core-admin-app-layout.md)
+    * [React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性](./docs/stories/core-admin-data-provider.md)
+    * [React-Admin 架构分析：Material-UI 定制](./docs/stories/material-ui-customization.md)
+        * [React-Admin 架构分析：Material-UI 定制之 `Themes` 文档](./docs/stories/material-ui-customization-themes.md)
+        * [React-Admin 架构分析：Material-UI 定制之 `Overrides` 文档](./docs/stories/material-ui-customization-overrides.md)
+        * [React-Admin 架构分析：Material-UI 定制之 `CSS in JS` 文档](./docs/stories/material-ui-customization-css-in-js.md)
+        * [React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档](./docs/stories/material-ui-customization-default-theme.md)
+    * [React-Admin 架构分析：`Admin` 组件源码解析之 `theme` 属性](./docs/stories/core-admin-app-theme.md)
+    * [React-Admin 架构分析：`Admin` 组件源码解析之 `appLayout` 属性](./docs/stories/core-admin-app-layout.md)
 
-3. [Admin 组件源码解析](./docs/components/Admin.md)（有些旧）
-4. [CoreAdminRouter 组件源码分析](./docs/components/CoreAdminRouter.md)（有些旧）
+3. `react-admin` 各 `package` 分析
+    * [react-admin 包分析](./docs/stories/react-admin-package.md)
+
+4. [Admin 组件源码解析](./docs/stories/Admin.md)（有些旧）
+5. [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有些旧）
 
 ## 小插曲
 
