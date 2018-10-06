@@ -349,3 +349,5 @@ import * as RA from 'react-admin';
 ```
 
 ![](../images/packages/react-admin.png)
+
+通过分析，我们知道，这个包只是一个对 `ra-core` 与 `ra-ui-materialui` 包的封装。
