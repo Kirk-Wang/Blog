@@ -19,6 +19,7 @@
 
 3. `react-admin` 各 `package` 分析
     * [react-admin 包分析](./docs/stories/react-admin-package.md)
+    * [ra-core 包分析](./docs/stories/ra-core-package.md)
 
 4. [Admin 组件源码解析](./docs/stories/Admin.md)（有些旧）
 5. [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有些旧）
