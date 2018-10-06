@@ -347,3 +347,5 @@ import * as RA from 'react-admin';
   withDefaultValue: ƒ (DecoratedComponent)
 }
 ```
+
+![](../images/packages/react-admin.png)
