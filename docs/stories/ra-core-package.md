@@ -1,6 +1,6 @@
 # ra-core 包分析
 
-这个包是整个 React-Admin 的核心逻辑
+这个包是整个 React-Admin 的核心逻辑
 
 ```jsx
 import * as Core from 'ra-core';
@@ -234,7 +234,5 @@ import * as Core from 'ra-core';
   withDefaultValue: ƒ (DecoratedComponent)
 }
 ```
-
-`ra-core` 脑图
 
 ![](../images/packages/ra-core.png)
