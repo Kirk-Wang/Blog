@@ -236,3 +236,8 @@ import * as Core from 'ra-core';
 ```
 
 ![](../images/packages/ra-core.png)
+
+![](../images/packages/ra-core-1.png)
+
+通过上图，我们来分析这个包架构：
+
