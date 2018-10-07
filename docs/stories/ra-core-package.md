@@ -248,10 +248,64 @@ import * as Core from 'ra-core';
 
 ![](../images/packages/ra-core-crud-action-creators.png)
 
+关于 `Redux` 相关的文档，如果大家不熟悉的话，可以参看[Redux 中文文档](https://cn.redux.js.org/)
 
 ### 针对 `C`(Create) 设计
 
-#### Action
+#### crudCreate
+
+这个 `Action Creator` 主要是根据必要的参数返回一个通用的 `action` 对象。
+
+```js
+export const crudCreate = (resource, data, basePath, redirectTo = 'edit') => ({
+    type: CRUD_CREATE,
+    payload: { data },
+    meta: {
+        resource,
+        fetch: CREATE,
+        onSuccess: {
+            notification: {
+                body: 'ra.notification.created',
+                level: 'info',
+                messageArgs: {
+                    smart_count: 1,
+                },
+            },
+            redirectTo,
+            basePath,
+        },
+        onFailure: {
+            notification: {
+                body: 'ra.notification.http_error',
+                level: 'warning',
+            },
+        },
+    },
+});
+```
+
+那它是如何被调用的呢？
+
+```js
+// 位于 CreateController.js
+save = (record, redirect) => {
+    // 此处的 `crudCreate` 已经由 `react-redux` 的 `connect` 组件
+    // 做了 `bindActionCreators` 的处理，所以会直接 `dispatch`
+    this.props.crudCreate(
+        this.props.resource, // 'posts'
+        record, // { data: { title: "hello, world" } }
+        /**
+         * const basePath = match.url; -->> 位于 Resource.js
+         * 
+         * match ->> 一个 match 对象中包涵了有关如何匹配 URL 的信息(react-router 注入进 CreateController的)
+        */
+        this.props.basePath,
+        // 创建完跳转到的路由，默认是编辑视图
+        redirect
+    );
+};
+```
+
 
 
 
