@@ -239,5 +239,22 @@ import * as Core from 'ra-core';
 
 ![](../images/packages/ra-core-1.png)
 
-通过上图，我们来分析这个包架构：
+`ra-core` 是整个 `React-Admin` 底层逻辑，对 `CRUD` 操作的高度封装。
+
+`ra-core` 是一个基于 `Redux` 状态管理的程序。所以他对 `CRUD` 操作抽象出了一系列公共的 `Action` 和 `ActionCreators`。从而可以高度复用。
+
+`ra-core` 针对 `CRUD` 抽象出来的 `ActionCreators`：（[源码](https://github.com/marmelab/react-admin/blob/master/packages/ra-core/src/actions/dataActions.js)）
+
+
+![](../images/packages/ra-core-crud-action-creators.png)
+
+
+### 针对 `C`(Create) 设计
+
+#### Action
+
+
+
+
+
 
