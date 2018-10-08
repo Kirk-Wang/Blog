@@ -248,13 +248,13 @@ import * as Core from 'ra-core';
 
 ![](../images/packages/ra-core-crud-action-creators.png)
 
-关于 `Redux` 相关的文档，如果大家不熟悉的话，可以参看[Redux 中文文档](https://cn.redux.js.org/)
+关于 `Redux` 相关的文档，如果大家不熟悉的话，可以参看[Redux 中文文档](https://cn.redux.js.org/)
 
 ### 针对 `C`(Create) 设计
 
 #### crudCreate
 
-这个 `Action Creator` 主要是根据必要的参数返回一个通用的 `action` 对象。
+这个 `Action Creator` 主要是根据必要的参数返回一个通用的 `action` 对象。
 
 ```js
 export const crudCreate = (resource, data, basePath, redirectTo = 'edit') => ({
