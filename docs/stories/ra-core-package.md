@@ -300,12 +300,45 @@ save = (record, redirect) => {
          * match ->> 一个 match 对象中包涵了有关如何匹配 URL 的信息(react-router 注入进 CreateController的)
         */
         this.props.basePath,
-        // 创建完跳转到的路由，默认是编辑视图
+        // 创建完跳转到的路由，默认是编辑(edit)视图
         redirect
     );
 };
 ```
 
+当这个 `action` 对象被 `dispatch` 出去后，由于 `meta` 里面包含 `fetch`，所以这个 `action` 会被 `fetchSaga` 监听到。
+
+所以，接下来它会执行 `handleFetch` 这个 `Side Effect`。
+
+```js
+// sideEffect/fetch.js
+export function* handleFetch(dataProvider, action) {
+    ...
+}
+```
+
+在这个函数里面，它根据传进来的 `dataProvider` 和 `action` 主要做了以下几件事儿：
+
+1. 首先判断 `optimistic` mode，是就是直接 `return`。
+
+2. 然后并行分发两个 `action`，`${type}_LOADING`(`RA/CRUD_CREATE_LOADING`) 和 `FETCH_START`。`RA/CRUD_CREATE_LOADING` 好像没什么用，`FETCH_START` 会触发 `loading` reducer。
+```js
+export default (previousState = 0, { type }) => {
+    switch (type) {
+        case FETCH_START:
+        case USER_LOGIN_LOADING:
+            return previousState + 1;
+        case FETCH_END:
+        case FETCH_ERROR:
+        case FETCH_CANCEL:
+        case USER_LOGIN_SUCCESS:
+        case USER_LOGIN_FAILURE:
+            return Math.max(previousState - 1, 0);
+        default:
+            return previousState;
+    }
+};
+```
 
 
 
