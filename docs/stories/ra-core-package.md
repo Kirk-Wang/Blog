@@ -321,24 +321,14 @@ export function* handleFetch(dataProvider, action) {
 
 1. 首先判断 `optimistic` mode，是就是直接 `return`。
 
-2. 然后并行分发两个 `action`，`${type}_LOADING`(`RA/CRUD_CREATE_LOADING`) 和 `FETCH_START`。`RA/CRUD_CREATE_LOADING` 好像没什么用，`FETCH_START` 会触发 `loading` reducer。
-```js
-export default (previousState = 0, { type }) => {
-    switch (type) {
-        case FETCH_START:
-        case USER_LOGIN_LOADING:
-            return previousState + 1;
-        case FETCH_END:
-        case FETCH_ERROR:
-        case FETCH_CANCEL:
-        case USER_LOGIN_SUCCESS:
-        case USER_LOGIN_FAILURE:
-            return Math.max(previousState - 1, 0);
-        default:
-            return previousState;
-    }
-};
-```
+2. 然后并行分发两个 `action`，`${type}_LOADING`(这里是`'RA/CRUD_CREATE_LOADING'`) 和 `FETCH_START`。`'RA/CRUD_CREATE_LOADING'` 好像没什么用，`FETCH_START` 会触发 `loading` reducer。
+
+3. 根据 `restType`(`'RA/CRUD_CREATE'`)，`meta.resource`，`payload` 调用 `dataProvider` 发送数据请求，来获取后端的 `CRUD` 响应结果。
+
+4. 如果成功分发 `${type}_SUCCESS`(这里是`'RA/CRUD_CREATE_SUCCESS'`) 和 `'RA/FETCH_END'` 这两个 `action`。
+
+5. 如果失败分发 `${type}_FAILURE`(这里是`'RA/CRUD_CREATE_FAILURE'`) 和 `'RA/FETCH_ERROR'` 这两个 `action`。
+
 
 
 
