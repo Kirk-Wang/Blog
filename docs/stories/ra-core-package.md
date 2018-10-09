@@ -411,7 +411,7 @@ yield put({ type: FETCH_END }); // 触发 loading reducer
 
 **应用场景：**
 
-显示一篇文章，编辑一条数据等。
+显示一篇文章，编辑一条数据等。
 
 **[dataProvider](https://marmelab.com/react-admin/DataProviders.html) 调用方式：**
 
