@@ -322,12 +322,79 @@ export function* handleFetch(dataProvider, action) {
 1. 首先判断 `optimistic` mode，是就是直接 `return`。
 
 2. 然后并行分发两个 `action`，`${type}_LOADING`(这里是`'RA/CRUD_CREATE_LOADING'`) 和 `FETCH_START`。`'RA/CRUD_CREATE_LOADING'` 好像没什么用，`FETCH_START` 会触发 `loading` reducer。
+```js
+export default (previousState = 0, { type }) => {
+    switch (type) {
+        case FETCH_START:
+        case USER_LOGIN_LOADING:
+            return previousState + 1;
+        case FETCH_END:
+        case FETCH_ERROR:
+        case FETCH_CANCEL:
+        case USER_LOGIN_SUCCESS:
+        case USER_LOGIN_FAILURE:
+            return Math.max(previousState - 1, 0);
+        default:
+            return previousState;
+    }
+};
+```
 
 3. 根据 `restType`(`'RA/CRUD_CREATE'`)，`meta.resource`，`payload` 调用 `dataProvider` 发送数据请求，来获取后端的 `CRUD` 响应结果。
+```js
+// 这里就是执行你提供的 dataProvider，它是一个类似于 ra-data-simple-rest 的函数
+import {
+    fetchUtils,
+    GET_LIST,
+    GET_ONE,
+    GET_MANY,
+    GET_MANY_REFERENCE,
+    CREATE,
+    UPDATE,
+    UPDATE_MANY,
+    DELETE,
+    DELETE_MANY,
+} from 'react-admin';
+export default (apiUrl, httpClient = fetchUtils.fetchJson) => {}
 
-4. 如果成功分发 `${type}_SUCCESS`(这里是`'RA/CRUD_CREATE_SUCCESS'`) 和 `'RA/FETCH_END'` 这两个 `action`。
+return (type, resource, params) => {
+    if (type === UPDATE_MANY) {
+        ...
+    }
+    ...
+}
+```
 
-5. 如果失败分发 `${type}_FAILURE`(这里是`'RA/CRUD_CREATE_FAILURE'`) 和 `'RA/FETCH_ERROR'` 这两个 `action`。
+4. 如果成功分发 `${type}_SUCCESS`(这里是`'RA/CRUD_CREATE_SUCCESS'`) 和 `'RA/FETCH_END'` 这两个 `action`。一般我们创建成功后，会有弹窗提示，跳转等，那么这些副作用该如何管理呢？
+```js
+yield put({
+    type: `${type}_SUCCESS`,
+    payload: response,
+    requestPayload: payload,
+    meta: {
+        ...meta,
+        ...onSuccess,
+        fetchResponse: restType,
+        fetchStatus: FETCH_END,
+    },
+});
+
+// 弹窗提示副作用管理，sideEffects/notification.js
+yield takeEvery(
+    action => action.meta && action.meta.notification,
+    handleNotification
+);
+
+// 跳转副作用管理，sideEffects/redirection.js
+yield takeEvery(
+    action => action.meta && typeof action.meta.redirectTo !== 'undefined',
+    handleRedirection
+);
+
+yield put({ type: FETCH_END }); // 触发 loading reducer
+```
+
+5. 如果失败分发 `${type}_FAILURE`(这里是`'RA/CRUD_CREATE_FAILURE'`) 和 `'RA/FETCH_ERROR'` 这两个 `action`。这里同样会触发弹窗提示副作用。
 
 6. 最后是 `finally` 部分做了任务被取消时的处理。这里主要是是使用一个特殊的 `effect`（cancelled） 来做判断，当前 `task` 是不是已经在外部被 `cancel` 掉了。是不是需要执行一些指定的逻辑。这里是分发一个 `RA/FETCH_CANCEL` 的 `action`，表明当前 `fetch` 已被取消。
 
