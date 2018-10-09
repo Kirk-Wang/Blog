@@ -329,7 +329,7 @@ export function* handleFetch(dataProvider, action) {
 
 5. 如果失败分发 `${type}_FAILURE`(这里是`'RA/CRUD_CREATE_FAILURE'`) 和 `'RA/FETCH_ERROR'` 这两个 `action`。
 
-
+6. 最后是 `finally` 部分做了任务被取消时的处理。这里主要是是使用一个特殊的 `effect`（cancelled） 来做判断，当前 `task` 是不是已经在外部被 `cancel` 掉了。是不是需要执行一些指定的逻辑。这里是分发一个 `RA/FETCH_CANCEL` 的 `action`，表明当前 `fetch` 已被取消。
 
 
 
