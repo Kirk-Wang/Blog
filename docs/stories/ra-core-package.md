@@ -250,7 +250,7 @@ import * as Core from 'ra-core';
 
 关于 `Redux` 相关的文档，如果大家不熟悉的话，可以参看[Redux 中文文档](https://cn.redux.js.org/)
 
-### 针对 `C`(Create) 设计
+### 针对 `C`(Create) 的设计
 
 #### crudCreate
 
@@ -399,6 +399,62 @@ yield put({ type: FETCH_END }); // 触发 loading reducer
 6. 最后是 `finally` 部分做了任务被取消时的处理。这里主要是是使用一个特殊的 `effect`（cancelled） 来做判断，当前 `task` 是不是已经在外部被 `cancel` 掉了。是不是需要执行一些指定的逻辑。这里是分发一个 `RA/FETCH_CANCEL` 的 `action`，表明当前 `fetch` 已被取消。
 
 7. 以上就是一次 `crudCreate` 所要经历的一些过程。
+
+
+### 针对 `R`(Retrieve) 的设计
+
+#### crudGetOne
+
+**功能：**
+
+通过 `id` 查询单条资源。
+
+**应用场景：**
+
+显示一篇文章，编辑一条数据等。
+
+**[dataProvider](https://marmelab.com/react-admin/DataProviders.html) 调用方式：**
+
+```jsx
+dataProvider(GET_ONE, 'posts', { id: 123 })
+.then(response => console.log(response));
+// {
+//     data: { id: 123, title: "hello, world" }
+// }
+```
+
+**相关源码：**
+
+```js
+export const CRUD_GET_ONE = 'RA/CRUD_GET_ONE';
+export const CRUD_GET_ONE_LOADING = 'RA/CRUD_GET_ONE_LOADING';
+export const CRUD_GET_ONE_FAILURE = 'RA/CRUD_GET_ONE_FAILURE';
+export const CRUD_GET_ONE_SUCCESS = 'RA/CRUD_GET_ONE_SUCCESS';
+
+export const crudGetOne = (resource, id, basePath, refresh = true) => ({
+    type: CRUD_GET_ONE,
+    payload: { id }, // "13"
+    meta: {
+        resource, // "posts"
+        fetch: GET_ONE,
+        basePath, // "/posts"
+        onFailure: {
+            notification: {
+                body: 'ra.notification.item_doesnt_exist',
+                level: 'warning',
+            },
+            redirectTo: 'list',
+            refresh,
+        },
+    },
+});
+```
+
+
+
+
+
+
 
 
 
