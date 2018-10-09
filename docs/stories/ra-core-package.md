@@ -398,6 +398,8 @@ yield put({ type: FETCH_END }); // 触发 loading reducer
 
 6. 最后是 `finally` 部分做了任务被取消时的处理。这里主要是是使用一个特殊的 `effect`（cancelled） 来做判断，当前 `task` 是不是已经在外部被 `cancel` 掉了。是不是需要执行一些指定的逻辑。这里是分发一个 `RA/FETCH_CANCEL` 的 `action`，表明当前 `fetch` 已被取消。
 
+7. 以上就是一次 `crudCreate` 所要经历的一些过程。
+
 
 
 
