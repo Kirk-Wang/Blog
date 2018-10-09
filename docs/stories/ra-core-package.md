@@ -409,9 +409,9 @@ yield put({ type: FETCH_END }); // 触发 loading reducer
 
 通过 `id` 查询单条资源。
 
-**应用场景：**
+**应用场景：**
 
-显示一篇文章，编辑一条数据等。
+显示一篇文章，编辑一条数据等。
 
 **[dataProvider](https://marmelab.com/react-admin/DataProviders.html) 调用方式：**
 
@@ -423,7 +423,7 @@ dataProvider(GET_ONE, 'posts', { id: 123 })
 // }
 ```
 
-**相关源码：**
+**相关源码：**
 
 ```js
 export const CRUD_GET_ONE = 'RA/CRUD_GET_ONE';
