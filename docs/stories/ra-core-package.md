@@ -450,6 +450,12 @@ export const crudGetOne = (resource, id, basePath, refresh = true) => ({
 });
 ```
 
+这个 `ActionCreator` 会在 `EditController` 和 `ShowController` 中进行调用。
+
+```js
+this.props.crudGetOne(resource, id, this.props.basePath);
+```
+
 
 
 
