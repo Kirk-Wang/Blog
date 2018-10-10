@@ -411,7 +411,7 @@ yield put({ type: FETCH_END }); // 触发 loading reducer
 
 **应用场景：**
 
-显示一篇文章，编辑一条数据等。
+编辑一条数据：
 
 **[dataProvider](https://marmelab.com/react-admin/DataProviders.html) 调用方式：**
 
@@ -473,11 +473,19 @@ meta: {
 },
 ```
 
-1. 当这个 `action` 被分发出去的时候，`meta` 数据中包含 `fetch`，所以这个 `action` 会被 `redux-saga` 中间件给监听到。从而进入 `fetchSaga` 的处理，也就是前面的 `handleFetch` 函数的调用。
+1. 当这个 `action` 被分发出去的时候，`meta` 数据中包含 `fetch`，
 
-2. 分发 `FETCH_START`，调用 `loading` reducer。
+2. `meta` 数据中包含 `fetch`，所以这个 `action` 会被 `redux-saga` 中间件给监听到。从而进入 `fetchSaga` 的处理，也就是前面的 `handleFetch` 函数的调用。
 
-3. `dataProvider` 的调用，请求服务端借口。
+3. 正常情况：
+
+    a. 分发 `FETCH_START`，调用 `loading` reducer。
+
+    b. `dataProvider` 的调用，拉取数据。
+
+    c. 分发 `${type}_SUCCESS` action，`meta` 多了 `fetchResponse` 和 `fetchStatus` 等 `key`。由于 `errorSaga` 监听了 `action.meta.fetchResponse`，所以处理和这个副作用。
+
+    d. 
 
 4. 
 
