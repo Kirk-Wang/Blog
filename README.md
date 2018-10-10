@@ -10,25 +10,26 @@
 
 ### 基于 Redux Devtools 来逐步分析 React-Admin（最新）
 
-    项目，采用官方自带的示例，`example` 目录下的 `simple` 项目。怎么跑起来？[调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
+项目，采用官方自带的示例，`example` 目录下的 `simple` 项目。怎么跑起来？[调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
 
-    扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
+扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
-    1. [从 `npm start` 启动项目开始说起](./docs/stories/redux-devtools/npm-start.md)
+1. [从 `npm start` 启动项目开始说起](./docs/stories/redux-devtools/npm-start.md)
 
 ### 用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓
-    * [React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性](./docs/stories/core-admin-data-provider.md)
-    * [React-Admin 架构分析：Material-UI 定制](./docs/stories/material-ui-customization.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `Themes` 文档](./docs/stories/material-ui-customization-themes.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `Overrides` 文档](./docs/stories/material-ui-customization-overrides.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `CSS in JS` 文档](./docs/stories/material-ui-customization-css-in-js.md)
-        * [React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档](./docs/stories/material-ui-customization-default-theme.md)
-    * [React-Admin 架构分析：`Admin` 组件源码解析之 `theme` 属性](./docs/stories/core-admin-app-theme.md)
-    * [React-Admin 架构分析：`Admin` 组件源码解析之 `appLayout` 属性](./docs/stories/core-admin-app-layout.md)
+* [React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性](./docs/stories/core-admin-data-provider.md)
+* [React-Admin 架构分析：Material-UI 定制](./docs/stories/material-ui-customization.md)
+    * [React-Admin 架构分析：Material-UI 定制之 `Themes` 文档](./docs/stories/material-ui-customization-themes.md)
+    * [React-Admin 架构分析：Material-UI 定制之 `Overrides` 文档](./docs/stories/material-ui-customization-overrides.md)
+    * [React-Admin 架构分析：Material-UI 定制之 `CSS in JS` 文档](./docs/stories/material-ui-customization-css-in-js.md)
+    * [React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档](./docs/stories/material-ui-customization-default-theme.md)
+* [React-Admin 架构分析：`Admin` 组件源码解析之 `theme` 属性](./docs/stories/core-admin-app-theme.md)
+* [React-Admin 架构分析：`Admin` 组件源码解析之 `appLayout` 属性](./docs/stories/core-admin-app-layout.md)
 
 ### `react-admin` 各 `package` 分析 (文章曲线不对，废弃)
-    * [react-admin 包分析](./docs/stories/react-admin-package.md)
-    * [ra-core 包分析](./docs/stories/ra-core-package.md)
+
+* [react-admin 包分析](./docs/stories/react-admin-package.md)
+* [ra-core 包分析](./docs/stories/ra-core-package.md)
 
 ### [Admin 组件源码解析](./docs/stories/Admin.md)（有干货但有些凌乱，留作纪念）
 ### [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有干货但有些凌乱，留作纪念）
