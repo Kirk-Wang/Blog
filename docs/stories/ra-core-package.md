@@ -456,9 +456,30 @@ export const crudGetOne = (resource, id, basePath, refresh = true) => ({
 this.props.crudGetOne(resource, id, this.props.basePath);
 ```
 
+**meta 分析：**
+```js
+meta: {
+    resource, // "posts"
+    fetch: GET_ONE,
+    basePath, // "/posts"
+    onFailure: {
+        notification: {
+            body: 'ra.notification.item_doesnt_exist',
+            level: 'warning',
+        },
+        redirectTo: 'list',
+        refresh,
+    },
+},
+```
 
+1. 当这个 `action` 被分发出去的时候，`meta` 数据中包含 `fetch`，所以这个 `action` 会被 `redux-saga` 中间件给监听到。从而进入 `fetchSaga` 的处理，也就是前面的 `handleFetch` 函数的调用。
 
+2. 分发 `FETCH_START`，调用 `loading` reducer。
 
+3. `dataProvider` 的调用，请求服务端借口。
+
+4. 
 
 
 
