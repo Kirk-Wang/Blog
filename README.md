@@ -10,6 +10,8 @@
 
 ### 基于 Redux Devtools 来逐步分析 React-Admin（最新）
 
+这是一个 `Redux` 应用程序，从 `Devtools` 去看它做了哪些事儿，应该是一个不错的选择。
+
 项目，采用官方自带的示例，`example` 目录下的 `simple` 项目。怎么跑起来？[调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
 
 扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
