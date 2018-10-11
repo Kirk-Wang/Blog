@@ -25,4 +25,24 @@
 
 ![](./images/npm-start/5.png)
 
+**`@@INIT`**
+
+这个是当你 `createStore` 的时候，`redux` 内部的一次 `dispatch`
+
+```js
+ dispatch({ type: ActionTypes.INIT })
+```
+
+**RA/RESET_FORM，@@redux-form/DESTROY, @@router/LOCATION_CHANGE**
+
+为什么要在路由改变的时候分发 `RA/RESET_FORM，@@redux-form/DESTROY`？
+
+原因是避免 `redux-form` 不必要的表单数据 state 的混乱。它处理已经作为 `redux` 中间件进行了封装。所以每次路由（`@@router/LOCATION_CHANGE` 被 `dispatch`）改变的时候都会做这件事儿。
+
+
+
+
+
+
+
 
