@@ -43,8 +43,37 @@
 
 这里其实就是 `resource` 组件的渲染，这是 `react-admin` 的机制。不管有没有权限，首先就会做这件事情。这是在 `CoreAdminRouter`。
 
+**RA/RESET_FORM，@@redux-form/DESTROY, @@router/LOCATION_CHANGE**
 
+默认 `resource` 都是有布局的， 所以在 `CoreAdminRouter` 中会用到 `RoutesWithLayout` 组件。
 
+又是一次跳转，在没有 `dashboard` 的情况下，`react-admin` 默认会转到第一个 `resouce`。
+```js
+firstChild ? (
+                <Route
+                    exact
+                    path="/"
+                    render={() => <Redirect to={`/${firstChild.props.name}`} />}
+                />
+            )
+```
+
+**RA/SET_SIDEBAR_VISIBILITY**
+
+这个 `action` 的触发，是由默认 `appLayout` 组件的 `SideBar` 组件触发的。
+```js
+// 位于 ra-ui-materialui 包中
+componentWillMount() {
+    const { width, setSidebarVisibility } = this.props;
+    if (width !== 'xs' && width !== 'sm') {
+        setSidebarVisibility(true);
+    }
+}
+```
+**RA/USER_CHECK**
+不同于之前的注册，这里 `Resource` 组件作为一个标准的组件进行渲染。
+
+由于在它的 `render` 里面用了 `WithPermissions` 组件，所以会触发这个检查动作。
 
 
 
