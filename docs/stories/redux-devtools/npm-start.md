@@ -60,7 +60,7 @@ firstChild ? (
 
 **RA/SET_SIDEBAR_VISIBILITY**
 
-这个 `action` 的触发，是由默认 `appLayout` 组件的 `SideBar` 组件触发的。
+同时，这个 `action` 的触发，是由默认 `appLayout` 组件的 `SideBar` 组件触发的。
 ```js
 // 位于 ra-ui-materialui 包中
 componentWillMount() {
@@ -71,12 +71,15 @@ componentWillMount() {
 }
 ```
 **RA/USER_CHECK**
+
 不同于之前的注册，这里 `Resource` 组件作为一个标准的组件进行渲染。
 
 由于在它的 `render` 里面用了 `WithPermissions` 组件，所以会触发这个检查动作。
 
+**@@redux-form/INITIALIZE，@@redux-form/REGISTER_FIELD**
 
+这是由列表页的过滤表单 `FilterForm` 组件触发的，**RA/USER_CHECK** 是异步的，在它没有 `resolve` 之前，它并不会阻止 `resource` 的渲染。也就是说如果**RA/USER_CHECK**一直阻塞到哪里的话，那么你会直接看到资源列表，并且你永远没法跳转到登录页。
 
+**RA/CRUD_GET_LIST，RA/CRUD_GET_LIST_LOADING，RA/FETCH_START**
 
-
-
+并发一连串 `action`，没啥好说的，在 `ListController` 里面发起的 `crudGetList`。
