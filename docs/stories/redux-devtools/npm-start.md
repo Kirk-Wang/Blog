@@ -83,3 +83,55 @@ componentWillMount() {
 **RA/CRUD_GET_LIST，RA/CRUD_GET_LIST_LOADING，RA/FETCH_START**
 
 并发一连串 `action`，没啥好说的，在 `ListController` 里面发起的 `crudGetList`。
+
+**RA/RESET_FORM，@@redux-form/DESTROY, @@router/LOCATION_CHANGE**
+
+再一次跳转，进入 `/login`。
+
+**@@redux-form/UPDATE_SYNC_ERRORS**
+
+这个是我们，在登录页面，用 `reduxForm` 高阶组件初始化表单时候，因为我们传入了 `validate` 函数，所以它会在内部分发一次。
+
+```js
+reduxForm({
+    form: 'signIn',
+    validate: (values, props) => {
+        const errors = {};
+        const { translate } = props;
+        if (!values.username)
+            errors.username = translate('ra.validation.required');
+        if (!values.password)
+            errors.password = translate('ra.validation.required');
+        return errors;
+    },
+})
+```
+
+**RA/UNREGISTER_RESOURCE(3)**
+
+因为转到登录页了，所以这里就理所当然的被卸载了，这个动作的触发在 `Resource` 组件的 `componentWillUnmount` 的函数中。
+
+```js
+componentWillUnmount() {
+    const { context, name, unregisterResource } = this.props;
+    if (context === 'registration') {
+        unregisterResource(name);
+    }
+}
+```
+
+**@@redux-form/UNREGISTER_FIELD**
+
+同样，`redux-form` 对 `filterForm` 的表单字段的卸载。
+
+**@@redux-form/REGISTER_FIELD(2)**
+
+同样，`redux-form` 对 `signIn` 的表单字段的注册。
+
+**@@redux-form/UPDATE_SYNC_ERRORS**
+
+注册完后，同步一下。
+
+**RA/CRUD_GET_LIST_SUCCESS，RA/FETCH_END** 
+
+这个 `action`，因为之前并没有 `cancel` 掉 `RA/CRUD_GET_LIST` 这个。这个的副作用还是会执行。
