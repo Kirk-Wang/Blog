@@ -57,7 +57,17 @@
 15. `result-first callback style`
 ```typescript
 type Callback = (result: any, isErr: boolean) => void
+/**
+redux-saga 源码中几乎所有回调函数都是该风格的，相应的变量名也有好几个：
+cont continuation 缩写，一般用于表示 Task / MainTask / ForkQueue 的后继
+cb callback 缩写 或是 **currCb** 应该是 currentCallback 的缩写。一般用于 effect 的后继/回调函数
+next 就是前边的递归函数，它也是符合 result-first callback style 的
+**/
 ```
+16. `cancellation`：[任务取消](https://redux-saga.js.org/docs/advanced/TaskCancellation.html)。
+17. [如何取消你的 Promise？](https://juejin.im/post/5a32705a6fb9a045117127fa)。
+18. `effect` 状态：运行中、已完成（正常结束或是抛出错误结束都算完成）、被取消。
+19. `little-saga` 有更新，待我啃一下源码……。
 
 **[坦克大战复刻版](https://zhuanlan.zhihu.com/p/35551654)** 阅读：
 
