@@ -24,6 +24,13 @@
 
 [Iterator 和 for...of 循环](http://es6.ruanyifeng.com/#docs/iterator)
 
+相关好文：
+[redux-saga 实践总结](https://zhuanlan.zhihu.com/p/23012870)
+[浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
+[Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)
+
+### 肥超大佬的 little-saga
+
 ### 工程化
 
 ### Mac开发配置
