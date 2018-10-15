@@ -51,7 +51,7 @@ npm start
 
 [FakeRest](https://github.com/marmelab/FakeRest)：拦截一个 AJAX 调用到一个基于 JSON 数据伪造的 REST 服务器。在 Sinon.js（针对 XMLHTTPRequest）或 fetch-mock（针对 fetch）之上使用它来测试浏览器端的 JavaScript REST 客户端（例如单页应用程序），而无需服务器。
 
-Fake Rest Server 示例代码（[demo](https://o-o.ren/react-admin-app/examples/fetch.html) | [demo source](./docs/examples/fetch.html)）
+Fake Rest Server 示例代码（[demo](https://o-o.ren/react-admin-app/examples/fetch.html) | [demo source](../examples/fetch.html)）
 
 ```js
 // 初始化一个伪造的 Rest Server
@@ -100,7 +100,7 @@ fetchMock.restore();
 我这里直接将 [data-generator](https://github.com/marmelab/react-admin/tree/master/examples/data-generator) 改造成一个 typescript 版本。放到 src 下。
 
 #### demo 前端数据 E-R 图
-![](./docs/images/demo-json-er.jpg)
+![](../images/demo-json-er.jpg)
 
 #### customers 的 Resource 组件
 ```jsx
@@ -119,10 +119,10 @@ export { default as CustomerIcon } from "@material-ui/icons/Person";
 
 #### Customers List [UI界面分析](https://marmelab.com/react-admin-demo/#/customers)
 1. 要展示的字段
-![](./docs/images/customers-list-field.jpg)
+![](../images/customers-list-field.jpg)
 
 2. 通过 E-R 图，我知道这个 customer field 展示组件由三个数据字段（avatar，first_name，last_name）组成。并且是一个 a 链接，指向 Edit 视图。因此这个自定义组件可以设计成这样：
-![](./docs/images/CustomerLinkField.jpg)
+![](../images/CustomerLinkField.jpg)
 3. 自定义组件（FullNameField）中，有用到[recompose/pure](https://github.com/acdlite/recompose/blob/e1b5359fc611a2eb8df94cd6c39b709e16294156/src/packages/recompose/pure.js)（用它来做一个高阶处理，使用 shallowEqual() 方法在高阶组件 shouldComponentUpdate 中决定组件是否执行 render）。[Recompose](https://github.com/acdlite/recompose) 是一个用于创建函数式组件和高阶组件的 React 工具库。
 4. 从 react-admin 导出 DateField 组件，用来展示 Last seen(last_seen)。并指明 type 是 date。
 5. 从 react-admin 导出 NumberField 组件，用来展示 Orders(nb_commands)。
@@ -270,7 +270,7 @@ const compose = (...funcs) =>
 </Create>
 ```
 组件结构图
-![](./docs/images/CustomerCreate.png)
+![](../images/CustomerCreate.png)
 
 #### Customers 编辑视图
 1. 通过从 react-admin 导出的 EditButton 轻松可以路由到 Edit 视图组件。EditButton 组件为您封装好了一切，这是因为它包含 从 react-router-dom 导出的 Link 组件。
@@ -279,37 +279,37 @@ const compose = (...funcs) =>
 ....
 <Edit/>
 ```
-![](./docs/images/CustomerEdit2.png)
+![](../images/CustomerEdit2.png)
 
 #### Segments 内部组件
-![](./docs/images/Segments.png)
+![](../images/Segments.png)
 
 #### CommandList(Orders) 内部组件
-![](./docs/images/command-list.png)
+![](../images/command-list.png)
 
 #### CommandEdit 内部组件
-![](./docs/images/CommandEdit.png)
+![](../images/CommandEdit.png)
 
 #### ProductList 内部组件
-![](./docs/images/ProductList.png)
+![](../images/ProductList.png)
 
 #### ProductCreate 内部组件
-![](./docs/images/ProductCreate.png)
+![](../images/ProductCreate.png)
 
 #### ProductEdit 内部组件
-![](./docs/images/ProductEdit.png)
+![](../images/ProductEdit.png)
 
 #### CategoryList 内部组件
-![](./docs/images/CategoryList.png)
+![](../images/CategoryList.png)
 
 #### CategoryEdit 内部组件
-![](./docs/images/CategoryEdit.png)
+![](../images/CategoryEdit.png)
 
 #### ReviewList 内部组件
-![](./docs/images/ReviewList.png)
+![](../images/ReviewList.png)
 
 #### ReviewEdit 内部组件
-![](./docs/images/ReviewEdit.png)
+![](../images/ReviewEdit.png)
 
 #### i18n（国际化）
 对于一个 App 来说，一开始就做多语言是一件好的事情，这里我们对 App 做中英文的支撑：
