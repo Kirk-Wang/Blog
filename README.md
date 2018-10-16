@@ -20,11 +20,18 @@
 
 ### redux-saga
 
-基础知识：
+预备知识：
 
 [Iterator 和 for...of 循环](http://es6.ruanyifeng.com/#docs/iterator)
+
 [深入浅出 ES6（二）：迭代器和 for-of 循环](http://www.infoq.com/cn/articles/es6-in-depth-iterators-and-the-for-of-loop)
+
 [深入浅出 ES6（三）：生成器 Generators](http://www.infoq.com/cn/articles/es6-in-depth-generators)
+
+**[官方文档](https://redux-saga-in-chinese.js.org/)扫盲**：
+
+1. `Effects` 是一些简单 `Javascript` 对象，包含了要被 `middleware` 执行的指令。
+2. `middleware` 检查每个被 `yield` 的 `Effect` 的类型，然后决定如何实现哪个 `Effect`。
 
 相关好文：
 
@@ -33,6 +40,14 @@
 [浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
 
 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)
+
+### 脑子里必须清楚的 `redux` `redux-saga` 使用流程。（脑回路一下……）
+
+### 生啃 `redux-saga` 源码：
+
+操练地址：
+
+
 
 ### 肥超大佬的 [little-saga](https://github.com/little-saga/little-saga)
 
