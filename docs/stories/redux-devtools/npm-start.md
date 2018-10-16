@@ -1,4 +1,4 @@
-# 探索进入 `http://localhost:8080` 后 `React-Admin` 所触发的动作
+# `localhost:8080` 背后的动作
 
 项目，采用官方自带的示例，`example` 目录下的 `simple` 项目。怎么跑起来？[调试 React-Admin 源码，看清框架的本质](../debug-react-admin.md)
 
@@ -9,11 +9,11 @@
 
 ![](./images/npm-start/1.png)
 
-2. 输入 [http://localhost:8080](http://localhost:8080/)，并回车。
+2. 输入 [localhost:8080](http://localhost:8080/)，并回车。
 
 ![](./images/npm-start/2.png)
 
-3. 发现 `url` 跳转到了 [http://localhost:8080/#/login](http://localhost:8080/)
+3. 发现 `url` 跳转到了 [localhost:8080/#/login](http://localhost:8080/)
 
 ![](./images/npm-start/3.png)
 

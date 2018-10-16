@@ -16,8 +16,8 @@
 
 扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
-1. [探索进入 `http://localhost:8080` 后 `React-Admin` 所触发的动作](./docs/stories/redux-devtools/npm-start.md)
-2. [探索进入 `http://localhost:8080/#/login` 后 `React-Admin` 所触发的动作](./docs/stories/redux-devtools/route-login.md)
+1. [`localhost:8080` 背后的动作](./docs/stories/redux-devtools/npm-start.md)
+2. [`localhost:8080/#/login` 背后的动作](./docs/stories/redux-devtools/route-login.md)
 
 ### redux-saga
 
