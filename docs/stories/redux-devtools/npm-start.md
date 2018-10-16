@@ -1,4 +1,4 @@
-# 基于 Redux Devtools 来逐步分析 React-Admin（从 `npm start` 启动项目开始说起）
+# 探索进入 `http://localhost:8080` 后 `React-Admin` 所触发的动作
 
 项目，采用官方自带的示例，`example` 目录下的 `simple` 项目。怎么跑起来？[调试 React-Admin 源码，看清框架的本质](../debug-react-admin.md)
 

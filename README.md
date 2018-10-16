@@ -16,7 +16,8 @@
 
 扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
-1. [从 `npm start` 启动项目开始说起](./docs/stories/redux-devtools/npm-start.md)
+1. [探索进入 `http://localhost:8080` 后 `React-Admin` 所触发的动作](./docs/stories/redux-devtools/npm-start.md)
+2. [探索进入 `http://localhost:8080/#/login` 后 `React-Admin` 所触发的动作](./docs/stories/redux-devtools/route-login.md)
 
 ### redux-saga
 
@@ -32,6 +33,7 @@
 
 1. `Effects` 是一些简单 `Javascript` 对象，包含了要被 `middleware` 执行的指令。
 2. `middleware` 检查每个被 `yield` 的 `Effect` 的类型，然后决定如何实现哪个 `Effect`。
+3. 记住这是一个 `Generator` 函数，它不具备 从运行至完成 的行为（`run-to-completion behavior`）
 
 相关好文：
 
@@ -46,8 +48,6 @@
 ### 生啃 `redux-saga` 源码：
 
 操练地址：
-
-
 
 ### 肥超大佬的 [little-saga](https://github.com/little-saga/little-saga)
 
