@@ -139,6 +139,17 @@ $btn.addEventListener('click', () => {
 
 OK，一次点击的监听搞定。
 
+多次就很简单了：
+
+```js
+function* saga() {
+  while(true) {
+    const action = yield take();
+    console.log(action);
+  }
+}
+```
+
 可能有的小伙伴很奇怪，为什么一个事件处理要TM搞的如此的麻烦？
 
 我们经常说程序功能的扩展性要强，可伸缩云云~~，就不难理解这样设计的好处了。所有逻辑通用单独维护，用到时纽带一连就好了。
