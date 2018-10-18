@@ -39,7 +39,7 @@
 
 [redux-saga 实践总结](https://zhuanlan.zhihu.com/p/23012870)
 
-[浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)，关于这篇我总结一下：
+[浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)，关于[小鹿](https://zhuanlan.zhihu.com/p/30098155)这篇我总结一下：
 
 从一个简单的 `saga` 函数（它其实就是一个 `Generator` 函数）说起：
 
@@ -71,11 +71,79 @@ function take() {
 
 OK，这显然就是一个（发布/订阅）的关系。
 
+`redux-saga` 用了一个名叫 `channel` 东西来做这件事情。简单的理解里面有一个 `take` 方法做订阅，一个 `put` 方法做发布。
+当 `put` 的时候，`take` 方法里面的订阅函数（这里我们叫它 taker）就是执行，并且立即销毁。
 
+那么这个函数的的雏形也就出来了：
 
+```js
+function channel() {
+  let taker;
 
+  function take(cb) {
+    taker = cb;
+  }
 
+  function put(input) {
+    if (taker) {
+      const tempTaker = taker;
+      taker = null;
+      tempTaker(input);
+    }
+  }
 
+  return {
+    put,
+    take,
+  };
+}
+
+const chan = channel();
+```
+
+纽带，我们建完了，我们把事件的订阅者（`saga` 函数）与事件的发布者（`dom` `Button`）捆绑上纽带。
+
+首先是订阅，其实就是运行这个 `saga` 函数，我们简单的把这个函数叫做 `runSaga`（当然，`redux-saga` 里面的这个函数要复杂的多）。
+
+```js
+function runSaga(saga) {
+  // 拿到迭代器
+  const iter = saga();
+  // 处理迭代器
+  function next(args) {
+    const result = iter.next(args);
+    if (!result.done) {
+      const effect = result.value;
+      if (effect.type === 'take') {
+          // iter 运行函数 `next` 不在继续执行
+          // 订阅注册
+          chan.take((input) => {
+              next(input)
+          })
+      }
+    }
+  }
+  next();
+}
+```
+
+好，接下来绑定发布者：
+
+```js
+let i = 0;
+$btn.addEventListener('click', () => {
+  const action =`action data${i++}`;
+  chan.put(action);
+}, false);
+```
+
+OK，一次点击的监听搞定。
+
+可能有的小伙伴很奇怪，为什么一个事件处理要TM搞的如此的麻烦？
+
+我们经常说程序功能的扩展性要强，可伸缩云云~~，就不难理解这样设计的好处了。所有逻辑通用单独维护，用到时纽带一连就好了。
+
+这也就验证了那句话：副作用不是消除，而是优雅的管理。
 
 
 
