@@ -39,7 +39,46 @@
 
 [redux-saga 实践总结](https://zhuanlan.zhihu.com/p/23012870)
 
-[浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
+[浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)，关于这篇我总结一下：
+
+从一个简单的 `saga` 函数（它其实就是一个 `Generator` 函数）说起：
+
+```js
+function* saga() {
+    const action = yield take();
+    console.log(action);
+}
+```
+
+这个函数很简单，当我们执行到 `yield take()` 时候，控制权交给了外部的运行函数，并且将 `take()` 的执行结果给返回。
+
+在 `redux-saga` 里面，`take` 是一个 `effect`，也就是说执行 `take()` 返回的是一个纯 `javascript` 对象。
+
+在这里我们简单理解它是长成这个样子的：
+
+```js
+function take() {
+  return {
+    type: 'take'
+  };
+}
+```
+
+外部函数拿到这个对象后，来决定 `saga` 是否继续执行。显然 `redux-saga` 并不立即把控制权给交换回去，让这个 `saga` 继续执行。
+
+而是等待一个 `action` 的触发，同时把这个 `action` 作为 `saga` 里面 `yield take()` 语句的返回。
+也就是外部 `saga` 运行函数需要在合适的时机调用这个 `saga` 的 `Iterator.next(action)`。
+
+OK，这显然就是一个（发布/订阅）的关系。
+
+
+
+
+
+
+
+
+
 
 [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)
 
@@ -126,3 +165,9 @@ next 就是前边的递归函数，它也是符合 result-first callback style �
 ## 使用 React-Admin 实战中后台应用
 
 [最早的想法（留作纪念）](./docs/stories/old-readme.md)
+
+## 优秀的 blog
+
+[Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
+[冴羽的博客](https://github.com/mqyqingfeng/Blog)
+[node-interview](https://github.com/ElemeFE/node-interview/tree/master/sections/zh-cn)
