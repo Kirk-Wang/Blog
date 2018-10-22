@@ -21,6 +21,8 @@
 
 ### redux-saga
 
+[Redux-Saga 仓库实例精解](./docs/stories/saga/examples-saga.md)
+
 预备知识：
 
 [Iterator 和 for...of 循环](http://es6.ruanyifeng.com/#docs/iterator)
