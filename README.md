@@ -21,7 +21,9 @@
 
 ### redux-saga
 
-[Redux-Saga 仓库实例精解](./docs/stories/saga/examples-saga.md)
+[Redux-Saga 仓库实例精解](./docs/stories/saga/examples-saga.md) (废弃，没价值，大家自行看源码🤣)
+
+[坦克大战复刻版](https://zhuanlan.zhihu.com/p/35551654) 源码分析：
 
 预备知识：
 
@@ -60,8 +62,6 @@
 **[构建你自己的 redux-saga](https://github.com/little-saga/little-saga/blob/master/docs/building-your-own-redux-saga.md)** 一文：
 
 [总结](./docs/stories/saga/build-saga.md)
-
-**[坦克大战复刻版](https://zhuanlan.zhihu.com/p/35551654)** 阅读：
 
 ### 工程化
 
