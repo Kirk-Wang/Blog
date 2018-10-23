@@ -23,14 +23,15 @@
 
 [Redux-Saga 仓库实例精解](./docs/stories/saga/examples-saga.md) (废弃，没价值，大家自行看源码🤣)
 
-[坦克大战复刻版](https://zhuanlan.zhihu.com/p/35551654) 源码分析：
+### [坦克大战复刻版](https://zhuanlan.zhihu.com/p/35551654) 源码分析：
 
 必备知识：
+
 [SVG 图像入门教程](http://www.ruanyifeng.com/blog/2018/08/svg.html)
+
 [走进SVG](https://www.imooc.com/learn/143)
 
-关于这篇文章的总结：
-
+系列文章：
 
 
 预备知识：
