@@ -11,3 +11,7 @@
 ### UI
 
 ![](./images/choose-stage-scene/1.png)
+
+### 场景用到的相关组件
+
+![](./images/choose-stage-scene/2.png)
