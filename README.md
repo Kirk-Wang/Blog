@@ -37,6 +37,8 @@
 
 [关卡选择场景组件 ChooseStageScene 的分析](./docs/stories/battle-city/choose-stage-scene.md)
 
+[游戏场景组件 GameScene 的分析](./docs/stories/battle-city/game-scene.md)
+
 预备知识：
 
 [Iterator 和 for...of 循环](http://es6.ruanyifeng.com/#docs/iterator)
