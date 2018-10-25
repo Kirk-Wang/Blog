@@ -35,6 +35,8 @@
 
 [首屏场景组件 GameTitleScene 的分析](./docs/stories/battle-city/game-title-scene.md)
 
+[关卡选择场景组件 ChooseStageScene 的分析](./docs/stories/battle-city/choose-stage-scene.md)
+
 预备知识：
 
 [Iterator 和 for...of 循环](http://es6.ruanyifeng.com/#docs/iterator)
