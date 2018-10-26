@@ -11,3 +11,7 @@
 ### UI
 
 ![](./images/game-scene/1.png)
+
+### BattleFieldScene 组件
+
+这是真正的游戏主界面组件
