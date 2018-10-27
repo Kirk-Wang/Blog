@@ -31,6 +31,8 @@
 
 [走进SVG](https://www.imooc.com/learn/143)
 
+相关基础知识点：
+
 系列文章：
 
 [首屏场景组件 GameTitleScene 的分析](./docs/stories/battle-city/game-title-scene.md)
