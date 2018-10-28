@@ -33,6 +33,8 @@
 
 相关基础知识点：
 
+![](./docs/images/svg.png)
+
 系列文章：
 
 [首屏场景组件 GameTitleScene 的分析](./docs/stories/battle-city/game-title-scene.md)
