@@ -53,6 +53,8 @@
 
 ![](./docs/images/svg.png)
 
+[immutable入坑指南](http://www.aliued.com/?p=4175)
+
 系列文章：
 
 [首屏场景组件 GameTitleScene 的分析](./docs/stories/battle-city/game-title-scene.md)
@@ -106,8 +108,6 @@
 ### FAQ
 [ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
 
-## 小插曲
-
 ### [CSSINJS](http://cssinjs.org)
 
 传统的“关注点分离”（separation of concerns）原则中不推荐我们把 HTML、CSS、JS 混杂一起编写，但是在伴随着前端组件模式的大潮"关注点混合"慢慢成为主流。
@@ -129,3 +129,7 @@
 [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 
 [node-interview](https://github.com/ElemeFE/node-interview/tree/master/sections/zh-cn)
+
+[大话WEB开发](https://github.com/SFLAQiu/web-develop)
+
+[梁少峰的个人博客](https://github.com/youngwind/blog)
