@@ -37,6 +37,47 @@
 ### [Admin 组件源码解析](./docs/stories/Admin.md)（有干货但有些凌乱，留作纪念）
 ### [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有干货但有些凌乱，留作纪念）
 
+### AOP & middleware(1秒懂^_^)
+
+```jsx
+const dispatch = action => action;
+
+const a1 = next => action => {
+	console.log('a1入栈切面');
+	const result = next(action);
+	console.log('a1出栈切面');
+	return result;
+}
+
+const a2 = next => action => {
+	console.log('a2入栈切面');
+	const result = next(action);
+	console.log('a2出栈切面');
+	return result;
+}
+
+const a3 = next => action => {
+	console.log('a3入栈切面');
+	const result = next(action);
+	console.log('a3出栈切面');
+	return result;
+}
+
+const enhancer = [a1, a2, a3].reduce((a, b) => action => a(b(action)));
+
+const finalDispatch = enhancer(dispatch);
+
+finalDispatch({type: 'what', payload: 'aop'});
+
+// a1入栈切面
+// a2入栈切面
+// a3入栈切面
+// a3出栈切面
+// a2出栈切面
+// a1出栈切面
+{type: "what", payload: "aop"}
+```
+
 ### redux-saga
 
 [Redux-Saga 仓库实例精解](./docs/stories/saga/examples-saga.md) (废弃，没价值，大家自行看源码🤣)
