@@ -174,3 +174,11 @@ finalDispatch({type: 'what', payload: 'aop'});
 [大话WEB开发](https://github.com/SFLAQiu/web-develop)
 
 [梁少峰的个人博客](https://github.com/youngwind/blog)
+
+## 杂项
+[解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
+```sh
+openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.crt -subj /CN=dev.xx.com -reqexts SAN -extensions SAN -config <(cat /System/Library/OpenSSL/openssl.cnf <(printf '[SAN]\nsubjectAltName=DNS:dev.xx.com')) -sha256 -days 3650
+```
+
+## 前端性能优化是什么❓为什么❓怎么做❓
