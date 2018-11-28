@@ -182,3 +182,8 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 ```
 
 ## 前端性能优化是什么❓为什么❓怎么做❓
+
+## docker
+[offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+[Error message 'sudo: unable to resolve host <USER>'](https://askubuntu.com/questions/59458/error-message-sudo-unable-to-resolve-host-user)
+[Docker CE 镜像源站](https://yq.aliyun.com/articles/110806)
