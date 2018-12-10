@@ -185,9 +185,14 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 
 ## 前端性能优化
 
-![](./docs/perf/perf_img.png)
+### 图片
 
-![](./docs/perf/perf_cache.png)
+![](./docs/images/perf/perf_img.png)
+
+
+### 缓存
+
+![](./docs/images/perf/perf_cache.png)
 
 ## docker
 
