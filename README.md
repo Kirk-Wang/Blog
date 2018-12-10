@@ -176,14 +176,23 @@ finalDispatch({type: 'what', payload: 'aop'});
 [梁少峰的个人博客](https://github.com/youngwind/blog)
 
 ## 杂项
+
 [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
+
 ```sh
 openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.crt -subj /CN=dev.xx.com -reqexts SAN -extensions SAN -config <(cat /System/Library/OpenSSL/openssl.cnf <(printf '[SAN]\nsubjectAltName=DNS:dev.xx.com')) -sha256 -days 3650
 ```
 
-## 前端性能优化是什么❓为什么❓怎么做❓
+## 前端性能优化
+
+![](./docs/perf/perf_img.png)
+
+![](./docs/perf/perf_cache.png)
 
 ## docker
+
 [offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
 [Error message 'sudo: unable to resolve host <USER>'](https://askubuntu.com/questions/59458/error-message-sudo-unable-to-resolve-host-user)
+
 [Docker CE 镜像源站](https://yq.aliyun.com/articles/110806)
