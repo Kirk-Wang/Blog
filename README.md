@@ -183,7 +183,7 @@ finalDispatch({type: 'what', payload: 'aop'});
 openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.crt -subj /CN=dev.xx.com -reqexts SAN -extensions SAN -config <(cat /System/Library/OpenSSL/openssl.cnf <(printf '[SAN]\nsubjectAltName=DNS:dev.xx.com')) -sha256 -days 3650
 ```
 
-## 前端性能优化
+## 前端性能优化(首先得知道哪些点可以去操作一波^_^)
 
 ### 图片
 
@@ -194,7 +194,19 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 
 ![](./docs/images/perf/perf_cache.png)
 
-## docker
+### 本地存储
+
+![](./docs/images/perf/perf_storage.png)
+
+### CDN
+
+![](./docs/images/perf/perf_cdn.png)
+
+### 页面渲染
+
+![](./docs/images/perf/perf_pagerender.png)
+
+## dockerper
 
 [offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
