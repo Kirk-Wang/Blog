@@ -194,7 +194,7 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 
 ![](./docs/images/perf/perf_cache.png)
 
-### 本地存储
+### 本地存储
 
 ![](./docs/images/perf/perf_storage.png)
 
