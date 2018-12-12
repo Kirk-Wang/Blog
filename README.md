@@ -206,6 +206,10 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 
 ![](./docs/images/perf/perf_pagerender.png)
 
+### 浏览器运行机制浅析
+
+![](./docs/images/perf/perf_explorer.png)
+
 ## dockerper
 
 [offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
