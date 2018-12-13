@@ -214,6 +214,8 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 
 ![](./docs/images/perf/perf_dom.png)
 
+### Event Loop 与异步更新策略
+
 ## dockerper
 
 [offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
