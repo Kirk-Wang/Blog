@@ -1,25 +1,17 @@
-# React-Admin-App
+## React-Admin-App [ROADMAP UNKNOWN……]
 
-## 文档
+### 文档
 
-[官方文档](https://marmelab.com/react-admin/) | [中文文档](https://www.react-admin.com)
+[官方文档](https://marmelab.com/react-admin/)
 
-## 核心组件及源码分析
-
-### [调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
-
-### 基于 Redux Devtools 来逐步分析 React-Admin（最新）
-
-这是一个 `Redux` 应用程序，从 `Devtools` 去看它做了哪些事儿，应该是一个不错的选择。
-
-项目，采用官方自带的示例，`example` 目录下的 `simple` 项目。怎么跑起来？[调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
+### 核心组件及源码分析
 
 扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
-1. [`localhost:8080` 背后的动作](./docs/stories/redux-devtools/npm-start.md)
-2. [`localhost:8080/#/login` 背后的动作](./docs/stories/redux-devtools/route-login.md)
+1. [调试 React-Admin 源码，看清框架的本质](./docs/stories/debug-react-admin.md)
+2. [`localhost:8080` 背后的动作](./docs/stories/redux-devtools/npm-start.md)
+3. [`localhost:8080/#/login` 背后的动作](./docs/stories/redux-devtools/route-login.md)
 
-### 用好 `React-Admin`，其实就是用好它暴露出来的 `Admin` 组件。它的实现可以说就是整个 `react-admin` 项目架构的实现。接下来会逐一讲解它的每一个属性，以及 `Admin` 组件用它们做了什么❓
 * [React-Admin 架构分析：`Admin` 组件源码解析之 `dataProvider` 属性](./docs/stories/core-admin-data-provider.md)
 * [React-Admin 架构分析：Material-UI 定制](./docs/stories/material-ui-customization.md)
     * [React-Admin 架构分析：Material-UI 定制之 `Themes` 文档](./docs/stories/material-ui-customization-themes.md)
@@ -28,14 +20,48 @@
     * [React-Admin 架构分析：Material-UI 定制之 `Default Theme` 文档](./docs/stories/material-ui-customization-default-theme.md)
 * [React-Admin 架构分析：`Admin` 组件源码解析之 `theme` 属性](./docs/stories/core-admin-app-theme.md)
 * [React-Admin 架构分析：`Admin` 组件源码解析之 `appLayout` 属性](./docs/stories/core-admin-app-layout.md)
-
-### `react-admin` 各 `package` 分析 (文章曲线不对，废弃)
-
 * [react-admin 包分析](./docs/stories/react-admin-package.md)
 * [ra-core 包分析](./docs/stories/ra-core-package.md)
+* [Admin 组件源码解析](./docs/stories/Admin.md)（有干货但有些凌乱，留作纪念）
+* [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有干货但有些凌乱，留作纪念）
+* [最早的想法（留作纪念）](./docs/stories/old-readme.md)
 
-### [Admin 组件源码解析](./docs/stories/Admin.md)（有干货但有些凌乱，留作纪念）
-### [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有干货但有些凌乱，留作纪念）
+*[ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
+
+### 前端性能优化(首先得知道哪些点可以去操作一波^_^)
+
+#### 图片
+
+![](./docs/images/perf/perf_img.png)
+
+#### 缓存
+
+![](./docs/images/perf/perf_cache.png)
+
+#### 本地存储
+
+![](./docs/images/perf/perf_storage.png)
+
+#### CDN
+
+![](./docs/images/perf/perf_cdn.png)
+
+#### 页面渲染
+
+![](./docs/images/perf/perf_pagerender.png)
+
+#### 浏览器运行机制浅析
+
+![](./docs/images/perf/perf_explorer.png)
+
+#### 浅析DOM优化原理
+
+![](./docs/images/perf/perf_dom.png)
+
+#### Event Loop 与异步更新策略
+
+![](./docs/images/perf/perf_eventloop.png)
+
 
 ### AOP & middleware(1秒懂^_^)
 
@@ -146,24 +172,12 @@ finalDispatch({type: 'what', payload: 'aop'});
 
 ### Mac开发配置
 
-### FAQ
-[ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
-
 ### [CSSINJS](http://cssinjs.org)
 
 传统的“关注点分离”（separation of concerns）原则中不推荐我们把 HTML、CSS、JS 混杂一起编写，但是在伴随着前端组件模式的大潮"关注点混合"慢慢成为主流。
 
 [漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
-
-### 读 NervJS 源码
-
-先刷一篇官方使用文档，然后总结一下……
-
-## 使用 React-Admin 实战中后台应用
-
-[最早的想法（留作纪念）](./docs/stories/old-readme.md)
-
-## 优秀的 blog
+### 优秀的 blog
 
 [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
 
@@ -175,7 +189,7 @@ finalDispatch({type: 'what', payload: 'aop'});
 
 [梁少峰的个人博客](https://github.com/youngwind/blog)
 
-## 杂项
+### 杂项
 
 [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
 
@@ -183,40 +197,7 @@ finalDispatch({type: 'what', payload: 'aop'});
 openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.crt -subj /CN=dev.xx.com -reqexts SAN -extensions SAN -config <(cat /System/Library/OpenSSL/openssl.cnf <(printf '[SAN]\nsubjectAltName=DNS:dev.xx.com')) -sha256 -days 3650
 ```
 
-## 前端性能优化(首先得知道哪些点可以去操作一波^_^)
-
-### 图片
-
-![](./docs/images/perf/perf_img.png)
-
-
-### 缓存
-
-![](./docs/images/perf/perf_cache.png)
-
-### 本地存储
-
-![](./docs/images/perf/perf_storage.png)
-
-### CDN
-
-![](./docs/images/perf/perf_cdn.png)
-
-### 页面渲染
-
-![](./docs/images/perf/perf_pagerender.png)
-
-### 浏览器运行机制浅析
-
-![](./docs/images/perf/perf_explorer.png)
-
-### 浅析DOM优化原理
-
-![](./docs/images/perf/perf_dom.png)
-
-### Event Loop 与异步更新策略
-
-## dockerper
+### dockerper
 
 [offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
