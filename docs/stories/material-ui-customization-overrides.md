@@ -74,14 +74,13 @@ const StyledButton = withStyles({
 }
 ```
 
-```jsx
+```js
 
 <Button
   disabled
   classes={{
     root: 'classes-state-root',
-    disabled: 'disabled', }
-  }
+    disabled: 'disabled'}}
 >
 
 ```
