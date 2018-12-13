@@ -210,6 +210,10 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 
 ![](./docs/images/perf/perf_explorer.png)
 
+### 浅析DOM优化原理
+
+![](./docs/images/perf/perf_dom.png)
+
 ## dockerper
 
 [offical install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
