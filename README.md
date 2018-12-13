@@ -26,7 +26,7 @@
 * [CoreAdminRouter 组件源码分析](./docs/stories/CoreAdminRouter.md)（有干货但有些凌乱，留作纪念）
 * [最早的想法（留作纪念）](./docs/stories/old-readme.md)
 
-*[ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
+* [ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
 
 ### 前端性能优化(首先得知道哪些点可以去操作一波^_^)
 
