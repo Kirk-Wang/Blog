@@ -172,6 +172,10 @@ finalDispatch({type: 'what', payload: 'aop'});
 
 ### Mac开发配置
 
+#### Git
+
+![Git 配置](./docs/images/mac/git/gitconfig.png)
+
 ### [CSSINJS](http://cssinjs.org)
 
 传统的“关注点分离”（separation of concerns）原则中不推荐我们把 HTML、CSS、JS 混杂一起编写，但是在伴随着前端组件模式的大潮"关注点混合"慢慢成为主流。
