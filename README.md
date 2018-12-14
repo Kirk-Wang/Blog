@@ -66,6 +66,19 @@
 
 ![](./docs/images/perf/perf_reflow_repaint.png)
 
+### 首屏
+
+![](./docs/images/perf/perf_homepage.png)
+
+### 防抖与节流
+
+![](./docs/images/perf/perf_th.png)
+
+### 性能监测
+
+![](./docs/images/perf/perf.png)
+
+
 
 ### AOP & middleware(1秒懂^_^)
 
