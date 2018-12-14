@@ -62,6 +62,10 @@
 
 ![](./docs/images/perf/perf_eventloop.png)
 
+### 回流与重绘
+
+![](./docs/images/perf/perf_reflow_repaint.png)
+
 
 ### AOP & middleware(1秒懂^_^)
 
