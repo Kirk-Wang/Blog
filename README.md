@@ -28,6 +28,12 @@
 
 * [ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
 
+### 必知必会
+
+#### ES相关基础
+
+![](./docs/images/jsms/ES_basic.png)
+
 ### 前端性能优化(首先得知道哪些点可以去操作一波^_^)
 
 #### 图片
