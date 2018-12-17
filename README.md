@@ -34,6 +34,10 @@
 
 ![](./docs/images/jsms/ES_basic.png)
 
+#### JS-WEB-API
+
+![](./docs/images/jsms/JS-WEB-API.png)
+
 ### 前端性能优化(首先得知道哪些点可以去操作一波^_^)
 
 #### 图片
