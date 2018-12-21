@@ -92,7 +92,13 @@
 
 ![](./docs/images/perf/perf.png)
 
+[react 性能分析](https://react.css88.com/blog/2018/09/10/introducing-the-react-profiler.html#profiling-an-application)
 
+[前端性能优化清单](https://juejin.im/post/5a966bd16fb9a0635172a50a)
+
+[creeperyang/blog](https://github.com/creeperyang/blog/issues)
+
+[把前端监控做到极致](https://juejin.im/post/5a52f138f265da3e5b32a41b)
 
 ### AOP & middleware(1秒懂^_^)
 
