@@ -100,6 +100,10 @@
 
 [把前端监控做到极致](https://juejin.im/post/5a52f138f265da3e5b32a41b)
 
+[js-leakage-patterns](https://github.com/zhansingsong/js-leakage-patterns)
+
+[CS-Interview-Knowledge-Map](https://github.com/InterviewMap/CS-Interview-Knowledge-Map)
+
 ### AOP & middleware(1秒懂^_^)
 
 ```jsx
