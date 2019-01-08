@@ -222,6 +222,7 @@ finalDispatch({type: 'what', payload: 'aop'});
 传统的“关注点分离”（separation of concerns）原则中不推荐我们把 HTML、CSS、JS 混杂一起编写，但是在伴随着前端组件模式的大潮"关注点混合"慢慢成为主流。
 
 [漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
+
 ### 优秀的 blog
 
 [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
@@ -249,3 +250,7 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 [Error message 'sudo: unable to resolve host <USER>'](https://askubuntu.com/questions/59458/error-message-sudo-unable-to-resolve-host-user)
 
 [Docker CE 镜像源站](https://yq.aliyun.com/articles/110806)
+
+### Skills
+
+[如何绕过chrome的弹窗拦截机制](https://my.oschina.net/jsan/blog/1545859)
