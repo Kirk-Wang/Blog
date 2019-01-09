@@ -4,6 +4,8 @@
 
 [官方文档](https://marmelab.com/react-admin/)
 
+[中文文档]
+
 ### 核心组件及源码分析
 
 扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
