@@ -4,7 +4,7 @@
 
 [官方文档](https://marmelab.com/react-admin/)
 
-[中文文档]
+[中文文档](https://www.react-admin.com)
 
 ### 核心组件及源码分析
 
