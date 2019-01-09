@@ -6,7 +6,7 @@
 
 [中文文档](https://www.react-admin.com)
 
-*[简介](https://www.react-admin.com/docs/zh-CN/intro.html)
+* [简介](https://www.react-admin.com/docs/zh-CN/intro.html)
 
 ### 核心组件及源码分析
 
