@@ -7,6 +7,24 @@
 [中文文档](https://www.react-admin.com)
 
 * [简介](https://www.react-admin.com/docs/zh-CN/intro.html)
+* [十分钟教程](https://www.react-admin.com/docs/zh-CN/tutorial.html)
+* [数据提供程序](https://www.react-admin.com/docs/zh-CN/data-providers.html)
+* [Admin 组件](https://www.react-admin.com/docs/zh-CN/admin-component.html)
+* [Resource 组件](https://www.react-admin.com/docs/zh-CN/resource-component.html)
+* [List 视图组件](https://www.react-admin.com/docs/zh-CN/list-view-component.html)
+* [Show 视图组件](https://www.react-admin.com/docs/zh-CN/show-view-component.html)
+* [Field 组件](https://www.react-admin.com/docs/zh-CN/field-components.html)
+* [Create 和 Edit 视图组件](https://www.react-admin.com/docs/zh-CN/creat-edit-view-components.html)
+* [Input 组件](https://www.react-admin.com/docs/zh-CN/input-components.html)
+* [身份验证](https://www.react-admin.com/docs/zh-CN/authentication.html)
+* [授权](https://www.react-admin.com/docs/zh-CN/authorization.html)
+* [主题](https://www.react-admin.com/docs/zh-CN/theming.html)
+* [编写 Action](https://www.react-admin.com/docs/zh-CN/actions.html)
+* [i18n](https://www.react-admin.com/docs/zh-CN/translation.html)
+* [在其它 App 中包含 Admin](https://www.react-admin.com/docs/zh-CN/custom-app.html)
+* [引用](https://www.react-admin.com/docs/zh-CN/reference.html)
+* [常见问题](https://www.react-admin.com/docs/zh-CN/faq.html)
+* [生态](https://www.react-admin.com/docs/zh-CN/ecosystem.html)
 
 ### 核心组件及源码分析
 
