@@ -11,7 +11,7 @@
 * A large scale React + Redux App
 
 #### Some Numbers for Azure DevOps
-* 1000s of React Components
+* 1000s of React Components
 * 100s of Developers
 * 100s of Independent Views
 * Each view is composed of several widgets
