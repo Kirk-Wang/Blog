@@ -1,14 +1,14 @@
 
-### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules)，构建大型可伸缩的 React + Redux App。
+### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
 
-油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
+油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
 
 
 ### React-Admin 相关
 
 [官方文档](https://marmelab.com/react-admin/)
 
-[中文文档](https://www.react-admin.com)
+[中文文档](https://www.react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
 
 * [简介](https://www.react-admin.com/docs/zh-CN/intro.html)
 * [十分钟教程](https://www.react-admin.com/docs/zh-CN/tutorial.html)
