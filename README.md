@@ -1,13 +1,7 @@
-## React-Admin-App [ROADMAP UNKNOWN……]
 
-### 怒刷React源码实现
+### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules)，构建大型可伸缩的 React + Redux App。
 
-#### 刷React源码大纲
-![刷React源码大纲](./docs/images/react/react-1.png)
-
-
-#### 浅聊 Virtual DOM
-![浅聊 Virtual DOM](./docs/images/react/virtual_dom.png)
+油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
 
 
 ### React-Admin 相关
@@ -59,6 +53,15 @@
 * [最早的想法（留作纪念）](./docs/stories/old-readme.md)
 
 * [ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
+
+### 怒刷React源码实现
+
+#### 刷React源码大纲
+![刷React源码大纲](./docs/images/react/react-1.png)
+
+
+#### 浅聊 Virtual DOM
+![浅聊 Virtual DOM](./docs/images/react/virtual_dom.png)
 
 ### 必知必会
 
