@@ -40,7 +40,12 @@ const ReactElement = function(type, key, ref, self, source, owner, props) {
 
 ![element](./docs/images/react/element.png)
 
+### ReactBaseClasses.js
 
+[Componet](https://reactjs.org/docs/react-component.html)
+
+
+-----
 ### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
 * 油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
 * 文字脱敏[Scaling Redux Apps](./docs/stories/scaling-redux-app.md)
