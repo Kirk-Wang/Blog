@@ -9,10 +9,7 @@
 
 ### React-Admin 相关
 
-[官方文档](https://marmelab.com/react-admin/)
-
-[中文文档](https://www.react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
-
+* [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://www.react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
 * [简介](https://www.react-admin.com/docs/zh-CN/intro.html)
 * [十分钟教程](https://www.react-admin.com/docs/zh-CN/tutorial.html)
 * [数据提供程序](https://www.react-admin.com/docs/zh-CN/data-providers.html)
