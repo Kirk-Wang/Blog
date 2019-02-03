@@ -3,11 +3,11 @@
 
 [React 源码解析](https://react.jokcy.me/)
 
-1. JSX到JavaScript的转换
+### JSX到JavaScript的转换
 
 [Babel-REPL](https://babeljs.io/repl)，在线互转
 
-2. ReactElement.js
+### ReactElement.js
 
 [createElement](https://reactjs.org/docs/react-api.html#createelement)
 ```jsx
