@@ -38,7 +38,7 @@ const ReactElement = function(type, key, ref, self, source, owner, props) {
 ```
 先记住这个对象：
 
-[element](./docs/images/react/element.png)
+![element](./docs/images/react/element.png)
 
 
 ### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
