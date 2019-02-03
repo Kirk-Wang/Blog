@@ -42,6 +42,8 @@ const ReactElement = function(type, key, ref, self, source, owner, props) {
 
 ### ReactBaseClasses.js
 
+只是对组件进行了通用定义
+
 [Componet](https://reactjs.org/docs/react-component.html)
 
 
