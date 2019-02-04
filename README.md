@@ -3,11 +3,11 @@
 
 [React 源码解析](https://react.jokcy.me/)
 
-### JSX到JavaScript的转换
+#### JSX到JavaScript的转换
 
 [Babel-REPL](https://babeljs.io/repl)，在线互转
 
-### ReactElement
+#### ReactElement
 
 ReactElement.js
 
@@ -15,7 +15,7 @@ ReactElement.js
 
 ![element](./docs/images/react/element.png)
 
-### ReactComponent
+#### ReactComponent
 
 ReactBaseClasses.js
 
@@ -23,7 +23,7 @@ ReactBaseClasses.js
 
 [Componet](https://reactjs.org/docs/react-component.html)
 
-### ReactRef
+#### ReactRef
 
 ReactCreateRef.js
 
@@ -33,7 +33,7 @@ createRef & ref
 
 核心：更新到结束
 
-### forwardRef
+#### forwardRef
 
 forwardRef.js
 
@@ -42,11 +42,49 @@ React.forwardRef((props, ref)=>(<div ref={ref}></div>))
 ```
 场景：HOC & functional Component
 
-### context 
+#### context 
 
 ReactContext.js
 
 Context的两种方式：childContextType(快被废弃) & createContext
+
+#### ConcurrentMode
+
+渲染优先级
+
+flushSync
+
+#### Suspense & Lazy
+
+#### hooks
+
+funciton Component & useState & useEffects ...
+
+应该是 redux 作者 Dan 亲自操刀写的
+
+#### children
+
+React.js & ReactChildren.js
+
+```jsx
+React.Children = { map, forEach, count, toArray, only }
+// React.Children.map 功能强大，会展开嵌套的数组
+```
+
+#### others
+
+MEMO & PureComponent
+
+<> & React.Fragment
+
+cloneElement
+
+createFactory
+
+...
+
+
+
 
 -----
 ### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
