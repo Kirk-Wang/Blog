@@ -42,7 +42,11 @@ React.forwardRef((props, ref)=>(<div ref={ref}></div>))
 ```
 场景：HOC & functional Component
 
+### context 
 
+ReactContext.js
+
+Context的两种方式：childContextType(快被废弃) & createContext
 
 -----
 ### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
