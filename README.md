@@ -25,9 +25,22 @@ ReactBaseClasses.js
 
 ### ReactRef
 
+ReactCreateRef.js
+
 createRef & ref
 
 三种方式：string & function & object
+
+核心：更新到结束
+
+### forwardRef
+
+forwardRef.js
+
+```jsx
+React.forwardRef((props, ref)=>(<div ref={ref}></div>))
+```
+场景：HOC & functional Component
 
 
 
