@@ -7,45 +7,21 @@
 
 [Babel-REPL](https://babeljs.io/repl)，在线互转
 
-### ReactElement.js
+### ReactElement
 
-[createElement](https://reactjs.org/docs/react-api.html#createelement)
-```jsx
-React.createElement(
-  type,
-  [props],
-  [...children]
-)
+ReactElement.js
 
-export function createElement(type, config, children) {
-...
-
-const ReactElement = function(type, key, ref, self, source, owner, props) {
-  const element = {
-    // This tag allows us to uniquely identify this as a React Element
-    $$typeof: REACT_ELEMENT_TYPE,
-
-    // Built-in properties that belong on the element
-    type: type,
-    key: key,
-    ref: ref,
-    props: props,
-
-    // Record the component responsible for creating this element.
-    _owner: owner,
-  };
-...
-```
 先记住这个对象：
 
 ![element](./docs/images/react/element.png)
 
-### ReactBaseClasses.js
+### ReactComponent
+
+ReactBaseClasses.js
 
 只是对组件进行了通用定义，平台无关。
 
 [Componet](https://reactjs.org/docs/react-component.html)
-
 
 -----
 ### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
