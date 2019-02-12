@@ -201,7 +201,7 @@ createFactory
 * [CSSINJS](http://cssinjs.org)
 * [漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
 
-### webpack 基础扫盲(脑图)
+### webpack 基础扫盲(脑图)
 
 * [webpack可以做什么](./docs/images/webpack/1.png)
 * [webpack基础配置](./docs/images/webpack/2.png)
