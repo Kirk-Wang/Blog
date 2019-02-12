@@ -201,7 +201,9 @@ createFactory
 * [CSSINJS](http://cssinjs.org)
 * [漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
 
-### webpack 工程化
+### webpack 相关
+
+* [webpack可以做什么](./docs/images/webpack/1.png)
 
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
