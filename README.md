@@ -205,6 +205,7 @@ createFactory
 
 * [webpack可以做什么](./docs/images/webpack/1.png)
 * [webpack基础配置](./docs/images/webpack/2.png)
+* [webpack打包文件分析](./docs/images/webpack/3.png)
 
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
