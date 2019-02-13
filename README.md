@@ -94,7 +94,7 @@
 * [浅析redux-saga实现原理](https://zhuanlan.zhihu.com/p/30098155)
 * [从 Pub/Sub 浅聊 reudx-saga](./docs/stories/saga/pub-sub-saga.md)
 * [Redux-Saga 漫谈](https://www.yuque.com/lovesueee/blog/redux-saga)
-* 肥超大佬的 [little-saga](https://github.com/little-saga/little-saga)
+* [little-saga](https://github.com/little-saga/little-saga)
 * [构建你自己的 redux-saga](https://github.com/little-saga/little-saga/blob/master/docs/building-your-own-redux-saga.md)一文：
 * [构建你自己的 redux-saga 总结](./docs/stories/saga/build-saga.md)
 * [Git 配置](./docs/images/mac/git/gitconfig.png)
