@@ -126,6 +126,7 @@
 * [Tapable](./docs/images/webpack/11.png)
 * [实现一个简易的webpack](./docs/images/webpack/12.png)
 * [写一个loader](./docs/images/webpack/13.png)
+* [写一个plugin](./docs/images/webpack/14.png)
 
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
