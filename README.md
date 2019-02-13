@@ -211,6 +211,7 @@ createFactory
 * [webpack暴露全局变量](./docs/images/webpack/6.png)
 * [webpack之Html插件](./docs/images/webpack/7.png)
 * [webpack之样式处理](./docs/images/webpack/8.png)
+* [webpack详细配置](./docs/images/webpack/9.png)
 
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
