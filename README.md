@@ -128,6 +128,13 @@
 * [写一个loader](./docs/images/webpack/13.png)
 * [写一个plugin](./docs/images/webpack/14.png)
 
+### 算法（为什么要修炼？优化工作中的确要用）
+
+思维 & 专注 & 视野 & 技巧
+
+
+
+
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
 * [冴羽的博客](https://github.com/mqyqingfeng/Blog)
