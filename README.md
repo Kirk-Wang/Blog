@@ -139,3 +139,8 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 ```
 * [Docker--Error message 'sudo: unable to resolve host <USER>'](https://askubuntu.com/questions/59458/error-message-sudo-unable-to-resolve-host-user)
 * [如何绕过chrome的弹窗拦截机制](https://my.oschina.net/jsan/blog/1545859)
+* 80
+```sh
+sudo lsof -n -P | grep :80
+```
+
