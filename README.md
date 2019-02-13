@@ -201,7 +201,7 @@ createFactory
 * [CSSINJS](http://cssinjs.org)
 * [漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
 
-### webpack 基础扫盲(脑图)
+### webpack 扫盲(脑图)
 
 * [webpack可以做什么](./docs/images/webpack/1.png)
 * [webpack基础配置](./docs/images/webpack/2.png)
@@ -212,6 +212,17 @@ createFactory
 * [webpack之Html插件](./docs/images/webpack/7.png)
 * [webpack之样式处理](./docs/images/webpack/8.png)
 * [webpack详细配置](./docs/images/webpack/9.png)
+* [webpack优化](./docs/images/webpack/10.png)
+    * tree-shaking 
+    * scope hosting
+    * splitChunks
+    * noParse
+    * webpack.IgnorePlugin
+    * 懒加载
+    * dllPlugin
+    * happypack
+    * 热更新
+    * ...
 
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
