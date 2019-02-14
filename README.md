@@ -179,13 +179,6 @@ x <= 3
     * 为保证动画的流畅性，每一帧动画我们只有(1000/60)ms执行其它计算的过程。播放动画的同时可能还在请求数据，改变DOM结构，响应事件等等
 - 老旧机型（华为荣耀4a，Android5.1，红米2a等)，性能较弱
 
-
-
-
-
-
-
-
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
 * [冴羽的博客](https://github.com/mqyqingfeng/Blog)
