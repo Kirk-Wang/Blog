@@ -187,11 +187,16 @@
   </ul>
 </details>
 
-#### web 常见场景
-
-* 静态资源的读取
-* 数据库操作
-* 渲染页面
+<details>
+  <summary>
+    <b>web 常见场景</b>
+  </summary>
+  <ul>
+    <li>静态资源的读取</li>
+    <li>数据库操作</li>
+    <li>渲染页面</li>
+  </ul>
+</details>
 
 #### 高并发应对之道
 
