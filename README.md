@@ -278,9 +278,16 @@
 });
 ```
 
-* 每个文件是一个模块，有自己的作用域
-* 在模块内部 module 变量代表模块本身
-* module.exports 属性代表模块对外接口
+<details>
+  <summary>
+    <b>CommonJS 特性</b>
+  </summary>
+  <ul>
+    <li>每个文件是一个模块，有自己的作用域</li>
+    <li>在模块内部 module 变量代表模块本身</li>
+    <li>module.exports 属性代表模块对外接口</li>
+  </ul>
+</details>
 
 <details>
   <summary>
