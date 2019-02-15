@@ -380,6 +380,7 @@ process.nextTick(() => {
   <ul>
     <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/debugger.html">文档</a></li>
     <li><a href="https://github.com/Microsoft/vscode-recipes">vscode-recipes</a></li>
+    <li>条件调试</li>
   </ul>
 </details>
 ---
