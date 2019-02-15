@@ -328,6 +328,17 @@
   </ul>
 </details>
 
+<details>
+  <summary>
+    <b>global</b>
+  </summary>
+  <ul>
+    <li>CommonJS</li>
+    <li>Buffer、process、console</li>
+    <li>timer</li>
+  </ul>
+</details>
+
 ---
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
