@@ -341,7 +341,7 @@
 
 <details>
   <summary>
-    <b>Process对象</b>
+    <b>process 对象</b>
   </summary>
   <ul>
     <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/process.html" target="_blank">文档</a></li>
