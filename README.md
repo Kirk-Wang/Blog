@@ -146,8 +146,6 @@
   </ul>
 </details>
 
-#### 
-
 <details>
   <summary>
     <b>非阻塞I/O</b>
@@ -159,10 +157,15 @@
   </ul>
 </details>
 
-#### 事件驱动
-
-* I/O 等异步操作结束后的通知
-* 观察者模式
+<details>
+  <summary>
+    <b>事件驱动</b>
+  </summary>
+  <ul>
+    <li>I/O 等异步操作结束后的通知</li>
+    <li>观察者模式</li>
+  </ul>
+</details>
 
 #### 为什么偏爱 NodeJS
 
