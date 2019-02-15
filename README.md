@@ -344,7 +344,7 @@
     <b>process 对象常用 API </b>
   </summary>
   <ul>
-    <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/process.html" target="_blank">文档</a></li>
+    <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/process.html">文档</a></li>
     <li>process.argv</li>
     <li>process.argv0</li>
     <li>process.execArgv</li>
@@ -378,7 +378,7 @@ process.nextTick(() => {
     <b>Debugger</b>
   </summary>
   <ul>
-    <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/debugger.html" target="_blank">文档</a></li>
+    <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/debugger.html">文档</a></li>
   </ul>
 </details>
 ---
