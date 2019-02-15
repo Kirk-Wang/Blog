@@ -341,13 +341,37 @@
 
 <details>
   <summary>
-    <b>process 对象</b>
+    <b>process 对象常用 API </b>
   </summary>
   <ul>
     <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/process.html" target="_blank">文档</a></li>
+    <li>process.argv</li>
+    <li>process.argv0</li>
+    <li>process.execArgv</li>
+    <li>process.execPath</li>
+    <li>process.env</li>
+    <li>process.cwd()</li>
+    <li>process.nextTick(()=>{})</li>
   </ul>
 </details>
 
+#### nextTick VS setTimeout VS setImmediate
+
+```js
+setImmediate(() => console.log('setImmediate'));
+setTimeout(() => console.log('timeout'), 0);
+process.nextTick(() => {
+    console.log('nextTick1')
+    process.nextTick(() => console.log('nextTick2'))
+});
+// nextTick1
+// nextTick2
+// timeout
+// setImmediate
+// nextTick 是放在当前事件队列的最后，主意这个不能出现递归，不然其它异步都会异常
+// setTimeout 放在 nextTick 和 setImmediate 中间
+// setImmediate 是放在下一个事件队列队首
+```
 ---
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
