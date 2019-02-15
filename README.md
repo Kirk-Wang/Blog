@@ -101,7 +101,7 @@
 * [CSSINJS](http://cssinjs.org)
 * [漫谈 CSS in JS](https://zhuanlan.zhihu.com/p/31622439)
 
-### webpack 扫盲(脑图)
+### webpack(脑图)
 
 * [webpack可以做什么](./docs/images/webpack/1.png)
 * [webpack基础配置](./docs/images/webpack/2.png)
@@ -127,6 +127,24 @@
 * [实现一个简易的webpack](./docs/images/webpack/12.png)
 * [写一个loader](./docs/images/webpack/13.png)
 * [写一个plugin](./docs/images/webpack/14.png)
+
+### NodeJS
+
+#### NodeJs 是什么？
+
+* Node.js is a `JavaScript runtime` built on Chrome's V8
+* Node.js uses an event-driven, `non-blocking I/O` model
+
+#### 非阻塞I/O
+
+* 阻塞：I/O 时进程休眠等待 I/O 完成后进行下一步
+* 非阻塞：I/O 时函数立即返回，进程不等待 I/O 完成
+
+
+
+
+
+
 
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
