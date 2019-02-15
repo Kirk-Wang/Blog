@@ -218,11 +218,15 @@
   </ul>
 </details>
 
-#### NodeJS 工作模型
-
-* Client --> EventLoop(single thred) --> Non-blocking Worker(internal C++ threadpool)
-
-* 一个 NodeJS 进程只开一个线程
+<details>
+  <summary>
+    <b>NodeJS 工作模型</b>
+  </summary>
+  <ul>
+    <li>Client --> EventLoop(single thred) --> Non-blocking Worker(internal C++ threadpool)</li>
+    <li>一个 NodeJS 进程只开一个线程</li>
+  </ul>
+</details>
 
 #### 线程
 
