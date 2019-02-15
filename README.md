@@ -212,6 +212,13 @@
 * 在模块内部 module 变量代表模块本身
 * module.exports 属性代表模块对外接口
 
+#### require 规则
+
+* `/` 表示绝对路径，`./` 表示相对于当前文件的
+* 支持 js、json、node 拓展名，不写依次尝试
+* 不写路径则认为是 build-in 模块或者各级 node_modules 内的第三方模块
+
+
 
 
 ---
