@@ -310,6 +310,15 @@
   </ul>
 </details>
 
+<details>
+  <summary>
+    <b>npm 常用命令</b>
+  </summary>
+  <ul>
+    <li>npm root -g</li>
+  </ul>
+</details>
+
 ---
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
