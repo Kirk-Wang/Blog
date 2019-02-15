@@ -167,10 +167,15 @@
   </ul>
 </details>
 
-#### 为什么偏爱 NodeJS
-
-* 前端职责范围变大，统一开发体验
-* 在处理高并发，I/O密集场景性能优势明显
+<details>
+  <summary>
+    <b>为什么偏爱 NodeJS</b>
+  </summary>
+  <ul>
+    <li>前端职责范围变大，统一开发体验</li>
+    <li>在处理高并发，I/O密集场景性能优势明显</li>
+  </ul>
+</details>
 
 #### CPU 密集 VS I/O 密集
 
