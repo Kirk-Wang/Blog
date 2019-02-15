@@ -192,7 +192,22 @@
 
 * Web Server
 * 本地代码构建(性能不是最好，但对前端友好)
-* 实用工具开发()
+* 实用工具开发(性能不是最好，但对前端友好)
+
+#### 开发工具
+
+* VSCode + Code Runner
+
+#### CommonJS
+
+包裹函数，不用自己写，NodeJS 帮我们弄好了
+
+```js
+(function(exports, require, module, __filename, __dirname){
+    console.log('test.');
+});
+```
+
 
 ---
 ### 优秀的 blog
