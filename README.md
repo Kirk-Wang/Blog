@@ -177,10 +177,15 @@
   </ul>
 </details>
 
-#### CPU 密集 VS I/O 密集
-
-* CPU 密集：压缩，解压，加密，解密
-* I/O 密集：文件操作，网络操作，数据库
+<details>
+  <summary>
+    <b>CPU 密集 VS I/O 密集</b>
+  </summary>
+  <ul>
+    <li>CPU 密集：压缩，解压，加密，解密</li>
+    <li>I/O 密集：文件操作，网络操作，数据库</li>
+  </ul>
+</details>
 
 #### web 常见场景
 
