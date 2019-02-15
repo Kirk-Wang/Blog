@@ -319,6 +319,15 @@
   </ul>
 </details>
 
+<details>
+  <summary>
+    <b>module.exports 与 exports 的区别</b>
+  </summary>
+  <ul>
+    <li>exports 是 module.exports 的快捷方式</li>
+  </ul>
+</details>
+
 ---
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
