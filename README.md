@@ -224,6 +224,9 @@
 * 支持 js、json、node 拓展名，不写依次尝试
 * 不写路径则认为是 build-in 模块或者各级 node_modules 内的第三方模块
 
+#### require 特性
+
+* module 被加载的时候执行，加载后缓存
 
 
 
