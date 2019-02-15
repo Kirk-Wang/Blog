@@ -341,7 +341,7 @@
 
 <details>
   <summary>
-    <b>process 对象常用 API </b>
+    <b>process 模块常用 API </b>
   </summary>
   <ul>
     <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/process.html">文档</a></li>
@@ -383,6 +383,34 @@ process.nextTick(() => {
     <li>条件调试</li>
   </ul>
 </details>
+
+<details>
+  <summary>
+    <b>path 模块常用 API </b>
+  </summary>
+  <ul>
+    <li><a href="http://nodejs.cn/api/path.html">文档</a></li>
+    <li>__dirname, __filename 总是返回文件的绝对路径</li>
+    <li>process.cwd() 总是返回执行 node 命令所在的文件夹</li>
+    <li>`./` 在 require 方法中总是相对当前文件所在文件夹</li>
+    <li>`./` 在其它地方 (path.resolve('./')) 就和 process.cwd() 一样，相对 node 启动文件夹</li>
+    <li>path.normalize</li>
+    <li>path.join</li>
+    <li>path.resolve</li>
+    <li>path.basename</li>
+    <li>path.dirname</li>
+    <li>path.extname</li>
+    <li>path.parse</li>
+    <li>path.format</li>
+    <li>path.sep</li>
+    <li>path.delimiter</li>
+    <li>path.win32</li>
+    <li>path.posix</li>
+  </ul>
+</details>
+
+
+
 ---
 
 ### 优秀的 blog
