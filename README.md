@@ -136,10 +136,15 @@
 
 ### NodeJS
 
-#### NodeJs 是什么？
-
-* Node.js is a `JavaScript runtime` built on Chrome's V8
-* Node.js uses an event-driven, `non-blocking I/O` model
+<details>
+  <summary>
+    <b>NodeJs 是什么？</b>
+  </summary>
+  <ul>
+    <li>Node.js is a `JavaScript runtime` built on Chrome's V8</li>
+    <li>Node.js uses an event-driven, `non-blocking I/O` model</li>
+  </ul>
+</details>
 
 #### 非阻塞I/O
 
