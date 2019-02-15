@@ -372,6 +372,15 @@ process.nextTick(() => {
 // setTimeout 放在 nextTick 和 setImmediate 中间
 // setImmediate 是放在下一个事件队列队首
 ```
+
+<details>
+  <summary>
+    <b>Debugger</b>
+  </summary>
+  <ul>
+    <li><a href="https://nodejs.org/dist/latest-v10.x/docs/api/debugger.html" target="_blank">文档</a></li>
+  </ul>
+</details>
 ---
 ### 优秀的 blog
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
