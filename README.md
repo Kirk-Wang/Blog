@@ -248,15 +248,25 @@
   </ul>
 </details>
 
-#### 常用场景
+<details>
+  <summary>
+    <b>常用场景</b>
+  </summary>
+  <ul>
+    <li>Web Server</li>
+    <li>本地代码构建(性能不是最好，但对前端友好)</li>
+    <li>实用工具开发(性能不是最好，但对前端友好)</li>
+  </ul>
+</details>
 
-* Web Server
-* 本地代码构建(性能不是最好，但对前端友好)
-* 实用工具开发(性能不是最好，但对前端友好)
-
-#### 开发工具
-
-* VSCode + Code Runner
+<details>
+  <summary>
+    <b>开发工具</b>
+  </summary>
+  <ul>
+    <li>VSCode + Code Runner</li>
+  </ul>
+</details>
 
 #### CommonJS
 
@@ -272,19 +282,26 @@
 * 在模块内部 module 变量代表模块本身
 * module.exports 属性代表模块对外接口
 
-#### require 规则
+<details>
+  <summary>
+    <b>require 规则</b>
+  </summary>
+  <ul>
+    <li>`/` 表示绝对路径，`./` 表示相对于当前文件的</li>
+    <li>支持 js、json、node 拓展名，不写依次尝试</li>
+    <li>不写路径则认为是 build-in 模块或者各级 node_modules 内的第三方模块</li>
+  </ul>
+</details>
 
-* `/` 表示绝对路径，`./` 表示相对于当前文件的
-* 支持 js、json、node 拓展名，不写依次尝试
-* 不写路径则认为是 build-in 模块或者各级 node_modules 内的第三方模块
-
-#### require 特性
-
-* module 被加载的时候执行，加载后缓存
-* 一旦出现某个模块被循环加载，就只输出已经执行的部分，还未执行的部分不会输出
-
-
-
+<details>
+  <summary>
+    <b>require 特性</b>
+  </summary>
+  <ul>
+    <li>module 被加载的时候执行，加载后缓存</li>
+    <li>一旦出现某个模块被循环加载，就只输出已经执行的部分，还未执行的部分不会输出</li>
+  </ul>
+</details>
 
 ---
 ### 优秀的 blog
