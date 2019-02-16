@@ -453,6 +453,11 @@ for(let i = 0; i < buf.length; i+=5) {
   <ul>
     <li><a href="http://nodejs.cn/api/events.html">文档</a></li>
     <li>继承 EventEmitter</li>
+    <li>ce.on</li>
+    <li>ce.emit</li>
+    <li>ce.onece</li>
+    <li>ce.removeListener</li>
+    <li>ce.removeAllListeners</li>
   </ul>
 </details>
 
