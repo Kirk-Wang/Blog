@@ -506,6 +506,18 @@ async function test() {
 test();
 ```
 
+<details>
+  <summary>
+    <b>.gitignore</b>
+  </summary>
+  <ul>
+    <li>匹配模式前 / 代表项目根目录</li>
+    <li>匹配模式最后加 / 代表目录</li>
+    <li>匹配模式前加 ! 代表取反</li>
+  </ul>
+</details>
+
+
 #### Static Web Server
 
 
