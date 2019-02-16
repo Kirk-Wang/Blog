@@ -452,7 +452,7 @@ for(let i = 0; i < buf.length; i+=5) {
   </summary>
   <ul>
     <li><a href="http://nodejs.cn/api/events.html">文档</a></li>
-    <li>EventEmitter</li>
+    <li>继承 EventEmitter</li>
   </ul>
 </details>
 
