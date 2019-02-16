@@ -461,6 +461,16 @@ for(let i = 0; i < buf.length; i+=5) {
   </ul>
 </details>
 
+<details>
+  <summary>
+    <b>fs 模块</b>
+  </summary>
+  <ul>
+    <li><a href="http://nodejs.cn/api/fs.html">文档</a></li>
+    <li></li>
+  </ul>
+</details>
+
 ---
 
 ### 优秀的 blog
