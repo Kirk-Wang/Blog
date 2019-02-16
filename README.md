@@ -505,6 +505,12 @@ async function test() {
 }
 test();
 ```
+
+#### 小试牛刀
+
+Static Web Server
+
+
 ---
 
 ### 优秀的 blog
