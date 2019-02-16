@@ -469,6 +469,8 @@ for(let i = 0; i < buf.length; i+=5) {
     <li><a href="http://nodejs.cn/api/fs.html">文档</a></li>
     <li>fs.readFile</li>
     <li>fs.readFileSync</li>
+    <li>fs.writeFile</li>
+     <li>fs.stat</li>
   </ul>
 </details>
 
