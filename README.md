@@ -527,8 +527,17 @@ test();
   </summary>
   <ul>
     <li><a href="https://docs.npmjs.com/misc/developers">文档</a></li>
-    <li>匹配模式前 / 代表项目根目录</li>
-    <li>匹配模式最后加 / 代表目录</li>
+    <li>src(npm 包忽略)</li>
+    <li>test(npm 包忽略)</li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>EditorConfig</b>
+  </summary>
+  <ul>
+    <li><a href="https://editorconfig.org/">文档</a></li>
   </ul>
 </details>
 
