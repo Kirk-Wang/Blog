@@ -471,6 +471,13 @@ for(let i = 0; i < buf.length; i+=5) {
     <li>fs.readFileSync</li>
     <li>fs.writeFile</li>
      <li>fs.stat</li>
+     <li>fs.unlink</li>
+     <li>fs.readdir</li>
+     <li>fs.mkdir</li>
+     <li>fs.rmdir</li>
+     <li>fs.watch</li>
+     <li>fs.readstream</li>
+     <li>fs.writestream</li>
   </ul>
 </details>
 
