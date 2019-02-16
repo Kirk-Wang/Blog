@@ -506,9 +506,7 @@ async function test() {
 test();
 ```
 
-#### 小试牛刀
-
-Static Web Server
+#### Static Web Server
 
 
 ---
