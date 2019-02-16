@@ -423,6 +423,12 @@ process.nextTick(() => {
     <li>Buffer.byteLength</li>
     <li>Buffer.isBuffer</li>
     <li>Buffer.concat</li>
+    <li>buf.length</li>
+    <li>buf.toString</li>
+    <li>buf.fill</li>
+    <li>buf.equals</li>
+    <li>buf.indexOf</li>
+    <li>buf.copy</li>
   </ul>
 </details>
 
