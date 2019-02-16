@@ -448,10 +448,11 @@ for(let i = 0; i < buf.length; i+=5) {
 
 <details>
   <summary>
-    <b>events</b>
+    <b>events 模块</b>
   </summary>
   <ul>
     <li><a href="http://nodejs.cn/api/events.html">文档</a></li>
+    <li>EventEmitter</li>
   </ul>
 </details>
 
