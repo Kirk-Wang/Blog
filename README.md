@@ -409,7 +409,22 @@ process.nextTick(() => {
   </ul>
 </details>
 
-
+<details>
+  <summary>
+    <b>Buffer 模块常用 API </b>
+  </summary>
+  <ul>
+    <li><a href="http://nodejs.cn/api/buffer.html">文档</a></li>
+    <li>Buffer 用于处理二进制数据流</li>
+    <li>实现类似整数数组，大小固定</li>
+    <li>C++ 代码在 V8 堆外分配物理内存</li>
+    <li>Buffer.alloc</li>
+    <li>Buffer.from</li>
+    <li>Buffer.byteLength</li>
+    <li>Buffer.isBuffer</li>
+    <li>Buffer.concat</li>
+  </ul>
+</details>
 
 ---
 
