@@ -514,11 +514,14 @@ test();
     <li>匹配模式前 / 代表项目根目录</li>
     <li>匹配模式最后加 / 代表目录</li>
     <li>匹配模式前加 ! 代表取反</li>
+    <li>* 代表任意个字符</li>
+    <li>？匹配任意一个字符</li>
+    <li>** 匹配多级目录</li>
   </ul>
 </details>
 
 
-#### Static Web Server
+#### 简单实现 Static Web Server
 
 
 ---
