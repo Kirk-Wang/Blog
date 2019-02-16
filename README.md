@@ -550,7 +550,7 @@ test();
   </ul>
 </details>
 
-#### 简单实现 Static Web Server
+#### Tiny Static Web Server
 
 
 ---
