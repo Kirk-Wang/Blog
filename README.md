@@ -481,6 +481,11 @@ for(let i = 0; i < buf.length; i+=5) {
   </ul>
 </details>
 
+#### promisify
+
+```js
+
+```
 ---
 
 ### 优秀的 blog
