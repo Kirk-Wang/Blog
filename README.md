@@ -446,6 +446,15 @@ for(let i = 0; i < buf.length; i+=5) {
 }
 ```
 
+<details>
+  <summary>
+    <b>events</b>
+  </summary>
+  <ul>
+    <li><a href="http://nodejs.cn/api/events.html">文档</a></li>
+  </ul>
+</details>
+
 ---
 
 ### 优秀的 blog
