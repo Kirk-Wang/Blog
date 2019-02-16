@@ -511,6 +511,7 @@ test();
     <b>.gitignore</b>
   </summary>
   <ul>
+    <li><a href="https://git-scm.com/docs/gitignore">文档</a></li>
     <li>匹配模式前 / 代表项目根目录</li>
     <li>匹配模式最后加 / 代表目录</li>
     <li>匹配模式前加 ! 代表取反</li>
@@ -520,6 +521,16 @@ test();
   </ul>
 </details>
 
+<details>
+  <summary>
+    <b>.npmignore</b>
+  </summary>
+  <ul>
+    <li><a href="https://docs.npmjs.com/misc/developers">文档</a></li>
+    <li>匹配模式前 / 代表项目根目录</li>
+    <li>匹配模式最后加 / 代表目录</li>
+  </ul>
+</details>
 
 #### 简单实现 Static Web Server
 
