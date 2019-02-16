@@ -1,8 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-const promisify = require('util').promisify
+const fs = require("fs");
+const path = require("path");
+const promisify = require("util").promisify;
 
-const read = promisify(fs.readFile)
+const read = promisify(fs.readFile);
 
 // read(path.join(__dirname,'./promisify.js'))
 // .then( data => {
@@ -14,8 +14,8 @@ const read = promisify(fs.readFile)
 
 async function test() {
   try {
-    const content = await read(path.join(__dirname,'./promisify.js'))
-    console.log(content.toString())
+    const content = await read(path.join(__dirname, "./promisify.js"));
+    console.log(content.toString());
   } catch (ex) {
     console.log(ex);
   }
