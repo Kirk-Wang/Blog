@@ -576,6 +576,7 @@ test();
 
 ### 优秀的 blog
 
+* [Preact 源码解析](https://sinkmind.github.io/preact-analysis/)
 * [React.js 小书](https://github.com/huzidaha/react-naive-book)
 * [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
 * [冴羽的博客](https://github.com/mqyqingfeng/Blog)
