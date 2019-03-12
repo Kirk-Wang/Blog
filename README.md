@@ -1,30 +1,9 @@
 
-### 一些基础
+### React-Admin 文档示例 Demo（最新）
 
-  * CSS 盒模型
-  * 页面布局
-  * DOM 事件
-  * HTTP 协议
-  * 原型链类
-  * 面向对象
-  * 通信
-  * 前端安全
-  * 前端算法
-  * 渲染机制
-  * JS 运行机制
-  * 页面性能
-  * 错误监控
-  * 业务
-  * 团队协作
-  * ...
 
-### [读 React 16.x 源码](./docs/stories/react/README.md)
 
-### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
-* 油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
-* 文字脱敏[Scaling Redux Apps](./docs/stories/scaling-redux-app.md)
-
-### React-Admin 相关
+### React-Admin  快速入门
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
 * [简介](https://react-admin.com/docs/zh-CN/intro.html)
 * [十分钟教程](https://react-admin.com/docs/zh-CN/tutorial.html)
@@ -46,7 +25,7 @@
 * [常见问题](https://react-admin.com/docs/zh-CN/faq.html)
 * [生态](https://react-admin.com/docs/zh-CN/ecosystem.html)
 
-### 核心组件及源码分析
+### React-Admin 核心组件及源码分析
 
 扩展安装：[Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
@@ -68,6 +47,12 @@
 12. [最早的想法（留作纪念）](./docs/stories/old-readme.md)
 13. [ImageInput 相关问题](https://github.com/Kirk-Wang/react-admin-app/issues/1)
 14. [AOP & middleware(1秒懂^_^)](./docs/stories/aop-middleware.md)
+
+### [读 React 16.x 源码](./docs/stories/react/README.md)
+
+### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
+* 油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
+* 文字脱敏[Scaling Redux Apps](./docs/stories/scaling-redux-app.md)
 
 脑图备份：
 * [React源码大纲](./docs/images/react/react-1.png)
@@ -590,6 +575,28 @@ test();
 </details>
 
 
+
+---
+
+
+### 一些基础
+
+  * CSS 盒模型
+  * 页面布局
+  * DOM 事件
+  * HTTP 协议
+  * 原型链类
+  * 面向对象
+  * 通信
+  * 前端安全
+  * 前端算法
+  * 渲染机制
+  * JS 运行机制
+  * 页面性能
+  * 错误监控
+  * 业务
+  * 团队协作
+  * ...
 
 ---
 
