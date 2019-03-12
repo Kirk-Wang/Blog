@@ -1,6 +1,10 @@
 
 ### React-Admin 文档示例 Demo（最新）
 
+示例采用 typescript 作为主要开发语言
+
+为什么选择 Typescript ? 相信 [这篇文章](https://juejin.im/post/59c46bc86fb9a00a4636f939) 会给你一些答案。
+
 
 
 ### React-Admin  快速入门
