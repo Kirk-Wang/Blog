@@ -14,6 +14,8 @@ import {
   LongTextInput,
   Create,
   Filter,
+  Responsive,
+  SimpleList,
 } from "react-admin";
 
 const PostTitle = ({ record }:any) => {
@@ -30,15 +32,27 @@ const PostFilter = (props: any) => (
 );
 
 export const PostList = (props: any) => (
-  <List filters={<PostFilter />} {...props}>
-    <Datagrid>
-      <TextField source="id" />
-      <ReferenceField source="userId" reference="users">
-        <TextField source="name" />
-      </ReferenceField>
-      <TextField source="title" />
-      <EditButton />
-    </Datagrid>
+  <List {...props}>
+      <Responsive
+          small={
+              <SimpleList
+                  primaryText={(record:any) => record.title}
+                  secondaryText={(record:any) => `${record.views} views`}
+                  tertiaryText={(record:any) => new Date(record.published_at).toLocaleDateString()}
+              />
+          }
+          medium={
+              <Datagrid>
+                  <TextField source="id" />
+                  <ReferenceField label="User" source="userId" reference="users">
+                      <TextField source="name" />
+                  </ReferenceField>
+                  <TextField source="title" />
+                  <TextField source="body" />
+                  <EditButton />
+              </Datagrid>
+          }
+      />
   </List>
 );
 
