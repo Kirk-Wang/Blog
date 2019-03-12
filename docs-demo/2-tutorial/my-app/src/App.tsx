@@ -7,6 +7,7 @@ import { PostList, PostEdit, PostCreate } from './Posts';
 import { UserList } from './Users';
 import Dashboard from './Dashboard';
 import authProvider from './authProvider';
+// import dataProvider from './dataProvider';
 
 
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
