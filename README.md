@@ -5,6 +5,8 @@
 
 为什么选择 Typescript ? 相信 [这篇文章](https://juejin.im/post/59c46bc86fb9a00a4636f939) 会给你一些答案。
 
+使用 [Create React App](https://facebook.github.io/create-react-app/) 快速生成脚手架（[Adding TypeScript
+](https://facebook.github.io/create-react-app/docs/adding-typescript)）。
 
 
 ### React-Admin  快速入门
