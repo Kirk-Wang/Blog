@@ -1,5 +1,4 @@
 import React from "react";
-import jsonServerProvider from "ra-data-json-server";
 import { Admin, Resource } from 'react-admin';
 import PostIcon from '@material-ui/icons/Book';
 import UserIcon from '@material-ui/icons/Group';
@@ -7,8 +6,7 @@ import { PostList, PostEdit, PostCreate } from './Posts';
 import { UserList } from './Users';
 import Dashboard from './Dashboard';
 import authProvider from './authProvider';
-// import dataProvider from './dataProvider';
-
+import jsonServerProvider from './dataProvider';
 
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 const App = () => (
