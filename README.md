@@ -13,7 +13,14 @@
 
   * [基于现有 API，10分钟内快速构建一个完整的应用](./docs-demo/2-tutorial/README.md)
     * [Users](http://jsonplaceholder.typicode.com/users) 功能点：
-      * 路由导航，信息列表，分页，全选，删除，撤销删除，导出 CSV 文件，表头排序
+      * 路由导航，用户列表，分页，全选，删除（2s 可撤销删除），导出 CSV 文件，点击表头排序
+    * [Posts](http://jsonplaceholder.typicode.com/posts)
+      * 路由导航，文章列表，分页，全选，删除（2s 可撤销删除），导出 CSV 文件，点击表头排序
+      * 添加文章 （针对某个用户）
+      * 编辑文章（2s 可撤销编辑）
+    * Dashboard
+      * 自定义首页
+    * 添加登录页，自定义 authProvider
 
 
 ### React-Admin  快速入门
