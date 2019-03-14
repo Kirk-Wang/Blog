@@ -20,7 +20,7 @@
       * 编辑文章（2s 可撤销编辑）
     * Dashboard
       * 自定义首页
-    * 添加登录页，自定义 authProvider
+    * 添加登录页，自定义 authProvider（登录提供者，适配不同的后端登录，注销功能）
 
 
 ### React-Admin  快速入门
