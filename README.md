@@ -11,7 +11,7 @@
 
 实战：
 
-  * [2. Tutorial](./docs-demo/2-tutorial)
+  * [2. Tutorial](./docs-demo/2-tutorial/README.md)
 
 
 ### React-Admin  快速入门
