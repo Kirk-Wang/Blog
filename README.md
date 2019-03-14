@@ -11,7 +11,9 @@
 
 实战：
 
-  * [2. Tutorial](./docs-demo/2-tutorial/README.md)
+  * [10分钟内快速做一个完整的应用](./docs-demo/2-tutorial/README.md)
+    * [Users](http://jsonplaceholder.typicode.com/users)
+      * 用户列表，分页，全选，删除，导出 CSV 文件，表头排序
 
 
 ### React-Admin  快速入门
