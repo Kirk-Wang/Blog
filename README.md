@@ -8,6 +8,8 @@
 * 使用 [Create React App](https://facebook.github.io/create-react-app/) 快速生成脚手架（[Adding TypeScript
 ](https://facebook.github.io/create-react-app/docs/adding-typescript)）。
 * [REST Client for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)。如果你用 VSCode，也许它比 Postman 更好用。
+* 使用 [DbSchema](https://www.dbschema.com/)（请支持正版😝） 对数据进行可视化建模
+  * [Demo](https://o-o.ren/scaling-redux-apps/visual-data-modeling/2-tutorial/)
 
 实战：
 
