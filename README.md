@@ -11,7 +11,7 @@
 * 使用 [DbSchema](https://www.dbschema.com/)（请支持正版😝） 对数据进行可视化建模
   * [Demo](https://o-o.ren/scaling-redux-apps/visual-data-modeling/2-tutorial/)
 
-实战（为保证真实的CRUD，这里我将基于 [jsonplaceholder](http://jsonplaceholder.typicode.com/posts) 的数据，然后使用 Golang 构建真实的 API）：
+实战（为保证真实的CRUD，这里我将基于 [jsonplaceholder](http://jsonplaceholder.typicode.com/posts) 的数据，然后使用 Golang & MongoDB 构建真实的 API）：
 
 <details>
   <summary>
