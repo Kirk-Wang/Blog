@@ -8,7 +8,8 @@ import Dashboard from './Dashboard';
 import authProvider from './authProvider';
 import jsonServerProvider from './dataProvider';
 
-const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
+// const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
+const dataProvider = jsonServerProvider("http://dev.admin.com:6868");
 const App = () => (
   <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider}>
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
