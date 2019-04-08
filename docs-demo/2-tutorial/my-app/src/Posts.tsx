@@ -24,15 +24,14 @@ const PostTitle = ({ record }:any) => {
 
 const PostFilter = (props: any) => (
     <Filter {...props}>
-        <TextInput label="Search" source="q" alwaysOn />
-        <ReferenceInput label="User" source="userId" reference="users" allowEmpty>
+        <ReferenceInput label="User" source="userId" reference="users" alwaysOn>
             <SelectInput optionText="name" />
         </ReferenceInput>
     </Filter>
 );
 
 export const PostList = (props: any) => (
-  <List {...props}>
+  <List {...props} filters={<PostFilter />}>
       <Responsive
           small={
               <SimpleList
@@ -71,7 +70,7 @@ export const PostEdit = (props:any) => (
 
 export const PostCreate = (props: any) => (
     <Create {...props}>
-        <SimpleForm>
+        <SimpleForm redirect="list">
             <ReferenceInput source="userId" reference="users">
                 <SelectInput optionText="name" />
             </ReferenceInput>
