@@ -609,6 +609,13 @@ test();
 
 ---
 
+### Jest
+
+[使用Jest进行React单元测试](https://juejin.im/post/5b6c39bde51d45195c079d62#heading-34)
+[Jest & enzyme 进行react单元测试](https://juejin.im/post/5c417aa4f265da616a47eb4d)
+
+---
+
 ### 优秀的 blog
 
 * [Preact 源码解析](https://sinkmind.github.io/preact-analysis/)
