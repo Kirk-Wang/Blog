@@ -1,18 +1,6 @@
 
 ### React-Admin 文档示例 Demo（最新）
 
-介绍：
-
-* 示例采用 Typescript 作为主要开发语言。
-* 为什么选择 Typescript ? 相信 [这篇文章](https://juejin.im/post/59c46bc86fb9a00a4636f939) 会给你一些答案。
-* 使用 [Create React App](https://facebook.github.io/create-react-app/) 快速生成脚手架（[Adding TypeScript
-](https://facebook.github.io/create-react-app/docs/adding-typescript)）。
-* [REST Client for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)。如果你用 VSCode，也许它比 Postman 更好用。
-* 使用 [DbSchema](https://www.dbschema.com/)（请支持正版😝） 对数据进行可视化建模
-  * [Demo](https://o-o.ren/scaling-redux-apps/visual-data-modeling/2-tutorial/)
-
-实战（为保证真实的CRUD，这里我将基于 [jsonplaceholder](http://jsonplaceholder.typicode.com/posts) 的数据，然后使用 [Gin](https://github.com/gin-gonic/gin) & [MongoDB](https://docs.mongodb.com/manual/) 构建真实的 API）：
-
 <details>
   <summary>
     <b><a href="./docs-demo/2-tutorial/README.md">基于现有 API，10分钟内快速构建一个完整的应用</a></b>
