@@ -624,14 +624,17 @@ test();
 
 ---
 
-### nice repo~
+### nice repos~
 
-* [postmate](https://github.com/dollarshaveclub/postmate)
 * [javascript-datastructures-algorithms](https://github.com/loiane/javascript-datastructures-algorithms)
 * [ory-editor](https://github.com/aeneasr/ory-editor)
 * [typescript-library-starter](https://github.com/alexjoverm/typescript-library-starter)
 * [wretch](https://github.com/elbywan/wretch)
 * [umbrella](https://github.com/thi-ng/umbrella)
+* [postmate](https://github.com/dollarshaveclub/postmate)
+* [penpal](https://github.com/Aaronius/penpal)
+* [final-form](https://github.com/final-form/final-form)
+
 
 ### 优秀的 blog
 
