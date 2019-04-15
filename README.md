@@ -635,6 +635,11 @@ test();
 * [penpal](https://github.com/Aaronius/penpal)
 * [final-form](https://github.com/final-form/final-form)
 
+### monorepos ~~~
+
+* [有赞开源项目最佳实践](https://juejin.im/post/5b03871df265da0ba6102022)
+* [Node.js项目拆包工程化](https://mp.weixin.qq.com/s/euyclYm8Use3UpFTeJ1WlA)
+* [Vue CLI 3结合Lerna进行UI框架设计](https://juejin.im/post/5cb12844e51d456e7a303b64)
 
 ### 优秀的 blog
 
