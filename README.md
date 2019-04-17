@@ -641,6 +641,11 @@ test();
 * [Node.js项目拆包工程化](https://mp.weixin.qq.com/s/euyclYm8Use3UpFTeJ1WlA)
 * [Vue CLI 3结合Lerna进行UI框架设计](https://juejin.im/post/5cb12844e51d456e7a303b64)
 
+### 前端性能
+
+* [深入理解前端性能监控](https://juejin.im/post/5caaacc0e51d452b45296487)
+ 
+
 ### 优秀的 blog
 
 * [Preact 源码解析](https://sinkmind.github.io/preact-analysis/)
@@ -654,6 +659,7 @@ test();
 * [每周重点攻克一个前端面试重难点](https://github.com/yygmind/blog)
 * [前端精读周刊](https://github.com/dt-fe/weekly)
 * [天猪部落阁](https://github.com/atian25/blog)
+* [TNFE-Weekly](https://github.com/Tnfe/TNFE-Weekly)
 
 ### 杂项
 * [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
