@@ -638,6 +638,7 @@ test();
 * [typescript-webpack-starter](https://github.com/nobrainr/typescript-webpack-starter)
 * [pdf-lib](https://github.com/Hopding/pdf-lib)
 * [formik](https://github.com/jaredpalmer/formik)
+* [yup](https://github.com/jquense/yup)
 
 ### monorepos ~~~
 
