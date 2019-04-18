@@ -634,6 +634,9 @@ test();
 * [postmate](https://github.com/dollarshaveclub/postmate)
 * [penpal](https://github.com/Aaronius/penpal)
 * [final-form](https://github.com/final-form/final-form)
+* [typescript-lib-starter](https://github.com/Hotell/typescript-lib-starter)
+* [typescript-webpack-starter](https://github.com/nobrainr/typescript-webpack-starter)
+* [pdf-lib](https://github.com/Hopding/pdf-lib)
 
 ### monorepos ~~~
 
