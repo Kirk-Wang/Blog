@@ -1,3 +1,10 @@
+
+### 刷 WHATWG
+
+[web-messaging](https://html.spec.whatwg.org/multipage/web-messaging.html)
+
+
+
 ### React-Admin 文档示例 Demo（最新）
 
 <details>
@@ -473,4 +480,190 @@ for(let i = 0; i < buf.length; i+=5) {
     <li>ce.on</li>
     <li>ce.emit</li>
     <li>ce.onece</li>
-    <li>ce.removeListener
+    <li>ce.removeListener</li>
+    <li>ce.removeAllListeners</li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>fs 模块</b>
+  </summary>
+  <ul>
+    <li><a href="http://nodejs.cn/api/fs.html">文档</a></li>
+    <li>fs.readFile</li>
+    <li>fs.readFileSync</li>
+    <li>fs.writeFile</li>
+     <li>fs.stat</li>
+     <li>fs.unlink</li>
+     <li>fs.readdir</li>
+     <li>fs.mkdir</li>
+     <li>fs.rmdir</li>
+     <li>fs.watch</li>
+     <li>fs.readstream</li>
+     <li>fs.writestream</li>
+  </ul>
+</details>
+
+#### promisify & async
+
+```js
+const fs = require("fs");
+const path = require("path");
+const promisify = require("util").promisify;
+const read = promisify(fs.readFile);
+// read(path.join(__dirname,'./promisify.js'))
+// .then( data => {
+//   console.log(data.toString());
+// })
+// .catch(ex => {
+//   console.log(ex)
+// })
+async function test() {
+  try {
+    const content = await read(path.join(__dirname, "./promisify.js"));
+    console.log(content.toString());
+  } catch (ex) {
+    console.log(ex);
+  }
+}
+test();
+```
+
+<details>
+  <summary>
+    <b>.gitignore</b>
+  </summary>
+  <ul>
+    <li><a href="https://git-scm.com/docs/gitignore">文档</a></li>
+    <li>匹配模式前 / 代表项目根目录</li>
+    <li>匹配模式最后加 / 代表目录</li>
+    <li>匹配模式前加 ! 代表取反</li>
+    <li>* 代表任意个字符</li>
+    <li>？匹配任意一个字符</li>
+    <li>** 匹配多级目录</li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>.npmignore</b>
+  </summary>
+  <ul>
+    <li><a href="https://docs.npmjs.com/misc/developers">文档</a></li>
+    <li>src(npm 包忽略)</li>
+    <li>test(npm 包忽略)</li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>EditorConfig</b>
+  </summary>
+  <ul>
+    <li><a href="https://editorconfig.org/">文档</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>ESLint</b>
+  </summary>
+  <ul>
+    <li><a href="http://eslint.cn/">文档</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>Benchmark.js</b>
+  </summary>
+  <ul>
+    <li><a href="https://benchmarkjs.com/docs/">文档</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>
+    <b>EventLoop</b>
+  </summary>
+  <ul>
+    <li><a href="https://github.com/jin5354/404forest/issues/61">深入探究 eventloop 与浏览器渲染的时序问题</a></li>
+  </ul>
+</details>
+
+---
+
+### 一些基础
+
+  * CSS 盒模型
+  * 页面布局
+  * DOM 事件
+  * HTTP 协议
+  * 原型链类
+  * 面向对象
+  * 通信
+  * 前端安全
+  * 前端算法
+  * 渲染机制
+  * JS 运行机制
+  * 页面性能
+  * 错误监控
+  * 业务
+  * 团队协作
+  * ...
+
+---
+
+### Jest
+
+* [使用Jest进行React单元测试](https://juejin.im/post/5b6c39bde51d45195c079d62#heading-34)
+* [Jest & enzyme 进行react单元测试](https://juejin.im/post/5c417aa4f265da616a47eb4d)
+* [postMessage do not trigger message event listener](https://github.com/facebook/jest/issues/6765)
+* [window.postMessage doesn't work ](https://github.com/jsdom/jsdom/issues/2245)
+
+---
+
+### nice repos~
+
+* [javascript-datastructures-algorithms](https://github.com/loiane/javascript-datastructures-algorithms)
+* [ory-editor](https://github.com/aeneasr/ory-editor)
+* [typescript-library-starter](https://github.com/alexjoverm/typescript-library-starter)
+* [wretch](https://github.com/elbywan/wretch)
+* [umbrella](https://github.com/thi-ng/umbrella)
+* [postmate](https://github.com/dollarshaveclub/postmate)
+* [penpal](https://github.com/Aaronius/penpal)
+* [final-form](https://github.com/final-form/final-form)
+
+### monorepos ~~~
+
+* [有赞开源项目最佳实践](https://juejin.im/post/5b03871df265da0ba6102022)
+* [Node.js项目拆包工程化](https://mp.weixin.qq.com/s/euyclYm8Use3UpFTeJ1WlA)
+* [Vue CLI 3结合Lerna进行UI框架设计](https://juejin.im/post/5cb12844e51d456e7a303b64)
+
+### 优秀的 blog
+
+* [Preact 源码解析](https://sinkmind.github.io/preact-analysis/)
+* [React.js 小书](https://github.com/huzidaha/react-naive-book)
+* [Jony的博客，记录学习工作的点点滴滴](https://github.com/forthealllight/blog)
+* [冴羽的博客](https://github.com/mqyqingfeng/Blog)
+* [node-interview](https://github.com/ElemeFE/node-interview/tree/master/sections/zh-cn)
+* [大话WEB开发](https://github.com/SFLAQiu/web-develop)
+* [梁少峰的个人博客](https://github.com/youngwind/blog)
+* [JavaScript内存泄露和CSS优化](https://github.com/zhansingsong/js-leakage-patterns)
+* [每周重点攻克一个前端面试重难点](https://github.com/yygmind/blog)
+* [前端精读周刊](https://github.com/dt-fe/weekly)
+* [天猪部落阁](https://github.com/atian25/blog)
+
+### 杂项
+* [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
+```sh
+openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.crt -subj /CN=dev.xx.com -reqexts SAN -extensions SAN -config <(cat /System/Library/OpenSSL/openssl.cnf <(printf '[SAN]\nsubjectAltName=DNS:dev.xx.com')) -sha256 -days 3650
+```
+* [Docker--Error message 'sudo: unable to resolve host <USER>'](https://askubuntu.com/questions/59458/error-message-sudo-unable-to-resolve-host-user)
+* [如何绕过chrome的弹窗拦截机制](https://my.oschina.net/jsan/blog/1545859)
+* 80
+```sh
+sudo lsof -n -P | grep :80
+```
+* [在GIT中创建一个空分支](https://segmentfault.com/a/1190000004931751)
