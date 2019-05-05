@@ -655,6 +655,9 @@ test();
 * [前端精读周刊](https://github.com/dt-fe/weekly)
 * [天猪部落阁](https://github.com/atian25/blog)
 
+### 监控
+* [让前端监控数据采集更高效](https://mp.weixin.qq.com/s/JB5LE0USD7EFpfc2F5IndA)
+
 ### 杂项
 * [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
 ```sh
