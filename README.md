@@ -634,6 +634,7 @@ test();
 * [postmate](https://github.com/dollarshaveclub/postmate)
 * [penpal](https://github.com/Aaronius/penpal)
 * [final-form](https://github.com/final-form/final-form)
+* [tsdx](https://github.com/palmerhq/tsdx)
 
 ### monorepos ~~~
 
