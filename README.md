@@ -659,6 +659,9 @@ test();
 ### 监控
 * [让前端监控数据采集更高效](https://mp.weixin.qq.com/s/JB5LE0USD7EFpfc2F5IndA)
 
+### JavaScript SDK Design
+* [JavaScript SDK Design](https://github.com/hueitan/javascript-sdk-design)
+
 ### 杂项
 * [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
 ```sh
