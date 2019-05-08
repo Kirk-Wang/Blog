@@ -661,6 +661,7 @@ test();
 
 ### JavaScript SDK Design
 * [JavaScript SDK Design](https://github.com/hueitan/javascript-sdk-design)
+* [Code-splitting for libraries—bundling for npm with Rollup 1.0](https://levelup.gitconnected.com/code-splitting-for-libraries-bundling-for-npm-with-rollup-1-0-2522c7437697)
 
 ### 杂项
 * [解决chrome提示"您的连接不是私密连接"问题](https://github.com/mrdulin/blog/issues/32)
