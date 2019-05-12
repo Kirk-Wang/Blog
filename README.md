@@ -4,7 +4,7 @@
 
 <details>
   <summary>
-    <b><a href="./docs-demo/2-tutorial/README.md">基于现有 API，10分钟内快速构建一个完整的应用</a></b>
+    <b>基于现有 API，10分钟内快速构建一个完整的应用</b>
   </summary>
   <ol>
     <li><a href="https://github.com/lotteryjs/ten-minutes-app" target="_black">ten-minutes-app</a></li>
