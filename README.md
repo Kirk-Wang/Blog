@@ -632,6 +632,7 @@ test();
 * [tsdx](https://github.com/palmerhq/tsdx)
 * [little-saga](https://github.com/little-saga)
 * [amis](https://github.com/baidu/amis)
+* [H5Skills](https://github.com/o2team/H5Skills)
 
 
 ### monorepos ~~~
