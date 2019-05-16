@@ -675,3 +675,4 @@ openssl req -newkey rsa:2048 -x509 -nodes -keyout server.pem -new -out server.cr
 sudo lsof -n -P | grep :80
 ```
 * [在GIT中创建一个空分支](https://segmentfault.com/a/1190000004931751)
+* [Android7.0以上使用Charles抓包Https](https://juejin.im/post/5c611302f265da2ddc3c5622)
