@@ -1,7 +1,3 @@
-### Saga
-
-fork-model & channel
-
 ### React-Admin 文档示例 Demo（最新）
 
 <details>
