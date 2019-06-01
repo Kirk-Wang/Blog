@@ -7,7 +7,11 @@
 
 #### 0.2 名词解释
 
-![little-saga](./little-saga/building-your-own-redux-saga/images/0-2.png)
+![0.2 名词解释](./little-saga/building-your-own-redux-saga/images/0-2.png)
+
+#### 1.1 生成器函数
+
+![1.1 生成器函数](./little-saga/building-your-own-redux-saga/images/1.1.png)
 
 
 ### React-Admin 文档示例 Demo（最新）
