@@ -2,7 +2,9 @@
 
 [构建你自己的 redux-saga](https://github.com/little-saga/little-saga/blob/v0.5.4/docs/building-your-own-redux-saga.md) 总结：（脑图）
 
+#### 0.2 名词解释
 
+![little-saga](./little-saga/images/0-2.png)
 
 
 ### React-Admin 文档示例 Demo（最新）
