@@ -3,7 +3,7 @@
 [构建你自己的 redux-saga](https://github.com/little-saga/little-saga/blob/v0.5.4/docs/building-your-own-redux-saga.md) 总结：（脑图）
 
 目录：
-[0.2 名词解释](#02-名词解释)
+*[0.2 名词解释](#02-名词解释)
 
 #### 0.2 名词解释
 
