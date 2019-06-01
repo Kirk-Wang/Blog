@@ -6,6 +6,7 @@
 * [0.2 名词解释](#02-名词解释)
 * [1.1 生成器函数](#11-生成器函数)
 * [1.2 使用 while-true 来消费迭代器](#12-使用-while-true-来消费迭代器)
+* [1.3 使用递归函数来消费迭代器](#13-使用递归函数来消费迭代器)
 
 #### 0.2 名词解释
 
@@ -19,6 +20,12 @@
 
 ![1.2 使用 while-true 来消费迭代器](./little-saga/building-your-own-redux-saga/images/1.2.png)
 
+#### 1.3 使用递归函数来消费迭代器
+
+![1.3 使用递归函数来消费迭代器](./little-saga/building-your-own-redux-saga/images/1.3.png)
+
+
+-------------------
 
 ### React-Admin 文档示例 Demo（最新）
 
