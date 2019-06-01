@@ -7,7 +7,7 @@
 
 #### 0.2 名词解释
 
-![little-saga](./little-saga/images/0-2.png)
+![little-saga](./little-saga/building-your-own-redux-saga/images/0-2.png)
 
 
 ### React-Admin 文档示例 Demo（最新）
