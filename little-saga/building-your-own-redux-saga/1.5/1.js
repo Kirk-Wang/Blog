@@ -5,6 +5,8 @@ function* gen() {
     // reject(new Error('haha error~~~'))
   })]
   console.assert(a === 1)
+  const b = yield ['delay', 500]
+  console.assert(b === '500ms elapsed')
   console.log('exit……')
 }
 
@@ -24,7 +26,11 @@ function next(args, isErr) {
   }
   if (value[0] === 'promise') {
     value[1].then(resolveValue => next(resolveValue), error => next(error, true))
-  } else {
+  } 
+  else if(value[0] === 'delay') {
+    setTimeout(() => next('500ms elapsed'), value[1])
+  }
+  else {
     next(new Error('无法识别的 Effect'), true)
   }
 }
