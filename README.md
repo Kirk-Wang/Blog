@@ -9,7 +9,8 @@
 * [1.3 使用递归函数来消费迭代器](#13-使用递归函数来消费迭代器)
 * [1.4 双向通信](#14-双向通信)
 * [1.5 effect 的类型与含义](#15-effect-的类型与含义)
-* [1.6 result-first callback style](#1.6-result-first-callback-style)
+* [1.6 result-first callback style](#16-result-first-callback-style)
+* [1.7 cancellation](#17-cancellation)
 
 
 #### 0.2 名词解释
@@ -40,6 +41,10 @@
 #### 1.6 result-first callback style
 
 ![1.6 result-first callback style](./little-saga/building-your-own-redux-saga/images/1.6.png)
+
+#### 1.7 cancellation
+
+![1.7 cancellation](./little-saga/building-your-own-redux-saga/images/1.7.png)
 
 -------------------
 
