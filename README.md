@@ -1,58 +1,3 @@
-### 深入理解 [redux-saga](https://github.com/redux-saga/redux-saga) 之 [little-saga](https://github.com/little-saga/little-saga) 全面解析
-
-[构建你自己的 redux-saga](https://github.com/little-saga/little-saga/blob/v0.5.4/docs/building-your-own-redux-saga.md) 总结：（脑图）
-
-目录：
-* [0.2 名词解释](#02-名词解释)
-* [1.1 生成器函数](#11-生成器函数)
-* [1.2 使用 while-true 来消费迭代器](#12-使用-while-true-来消费迭代器)
-* [1.3 使用递归函数来消费迭代器](#13-使用递归函数来消费迭代器)
-* [1.4 双向通信](#14-双向通信)
-* [1.5 effect 的类型与含义](#15-effect-的类型与含义)
-* [1.6 result-first callback style](#16-result-first-callback-style)
-* [1.7 cancellation](#17-cancellation)
-* [1.8 effect 状态](#18-effect-状态)
-
-
-#### 0.2 名词解释
-
-![0.2 名词解释](./little-saga/building-your-own-redux-saga/images/0-2.png)
-
-#### 1.1 生成器函数
-
-![1.1 生成器函数](./little-saga/building-your-own-redux-saga/images/1.1.png)
-
-#### 1.2 使用 while-true 来消费迭代器
-
-![1.2 使用 while-true 来消费迭代器](./little-saga/building-your-own-redux-saga/images/1.2.png)
-
-#### 1.3 使用递归函数来消费迭代器
-
-![1.3 使用递归函数来消费迭代器](./little-saga/building-your-own-redux-saga/images/1.3.png)
-
-
-#### 1.4 双向通信
-
-![1.4 双向通信](./little-saga/building-your-own-redux-saga/images/1.4.png)
-
-#### 1.5 effect 的类型与含义
-
-![1.5 effect 的类型与含义](./little-saga/building-your-own-redux-saga/images/1.5.png)
-
-#### 1.6 result-first callback style
-
-![1.6 result-first callback style](./little-saga/building-your-own-redux-saga/images/1.6.png)
-
-#### 1.7 cancellation
-
-![1.7 cancellation](./little-saga/building-your-own-redux-saga/images/1.7.png)
-
-#### 1.8 effect 状态
-
-![ 1.8 effect 状态](./little-saga/building-your-own-redux-saga/images/1.8.png)
-
--------------------
-
 ### React-Admin 文档示例 Demo（最新）
 
 <details>
@@ -731,3 +676,58 @@ sudo lsof -n -P | grep :80
 * [Android7.0以上使用Charles抓包Https](https://juejin.im/post/5c611302f265da2ddc3c5622)
 * [JB的测试之旅-听说安卓微信7.0不能抓https?](https://juejin.im/post/5c38d6e95188252584692f99)
 * [Android 7.0+ 抓包https的一种方案(支持微信7.0)](https://www.jianshu.com/p/a818a0d0aa9f)
+
+--------------------------------
+
+### 深入理解 [redux-saga](https://github.com/redux-saga/redux-saga) 之 [little-saga](https://github.com/little-saga/little-saga) 全面解析
+
+[构建你自己的 redux-saga](https://github.com/little-saga/little-saga/blob/v0.5.4/docs/building-your-own-redux-saga.md) 总结：（脑图）
+
+目录：
+* [0.2 名词解释](#02-名词解释)
+* [1.1 生成器函数](#11-生成器函数)
+* [1.2 使用 while-true 来消费迭代器](#12-使用-while-true-来消费迭代器)
+* [1.3 使用递归函数来消费迭代器](#13-使用递归函数来消费迭代器)
+* [1.4 双向通信](#14-双向通信)
+* [1.5 effect 的类型与含义](#15-effect-的类型与含义)
+* [1.6 result-first callback style](#16-result-first-callback-style)
+* [1.7 cancellation](#17-cancellation)
+* [1.8 effect 状态](#18-effect-状态)
+
+
+#### 0.2 名词解释
+
+![0.2 名词解释](./little-saga/building-your-own-redux-saga/images/0-2.png)
+
+#### 1.1 生成器函数
+
+![1.1 生成器函数](./little-saga/building-your-own-redux-saga/images/1.1.png)
+
+#### 1.2 使用 while-true 来消费迭代器
+
+![1.2 使用 while-true 来消费迭代器](./little-saga/building-your-own-redux-saga/images/1.2.png)
+
+#### 1.3 使用递归函数来消费迭代器
+
+![1.3 使用递归函数来消费迭代器](./little-saga/building-your-own-redux-saga/images/1.3.png)
+
+
+#### 1.4 双向通信
+
+![1.4 双向通信](./little-saga/building-your-own-redux-saga/images/1.4.png)
+
+#### 1.5 effect 的类型与含义
+
+![1.5 effect 的类型与含义](./little-saga/building-your-own-redux-saga/images/1.5.png)
+
+#### 1.6 result-first callback style
+
+![1.6 result-first callback style](./little-saga/building-your-own-redux-saga/images/1.6.png)
+
+#### 1.7 cancellation
+
+![1.7 cancellation](./little-saga/building-your-own-redux-saga/images/1.7.png)
+
+#### 1.8 effect 状态
+
+![ 1.8 effect 状态](./little-saga/building-your-own-redux-saga/images/1.8.png)
