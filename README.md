@@ -11,6 +11,7 @@
 * [1.5 effect 的类型与含义](#15-effect-的类型与含义)
 * [1.6 result-first callback style](#16-result-first-callback-style)
 * [1.7 cancellation](#17-cancellation)
+* [1.8 effect 状态](#18-effect-状态)
 
 
 #### 0.2 名词解释
@@ -45,6 +46,10 @@
 #### 1.7 cancellation
 
 ![1.7 cancellation](./little-saga/building-your-own-redux-saga/images/1.7.png)
+
+#### 1.8 effect 状态
+
+![ 1.8 effect 状态](./little-saga/building-your-own-redux-saga/images/1.8.png)
 
 -------------------
 
