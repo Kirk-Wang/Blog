@@ -37,3 +37,9 @@ beginWork以及优化
 * completeUnitOfWork 虚拟DOM对比
 * completeWork 错误捕获处理
 * unwindWork 完成整一棵树更新
+
+提交更新
+* commitRoot整体流程   开发时的帮助方法
+* 提交快照             提交DOM插入
+* 提交DOM更新          提交DOM删除
+* 提交所有声明周期
