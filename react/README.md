@@ -2,10 +2,4 @@
 
 React API 
 * createElement
-* createContext
-* JSX -> JS
-* ConcurrentMode
-* Ref
-* Component
-* Suspense
-* Hooks
+* 
