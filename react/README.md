@@ -49,3 +49,8 @@ beginWork以及优化
 * ref的实现过程
 * hydrate的实现过程
 * React的事件体系
+
+Suspense
+* 更新优先级的概念      更新挂起的概念
+* Suspense组件更新     timeout处理
+* retry重新尝试渲染    lazy组件更新
