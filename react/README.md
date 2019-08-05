@@ -1,5 +1,7 @@
 ### React 源码学习
 
+🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻
+
 [React 源码解析](https://react.jokcy.me/)
 * 足够的耐心
 * 思考再思考
@@ -79,4 +81,12 @@ Fiber、Update、Scheduler 核心
 ### JSX 到 JavaScript 的转换
 
 [REPL](https://babeljs.io/repl)
+
+*自定义定义组件要大写，它就是一个规范*
+
+### ReactElement
+
+![React-Element](./images/react-element.png)
+
+
 
