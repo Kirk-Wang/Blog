@@ -82,13 +82,13 @@ Fiber、Update、Scheduler 核心
 
 [REPL](https://babeljs.io/repl)
 
-*自定义定义组件要大写，它就是一个规范*
+**规范：自定义定义组件要大写**
 
 ### ReactElement
 
-*ReactElement.js*
+**ReactElement.js**
 
 ![React-Element](./images/react-element.png)
 
-[ReactElement](https://react.jokcy.me/book/api/react-element.html)
+手册：[ReactElement](https://react.jokcy.me/book/api/react-element.html)
 
