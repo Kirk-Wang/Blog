@@ -1,5 +1,9 @@
 ### React 源码学习
 
+[React 源码解析](https://react.jokcy.me/)
+* 足够的耐心
+* 思考再思考
+
 React API 
 * createElement
 * Ref
@@ -59,3 +63,5 @@ Hooks
 * 核心原理        useState
 * useEffect      useContext
 * 其他Hooks API
+
+Fiber、Update、Scheduler 核心
