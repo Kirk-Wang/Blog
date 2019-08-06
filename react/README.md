@@ -96,5 +96,12 @@ Fiber、Update、Scheduler 核心
 
 **ReactBaseClasses.js**
 
+**组件的定义，平台无关性**
+
 ![react-component](./images/react-component.png)
+
+### createRef & ref
+**获取 DOM 节点的实例**
+
+
 
