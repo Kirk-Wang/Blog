@@ -119,3 +119,8 @@ ref 使用的三种方式
 
 ![forward-ref](./images/forward-ref.png)
 
+### Context
+两种方式
+* childContextType
+* createContext
+
