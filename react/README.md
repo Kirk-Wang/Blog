@@ -138,4 +138,10 @@ ref 使用的三种方式
 
 ![ReactContext](./images/react-context.png)
 
+### ConcurrentMode
+
+**让整个渲染过程能够进行多任务调度**
+
+REACT_CONCURRENT_MODE_TYPE
+
 
