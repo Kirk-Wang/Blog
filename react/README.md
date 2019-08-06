@@ -122,5 +122,13 @@ ref 使用的三种方式
 ### Context
 两种方式
 * childContextType
+  * Parent
+    * getChildContext
+    * childContextTypes
+  * child 
+    * contextTypes
+    * this.context.xx
 * createContext
+  * Provider
+  * Consumer
 
