@@ -101,10 +101,14 @@ Fiber、Update、Scheduler 核心
 ![react-component](./images/react-component.png)
 
 ### createRef & ref
+
 **获取 DOM 节点的实例**
 
 ref 使用的三种方式
 * string ref
 * function
 * createRef
+
+**ReactCreateRef.js**
+![create-ref](./images/create-ref.png)
 
