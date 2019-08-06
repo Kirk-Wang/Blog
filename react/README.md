@@ -134,3 +134,8 @@ ref 使用的三种方式
 
 **旧的 Context 对组件更新性能有影响**
 
+**ReactContext.js**
+
+![ReactContext](./images/react-context.png)
+
+
