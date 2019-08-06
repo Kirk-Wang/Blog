@@ -96,3 +96,5 @@ Fiber、Update、Scheduler 核心
 
 **ReactBaseClasses.js**
 
+![react-component](./images/react-component.png)
+
