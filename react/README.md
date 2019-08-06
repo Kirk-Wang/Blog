@@ -113,4 +113,4 @@ ref 使用的三种方式
 ![create-ref](./images/create-ref.png)
 
 ### forwardRef
-
+**针对 functional components**
