@@ -132,3 +132,5 @@ ref 使用的三种方式
   * Provider
   * Consumer
 
+**旧的 Context 对组件更新性能有影响**
+
