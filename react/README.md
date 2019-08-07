@@ -1,12 +1,11 @@
 ### React 源码学习
 
-🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻🍻
-
 [React 源码解析](https://react.jokcy.me/)
 * 足够的耐心
 * 思考再思考
 
-### 通读源码不是目的
+通读源码不是目的
+
 * 外在
   * 提高开发能力
   * 解决问题能力
@@ -15,6 +14,8 @@
   * 提升学习能力
   * 提升思考能力
   * 提升设计能力
+
+## React API 一揽
 
 ### 快速过一遍 React API 
 * createElement
@@ -191,6 +192,9 @@ Lazy
 * cloneElement
 * createFactory
   * 对 createElement 的封装
+
+## React 中的更新
+
 
 
 
