@@ -196,7 +196,10 @@ Lazy
 ## React 中的更新
 
 ### ReactDOM.render
-
+创建更新的方式
+* ReactDOM.render || hydrate
+* setState
+* forceUpdate
 
 
 
