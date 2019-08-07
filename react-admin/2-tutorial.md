@@ -1,4 +1,6 @@
 
+Create, Retrieve, Update, and Delete (CRUD)
+
 * [Create React App](https://facebook.github.io/create-react-app/)
 * [Tutorial](https://marmelab.com/react-admin/Tutorial.html)
 * [REST Client for VSCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
