@@ -4,6 +4,7 @@
  - [blog.atulr.com](https://blog.atulr.com/)
  - [react.amsterdam](https://react.amsterdam/)
   <img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/>
+  - [GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
  - [React 源码解析](https://react.jokcy.me/)
 
 ### 快速过一遍 React API 
