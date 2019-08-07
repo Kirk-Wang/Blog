@@ -3,7 +3,7 @@
 **COMMUNITY**
  - [blog.atulr.com](https://blog.atulr.com/)
  - [react.amsterdam](https://react.amsterdam/)
-  <img src="https://react.amsterdam/img/logo.svg" />
+  <img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/>
 
 [React 源码解析](https://react.jokcy.me/)
 * 足够的耐心
