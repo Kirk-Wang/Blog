@@ -1,26 +1,10 @@
-### React 源码学习
+### React
 
 **COMMUNITY**
  - [blog.atulr.com](https://blog.atulr.com/)
  - [react.amsterdam](https://react.amsterdam/)
   <img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/>
-
-[React 源码解析](https://react.jokcy.me/)
-* 足够的耐心
-* 思考再思考
-
-通读源码不是目的
-
-* 外在
-  * 提高开发能力
-  * 解决问题能力
-  * 提升自身价值
-* 内在
-  * 提升学习能力
-  * 提升思考能力
-  * 提升设计能力
-
-## React API 一揽
+ - [React 源码解析](https://react.jokcy.me/)
 
 ### 快速过一遍 React API 
 * createElement
