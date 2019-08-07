@@ -1,0 +1,12 @@
+{
+  "name": "db-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx json-server --watch db.json"
+  },
+  "devDependencies": {
+    "json-server": "^0.15.0"
+  }
+}
