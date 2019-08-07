@@ -181,10 +181,12 @@ Lazy
 
 ### Others
 * MEMO 
-  * for function components
+  * for function
   * VS. PureComponent
 * Fragment
-  * 
+  * VS. DIV
+* StrictMode
+  * 过时 API 的提醒
 
 
 
