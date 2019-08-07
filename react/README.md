@@ -179,6 +179,13 @@ Lazy
 * toArray
 * only
 
+### Others
+* MEMO 
+  * for function components
+  * VS. PureComponent
+* Fragment
+  * 
+
 
 
 
