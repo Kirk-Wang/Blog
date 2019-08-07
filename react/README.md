@@ -186,7 +186,11 @@ Lazy
 * Fragment
   * VS. DIV
 * StrictMode
-  * 过时 API 的提醒
+  * 如：过时 API 的提醒
+  * development tool
+* cloneElement
+* createFactory
+  * 对 createElement 的封装
 
 
 
