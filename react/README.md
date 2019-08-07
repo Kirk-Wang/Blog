@@ -139,13 +139,19 @@ ref 使用的三种方式
 ![ReactContext](./images/react-context.png)
 
 ### ConcurrentMode
+REACT_CONCURRENT_MODE_TYPE
 
 **让整个渲染过程能够进行多任务调度**
-
-REACT_CONCURRENT_MODE_TYPE
 
 **ConcurrentMode 下面组件所有的更新都是低优先级更新**
 
 **flushSync 来提高优先级**
 
+### Suspense & Lazy
+
+Suspense: REACT_SUSPENSE_TYPE
+
+Lazy
+
+**ReactLazy.js**
 
