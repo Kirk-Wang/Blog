@@ -3,6 +3,8 @@
 * [Tutorial](https://marmelab.com/react-admin/Tutorial.html)
 * [REST Client for VSCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
   * api.http
+* [json-server](https://github.com/typicode/json-server)
+
 
 ```sh
 npx create-react-app 2-test-admin
