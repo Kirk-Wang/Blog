@@ -155,3 +155,5 @@ Lazy
 
 **ReactLazy.js**
 
+![ReactLazy](./images/react-lazy.png)
+
