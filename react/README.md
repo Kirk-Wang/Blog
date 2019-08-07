@@ -146,4 +146,6 @@ REACT_CONCURRENT_MODE_TYPE
 
 **ConcurrentMode 下面的所有的更新都是低优先级更新**
 
+**flushSync 来提高优先级**
+
 
