@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash.template": "^4.5.0",
     "prop-types": "^15.7.2",
     "ra-data-json-server": "^2.9.5",
     "react": "^16.8.6",
