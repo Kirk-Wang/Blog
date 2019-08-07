@@ -1,6 +1,6 @@
 ### React 源码学习
 
-[community]
+**COMMUNITY**
  - [blog.atulr.com](https://blog.atulr.com/)
  - [react.amsterdam](https://react.amsterdam/)
   <img src="https://react.amsterdam/img/logo.svg" />
