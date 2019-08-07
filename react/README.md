@@ -144,4 +144,6 @@ ref 使用的三种方式
 
 REACT_CONCURRENT_MODE_TYPE
 
+**ConcurrentMode 下面的所有的更新都是低优先级更新**
+
 
