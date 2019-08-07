@@ -203,7 +203,7 @@ Lazy
 * forceUpdate
 
 ReactDOM.render 需要做哪些事情呢？
-* 创建ReactRoot
+* 创建 ReactRoot
 * 创建 FiberRoot 和 RootFiber
 * 创建更新
 
