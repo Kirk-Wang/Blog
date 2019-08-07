@@ -1,20 +1,15 @@
-### React-Admin 文档示例 Demo（最新）
+一个前端 Blog
 
-<details>
-  <summary>
-    <b>基于现有 API，10分钟内快速构建一个完整的应用</b>
-  </summary>
-  <ol>
-    <li><a href="https://github.com/lotteryjs/ten-minutes-app" target="_black">ten-minutes-app</a></li>
-    <li><a href="http://jsonplaceholder.typicode.com/users">Users</a>：路由导航，用户列表，分页，全选，删除（2s 可撤销删除），导出 CSV 文件，点击表头排序</li>
-    <li><a href="http://jsonplaceholder.typicode.com/posts">Posts</a>：路由导航，文章列表，分页，全选，删除（2s 可撤销删除），导出 CSV 文件，点击表头排序</li>
-    <li>添加文章（针对某个用户）</li>
-    <li>编辑文章（2s 可撤销编辑）</li>
-    <li>自定义首页（Dashboard）</li>
-    <li>添加 AuthProvider（登录自定义处理，适配后端登录，注销功能）并设置登录页。</li>
-    <li>添加 DataProvider（数据提供自定义处理，适配后端不同的 API 请求格式和响应）。</li>
-  </ol>
-</details>
+**COMMUNITY**
+[blog.atulr.com](https://blog.atulr.com/)
+
+[react.amsterdam](https://react.amsterdam/)
+
+<img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/>
+
+[YouTuBe-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
+
+[React 源码解析](https://react.jokcy.me/)
 
 ### React-Admin  快速入门
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
