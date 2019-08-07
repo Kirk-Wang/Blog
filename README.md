@@ -4,7 +4,7 @@
 
 <a href="https://react.amsterdam/"><img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/><a/>
 
-* [YouTuBe-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
+* [油管-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
 
 ### React-Admin  快速入门
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
