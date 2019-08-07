@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npx json-server --watch db.json"
+    "start": "npx json-server --watch db.json --port 3004"
   },
   "devDependencies": {
     "json-server": "^0.15.0"

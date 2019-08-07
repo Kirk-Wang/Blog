@@ -5,10 +5,16 @@
   * api.http
 * [json-server](https://github.com/typicode/json-server)
 
-
+启动 `db-server`:
 ```sh
-npx create-react-app 2-test-admin
-cd 2-test-admin/
-yarn add react-admin ra-data-json-server prop-types
+cd db-server
 yarn start
 ```
+
+启动 Demo
+```sh
+cd 2-test-admin
+yarn start
+```
+
+打开🔛[http://localhost:3000](http://localhost:3000)
