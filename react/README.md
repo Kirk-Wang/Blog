@@ -1,7 +1,9 @@
 ### React 源码学习
 
-[refs]
+[community]
 * [blog.atulr.com](https://blog.atulr.com/)
+* [react.amsterdam](https://react.amsterdam/)
+  ![react.amsterdam](https://react.amsterdam/img/logo.svg)
 
 [React 源码解析](https://react.jokcy.me/)
 * 足够的耐心
