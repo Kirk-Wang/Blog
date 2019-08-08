@@ -6,7 +6,11 @@
 
 * [油管-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
 
-### React-Admin  快速入门
+### 读 React-Admin 项目，感受 React 应用架构的魅力（狂热更新中……）
+* [光速上手教程](./react-admin/2-tutorial.md)
+
+
+### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
 * [简介](https://react-admin.com/docs/zh-CN/intro.html)
 * [十分钟教程](https://react-admin.com/docs/zh-CN/tutorial.html)
