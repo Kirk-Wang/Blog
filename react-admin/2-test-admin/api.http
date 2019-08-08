@@ -1,2 +1,5 @@
-### User
-GET http://jsonplaceholder.typicode.com/users/2
+### Users
+GET http://localhost:3004/users
+
+### Posts
+GET http://localhost:3004/posts

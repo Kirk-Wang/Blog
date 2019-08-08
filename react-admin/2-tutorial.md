@@ -1,6 +1,8 @@
 
 Create, Retrieve, Update, and Delete (CRUD)
 
+[2-test-admin](./images/2-test-admin.png)
+
 * [Create React App](https://facebook.github.io/create-react-app/)
 * [Tutorial](https://marmelab.com/react-admin/Tutorial.html)
 * [REST Client for VSCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
