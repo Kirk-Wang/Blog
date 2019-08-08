@@ -13,7 +13,7 @@
 * 对于偏 React 生态应用的项目架构来说，参考性较强
 * 举一反三，应用到其它 UI 层架构也是不错
 
-指南：
+开始：
 * [十分钟教程上手教程](./react-admin/2-tutorial.md)
 ![2-test-admin](./react-admin/images/2-test-admin.png)
 
