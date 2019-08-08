@@ -1,6 +1,8 @@
 import React from 'react';
 import { 
   List,
+  Responsive,
+  SimpleList,
   Filter,
   Datagrid,
   TextField,
@@ -25,19 +27,30 @@ const PostFilter = (props) => (
   </Filter>
 );
 
-export const PostList = props => (
-    <List filters={<PostFilter/>} {...props}>
-        <Datagrid>
-            <ReferenceField source="userId" reference="users">
-                <TextField source="name" />
-            </ReferenceField>
-            <TextField source="id" />
-            <TextField source="title" />
-            <TextField source="body" />
-            <EditButton />
-        </Datagrid>
-    </List>
-)
+export const PostList = (props) => (
+  <List filters={<PostFilter/>} {...props}>
+      <Responsive
+          small={
+              <SimpleList
+                  primaryText={record => record.title}
+                  secondaryText={record => `${record.views} views`}
+                  //tertiaryText={record => new Date(record.published_at).toLocaleDateString()}
+              />
+          }
+          medium={
+              <Datagrid>
+                  <TextField source="id" />
+                  <ReferenceField label="User" source="userId" reference="users">
+                      <TextField source="name" />
+                  </ReferenceField>
+                  <TextField source="title" />
+                  <TextField source="body" />
+                  <EditButton />
+              </Datagrid>
+          }
+      />
+  </List>
+);
 
 const PostTitle = ({ record }) => {
   return <span>Post {record ? `"${record.title}"` : ''}</span>;
