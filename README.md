@@ -14,9 +14,9 @@
 * 举一反三，应用到其它 UI 层架构也是不错
 
 开始：
-* [十分钟教程上手教程](./react-admin/2-tutorial.md)
+1. [十分钟教程上手教程](./react-admin/2-tutorial.md)
 ![2-test-admin](./react-admin/images/2-test-admin.png)
-* [利用 Data Provider 适配你自己的 API](./react-admin/3-data-providers.md)
+2. [利用 Data Provider 适配你自己的 API](./react-admin/3-data-providers.md)
 
 
 ### React-Admin 相关文档
