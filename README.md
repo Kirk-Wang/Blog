@@ -6,8 +6,14 @@
 
 * [油管-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
 
-### 读 React-Admin 项目，感受 React 应用架构的魅力（狂热更新中……）
-* [光速上手教程](./react-admin/2-tutorial.md)
+### 读 React-Admin 项目，感受 React 应用架构的魅力（近期狂热更新中……）
+
+[react-admin](https://github.com/marmelab/react-admin)
+* 对于一个长期迭代的 React 应用来说，在组件维护上面参考性较强。
+
+[光速上手教程](./react-admin/2-tutorial.md)
+
+![2-test-admin](./react-admin/images/2-test-admin.png)
 
 
 ### React-Admin 相关文档
