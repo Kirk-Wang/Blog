@@ -20,6 +20,8 @@
 2. [利用 Data Provider 适配你自己的 API](./react-admin/3-data-providers.md)
 <img src="./react-admin/images/3-data-providers.png" width="500" />
 
+<img src="./react-admin/images/3-data-providers-2.png" width="500" />
+
 
 ### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
