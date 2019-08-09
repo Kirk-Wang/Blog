@@ -23,6 +23,9 @@
 <img src="./react-admin/images/3-data-providers-2.png" width="500" />
 
 4. [利用&lt;Admin/&gt;自定义一切](./react-admin/4-admin-component.md)
+<img src="./react-admin/images/4-admin-component.png" width="500" />
+
+
 
 ### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
