@@ -1,1 +1,1 @@
-[The &lt;Admin Component](https://marmelab.com/react-admin/Admin.html)
+[&lt;Admin/&gt;](https://marmelab.com/react-admin/Admin.html)
