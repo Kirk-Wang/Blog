@@ -11,6 +11,7 @@
 
 * [1.1-快速上手](./redux-saga/1.1-beginner-tutorial.md)
 <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
+* [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
 
 
 -------------------------------------
