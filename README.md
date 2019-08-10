@@ -10,7 +10,7 @@
 <a href="https://redux-saga.js.org/"><img src="https://camo.githubusercontent.com/4354872161943c4ae2ceec2a946dec85b96799b8/68747470733a2f2f72656475782d736167612e6a732e6f72672f6c6f676f2f303830302f52656475782d536167612d4c6f676f2d4c616e6473636170652e706e67" width="300px"/><a/>
 
 * [1.1-快速上手](./redux-saga/1.1-beginner-tutorial.md)
-![1.1-beginner-tutorial](./redux-saga/images/1.1-beginner-tutorial.png)
+<img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
 
 
 -------------------------------------
