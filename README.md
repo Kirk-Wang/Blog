@@ -4,7 +4,7 @@
 
 International React Conference in Tel Aviv
 
-<a href="https://react-next.com/"><img src="https://react-next.com/elements/ReactNextWhiteLogo.svg" width="200px" height="200px"/><a/>
+<a href="https://react-next.com/"><img style="background-color: #784997;" src="https://react-next.com/elements/ReactNextWhiteLogo.svg" width="200px" height="200px"/><a/>
 
 <a href="https://react.amsterdam/"><img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/><a/>
 
@@ -15,6 +15,7 @@ International React Conference in Tel Aviv
 
 * [1.1-快速上手](./redux-saga/1.1-beginner-tutorial.md)
 <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
+
 * [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
 
 
