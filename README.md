@@ -2,13 +2,11 @@
 
 **COMMUNITY**
 
-International React Conference in Tel Aviv
+International React Conference
 
 <a href="https://react-next.com/" style="background:#000"><img src="https://react-next.com/elements/ReactNextWhiteLogo.svg" width="200px" height="200px"/><a/>
 
 <a href="https://react.amsterdam/"><img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/><a/>
-
-* [油管-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
 
 ### 利用 Redux-Saga 优雅的管理各种复杂的逻辑
 <a href="https://redux-saga.js.org/"><img src="https://camo.githubusercontent.com/4354872161943c4ae2ceec2a946dec85b96799b8/68747470733a2f2f72656475782d736167612e6a732e6f72672f6c6f676f2f303830302f52656475782d536167612d4c6f676f2d4c616e6473636170652e706e67" width="300px"/><a/>
