@@ -1,8 +1,6 @@
 # 🍻
 
-**COMMUNITY**
-
-International React Conference
+### International React Conference
 
 * [conf.reactjs.org](https://conf.reactjs.org/)
 * [react-next.com](https://react-next.com/)
