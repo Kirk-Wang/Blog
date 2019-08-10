@@ -15,6 +15,13 @@ International React Conference
 <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
 
 * [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
+  * [Applying the Saga Pattern • Caitie McCaffrey](https://www.youtube.com/watch?v=xDuwrtwYHu8)
+  * [Original paper](http://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf)
+  * [A Saga on Sagas](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/jj591569(v=pandp.10))
+  * [André Kovac - Handle All Async Events in Redux-Sagas | React Next 2019](https://www.youtube.com/watch?v=FsC4CF40__I)
+  * [Build a Chat Application using React, Redux, Redux-Saga, and Web Sockets - Tutorial](https://www.youtube.com/watch?v=x_fHXt9V3zQ)
+  * [Using sagas to maintain data consistency in a microservice architecture by Chris Richardson](https://www.youtube.com/watch?v=YPbGW3Fnmbc)
+  * ...
 
 
 -------------------------------------
