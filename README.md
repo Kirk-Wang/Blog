@@ -4,7 +4,7 @@
 
 International React Conference in Tel Aviv
 
-<a href="https://react-next.com/"><img style="background-color: #784997;" src="https://react-next.com/elements/ReactNextWhiteLogo.svg" width="200px" height="200px"/><a/>
+<a href="https://react-next.com/" style="background:#000"><img src="https://react-next.com/elements/ReactNextWhiteLogo.svg" width="200px" height="200px"/><a/>
 
 <a href="https://react.amsterdam/"><img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/><a/>
 
