@@ -9,28 +9,8 @@
 ### 利用 Redux-Saga 优雅的管理各种复杂的逻辑
 <a href="https://redux-saga.js.org/"><img src="https://camo.githubusercontent.com/4354872161943c4ae2ceec2a946dec85b96799b8/68747470733a2f2f72656475782d736167612e6a732e6f72672f6c6f676f2f303830302f52656475782d536167612d4c6f676f2d4c616e6473636170652e706e67" width="300px"/><a/>
 
-### 读 React-Admin 项目，感受 React 应用架构的魅力
 
-[react-admin](https://github.com/marmelab/react-admin)
-* Powered by [material-ui](https://v1.material-ui.com/), [redux](https://redux.js.org/), [redux-form](https://redux-form.com/7.3.0/), [redux-saga](https://redux-saga.js.org/), [react-router](https://reacttraining.com/react-router/), [recompose](https://github.com/acdlite/recompose), [reselect](https://github.com/reduxjs/reselect) and a few more.
-* 对于偏 React 生态应用的项目架构来说，参考性较强
-* 举一反三，应用到其它 UI 层架构也是不错
-
-开始：
-1. **README**
-2. **[十分钟教程上手教程](./react-admin/2-tutorial.md)**
-<img src="./react-admin/images/2-test-admin.png" width="500" />
-
-3. **[利用 Data Provider 适配你自己的 API](./react-admin/3-data-providers.md)**
-<img src="./react-admin/images/3-data-providers.png" width="500" />
-
-<img src="./react-admin/images/3-data-providers-2.png" width="500" />
-
-4. **[利用&lt;Admin/&gt;自定义一切](./react-admin/4-admin-component.md)**
-<img src="./react-admin/images/4-admin-component.png" width="500" />
-
-
-
+-------------------------------------
 ### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
 * [简介](https://react-admin.com/docs/zh-CN/intro.html)
@@ -52,6 +32,27 @@
 * [引用](https://react-admin.com/docs/zh-CN/reference.html)
 * [常见问题](https://react-admin.com/docs/zh-CN/faq.html)
 * [生态](https://react-admin.com/docs/zh-CN/ecosystem.html)
+
+### 读 React-Admin 项目，感受 React 应用架构的魅力
+
+[react-admin](https://github.com/marmelab/react-admin)
+* Powered by [material-ui](https://v1.material-ui.com/), [redux](https://redux.js.org/), [redux-form](https://redux-form.com/7.3.0/), [redux-saga](https://redux-saga.js.org/), [react-router](https://reacttraining.com/react-router/), [recompose](https://github.com/acdlite/recompose), [reselect](https://github.com/reduxjs/reselect) and a few more.
+* 对于偏 React 生态应用的项目架构来说，参考性较强
+* 举一反三，应用到其它 UI 层架构也是不错
+
+开始：
+1. **README**
+2. **[十分钟教程上手教程](./react-admin/2-tutorial.md)**
+<img src="./react-admin/images/2-test-admin.png" width="500" />
+
+3. **[利用 Data Provider 适配你自己的 API](./react-admin/3-data-providers.md)**
+<img src="./react-admin/images/3-data-providers.png" width="500" />
+
+<img src="./react-admin/images/3-data-providers-2.png" width="500" />
+
+4. **[利用&lt;Admin/&gt;自定义一切](./react-admin/4-admin-component.md)**
+<img src="./react-admin/images/4-admin-component.png" width="500" />
+
 
 ### React-Admin 核心组件及源码分析
 
