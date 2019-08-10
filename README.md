@@ -2,6 +2,10 @@
 
 **COMMUNITY**
 
+International React Conference in Tel Aviv
+
+<a href="https://react-next.com/"><img src="https://react-next.com/elements/ReactNextWhiteLogo.svg" width="200px" height="200px"/><a/>
+
 <a href="https://react.amsterdam/"><img src="https://react.amsterdam/img/logo.svg" width="200px" height="200px"/><a/>
 
 * [油管-->GitNation React Conferences](https://www.youtube.com/channel/UCsFrt8oKNYXGspSlX9u6uXw)
