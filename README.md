@@ -12,7 +12,7 @@
 [https://redux-saga.js.org/](https://redux-saga.js.org/)|[https://redux-saga-in-chinese.js.org](https://redux-saga-in-chinese.js.org)
 
 * [1.1-快速上手](./redux-saga/1.1-beginner-tutorial.md)
-<img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
+  <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
 
 * [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
   * [Applying the Saga Pattern • Caitie McCaffrey](https://www.youtube.com/watch?v=xDuwrtwYHu8)
@@ -23,6 +23,7 @@
   * [Using sagas to maintain data consistency in a microservice architecture by Chris Richardson](https://www.youtube.com/watch?v=YPbGW3Fnmbc)
   * ...
 * [2.1-使用 Saga 辅助函数](./redux-saga/2.1-using-saga-helpers.md)
+  <img src="./redux-saga/images/2.1-using-saga-helpers.png" width="500" />
 
 
 -------------------------------------
