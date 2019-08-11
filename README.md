@@ -26,6 +26,9 @@
 * [2.1-使用 Saga 辅助函数](./redux-saga/2.1-using-saga-helpers.md)
 <img src="./redux-saga/images/2.1-using-saga-helpers.png" width="500" />
 
+* [2.2-声明式 Effects](./redux-saga/2.2-declarative-effects.md)
+<img src="./redux-saga/images/2.2-declarative-effects.png" width="500" />
+
 
 -------------------------------------
 ### React-Admin 相关文档
