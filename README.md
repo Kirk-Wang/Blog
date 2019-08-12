@@ -32,6 +32,8 @@
 * [2.3-发起 action 到 store](./redux-saga/2.3-dispatching-actions.md)
 <img src="./redux-saga/images/2.3-dispatching-actions.png" width="150" />
 
+* [2.4-错误处理](./redux-saga/2.4-error-handling.md)
+
 -------------------------------------
 ### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
