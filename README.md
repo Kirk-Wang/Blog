@@ -24,15 +24,16 @@
   * ...
   
 * [2.1-使用 Saga 辅助函数](./redux-saga/2.1-using-saga-helpers.md)
-<img src="./redux-saga/images/2.1-using-saga-helpers.png" width="500" />
+<img src="./redux-saga/images/2.1-using-saga-helpers.png" width="400" />
 
 * [2.2-声明式 Effects](./redux-saga/2.2-declarative-effects.md)
-<img src="./redux-saga/images/2.2-declarative-effects.png" width="500" />
+<img src="./redux-saga/images/2.2-declarative-effects.png" width="400" />
 
 * [2.3-发起 action 到 store](./redux-saga/2.3-dispatching-actions.md)
 <img src="./redux-saga/images/2.3-dispatching-actions.png" width="150" />
 
 * [2.4-错误处理](./redux-saga/2.4-error-handling.md)
+<img src="./redux-saga/images/2.4-error-handling.png" width="400" />
 
 -------------------------------------
 ### React-Admin 相关文档
