@@ -36,7 +36,7 @@
 <img src="./redux-saga/images/2.4-error-handling.png" width="400" />
 
 * [2.5-一个常见的抽象概念: Effect](./redux-saga/2.5-a-common-abstraction-effect.md)
-<img src="./redux-saga/images/2.5-a-common-abstraction-effect.png" width="200" />
+<img src="./redux-saga/images/2.5-a-common-abstraction-effect.png" width="150" />
 
 -------------------------------------
 ### React-Admin 相关文档
