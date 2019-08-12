@@ -30,7 +30,7 @@
 <img src="./redux-saga/images/2.2-declarative-effects.png" width="500" />
 
 * [2.3-发起 action 到 store](./redux-saga/2.3-dispatching-actions.md)
-<img src="./redux-saga/images/2.3-dispatching-actions.png" width="200" />
+<img src="./redux-saga/images/2.3-dispatching-actions.png" width="150" />
 
 -------------------------------------
 ### React-Admin 相关文档
