@@ -44,6 +44,9 @@
 * [2.5-一个常见的抽象概念: Effect](./redux-saga/2.5-a-common-abstraction-effect.md)
 <img src="./redux-saga/images/2.5-a-common-abstraction-effect.png" width="150" />
 
+* [7-名词解释](./redux-saga/7-glossary.md)
+<img src="./redux-saga/images/7-glossary.png" width="150" />
+
 -------------------------------------
 ### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
