@@ -45,7 +45,7 @@
 <img src="./redux-saga/images/2.5-a-common-abstraction-effect.png" width="150" />
 
 * [7-名词解释](./redux-saga/7-glossary.md)
-<img src="./redux-saga/images/7-glossary.png" width="150" />
+<img src="./redux-saga/images/7-glossary.png" width="400" />
 
 -------------------------------------
 ### React-Admin 相关文档
