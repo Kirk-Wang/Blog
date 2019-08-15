@@ -35,6 +35,9 @@
 <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
 
 * [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
+  * Saga Pattern | How to implement business transactions using Microservices
+    * [Part I](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
+    * [Part II](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part-2/)
   * [SAGA | Microservices Architecture Patterns | Tech Primers](https://www.youtube.com/watch?v=WnZ7IcaN_JA)
   * [Applying the Saga Pattern • Caitie McCaffrey](https://www.youtube.com/watch?v=xDuwrtwYHu8)
     * [go-saga](https://github.com/lysu/go-saga),Implements saga-pattern in Go
