@@ -31,6 +31,8 @@
 
 [redux-saga.js.org](https://redux-saga.js.org/)|[redux-saga-in-chinese.js.org](https://redux-saga-in-chinese.js.org)|[little-saga](https://github.com/little-saga/little-saga)(⚡ Universal and embeddable saga run-time.)
 
+* [构建你自己的 redux-saga](https://www.yuque.com/shinima/blog/qtarrq)
+
 * [1.1-快速上手](./redux-saga/1.1-beginner-tutorial.md)
 <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
 
