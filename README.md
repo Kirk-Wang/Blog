@@ -26,6 +26,7 @@
 * [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
   * [SAGA | Microservices Architecture Patterns | Tech Primers](https://www.youtube.com/watch?v=WnZ7IcaN_JA)
   * [Applying the Saga Pattern • Caitie McCaffrey](https://www.youtube.com/watch?v=xDuwrtwYHu8)
+    * [go-saga](https://github.com/lysu/go-saga),Implements saga-pattern in Go
   * [Original paper](http://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf)
   * [A Saga on Sagas](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/jj591569(v=pandp.10))
   * [André Kovac - Handle All Async Events in Redux-Sagas | React Next 2019](https://www.youtube.com/watch?v=FsC4CF40__I)
