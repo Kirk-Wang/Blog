@@ -25,6 +25,15 @@ function put(action) {
   }
 }
 
+function delay(ms) {
+  return {
+    type: 'DELAY',
+    payload: {
+      ms,
+    }
+  }
+}
+
 function channel() {
   const takers = {}
 
@@ -64,6 +73,11 @@ function runPutEffect(effect, cb) {
   cb()
 }
 
+function runDelayEffect(effect, cb) {
+  const { ms } = effect.payload
+  setTimeout(cb, ms)
+}
+
 function runForkEffect(effect, cb) {
   const { fn } = effect.payload
   runSaga(fn())
@@ -85,6 +99,9 @@ function runSaga(iterator) {
         case "PUT": {
           runPutEffect(effect, next)
         } break;
+        case "DELAY": {
+          runDelayEffect(effect, next)
+        } break;
       }
     }
   }
@@ -94,6 +111,7 @@ function runSaga(iterator) {
 function* incrementSaga() {
   while(true) {
     const action = yield take('INCREMENT')
+    yield delay(500)
     yield put(action)
   }
 }
