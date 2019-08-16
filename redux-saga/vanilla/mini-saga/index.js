@@ -119,6 +119,7 @@ function* incrementSaga() {
 function* decrementSaga() {
   while(true) {
     const action = yield take('DECREMENT')
+    yield delay(400)
     yield put(action)
   }
 }
@@ -129,7 +130,8 @@ function* rootSaga() {
 }
 
 function dispatch(action) {
-  console.log('dispatch', action)
+  const input = document.querySelector('input')
+  input.value = +(input.value) + action.payload.step
 }
 
 document.addEventListener('DOMContentLoaded',() => {
