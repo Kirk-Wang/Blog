@@ -50,6 +50,8 @@
   * [Build a Chat Application using React, Redux, Redux-Saga, and Web Sockets - Tutorial](https://www.youtube.com/watch?v=x_fHXt9V3zQ)
   * [Using sagas to maintain data consistency in a microservice architecture by Chris Richardson](https://www.youtube.com/watch?v=YPbGW3Fnmbc)
   * [Modular redux architecture](https://dev.to/jovidecroock/modular-redux-57nl)
+  * [Building Modular Redux Applications](https://blog.usejournal.com/making-redux-modular-d21fd069bb33)
+  * [Code Splitting for redux and redux-saga](https://manukyan.dev/posts/2019-04-15-code-splitting-for-redux-and-optional-redux-saga/)
   * ...
   
 * [2.1-使用 Saga 辅助函数](./redux-saga/2.1-using-saga-helpers.md)
