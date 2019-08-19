@@ -73,6 +73,7 @@
 <img src="./redux-saga/images/7-glossary.png" width="400" />
 
 channels-trans-table
+
 ![channels-trans-table](https://raw.githubusercontent.com/redux-saga/redux-saga/master/packages/core/src/internal/channels-trans-table.png)
 
 -------------------------------------
