@@ -72,6 +72,9 @@
 * [7-名词解释](./redux-saga/7-glossary.md)
 <img src="./redux-saga/images/7-glossary.png" width="400" />
 
+channels-trans-table
+![channels-trans-table](https://raw.githubusercontent.com/redux-saga/redux-saga/master/packages/core/src/internal/channels-trans-table.png)
+
 -------------------------------------
 ### React-Admin 相关文档
 * [官方文档](https://marmelab.com/react-admin/) | [中文文档](https://react-admin.com) | [Demo](https://o-o.ren/scaling-redux-apps/demo/#/customers)
