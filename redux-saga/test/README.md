@@ -97,3 +97,18 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('saga cps call handling')
 - [ ] test('saga synchronous cps failures handling')
 - [ ] test('saga cps cancellation handling')
+
+### interpreter/effectMiddlewares.js
+- [ ] test('effectMiddlewares - single')
+- [ ] test('effectMiddlewares - multiple')
+- [ ] test('effectMiddlewares - nested task')
+
+### interpreter/flush.js
+- [ ] test('saga flush handling')
+
+### interpreter/fork.js
+- [ ] test('should not interpret returned effect. fork(() => effectCreator())')
+- [ ] test('should not interpret returned effect. yield fork(takeEvery, 'pattern', fn)')
+- [ ] test('should interpret returned promise. fork(() => promise)')
+- [ ] test('should handle promise that resolves undefined properly. fork(() => Promise.resolve(undefined))')
+- [ ] test('should interpret returned iterator. fork(() => iterator)')
