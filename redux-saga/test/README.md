@@ -41,3 +41,8 @@ Redux-Saga 测试用例阅读计划：
 ### scheduler.js
 - [ ] test('scheduler executes all recursively triggered tasks in order')
 - [ ] test('scheduler when suspended queues up and executes all tasks on flush')
+
+### monitoring.js
+- [ ] test('saga middleware monitoring')
+- [ ] test('runSaga monitoring')
+- [ ] test('saga monitors without all functions')
