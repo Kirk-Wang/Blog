@@ -205,3 +205,27 @@ Redux-Saga 测试用例阅读：
 ### sagaHelpers/retry.js
 - [ ] test('retry failing')
 - [ ] test('retry without failing')
+
+### sagaHelpers/takeEvery.js
+- [ ] test('takeEvery')
+- [ ] test('takeEvery: pattern END')
+
+### sagaHelpers/takeLatest.js
+- [ ] test('takeLatest')
+- [ ] test('takeLatest: pattern END')
+
+### sagaHelpers/takeLeading.js
+- [ ] test('takeLeading')
+- [ ] test('takeLeading: pattern END')
+
+### sagaHelpers/throttle.js
+- [ ] test('throttle')
+- [ ] test('throttle: pattern END')
+
+## /packages/testing-utils/__tests__
+
+### cloneableGenerator.js
+- [ ] test('it should allow to "clone" the generator')
+
+### createMockTask.js
+- [ ] test('should allow to use createMockTask for testing purposes')
