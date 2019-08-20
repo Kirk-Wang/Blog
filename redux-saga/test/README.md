@@ -134,3 +134,9 @@ Redux-Saga 测试用例阅读计划：
 ### interpreter/iterators.js
 - [ ] test('saga nested iterator handling')
 
+### interpreter/onerror.js
+- [ ] test('saga onError is optional (the default is console.error)')
+- [ ] test('saga onError is called for uncaught error (thrown Error instance)')
+- [ ] test('saga onError is called for uncaught error (thrown primitive)')
+- [ ] test('saga onError is not called for caught errors')
+
