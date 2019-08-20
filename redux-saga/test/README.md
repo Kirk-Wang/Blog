@@ -15,3 +15,11 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('middleware options')
 - [ ] test('enhance channel.put with an emitter')
 - [ ] test('middleware.run saga arguments validation')
+
+### taskToPromise.js
+- [ ] test('calling toPromise() of an already completed task')
+- [ ] test('calling toPromise() before a task completes')
+- [ ] test('calling toPromise() of an already aborted task')
+- [ ] test('calling toPromise() before a task aborts')
+- [ ] test('calling toPromise() of an already cancelled task')
+- [ ] test('calling toPromise() of before a task gets cancelled')
