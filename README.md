@@ -18,11 +18,9 @@
 ### Courses
 
 * [freeCodeCamp.org](https://www.freecodecamp.org/)
-  * [油管视频专辑列表](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
+  * ![logo](https://yt3.ggpht.com/a/AGF-l7_sGUrG_alh-mdTIDmdcaw1GanuPL2PxVajjQ=s48-c-k-c0xffffffff-no-rj-mo)
+  * [油管视频专辑列表，很多课程](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
   * [Data Structures and Algorithms in JavaScript](https://www.youtube.com/watch?v=t2CEgPsws3U&t=148s)
-
-    * ![logo](https://yt3.ggpht.com/a/AGF-l7_sGUrG_alh-mdTIDmdcaw1GanuPL2PxVajjQ=s48-c-k-c0xffffffff-no-rj-mo)
-
     * 感觉可以一边学英语，一边复习基础数据结构🤣🤦‍♂️
 * [FrontendMasters](https://frontendmasters.com)
   * [Rethinking Asynchronous JavaScript](https://frontendmasters.com/courses/rethinking-async-js/)
