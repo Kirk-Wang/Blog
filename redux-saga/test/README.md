@@ -7,3 +7,5 @@ Redux-Saga 测试用例阅读计划：
 
 ### runSaga.js
 - [ ] test('runSaga')
+
+### middleware.js
