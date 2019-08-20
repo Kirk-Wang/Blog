@@ -6,4 +6,4 @@ Redux-Saga 测试用例阅读计划：
 阅读顺序不分先后
 
 ### runSaga.js
-- [ ] runSaga
+- [ ] test('runSaga')
