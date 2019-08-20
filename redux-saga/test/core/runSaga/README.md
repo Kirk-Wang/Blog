@@ -59,3 +59,28 @@ function configStore() {
   return store
 }
 ```
+5. Side Effects
+```js
+function* root() {
+  const { all, fork} = ReduxSagaEffects
+  yield all([fork(incAsync), fork(decAsync)])
+}
+
+function* incAsync() {
+  const { take, delay, put} = ReduxSagaEffects
+  while(true) {
+    yield take('INCREMENT_ASYNC')
+    yield delay(500)
+    yield put({ type: 'INCREMENT', payload: { step: 3 } })
+  }
+}
+
+function* decAsync() {
+  const { take, delay, put} = ReduxSagaEffects
+  while(true) {
+    yield take('DECREMENT_ASYNC')
+    yield delay(1000)
+    yield put({ type: 'DECREMENT', payload: { step: 3 }  })
+  }
+}
+```
