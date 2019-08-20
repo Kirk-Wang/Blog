@@ -6,7 +6,7 @@ Redux-Saga 测试用例阅读：
 阅读顺序不分先后
 
 ### runSaga.js
-- [ ] test('runSaga')
+- [x] test('runSaga')
 
 ### middleware.js
 - [ ] test('middleware output')
