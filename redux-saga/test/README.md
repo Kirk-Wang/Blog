@@ -131,3 +131,6 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('saga sync fork failures: spawns (detached forks)')
 - [ ] test('saga detached forks failures')
 
+### interpreter/iterators.js
+- [ ] test('saga nested iterator handling')
+
