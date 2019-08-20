@@ -1,6 +1,6 @@
-精读 Redux-Saga 测试用例：
+Redux-Saga 测试用例阅读：
 
-**目标：精通 Redux-Saga 所有用法**
+**目标：熟悉 Redux-Saga 所有用法**
 
 ## /packages/core/__tests__
 阅读顺序不分先后
@@ -189,3 +189,12 @@
 - [ ] test('put causing sync dispatch response in store subscriber')
 - [ ] test('action dispatched in root saga should get scheduled and taken by a "sibling" take')
 - [ ] test('action dispatched synchronously in forked task should be taken a following sync take')
+
+### sagaHelpers/debounce.js
+- [ ] test('debounce: sync actions')
+- [ ] test('debounce: async actions')
+- [ ] test('debounce: cancelled')
+- [ ] test('debounce: channel')
+- [ ] test('debounce: channel END')
+- [ ] test('debounce: pattern END')
+- [ ] test('debounce: pattern END during race')
