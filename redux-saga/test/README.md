@@ -30,3 +30,14 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('event channel')
 - [ ] test('unsubscribe event channel')
 - [ ] test('expanding buffer')
+
+### channel-recipes.js
+- [ ] test('action channel')
+- [ ] test('error check when constructing actionChannels')
+- [ ] test('action channel generator')
+- [ ] test('action channel generator with buffers')
+- [ ] test('channel: watcher + max workers')
+
+### scheduler.js
+- [ ] test('scheduler executes all recursively triggered tasks in order')
+- [ ] test('scheduler when suspended queues up and executes all tasks on flush')
