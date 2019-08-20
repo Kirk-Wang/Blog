@@ -198,3 +198,10 @@ Redux-Saga 测试用例阅读：
 - [ ] test('debounce: channel END')
 - [ ] test('debounce: pattern END')
 - [ ] test('debounce: pattern END during race')
+
+### sagaHelpers/delay.js
+- [ ] test('delay')
+
+### sagaHelpers/retry.js
+- [ ] test('retry failing')
+- [ ] test('retry without failing')
