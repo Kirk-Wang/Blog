@@ -84,3 +84,39 @@ function* decAsync() {
   }
 }
 ```
+6. 连接到 Saga
+```js
+let { dispatch, getState } = configStore()
+const channel = ReduxSaga.stdChannel()
+const IO = {
+  channel,
+  dispatch,
+  getState
+}
+
+const enhancer = next => action => {
+  // hit reducers
+ result = next(action)
+ channel.put(action)
+ return result
+}
+dispatch = enhancer(dispatch)
+
+task = ReduxSaga.runSaga(IO, root)
+```
+
+7.绑定事件
+```js
+document.addEventListener('click', (e) => {
+  switch (e.target.id) {
+    case 'inc': {
+      dispatch({type: 'INCREMENT_ASYNC'})
+      console.log(`task.isRunning()`, task.isRunning())
+    } break;
+    case 'dec': {
+      dispatch({type: 'DECREMENT_ASYNC'})
+      console.log(`task.isRunning()`, task.isRunning())
+    } break;
+  }
+})
+```

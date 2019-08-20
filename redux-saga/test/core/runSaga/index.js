@@ -81,14 +81,16 @@ const enhancer = next => action => {
 dispatch = enhancer(dispatch)
 
 task = ReduxSaga.runSaga(IO, root)
-// bind events
+
 document.addEventListener('click', (e) => {
   switch (e.target.id) {
     case 'inc': {
       dispatch({type: 'INCREMENT_ASYNC'})
+      console.log(`task.isRunning()`, task.isRunning())
     } break;
     case 'dec': {
       dispatch({type: 'DECREMENT_ASYNC'})
+      console.log(`task.isRunning()`, task.isRunning())
     } break;
   }
 })
