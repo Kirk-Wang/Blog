@@ -140,3 +140,17 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('saga onError is called for uncaught error (thrown primitive)')
 - [ ] test('saga onError is not called for caught errors')
 
+### interpreter/promise.js
+- [ ] test('saga native promise handling')
+- [ ] test('saga native promise handling: undefined errors')
+
+### interpreter/put.js
+- [ ] test('saga put handling')
+- [ ] test('saga put in a channel')
+- [ ] test('saga async put's response handling')
+- [ ] test('saga error put's response handling')
+- [ ] test('saga error putResolve's response handling')
+- [ ] test('saga nested puts handling')
+- [ ] test('puts emitted while dispatching saga need not to cause stack overflow')
+- [ ] test('puts emitted directly after creating a task (caused by another put) should not be missed by that task')
+- [ ] test('END should reach tasks created after it gets dispatched')
