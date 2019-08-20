@@ -85,3 +85,15 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('should bubble an exception thrown during cancellation')
 - [ ] test('task should end in cancelled state when joining cancelled child')
 - [ ] test('task should end in cancelled state when parent gets cancelled')
+
+### interpreter/channel.js
+- [ ] test('saga create channel for store actions')
+- [ ] test('saga create channel for store actions (with buffer)')
+
+### interpreter/context.js
+- [ ] test('saga must handle context in dynamic scoping manner')
+
+### interpreter/cps.js
+- [ ] test('saga cps call handling')
+- [ ] test('saga synchronous cps failures handling')
+- [ ] test('saga cps cancellation handling')
