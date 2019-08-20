@@ -46,3 +46,23 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('saga middleware monitoring')
 - [ ] test('runSaga monitoring')
 - [ ] test('saga monitors without all functions')
+
+### interpreter/all.js
+- [ ] test('saga parallel effects handling')
+- [ ] test('saga empty array')
+- [ ] test('saga parallel effect: handling errors')
+- [ ] test('saga parallel effect: handling END')
+- [ ] test('saga parallel effect: named effects')
+
+### interpreter/base.js
+- [ ] test('saga iteration')
+- [ ] test('saga error handling')
+- [ ] test('saga output handling')
+- [ ] test('saga yielded falsy values')
+
+### interpreter/call.js
+- [ ] test('saga handles call effects and resume with the resolved values')
+- [ ] test('saga handles call effects and throw the rejected values inside the generator')
+- [ ] test('saga handles call's synchronous failures and throws in the calling generator (1)')
+- [ ] test('saga handles call's synchronous failures and throws in the calling generator (2)')
+- [ ] test('saga handles call's synchronous failures and throws in the calling generator (2)')
