@@ -1,6 +1,6 @@
-Redux-Saga 测试用例阅读计划：
+精读 Redux-Saga 测试用例：
 
-**目标：熟悉 Redux-Saga 所有用法**
+**目标：精通 Redux-Saga 所有用法**
 
 ## /packages/core/__tests__
 阅读顺序不分先后
