@@ -8,5 +8,6 @@ state=0
 ```
 {type: 'INCREMENT'}
 {type: 'DECREMENT'}
-{type: 'DECREMENT_DELAY_5MS'}
+{type: 'INCREMENT_ASYNC'}
+{type: 'DECREMENT_ASYNC'}
 ```

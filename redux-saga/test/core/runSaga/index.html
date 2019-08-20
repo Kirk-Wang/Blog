@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>runSaga</title>
+  <script src="https://cdn.bootcss.com/redux-saga/1.0.5/redux-saga.umd.js"></script>
+  <script src="https://cdn.bootcss.com/redux-saga/1.0.5/redux-saga-effects.umd.min.js"></script>
 </head>
 
 <body>
-  <button id="inc">+</button>
+  <button id="inc">+(delay 500ms)</button>
   <input type="text" readonly style="width:30px; text-align: center;">
-  <button id="dec">-</button>
+  <button id="dec">-(delay 1s)</button>
   <script>
     function reducer(state = 0, action) {
       switch (action.type) {
@@ -73,17 +75,53 @@
       input$.value = state
     }
 
-    const { dispatch } = configStore()
+    const store = configStore()
     document.addEventListener('click', (e) => {
       switch (e.target.id) {
         case 'inc': {
-          dispatch({type: 'INCREMENT'})
+          store.dispatch({type: 'INCREMENT_ASYNC'})
         } break;
         case 'dec': {
-          dispatch({type: 'DECREMENT'})
+          store.dispatch({type: 'DECREMENT_ASYNC'})
         } break;
       }
     })
+
+    function* root() {
+      yield ReduxSagaEffects.all([ReduxSagaEffects.fork(incAsync), ReduxSagaEffects.fork(decAsync)])
+    }
+
+    function* incAsync() {
+      while(true) {
+        yield ReduxSagaEffects.take('INCREMENT_ASYNC')
+        yield ReduxSagaEffects.delay(500)
+        yield ReduxSagaEffects.put({ type: 'INCREMENT' })
+      }
+    }
+
+    function* decAsync() {
+      while(true) {
+        yield ReduxSagaEffects.take('DECREMENT_ASYNC')
+        yield ReduxSagaEffects.delay(1000)
+        yield ReduxSagaEffects.put({ type: 'DECREMENT' })
+      }
+    }
+
+    const channel = ReduxSaga.stdChannel()
+    const dispatch = next => action => {
+       // hit reducers
+      result = next(action)
+      channel.put(action)
+      return result
+    }
+    // enhance
+    store.dispatch = dispatch(store.dispatch)
+    const IO = {
+      channel,
+      dispatch: store.dispatch,
+      getState: store.getState
+    }
+    task = ReduxSaga.runSaga(IO, root)
   </script>
 </body>
 
