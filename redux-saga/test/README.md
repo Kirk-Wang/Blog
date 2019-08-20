@@ -112,3 +112,14 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('should interpret returned promise. fork(() => promise)')
 - [ ] test('should handle promise that resolves undefined properly. fork(() => Promise.resolve(undefined))')
 - [ ] test('should interpret returned iterator. fork(() => iterator)')
+
+### interpreter/forkjoin.js
+- [ ] test('saga fork handling: generators')
+- [ ] test('saga join handling : generators')
+- [ ] test('saga fork/join handling : functions')
+- [ ] test('saga fork wait for attached children')
+- [ ] test('saga auto cancel forks on error')
+- [ ] test('saga auto cancel forks on main cancelled')
+- [ ] test('saga auto cancel forks if a child aborts')
+- [ ] test('saga auto cancel parent + forks if a child aborts')
+- [ ] test('joining multiple tasks')
