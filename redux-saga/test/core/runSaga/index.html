@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>runSaga</title>
 </head>
+
 <body>
-  
+  <button id="inc">+</button>
+  <input type="text" readonly style="width:30px; text-align: center;">
+  <button id="dec">-</button>
+  <script>
+    function reducer(state = 0, action) {
+      switch (action.type) {
+        case 'INCREMENT': {
+          return ++state
+        } break;
+        case 'DECREMENT': {
+          return --state
+        } break;
+        default:
+          return state;
+      }
+    }
+
+    function createStore(reducer) {
+      let state
+      let listener
+
+      function dispatch(action) {
+        nextState = reducer(state, action)
+        if (nextState !== state && listener) {
+          state = nextState
+          listener()
+        }
+        return action
+      }
+
+      function getState() {
+        return state
+      }
+
+      function subscribe(cb) {
+        listener = cb
+      }
+
+      dispatch({ type: 'INIT' })
+
+      return {
+        dispatch,
+        getState,
+        subscribe
+      }
+    }
+
+    function configStore() {
+      const store = createStore(reducer)
+      store.subscribe(() => {
+        render(store.getState())
+      })
+      store.dispatch({type:'UNKNOWN'})
+      return store
+    }
+
+    const input$ = document.querySelector('input')
+    const inc$ = document.querySelector('#inc')
+    const dec$ = document.querySelector('#dec')
+
+    function render(state) {
+      input$.value = state
+    }
+
+    const { dispatch } = configStore()
+    document.addEventListener('click', (e) => {
+      switch (e.target.id) {
+        case 'inc': {
+          dispatch({type: 'INCREMENT'})
+        } break;
+        case 'dec': {
+          dispatch({type: 'DECREMENT'})
+        } break;
+      }
+    })
+  </script>
 </body>
+
 </html>
