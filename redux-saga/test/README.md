@@ -123,3 +123,11 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('saga auto cancel forks if a child aborts')
 - [ ] test('saga auto cancel parent + forks if a child aborts')
 - [ ] test('joining multiple tasks')
+
+### interpreter/forkJoinErrors.js
+- [ ] test('saga sync fork failures: functions')
+- [ ] test('saga sync fork failures: functions/error bubbling')
+- [ ] test('saga fork's failures: generators')
+- [ ] test('saga sync fork failures: spawns (detached forks)')
+- [ ] test('saga detached forks failures')
+
