@@ -9,3 +9,9 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('runSaga')
 
 ### middleware.js
+- [ ] test('middleware output')
+- [ ] test('middleware's action handler output')
+- [ ] test('middleware.run')
+- [ ] test('middleware options')
+- [ ] test('enhance channel.put with an emitter')
+- [ ] test('middleware.run saga arguments validation')
