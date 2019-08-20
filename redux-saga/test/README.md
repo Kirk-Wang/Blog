@@ -154,3 +154,38 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('puts emitted while dispatching saga need not to cause stack overflow')
 - [ ] test('puts emitted directly after creating a task (caused by another put) should not be missed by that task')
 - [ ] test('END should reach tasks created after it gets dispatched')
+
+### interpreter/race.js
+- [ ] test('saga race between effects handling')
+- [ ] test('saga race between array of effects handling')
+- [ ] test('saga race between effects: handle END')
+- [ ] test('saga race between sync effects')
+- [ ] test('saga race cancelling joined tasks')
+
+### interpreter/select.js
+- [ ] test('saga select/getState handling')
+
+### interpreter/take.js
+- [ ] test('saga take from default channel')
+- [ ] test('saga take from provided channel')
+- [ ] test('saga take from eventChannel')
+
+### interpreter/takeSync.js
+- [ ] test('synchronous sequential takes')
+- [ ] test('synchronous concurrent takes')
+- [ ] test('synchronous parallel takes')
+- [ ] test('synchronous parallel + concurrent takes')
+- [ ] test('startup actions')
+- [ ] test('synchronous takes + puts')
+- [ ] test('synchronous takes (from a channel) + puts (to the store)')
+- [ ] test('inter-saga put/take handling')
+- [ ] test('inter-saga put/take handling (via buffered channel)')
+- [ ] test('inter-saga send/acknowledge handling')
+- [ ] test('inter-saga send/acknowledge handling (via unbuffered channel)')
+- [ ] test('inter-saga send/acknowledge handling (via buffered channel)')
+- [ ] test('inter-saga fork/take back from forked child 1')
+- [ ] test('deeply nested forks/puts')
+- [ ] test('inter-saga fork/take back from forked child 2')
+- [ ] test('put causing sync dispatch response in store subscriber')
+- [ ] test('action dispatched in root saga should get scheduled and taken by a "sibling" take')
+- [ ] test('action dispatched synchronously in forked task should be taken a following sync take')
