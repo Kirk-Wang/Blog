@@ -23,3 +23,10 @@ Redux-Saga 测试用例阅读计划：
 - [ ] test('calling toPromise() before a task aborts')
 - [ ] test('calling toPromise() of an already cancelled task')
 - [ ] test('calling toPromise() of before a task gets cancelled')
+
+### channel.js
+- [ ] test('Unbuffered channel')
+- [ ] test('buffered channel')
+- [ ] test('event channel')
+- [ ] test('unsubscribe event channel')
+- [ ] test('expanding buffer')
