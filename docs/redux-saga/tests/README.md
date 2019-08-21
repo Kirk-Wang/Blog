@@ -39,10 +39,11 @@ Redux-Saga 测试用例阅读：
 - [x] test('calling toPromise() of before a task gets cancelled')
 
 ### channel-recipes.js
-- [ ] test('action channel')
-- [ ] test('error check when constructing actionChannels')
-- [ ] test('action channel generator')
-- [ ] test('action channel generator with buffers')
+- [x] test('action channel')
+  * Sagas must take consecutive actions dispatched synchronously on an action channel even if it performs blocking calls
+- [x] test('error check when constructing actionChannels')
+- [x] test('action channel generator')
+- [x] test('action channel generator with buffers')
 - [ ] test('channel: watcher + max workers')
 
 ### channel.js
