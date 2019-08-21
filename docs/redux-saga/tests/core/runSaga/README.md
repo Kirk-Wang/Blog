@@ -1,5 +1,7 @@
 ### runSaga(...)
 
+[demo](https://o-o.ren/Blog/redux-saga/tests/core/runSaga/)
+
 1. 设计状态
 ```js
 state=0
