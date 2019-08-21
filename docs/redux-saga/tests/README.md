@@ -14,6 +14,9 @@ Redux-Saga 测试用例阅读：
   * middleware factory must return a function to handle {getState, dispatch}
   * middleware returned function must take exactly 1 argument
   * next handler must return a function to handle action
+  * next handler must take exactly 1 argument
+  * next handler must return a function to handle action
+  * action handler must take exactly 1 argument
 - [ ] test('middleware's action handler output')
 - [ ] test('middleware.run')
 - [ ] test('middleware options')
