@@ -44,7 +44,8 @@ Redux-Saga 测试用例阅读：
 - [x] test('error check when constructing actionChannels')
 - [x] test('action channel generator')
 - [x] test('action channel generator with buffers')
-- [ ] test('channel: watcher + max workers')
+- [x] test('channel: watcher + max workers')
+  * Saga must dispatch to free workers via channel
 
 ### channel.js
 - [ ] test('Unbuffered channel')
