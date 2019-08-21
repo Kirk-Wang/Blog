@@ -19,7 +19,10 @@ Redux-Saga 测试用例阅读：
   * action handler must take exactly 1 argument
 - [x] test('middleware's action handler output')
   * action handler must return the result of the next argument
-- [ ] test('middleware.run')
+- [x] test('middleware.run')
+  * middleware.run must throw an Error when executed before the middleware is connected to a Store
+  * middleware.run must return a Task Object
+  * middleware must run the Saga and provides it with the given arguments
 - [ ] test('middleware options')
 - [ ] test('enhance channel.put with an emitter')
 - [ ] test('middleware.run saga arguments validation')
