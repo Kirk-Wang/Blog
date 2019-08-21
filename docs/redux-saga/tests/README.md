@@ -25,8 +25,10 @@ Redux-Saga 测试用例阅读：
   * middleware must run the Saga and provides it with the given arguments
 - [x] test('middleware options')
   * middleware factory must raise an error if `options.onError` is not a function
-- [ ] test('enhance channel.put with an emitter')
-- [ ] test('middleware.run saga arguments validation')
+- [x] test('enhance channel.put with an emitter')
+  * saga must be able to take actions emitted by middleware's custom emitter
+- [x] test('middleware.run saga arguments validation')
+  * saga argument must be a Generator function
 
 ### taskToPromise.js
 - [ ] test('calling toPromise() of an already completed task')
