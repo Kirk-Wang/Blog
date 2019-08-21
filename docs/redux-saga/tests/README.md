@@ -31,8 +31,8 @@ Redux-Saga 测试用例阅读：
   * saga argument must be a Generator function
 
 ### taskToPromise.js
-- [ ] test('calling toPromise() of an already completed task')
-- [ ] test('calling toPromise() before a task completes')
+- [x] test('calling toPromise() of an already completed task')
+- [x] test('calling toPromise() before a task completes')
 - [ ] test('calling toPromise() of an already aborted task')
 - [ ] test('calling toPromise() before a task aborts')
 - [ ] test('calling toPromise() of an already cancelled task')
