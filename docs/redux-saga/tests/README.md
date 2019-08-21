@@ -23,7 +23,8 @@ Redux-Saga 测试用例阅读：
   * middleware.run must throw an Error when executed before the middleware is connected to a Store
   * middleware.run must return a Task Object
   * middleware must run the Saga and provides it with the given arguments
-- [ ] test('middleware options')
+- [x] test('middleware options')
+  * middleware factory must raise an error if `options.onError` is not a function
 - [ ] test('enhance channel.put with an emitter')
 - [ ] test('middleware.run saga arguments validation')
 
