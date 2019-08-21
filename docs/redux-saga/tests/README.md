@@ -38,19 +38,19 @@ Redux-Saga 测试用例阅读：
 - [x] test('calling toPromise() of an already cancelled task')
 - [x] test('calling toPromise() of before a task gets cancelled')
 
-### channel.js
-- [ ] test('Unbuffered channel')
-- [ ] test('buffered channel')
-- [ ] test('event channel')
-- [ ] test('unsubscribe event channel')
-- [ ] test('expanding buffer')
-
 ### channel-recipes.js
 - [ ] test('action channel')
 - [ ] test('error check when constructing actionChannels')
 - [ ] test('action channel generator')
 - [ ] test('action channel generator with buffers')
 - [ ] test('channel: watcher + max workers')
+
+### channel.js
+- [ ] test('Unbuffered channel')
+- [ ] test('buffered channel')
+- [ ] test('event channel')
+- [ ] test('unsubscribe event channel')
+- [ ] test('expanding buffer')
 
 ### scheduler.js
 - [ ] test('scheduler executes all recursively triggered tasks in order')
