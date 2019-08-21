@@ -9,7 +9,11 @@ Redux-Saga 测试用例阅读：
 - [x] test('runSaga'),[demo](./core/runSaga/)
 
 ### middleware.js
+`({getState, dispatch}) => next => action => action`
 - [ ] test('middleware output')
+  * middleware factory must return a function to handle {getState, dispatch}
+  * middleware returned function must take exactly 1 argument
+  * next handler must return a function to handle action
 - [ ] test('middleware's action handler output')
 - [ ] test('middleware.run')
 - [ ] test('middleware options')
