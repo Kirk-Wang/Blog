@@ -17,7 +17,8 @@ Redux-Saga 测试用例阅读：
   * next handler must take exactly 1 argument
   * next handler must return a function to handle action
   * action handler must take exactly 1 argument
-- [ ] test('middleware's action handler output')
+- [x] test('middleware's action handler output')
+  * action handler must return the result of the next argument
 - [ ] test('middleware.run')
 - [ ] test('middleware options')
 - [ ] test('enhance channel.put with an emitter')
