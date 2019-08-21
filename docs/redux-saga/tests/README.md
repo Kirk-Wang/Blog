@@ -10,7 +10,7 @@ Redux-Saga 测试用例阅读：
 
 ### middleware.js
 `({getState, dispatch}) => next => action => action`
-- [ ] test('middleware output')
+- [x] test('middleware output')
   * middleware factory must return a function to handle {getState, dispatch}
   * middleware returned function must take exactly 1 argument
   * next handler must return a function to handle action
