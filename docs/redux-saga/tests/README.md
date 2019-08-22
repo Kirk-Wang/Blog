@@ -74,7 +74,8 @@ Redux-Saga 测试用例阅读：
   * eventChannel should call unsubscribe when channel is closed
   * eventChannel should call unsubscribe when END event is emitted synchronously
   * eventChannel should call unsubscribe when END event is emitted asynchronously
-- [ ] test('expanding buffer')
+- [x] test('expanding buffer')
+  * expanding buffer should be able to buffer more items than its initial limit
 
 ### scheduler.js
 - [ ] test('scheduler executes all recursively triggered tasks in order')
