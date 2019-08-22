@@ -9,6 +9,7 @@
 ### DEV COMMUNITY
 
 * [dev.to](https://dev.to/)
+* [scotch.io](https://scotch.io/)
 * [react.rocks](https://react.rocks/)
 
 ### CHAT
