@@ -48,7 +48,13 @@ Redux-Saga 测试用例阅读：
   * Saga must dispatch to free workers via channel
 
 ### channel.js
-- [ ] test('Unbuffered channel')
+- [x] test('Unbuffered channel')
+  * channel should reject undefined messages
+  * channel must notify takers
+  * channel must discard cancelled takes
+  * closing a channel must resolve all takers with END
+  * closed channel must resolve new takers with END
+  * channel must reject messages after being closed
 - [ ] test('buffered channel')
 - [ ] test('event channel')
 - [ ] test('unsubscribe event channel')
