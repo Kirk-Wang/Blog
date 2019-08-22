@@ -70,7 +70,10 @@ Redux-Saga 测试用例阅读：
   * eventChannel must notify takers only once
   * eventChannel must notify all pending takers on END
   * eventChannel must notify all new takers if closed
-- [ ] test('unsubscribe event channel')
+- [x] test('unsubscribe event channel')
+  * eventChannel should call unsubscribe when channel is closed
+  * eventChannel should call unsubscribe when END event is emitted synchronously
+  * eventChannel should call unsubscribe when END event is emitted asynchronously
 - [ ] test('expanding buffer')
 
 ### scheduler.js
