@@ -42,6 +42,7 @@
 <img src="./redux-saga/images/1.1-beginner-tutorial.png" width="500" />
 
 * [1.2-Saga 概念的背景](./redux-saga/1.2-saga-background.md)
+  * [Distributed Sagas: A Protocol for Coordinating Microservices - Caitie McCaffrey - JOTB17](https://www.youtube.com/watch?v=0UTOLRTwOX0&feature=youtu.be)
   * [Saga Pattern](https://microservices.io/patterns/data/saga.html)
   * Saga Pattern | How to implement business transactions using Microservices
     * [Part I](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
