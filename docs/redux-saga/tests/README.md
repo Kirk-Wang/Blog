@@ -78,8 +78,8 @@ Redux-Saga 测试用例阅读：
   * expanding buffer should be able to buffer more items than its initial limit
 
 ### scheduler.js
-- [ ] test('scheduler executes all recursively triggered tasks in order')
-- [ ] test('scheduler when suspended queues up and executes all tasks on flush')
+- [x] test('scheduler executes all recursively triggered tasks in order')
+- [x] test('scheduler when suspended queues up and executes all tasks on flush')
 
 ### monitoring.js
 - [ ] test('saga middleware monitoring')
