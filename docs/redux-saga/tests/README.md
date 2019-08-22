@@ -55,7 +55,15 @@ Redux-Saga 测试用例阅读：
   * closing a channel must resolve all takers with END
   * closed channel must resolve new takers with END
   * channel must reject messages after being closed
-- [ ] test('buffered channel')
+- [x] test('buffered channel')
+  * channel must queue pending takers if there are no buffered messages
+  * channel must resolve the oldest pending taker with a new message
+  * channel must buffer new messages if there are no takers
+  * channel must resolve new takers if there are buffered messages
+  * closing an already closed channel should be noop
+  * putting on an already closed channel should be noop
+  * closed channel must resolve new takers with any buffered message
+  * closed channel must resolve new takers with END if there are no buffered message
 - [ ] test('event channel')
 - [ ] test('unsubscribe event channel')
 - [ ] test('expanding buffer')
