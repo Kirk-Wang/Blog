@@ -64,7 +64,12 @@ Redux-Saga 测试用例阅读：
   * putting on an already closed channel should be noop
   * closed channel must resolve new takers with any buffered message
   * closed channel must resolve new takers with END if there are no buffered message
-- [ ] test('event channel')
+- [x] test('event channel')
+  * eventChannel should throw if subscriber does not return a function to unsubscribe
+  * eventChannel must notify takers on a new action
+  * eventChannel must notify takers only once
+  * eventChannel must notify all pending takers on END
+  * eventChannel must notify all new takers if closed
 - [ ] test('unsubscribe event channel')
 - [ ] test('expanding buffer')
 
