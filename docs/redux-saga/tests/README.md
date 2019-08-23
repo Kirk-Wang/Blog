@@ -90,18 +90,18 @@ Redux-Saga 测试用例阅读：
   * runSaga must notify the saga monitor of dispatched actions
 - [x] test('saga monitors without all functions')
 
+### interpreter/base.js
+- [ ] test('saga iteration')
+- [ ] test('saga error handling')
+- [ ] test('saga output handling')
+- [ ] test('saga yielded falsy values')
+
 ### interpreter/all.js
 - [ ] test('saga parallel effects handling')
 - [ ] test('saga empty array')
 - [ ] test('saga parallel effect: handling errors')
 - [ ] test('saga parallel effect: handling END')
 - [ ] test('saga parallel effect: named effects')
-
-### interpreter/base.js
-- [ ] test('saga iteration')
-- [ ] test('saga error handling')
-- [ ] test('saga output handling')
-- [ ] test('saga yielded falsy values')
 
 ### interpreter/call.js
 - [ ] test('saga handles call effects and resume with the resolved values')
