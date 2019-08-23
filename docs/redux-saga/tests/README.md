@@ -112,9 +112,12 @@ Redux-Saga 测试用例阅读：
   * saga should call cancellation function on callback
 
 ### interpreter/put.js
-- [ ] test('saga put handling')
-- [ ] test('saga put in a channel')
-- [ ] test('saga async put's response handling')
+- [x] test('saga put handling')
+  * saga must handle generator puts
+- [x] test('saga put in a channel')
+  * saga must handle puts on a given channel
+- [x] test('saga async put's response handling')
+  * saga must handle async responses of generator put effects
 - [ ] test('saga error put's response handling')
 - [ ] test('saga error putResolve's response handling')
 - [ ] test('saga nested puts handling')
