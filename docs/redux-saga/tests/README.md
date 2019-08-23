@@ -104,9 +104,12 @@ Redux-Saga 测试用例阅读：
 - [x] test('saga handles call's synchronous failures and throws in the calling generator (2)')
 
 ### interpreter/cps.js
-- [ ] test('saga cps call handling')
-- [ ] test('saga synchronous cps failures handling')
-- [ ] test('saga cps cancellation handling')
+- [x] test('saga cps call handling')
+  * saga must fulfill cps call effects
+- [x] test('saga synchronous cps failures handling')
+  * saga should inject call error into generator
+- [x] test('saga cps cancellation handling')
+  * saga should call cancellation function on callback
 
 ### interpreter/put.js
 - [ ] test('saga put handling')
