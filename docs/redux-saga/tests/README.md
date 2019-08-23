@@ -88,7 +88,7 @@ Redux-Saga 测试用例阅读：
 - [x] test('runSaga monitoring')
   * runSaga must notify the saga monitor of Effect creation and resolution
   * runSaga must notify the saga monitor of dispatched actions
-- [ ] test('saga monitors without all functions')
+- [x] test('saga monitors without all functions')
 
 ### interpreter/all.js
 - [ ] test('saga parallel effects handling')
