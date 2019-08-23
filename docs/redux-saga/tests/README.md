@@ -92,9 +92,9 @@ Redux-Saga 测试用例阅读：
 
 ### interpreter/base.js
 - [x] test('saga iteration')
-- [ ] test('saga error handling')
-- [ ] test('saga output handling')
-- [ ] test('saga yielded falsy values')
+- [x] test('saga error handling')
+- [x] test('saga output handling')
+- [x] test('saga yielded falsy values')
 
 ### interpreter/all.js
 - [ ] test('saga parallel effects handling')
