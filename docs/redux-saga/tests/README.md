@@ -97,7 +97,8 @@ Redux-Saga 测试用例阅读：
 - [x] test('saga yielded falsy values')
 
 ### interpreter/all.js
-- [ ] test('saga parallel effects handling')
+- [x] test('saga parallel effects handling')
+  * saga must fulfill declarative call effects
 - [ ] test('saga empty array')
 - [ ] test('saga parallel effect: handling errors')
 - [ ] test('saga parallel effect: handling END')
