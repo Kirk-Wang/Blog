@@ -118,12 +118,16 @@ Redux-Saga 测试用例阅读：
   * saga must handle puts on a given channel
 - [x] test('saga async put's response handling')
   * saga must handle async responses of generator put effects
-- [ ] test('saga error put's response handling')
-- [ ] test('saga error putResolve's response handling')
-- [ ] test('saga nested puts handling')
-- [ ] test('puts emitted while dispatching saga need not to cause stack overflow')
-- [ ] test('puts emitted directly after creating a task (caused by another put) should not be missed by that task')
-- [ ] test('END should reach tasks created after it gets dispatched')
+- [x] test('saga error put's response handling')
+  * saga should bubble thrown errors of generator put effects
+- [x] test('saga error putResolve's response handling')
+  * saga must bubble thrown errors of generator putResolve effects
+- [x] test('saga nested puts handling')
+  * saga must order nested puts by executing them after the outer puts complete
+- [x] test('puts emitted while dispatching saga need not to cause stack overflow')
+  * this saga needs to run without stack overflow
+- [x] test('puts emitted directly after creating a task (caused by another put) should not be missed by that task')
+- [x] test('END should reach tasks created after it gets dispatched')
 
 ### interpreter/take.js
 - [ ] test('saga take from default channel')
