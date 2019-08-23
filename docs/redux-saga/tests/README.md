@@ -91,7 +91,7 @@ Redux-Saga 测试用例阅读：
 - [x] test('saga monitors without all functions')
 
 ### interpreter/base.js
-- [ ] test('saga iteration')
+- [x] test('saga iteration')
 - [ ] test('saga error handling')
 - [ ] test('saga output handling')
 - [ ] test('saga yielded falsy values')
