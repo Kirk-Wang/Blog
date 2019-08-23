@@ -82,7 +82,9 @@ Redux-Saga 测试用例阅读：
 - [x] test('scheduler when suspended queues up and executes all tasks on flush')
 
 ### monitoring.js
-- [ ] test('saga middleware monitoring')
+- [x] test('saga middleware monitoring')
+  * sagaMiddleware must notify the saga monitor of Effect creation and resolution
+  * sagaMiddleware must notify the saga monitor of dispatched actions
 - [ ] test('runSaga monitoring')
 - [ ] test('saga monitors without all functions')
 
