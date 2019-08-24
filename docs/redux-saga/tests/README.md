@@ -143,8 +143,10 @@ Redux-Saga 测试用例阅读：
   * saga must take payloads from the eventChannel, and errors from eventChannel will make the saga jump to the catch block
 
 ### interpreter/takeSync.js
-- [ ] test('synchronous sequential takes')
-- [ ] test('synchronous concurrent takes')
+- [x] test('synchronous sequential takes')
+  * Sagas must take consecutive actions dispatched synchronously
+- [x] test('synchronous concurrent takes')
+  * In concurrent takes only the winner must take an action
 - [ ] test('synchronous parallel takes')
 - [ ] test('synchronous parallel + concurrent takes')
 - [ ] test('startup actions')
