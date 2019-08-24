@@ -147,8 +147,10 @@ Redux-Saga 测试用例阅读：
   * Sagas must take consecutive actions dispatched synchronously
 - [x] test('synchronous concurrent takes')
   * In concurrent takes only the winner must take an action
-- [ ] test('synchronous parallel takes')
-- [ ] test('synchronous parallel + concurrent takes')
+- [x] test('synchronous parallel takes')
+  * Saga must resolve once all parallel actions dispatched
+- [x] test('synchronous parallel + concurrent takes')
+  * Saga must resolve once all parallel actions dispatched
 - [ ] test('startup actions')
 - [ ] test('synchronous takes + puts')
 - [ ] test('synchronous takes (from a channel) + puts (to the store)')
