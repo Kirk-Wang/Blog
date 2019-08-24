@@ -130,9 +130,17 @@ Redux-Saga 测试用例阅读：
 - [x] test('END should reach tasks created after it gets dispatched')
 
 ### interpreter/take.js
-- [ ] test('saga take from default channel')
-- [ ] test('saga take from provided channel')
-- [ ] test('saga take from eventChannel')
+- [x] test('saga take from default channel')
+  * take all actions
+  * take only actions of type 'action-1'
+  * take either type
+  * take if match predicate
+  * take if match any from the mixed array
+  * take only actions of a Symbol type
+- [x] test('saga take from provided channel')
+  * saga must fulfill take Effects from a provided channel
+- [x] test('saga take from eventChannel')
+  * saga must take payloads from the eventChannel, and errors from eventChannel will make the saga jump to the catch block
 
 ### interpreter/takeSync.js
 - [ ] test('synchronous sequential takes')
