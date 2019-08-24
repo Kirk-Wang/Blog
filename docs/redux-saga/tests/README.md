@@ -153,7 +153,8 @@ Redux-Saga 测试用例阅读：
   * Saga must resolve once all parallel actions dispatched
 - [x] test('startup actions')
   * Saga must be able to dispatch startup actions
-- [ ] test('synchronous takes + puts')
+- [x] test('synchronous takes + puts')
+  * Sagas must be able to interleave takes and puts without losing actions
 - [ ] test('synchronous takes (from a channel) + puts (to the store)')
 - [ ] test('inter-saga put/take handling')
 - [ ] test('inter-saga put/take handling (via buffered channel)')
