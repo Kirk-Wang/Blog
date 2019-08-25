@@ -165,11 +165,16 @@ Redux-Saga 测试用例阅读：
   * Sagas must take actions from each other in the right order
 - [x] test('inter-saga send/acknowledge handling (via unbuffered channel)')
   * Sagas must take actions from each other (via unbuffered channel) in the right order
-- [ ] test('inter-saga send/acknowledge handling (via buffered channel)')
-- [ ] test('inter-saga fork/take back from forked child 1')
-- [ ] test('deeply nested forks/puts')
-- [ ] test('inter-saga fork/take back from forked child 2')
-- [ ] test('put causing sync dispatch response in store subscriber')
+- [x] test('inter-saga send/acknowledge handling (via buffered channel)')
+  * Sagas must take actions from each other (via buffered channel) in the right order
+- [x] test('inter-saga fork/take back from forked child 1')
+  * Sagas must take actions from each forked childs doing Sync puts
+- [x] test('deeply nested forks/puts')
+  * must schedule deeply nested forks/puts
+- [x] test('inter-saga fork/take back from forked child 2')
+  * Sagas must take actions from each forked childs doing Sync puts
+- [x] test('put causing sync dispatch response in store subscriber')
+  * Sagas can't miss actions dispatched by store subscribers during put handling
 - [ ] test('action dispatched in root saga should get scheduled and taken by a "sibling" take')
 - [ ] test('action dispatched synchronously in forked task should be taken a following sync take')
 
