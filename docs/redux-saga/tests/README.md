@@ -157,8 +157,10 @@ Redux-Saga 测试用例阅读：
   * Sagas must be able to interleave takes and puts without losing actions
 - [x] test('synchronous takes (from a channel) + puts (to the store)')
   * Sagas must be able to interleave takes (from a channel) and puts (to the store) without losing actions
-- [ ] test('inter-saga put/take handling')
-- [ ] test('inter-saga put/take handling (via buffered channel)')
+- [x] test('inter-saga put/take handling')
+  * Sagas must take actions from each other
+- [x] test('inter-saga put/take handling (via buffered channel)')
+  * Sagas must take actions from each other (via buffered channel)
 - [ ] test('inter-saga send/acknowledge handling')
 - [ ] test('inter-saga send/acknowledge handling (via unbuffered channel)')
 - [ ] test('inter-saga send/acknowledge handling (via buffered channel)')
