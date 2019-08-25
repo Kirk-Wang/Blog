@@ -175,8 +175,8 @@ Redux-Saga 测试用例阅读：
   * Sagas must take actions from each forked childs doing Sync puts
 - [x] test('put causing sync dispatch response in store subscriber')
   * Sagas can't miss actions dispatched by store subscribers during put handling
-- [ ] test('action dispatched in root saga should get scheduled and taken by a "sibling" take')
-- [ ] test('action dispatched synchronously in forked task should be taken a following sync take')
+- [x] test('action dispatched in root saga should get scheduled and taken by a "sibling" take')
+- [x] test('action dispatched synchronously in forked task should be taken a following sync take')
 
 ### interpreter/fork.js
 - [ ] test('should not interpret returned effect. fork(() => effectCreator())')
