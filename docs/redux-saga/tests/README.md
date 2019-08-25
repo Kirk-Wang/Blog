@@ -161,8 +161,10 @@ Redux-Saga 测试用例阅读：
   * Sagas must take actions from each other
 - [x] test('inter-saga put/take handling (via buffered channel)')
   * Sagas must take actions from each other (via buffered channel)
-- [ ] test('inter-saga send/acknowledge handling')
-- [ ] test('inter-saga send/acknowledge handling (via unbuffered channel)')
+- [x] test('inter-saga send/acknowledge handling')
+  * Sagas must take actions from each other in the right order
+- [x] test('inter-saga send/acknowledge handling (via unbuffered channel)')
+  * Sagas must take actions from each other (via unbuffered channel) in the right order
 - [ ] test('inter-saga send/acknowledge handling (via buffered channel)')
 - [ ] test('inter-saga fork/take back from forked child 1')
 - [ ] test('deeply nested forks/puts')
