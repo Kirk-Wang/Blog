@@ -191,9 +191,12 @@ Redux-Saga 测试用例阅读：
   * fork result must include the promise of the task result
   * fork result must resolve with the return value of the forked task
   * fork must also handle generators defined as instance methods
-- [ ] test('saga join handling : generators')
-- [ ] test('saga fork/join handling : functions')
-- [ ] test('saga fork wait for attached children')
+- [x] test('saga join handling : generators')
+  * saga must not block on forked tasks, but block on joined tasks
+- [x] test('saga fork/join handling : functions')
+  * saga must not block on forked tasks, but block on joined tasks
+- [x] test('saga fork wait for attached children')
+  * parent task must wait for all forked tasks before terminating
 - [ ] test('saga auto cancel forks on error')
 - [ ] test('saga auto cancel forks on main cancelled')
 - [ ] test('saga auto cancel forks if a child aborts')
