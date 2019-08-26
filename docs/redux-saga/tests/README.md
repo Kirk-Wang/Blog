@@ -179,11 +179,11 @@ Redux-Saga 测试用例阅读：
 - [x] test('action dispatched synchronously in forked task should be taken a following sync take')
 
 ### interpreter/fork.js
-- [ ] test('should not interpret returned effect. fork(() => effectCreator())')
-- [ ] test('should not interpret returned effect. yield fork(takeEvery, 'pattern', fn)')
-- [ ] test('should interpret returned promise. fork(() => promise)')
-- [ ] test('should handle promise that resolves undefined properly. fork(() => Promise.resolve(undefined))')
-- [ ] test('should interpret returned iterator. fork(() => iterator)')
+- [x] test('should not interpret returned effect. fork(() => effectCreator())')
+- [x] test('should not interpret returned effect. yield fork(takeEvery, 'pattern', fn)')
+- [x] test('should interpret returned promise. fork(() => promise)')
+- [x] test('should handle promise that resolves undefined properly. fork(() => Promise.resolve(undefined))')
+- [x] test('should interpret returned iterator. fork(() => iterator)')
 
 ### interpreter/forkjoin.js
 - [ ] test('saga fork handling: generators')
