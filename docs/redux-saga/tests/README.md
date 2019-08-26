@@ -186,7 +186,11 @@ Redux-Saga 测试用例阅读：
 - [x] test('should interpret returned iterator. fork(() => iterator)')
 
 ### interpreter/forkjoin.js
-- [ ] test('saga fork handling: generators')
+- [x] test('saga fork handling: generators')
+  * fork result must include the name of the forked generator function
+  * fork result must include the promise of the task result
+  * fork result must resolve with the return value of the forked task
+  * fork must also handle generators defined as instance methods
 - [ ] test('saga join handling : generators')
 - [ ] test('saga fork/join handling : functions')
 - [ ] test('saga fork wait for attached children')
