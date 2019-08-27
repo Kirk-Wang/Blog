@@ -197,8 +197,10 @@ Redux-Saga 测试用例阅读：
   * saga must not block on forked tasks, but block on joined tasks
 - [x] test('saga fork wait for attached children')
   * parent task must wait for all forked tasks before terminating
-- [ ] test('saga auto cancel forks on error')
-- [ ] test('saga auto cancel forks on main cancelled')
+- [x] test('saga auto cancel forks on error')
+  * parent task must cancel all forked tasks when it aborts
+- [x] test('saga auto cancel forks on main cancelled')
+  * parent task must cancel all forked tasks when it's cancelled
 - [ ] test('saga auto cancel forks if a child aborts')
 - [ ] test('saga auto cancel parent + forks if a child aborts')
 - [ ] test('joining multiple tasks')
