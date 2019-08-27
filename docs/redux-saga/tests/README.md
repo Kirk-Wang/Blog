@@ -203,8 +203,10 @@ Redux-Saga 测试用例阅读：
   * parent task must cancel all forked tasks when it's cancelled
 - [x] test('saga auto cancel forks if a child aborts')
   * parent task must cancel all forked tasks when it aborts
-- [ ] test('saga auto cancel parent + forks if a child aborts')
-- [ ] test('joining multiple tasks')
+- [x] test('saga auto cancel parent + forks if a child aborts')
+  * parent task must cancel all forked tasks when it aborts
+- [x] test('joining multiple tasks')
+  * it must be possible to join on multiple tasks
 
 ### interpreter/forkJoinErrors.js
 - [ ] test('saga sync fork failures: functions')
