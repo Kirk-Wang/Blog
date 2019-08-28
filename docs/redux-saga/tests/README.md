@@ -289,10 +289,12 @@ Redux-Saga 测试用例阅读：
   * saga must queue dispatched actions
 
 ### interpreter/flush.js
-- [ ] test('saga flush handling')
+- [x] test('saga flush handling')
+  * saga must handle generator flushes
 
 ### interpreter/context.js
-- [ ] test('saga must handle context in dynamic scoping manner')
+- [x] test('saga must handle context in dynamic scoping manner')
+  * saga must handle context in dynamic scoping manner
 
 ### interpreter/effectMiddlewares.js
 - [ ] test('effectMiddlewares - single')
