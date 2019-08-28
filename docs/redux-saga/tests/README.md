@@ -320,8 +320,10 @@ Redux-Saga 测试用例阅读：
   * parent must catch error
 
 ### interpreter/promise.js
-- [ ] test('saga native promise handling')
-- [ ] test('saga native promise handling: undefined errors')
+- [x] test('saga native promise handling')
+  * saga should handle promise resolved/rejected values
+- [x] test('saga native promise handling: undefined errors')
+  * saga should throw if Promise rejected with an undefined error
 
 ### sagaHelpers/debounce.js
 - [ ] test('debounce: sync actions')
