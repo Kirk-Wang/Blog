@@ -297,9 +297,12 @@ Redux-Saga 测试用例阅读：
   * saga must handle context in dynamic scoping manner
 
 ### interpreter/effectMiddlewares.js
-- [ ] test('effectMiddlewares - single')
-- [ ] test('effectMiddlewares - multiple')
-- [ ] test('effectMiddlewares - nested task')
+- [x] test('effectMiddlewares - single')
+  * effectMiddleware must be able to intercept and resolve effect in a custom way
+- [x] test('effectMiddlewares - multiple')
+  * multiple effectMiddlewares must create a chain
+- [x] test('effectMiddlewares - nested task')
+  * effectMiddleware must be able to intercept effects from non-root sagas
 
 ### interpreter/iterators.js
 - [ ] test('saga nested iterator handling')
