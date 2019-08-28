@@ -305,13 +305,19 @@ Redux-Saga 测试用例阅读：
   * effectMiddleware must be able to intercept effects from non-root sagas
 
 ### interpreter/iterators.js
-- [ ] test('saga nested iterator handling')
+- [x] test('saga nested iterator handling')
+  * saga must fulfill nested iterator effects
 
 ### interpreter/onerror.js
-- [ ] test('saga onError is optional (the default is console.error)')
-- [ ] test('saga onError is called for uncaught error (thrown Error instance)')
-- [ ] test('saga onError is called for uncaught error (thrown primitive)')
-- [ ] test('saga onError is not called for caught errors')
+- [x] test('saga onError is optional (the default is console.error)')
+  * saga does not blow up without onError
+- [x] test('saga onError is called for uncaught error (thrown Error instance)')
+  * saga passes thrown Error instance in onError handler
+- [x] test('saga onError is called for uncaught error (thrown primitive)')
+  * saga passes thrown primitive in onError handler
+- [x] test('saga onError is not called for caught errors')
+  * saga must not call onError
+  * parent must catch error
 
 ### interpreter/promise.js
 - [ ] test('saga native promise handling')
