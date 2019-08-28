@@ -262,11 +262,16 @@ Redux-Saga 测试用例阅读：
   * cancelled routine must cancel proper joiners
 - [x] test('saga cancellation: parallel effect')
   * cancelled parallel effect must cancel all sub-effects
-- [ ] test('saga cancellation: race effect')
-- [ ] test('saga cancellation: automatic parallel effect cancellation')
-- [ ] test('saga cancellation: automatic race competitor cancellation')
-- [ ] test('saga cancellation:  manual task cancellation')
-- [ ] test('saga cancellation: nested task cancellation')
+- [x] test('saga cancellation: race effect')
+  * cancelled race effect must cancel all sub-effects
+- [x] test('saga cancellation: automatic parallel effect cancellation')
+  * saga must cancel parallel sub-effects on rejection
+- [x] test('saga cancellation: automatic race competitor cancellation')
+  * saga must cancel race competitors except for the winner
+- [x] test('saga cancellation:  manual task cancellation')
+  * saga must cancel forked tasks
+- [x] test('saga cancellation: nested task cancellation')
+  * 
 - [ ] test('saga cancellation: nested forked task cancellation')
 - [ ] test('cancel should be able to cancel multiple tasks')
 - [ ] test('cancel should support for self cancellation')
