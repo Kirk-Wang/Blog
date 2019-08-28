@@ -250,11 +250,16 @@ Redux-Saga 测试用例阅读：
   * saga must handle parallel named effects
 
 ### interpreter/cancellation.js
-- [ ] test('saga cancellation: call effect')
-- [ ] test('saga cancellation: forked children')
-- [ ] test('saga cancellation: take effect')
-- [ ] test('saga cancellation: join effect (joining from a different task)')
-- [ ] test('saga cancellation: join effect (join from the same task's parent)')
+- [x] test('saga cancellation: call effect')
+  * cancelled call effect must throw exception inside called subroutine
+- [x] test('saga cancellation: forked children')
+  * cancelled main task must cancel all forked sub-tasks
+- [x] test('saga cancellation: take effect')
+  * cancelled take effect must stop waiting for action
+- [x] test('saga cancellation: join effect (joining from a different task)')
+  * cancelled task must cancel foreing joiners
+- [x] test('saga cancellation: join effect (join from the same task's parent)')
+  * cancelled routine must cancel proper joiners
 - [ ] test('saga cancellation: parallel effect')
 - [ ] test('saga cancellation: race effect')
 - [ ] test('saga cancellation: automatic parallel effect cancellation')
