@@ -337,8 +337,12 @@ Redux-Saga 测试用例阅读：
 - [x] test('debounce: channel END')
   * should finish debounce task on END
   * should not call function if finished with END
-- [ ] test('debounce: pattern END')
-- [ ] test('debounce: pattern END during race')
+- [x] test('debounce: pattern END')
+  * should finish debounce task on END
+  * should not call function if finished with END
+- [x] test('debounce: pattern END during race')
+  * should interrupt race on END
+  * should finish debounce task on END
 
 ### sagaHelpers/delay.js
 - [ ] test('delay')
