@@ -345,7 +345,8 @@ Redux-Saga 测试用例阅读：
   * should finish debounce task on END
 
 ### sagaHelpers/delay.js
-- [ ] test('delay')
+- [x] test('delay')
+  * setTimeout(resolve, ms, val)
 
 ### sagaHelpers/retry.js
 - [ ] test('retry failing')
