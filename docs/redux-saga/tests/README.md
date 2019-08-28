@@ -234,7 +234,8 @@ Redux-Saga 测试用例阅读：
 - [x] test('saga race cancelling joined tasks')
 
 ### interpreter/select.js
-- [ ] test('saga select/getState handling')
+- [x] test('saga select/getState handling')
+  * should resolve getState and select effects
 
 ### interpreter/all.js
 - [ ] test('saga parallel effects handling')
