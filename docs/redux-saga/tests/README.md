@@ -326,11 +326,17 @@ Redux-Saga 测试用例阅读：
   * saga should throw if Promise rejected with an undefined error
 
 ### sagaHelpers/debounce.js
-- [ ] test('debounce: sync actions')
-- [ ] test('debounce: async actions')
-- [ ] test('debounce: cancelled')
-- [ ] test('debounce: channel')
-- [ ] test('debounce: channel END')
+- [x] test('debounce: sync actions')
+  * should debounce sync actions and pass the lastest action to a worker
+- [x] test('debounce: async actions')
+  * should debounce async actions and pass the lastest action to a worker
+- [x] test('debounce: cancelled')
+  * should not call a worker if cancelled before debounce limit is reached
+- [x] test('debounce: channel')
+  * should debounce actions from channel and pass the lastest action to a worker
+- [x] test('debounce: channel END')
+  * should finish debounce task on END
+  * should not call function if finished with END
 - [ ] test('debounce: pattern END')
 - [ ] test('debounce: pattern END during race')
 
