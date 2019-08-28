@@ -209,8 +209,12 @@ Redux-Saga 测试用例阅读：
   * it must be possible to join on multiple tasks
 
 ### interpreter/forkJoinErrors.js
-- [ ] test('saga sync fork failures: functions')
-- [ ] test('saga sync fork failures: functions/error bubbling')
+- [x] test('saga sync fork failures: functions')
+  * NOTE: we'll be forking a function not a Generator
+  * saga should fails the parent if a forked function fails synchronously
+- [x] test('saga sync fork failures: functions/error bubbling')
+  * NOTE: we'll be forking a function not a Generator
+  * saga should propagate errors up to the root of fork tree
 - [ ] test('saga fork's failures: generators')
 - [ ] test('saga sync fork failures: spawns (detached forks)')
 - [ ] test('saga detached forks failures')
