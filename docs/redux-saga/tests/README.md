@@ -283,8 +283,10 @@ Redux-Saga 测试用例阅读：
 - [x] test('task should end in cancelled state when parent gets cancelled')
 
 ### interpreter/channel.js
-- [ ] test('saga create channel for store actions')
-- [ ] test('saga create channel for store actions (with buffer)')
+- [x] test('saga create channel for store actions')
+  * saga must queue dispatched actions
+- [x] test('saga create channel for store actions (with buffer)')
+  * saga must queue dispatched actions
 
 ### interpreter/flush.js
 - [ ] test('saga flush handling')
