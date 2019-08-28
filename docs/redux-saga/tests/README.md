@@ -238,8 +238,8 @@ Redux-Saga 测试用例阅读：
   * should resolve getState and select effects
 
 ### interpreter/all.js
-- [ ] test('saga parallel effects handling')
-  * saga must fulfill declarative call effects
+- [x] test('saga parallel effects handling')
+  *  saga must fulfill parallel effects
 - [ ] test('saga empty array')
 - [ ] test('saga parallel effect: handling errors')
 - [ ] test('saga parallel effect: handling END')
