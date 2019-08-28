@@ -215,16 +215,23 @@ Redux-Saga 测试用例阅读：
 - [x] test('saga sync fork failures: functions/error bubbling')
   * NOTE: we'll be forking a function not a Generator
   * saga should propagate errors up to the root of fork tree
-- [ ] test('saga fork's failures: generators')
-- [ ] test('saga sync fork failures: spawns (detached forks)')
-- [ ] test('saga detached forks failures')
+- [x] test('saga fork's failures: generators')
+  * saga should fails the parent if a forked generator fails synchronously
+- [x] test('saga sync fork failures: spawns (detached forks)')
+  * saga should not fail a parent with errors from detached forks (using spawn)
+- [x] test('saga detached forks failures')
+  * saga should not fail a parent with errors from detached fork
 
 ### interpreter/race.js
-- [ ] test('saga race between effects handling')
-- [ ] test('saga race between array of effects handling')
-- [ ] test('saga race between effects: handle END')
-- [ ] test('saga race between sync effects')
-- [ ] test('saga race cancelling joined tasks')
+- [x] test('saga race between effects handling')
+  * saga must fulfill race between effects
+- [x] test('saga race between array of effects handling')
+  * saga must fulfill race between array of effects
+- [x] test('saga race between effects: handle END')
+  * saga must end Race Effect if one of the effects resolve with END
+- [x] test('saga race between sync effects')
+  * saga must not run effects when already completed
+- [x] test('saga race cancelling joined tasks')
 
 ### interpreter/select.js
 - [ ] test('saga select/getState handling')
