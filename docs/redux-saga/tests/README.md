@@ -247,7 +247,7 @@ Redux-Saga 测试用例阅读：
 - [x] test('saga parallel effect: handling END')
   * saga must end Parallel Effect if one of the effects resolve with END
 - [x] test('saga parallel effect: named effects')
-  * 
+  * saga must handle parallel named effects
 
 ### interpreter/cancellation.js
 - [ ] test('saga cancellation: call effect')
