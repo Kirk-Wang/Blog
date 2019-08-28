@@ -239,11 +239,15 @@ Redux-Saga 测试用例阅读：
 
 ### interpreter/all.js
 - [x] test('saga parallel effects handling')
-  *  saga must fulfill parallel effects
-- [ ] test('saga empty array')
-- [ ] test('saga parallel effect: handling errors')
-- [ ] test('saga parallel effect: handling END')
-- [ ] test('saga parallel effect: named effects')
+  * saga must fulfill parallel effects
+- [x] test('saga empty array')
+  * saga must fulfill empty parallel effects with an empty array
+- [x] test('saga parallel effect: handling errors')
+  * saga must catch the first error in parallel effects
+- [x] test('saga parallel effect: handling END')
+  * saga must end Parallel Effect if one of the effects resolve with END
+- [x] test('saga parallel effect: named effects')
+  * 
 
 ### interpreter/cancellation.js
 - [ ] test('saga cancellation: call effect')
