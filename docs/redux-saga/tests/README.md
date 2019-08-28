@@ -274,11 +274,13 @@ Redux-Saga 测试用例阅读：
   * saga must cancel forked task and its nested subtask
 - [x] test('saga cancellation: nested forked task cancellation')
   * saga must cancel forked task and its forked nested subtask
-- [ ] test('cancel should be able to cancel multiple tasks')
-- [ ] test('cancel should support for self cancellation')
-- [ ] test('should bubble an exception thrown during cancellation')
-- [ ] test('task should end in cancelled state when joining cancelled child')
-- [ ] test('task should end in cancelled state when parent gets cancelled')
+- [x] test('cancel should be able to cancel multiple tasks')
+  * it must be possible to cancel multiple tasks at once
+- [x] test('cancel should support for self cancellation')
+  * it must be possible to trigger self cancellation
+- [x] test('should bubble an exception thrown during cancellation')
+- [x] test('task should end in cancelled state when joining cancelled child')
+- [x] test('task should end in cancelled state when parent gets cancelled')
 
 ### interpreter/channel.js
 - [ ] test('saga create channel for store actions')
