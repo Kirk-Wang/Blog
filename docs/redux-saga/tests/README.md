@@ -370,8 +370,11 @@ Redux-Saga 测试用例阅读：
   * should not call function if finished with END
 
 ### sagaHelpers/takeLeading.js
-- [ ] test('takeLeading')
-- [ ] test('takeLeading: pattern END')
+- [x] test('takeLeading')
+  * takeLeading must ignore new action and keep running task until the completion
+- [x] test('takeLeading: pattern END')
+  * should finish takeLeading task on END
+  * should not call function if finished with END
 
 ### sagaHelpers/throttle.js
 - [ ] test('throttle')
