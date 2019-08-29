@@ -386,7 +386,7 @@ Redux-Saga 测试用例阅读：
 ## /packages/testing-utils/__tests__
 
 ### cloneableGenerator.js
-- [ ] test('it should allow to "clone" the generator')
+- [x] test('it should allow to "clone" the generator')
 
 ### createMockTask.js
-- [ ] test('should allow to use createMockTask for testing purposes')
+- [x] test('should allow to use createMockTask for testing purposes')
