@@ -349,8 +349,11 @@ Redux-Saga 测试用例阅读：
   * setTimeout(resolve, ms, val)
 
 ### sagaHelpers/retry.js
-- [ ] test('retry failing')
-- [ ] test('retry without failing')
+- [x] test('retry failing')
+  * should retry only for the defined number of times
+  * should rethrow Error if failed more than the defined number of times
+- [x] test('retry without failing')
+  * should return a result of called function
 
 ### sagaHelpers/takeEvery.js
 - [ ] test('takeEvery')
