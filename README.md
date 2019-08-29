@@ -36,7 +36,7 @@
 [精读 Redux-Saga 源码测试用例](./docs/redux-saga/tests/)
 
 **runSaga.js**
-- [x] test('runSaga'),[demo](./core/runSaga/)
+- [x] test('runSaga')
 
 **middleware.js**
 `({getState, dispatch}) => next => action => action`
