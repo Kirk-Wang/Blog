@@ -365,10 +365,12 @@ Redux-Saga 测试用例阅读：
 ### sagaHelpers/takeLatest.js
 - [x] test('takeLatest')
   * takeLatest must cancel current task before forking a new task
-- [ ] test('takeLatest: pattern END')
+- [x] test('takeLatest: pattern END')
+  * should finish takeLatest task on END
+  * should not call function if finished with END
 
 ### sagaHelpers/takeLeading.js
-- [] test('takeLeading')
+- [ ] test('takeLeading')
 - [ ] test('takeLeading: pattern END')
 
 ### sagaHelpers/throttle.js
