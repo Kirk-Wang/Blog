@@ -377,8 +377,11 @@ Redux-Saga 测试用例阅读：
   * should not call function if finished with END
 
 ### sagaHelpers/throttle.js
-- [ ] test('throttle')
-- [ ] test('throttle: pattern END')
+- [x] test('throttle')
+  * throttle must ignore incoming actions during throttling interval
+- [x] test('throttle: pattern END')
+  * should finish throttle task on END
+  * should not call function if finished with END
 
 ## /packages/testing-utils/__tests__
 
