@@ -356,8 +356,11 @@ Redux-Saga 测试用例阅读：
   * should return a result of called function
 
 ### sagaHelpers/takeEvery.js
-- [ ] test('takeEvery')
-- [ ] test('takeEvery: pattern END')
+- [x] test('takeEvery')
+  * takeEvery must fork a worker on each action
+- [x] test('takeEvery: pattern END')
+  * should finish takeEvery task on END
+  * should not call function if finished with END
 
 ### sagaHelpers/takeLatest.js
 - [ ] test('takeLatest')
