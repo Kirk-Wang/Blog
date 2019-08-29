@@ -1,4 +1,4 @@
-# 🍻
+# 🍺🍗🍖
 
 ### International React Conference
 
