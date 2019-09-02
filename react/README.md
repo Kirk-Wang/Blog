@@ -6,4 +6,4 @@ React 测试覆盖率应该是接近 100% 的。从这些测试用例出发，�
 
 运行测试用例：[contribution guide](https://reactjs.org/contributing/how-to-contribute.html)
 * [isfiberreadyyet](http://isfiberreadyyet.com/)
-
+* [vscode-recipes](https://github.com/microsoft/vscode-recipes)
