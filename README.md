@@ -1216,3 +1216,4 @@ sudo lsof -n -P | grep :80
 ---------
 [ReactDeveloper](https://space.bilibili.com/16464410)
 [你不知道的React](https://www.bilibili.com/read/readlist/rl97709)
+[react16-fiber协调算法](http://echizen.github.io/tech/2019/04-06-react-fiber)
