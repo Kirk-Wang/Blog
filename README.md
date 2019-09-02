@@ -538,6 +538,9 @@ channels-trans-table
 14. [AOP & middleware(1秒懂^_^)](./docs/stories/aop-middleware.md)
 
 ### [读 React 16.x 源码](./docs/stories/react/README.md)
+* [ReactDeveloper](https://space.bilibili.com/16464410)
+* [你不知道的React](https://www.bilibili.com/read/readlist/rl97709)
+* [react16-fiber协调算法](http://echizen.github.io/tech/2019/04-06-react-fiber)
 
 ### 深入实践 [Redux Dynamic Modules](https://github.com/Microsoft/redux-dynamic-modules), 构建大型可伸缩的 React + Redux App
 * 油管上视频：[Redux Dynamic Modules - Navneet Gupta & Alex B](https://www.youtube.com/watch?v=SktRbSZ-4Tk)
@@ -1214,6 +1217,3 @@ sudo lsof -n -P | grep :80
 ![ 1.8 effect 状态](./little-saga/building-your-own-redux-saga/images/1.8.png)
 
 ---------
-[ReactDeveloper](https://space.bilibili.com/16464410)
-[你不知道的React](https://www.bilibili.com/read/readlist/rl97709)
-[react16-fiber协调算法](http://echizen.github.io/tech/2019/04-06-react-fiber)
