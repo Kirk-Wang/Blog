@@ -11,28 +11,46 @@
       padding: 0;
       box-sizing: border-box;
     }
+    body {
+      min-width: 600px;
+    }
     header {
       height: 20px;
       background-color: bisque;
     }
     section {
-
+      padding: 0 200px;
     }
-    section:after {
-
+    section::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    section > div{
+      float: left;
     }
     .main {
       width: 100%;
       height: 200px;
-      background: lightblue;
+      background: lightseagreen;
     }
     .left {
+      position: relative;
+      left: -200px;
+      margin-left: -100%;
+      width: 200px;
       height: 200px;
-      background:lightcoral;
+      opacity: 0.3;
+      background-color: green;
     }
     .right {
+      position: relative;
+      left: 200px;
+      opacity: 0.3;
+      margin-left: -200px;
+      width: 200px;
       height: 200px;
-      background:lightcoral;
+      background-color: green;
     }
     footer {
       height: 20px;
