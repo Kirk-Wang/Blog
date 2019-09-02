@@ -1212,3 +1212,7 @@ sudo lsof -n -P | grep :80
 #### 1.8 effect 状态
 
 ![ 1.8 effect 状态](./little-saga/building-your-own-redux-saga/images/1.8.png)
+
+---------
+[ReactDeveloper](https://space.bilibili.com/16464410)
+[你不知道的React](https://www.bilibili.com/read/readlist/rl97709)
