@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      height: 20px;
+      background-color: bisque;
+    }
+    section::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    section > div{
+      float: left;
+    }
+    .main {
+      width: 100%;
+      height: 200px;
+      background: lightseagreen;
+    }
+    .main-content {
+      margin: 0 200px;
+    }
+    .left {
+      margin-left: -100%;
+      width: 200px;
+      height: 200px;
+      opacity: 0.3;
+      background-color: green;
+    }
+    .right {
+      opacity: 0.3;
+      margin-left: -200px;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+    footer {
+      height: 20px;
+      background-color:lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <section>
+    <div class="main">
+      <div class="main-content">
+        hello-world!!!!
+      </div>
+    </div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </section>
+  <footer></footer>
+</body>
+</html>
