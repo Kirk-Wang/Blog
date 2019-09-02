@@ -550,7 +550,7 @@ channels-trans-table
 * [React源码大纲](./docs/images/react/react-1.png)
 * [浅聊 Virtual DOM](./docs/images/react/virtual_dom.png)
 * [ES相关基础](./docs/images/jsms/ES_basic.png)
-* [JS-WEB-API](./docs/images/jsms/JS-WEB-API-2.png)
+* [JS-WEB-API](./docs/images/jsms/JS-Web-API-2.png)
 * [CSS-HTML](./docs/images/jsms/CSS-HTML.png)
 * [前端性能](./docs/images/perf/perf_img.png)
 * [缓存](./docs/images/perf/perf_cache.png)
