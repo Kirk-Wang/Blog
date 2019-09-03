@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fibonacci</title>
+  <script>
+  // 1, 1, 2, 3, 5, 8....n
+  (function() {
+    let count=0
+    function fib(n) {
+      count++
+      if (n === 1 || n===2) {
+        return 1
+      }
+      return fib(n-1) + fib(n-2)
+    }
+    console.log('第20项：' + fib(20), "执行了："+count)
+  })();
+
+  (function() {
+    let count=0
+    function fib(n) {
+      let _cache = {}
+      function _fn(n) {
+        if (_cache[n]) {
+          return _cache[n]
+        }
+        count++
+        if (n === 1 || n===2) {
+          return 1
+        }
+        let prev = _fn(n-1)
+        _cache[n-1] = prev
+        let next = _fn(n-2)
+        _cache[n-2] = next
+        return prev + next
+      }
+      return _fn(n)
+    }
+    console.log('第20项：' + fib(20), "执行了："+count)
+  })()
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
