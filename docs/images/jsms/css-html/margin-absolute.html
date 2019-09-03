@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>margin-absolute</title>
+  <style>
+    * {
+      margin: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+    div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: lightcoral;
+    }
+    .top-center{
+      left:0;
+      right: 0;
+      margin: auto;
+    }
+    .left-center {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .bottom-center {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .right-center {
+      left: auto;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-center">top-center</div>
+  <div class="left-center">left-center</div>
+  <div class="bottom-center">bottom-center</div>
+  <div class="right-center">right-center</div>
+</body>
+</html>
