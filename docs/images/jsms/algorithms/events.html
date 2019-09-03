@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Events</title>
+  <script>
+  (function() {
+    console.log('algorithms!')
+
+    class Event {
+      constructor() {
+        this._cache = {}
+      }
+
+      on(type, callback) {
+        let fns = (this._cache[type] = this._cache[type] || [])
+        if (fns.indexOf(callback) === -1) {
+          fns.push(callback)
+        }
+        return this
+      }
+
+      trigger(type, data) {
+        let fns = this._cache[type]
+        if(Array.isArray(fns)) {
+          fns.forEach(fn => {
+            fn(data)
+          })
+        }
+        return this
+      }
+
+      off(type, callback) {
+        let fns = this._cache[type]
+        if (Array.isArray(fns)) {
+          let index = fns.indexOf(callback)
+          if (index !== -1) {
+            fns.splice(index, 1)
+          }else {
+            fns.length = 0;
+          }
+        }
+        return this
+      }
+    }
+
+    // 测试用例
+    const event = new Event();
+    event.on('test', (a) => {
+        console.log(a);
+    });
+    event.trigger('test', 'hello world');
+
+    event.off('test');
+    event.trigger('test', 'hello world');
+  })()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
