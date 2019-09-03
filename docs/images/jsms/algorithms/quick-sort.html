@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>quickSort</title>
+  <script>
+  (function() {
+    function quickSort(arr) {
+      if (arr.length < 2) {
+        return arr;
+      }
+      let chi = arr[0]
+      let left = []
+      let right = []
+      for(let i=1; i < arr.length; i++) {
+        if (arr[i] <= chi) {
+          left.push(arr[i])
+        }
+        if (arr[i] > chi) {
+          right.push(arr[i])
+        }
+      }
+      return quickSort(left).concat(chi, quickSort(right))
+    }
+    const sort = quickSort([3, 4, 8, 6, 4, 9, 1, 5, 6, 10, 22, 5, 3,2, 7, 1, 4, 5, 2])
+    console.log(sort)
+  })();
+
+  (function(){
+
+    function swap(arr, a, b) {
+      [arr[a], arr[b]] = [arr[b], arr[a]]
+    }
+
+    // 划分算法，找每一次的分界索引
+    function partition(arr, left, right) {
+      // 选第一个数做为标尺
+      let chi = arr[left]
+      let p = left + 1
+      // 可以进行交换的索引
+      let swapIndex = p
+      for (let i = p; i <= right; i++) {
+        if (chi > arr[i]) {
+          // 把小于标尺的数放在左边
+          swap(arr, swapIndex, i)
+          // 交换的位置移动一位
+          swapIndex++
+        }
+      }
+      //移动标尺到 swpIndex 的前面
+      swap(arr, left, swapIndex - 1)
+      // 当前标尺的位置
+      return swapIndex - 1
+    }
+
+    function quickSort(arr, left, right) {
+      if (left < right) {
+        let chiIndex = partition(arr, left, right)
+        //left
+        quickSort(arr, left, chiIndex-1)
+        // right
+        quickSort(arr, chiIndex+1, right)
+      }
+    }
+
+    const arr = [5, 9, 7, 8, 3, 6, 1]; // 1, 3, 5, 8 , 9, 6, 7
+    // partition(arr, 0, arr.length-1)
+    quickSort(arr, 0, arr.length-1)
+    console.log(arr)
+
+    const arr2 = [3, 4, 8, 6, 4, 9, 1, 5, 6, 10, 22, 5, 3,2, 7, 1, 4, 5, 2]
+    quickSort(arr2, 0, arr2.length-1)
+    console.log(arr2)
+
+    const arr3 = [85, 24, 63, 45, 17, 31, 96, 50];
+    quickSort(arr3, 0, arr3.length-1)
+    console.log(arr3);
+
+  })()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
