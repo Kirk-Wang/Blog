@@ -552,6 +552,7 @@ channels-trans-table
 * [ES相关基础](./docs/images/jsms/ES_basic.png)
 * [JS-WEB-API](./docs/images/jsms/JS-Web-API-2.png)
 * [CSS-HTML](./docs/images/jsms/CSS-HTML-2.png)
+* [前端算法基础](./docs/images/jsms/algorithms.png)
 * [前端性能](./docs/images/perf/perf_img.png)
 * [缓存](./docs/images/perf/perf_cache.png)
 * [本地存储](./docs/images/perf/perf_storage.png)
