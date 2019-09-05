@@ -11,3 +11,7 @@ npm install webpack webpack-cli --save-dev
 通过 npm run build 运行构建
 
 原理：模块局部安装会在 node_modules/.bin 目录创建软链接 
+
+### 核心概念 Entry
+
+Entry 用来指定 webpack 打包入口
