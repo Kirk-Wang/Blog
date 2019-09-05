@@ -15,3 +15,9 @@ npm install webpack webpack-cli --save-dev
 ### 核心概念 Entry
 
 Entry 用来指定 webpack 打包入口
+
+### 理解依赖图的含义
+
+依赖图的入口是 entry
+
+对于非代码比如图片、字体依赖也会不断加入到依赖图中
