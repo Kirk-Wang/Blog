@@ -40,3 +40,14 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 其它文件类型并且把它们转化成有效的模块，并且可以添加到依赖图中。
 
 本身是一个函数，接受源文件作为参数，返回转换的结果。
+
+### 常见的 Loaders 有哪些？
+|名称|描述|
+|---|----|
+|babel-loader|转换ES6、ES7等JS新特性|
+|css-loader|支持.css 文件的加载和解析|
+|less-loader|将 less 文件转换为 css|
+|ts-loader|将 TS 转换为 JS|
+|file-loader|进行图片、字体等的打包|
+|raw-loader|将文件以字符串的形式导入|
+|thread-loader|多进程打包 JS 和 CSS|
