@@ -82,3 +82,8 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 |production|设置 process.env.NODE_ENV 的值为 production.开启 FlagDependencyUsagePlugin, FlagIncludeChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, OccurenceOrderPlugin, SideEffectsFlagPlugin 和 TerserPlugin|
 |none|不开启任何优化选项|
 
+### 资源解析：解析 ES6
+* 使用 babel-loader
+* babel的配置文件是：.babelrc
+* 增加 ES6 的 babel preset配置
+* [github.com/babel/babel-loader](https://github.com/babel/babel-loader)
