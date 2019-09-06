@@ -75,3 +75,10 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 * Mode 用来指定当前的构建环境是：production、development 还是 none
 * 设置 mode 可以使用 webpack 内置的函数，默认值为 production
 
+### Mode函数的内置功能
+|选项|描述|
+|---|----|
+|development|设置 process.env.NODE_ENV 的值为 development.开启 NamedChunksPlugin 和 NamedModulePlugin|
+|production|设置 process.env.NODE_ENV 的值为 production.开启 FlagDependencyUsagePlugin, FlagIncludeChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, OccurenceOrderPlugin, SideEffectsFlagPlugin 和 TerserPlugin|
+|none|不开启任何优化选项|
+
