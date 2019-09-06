@@ -59,3 +59,14 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 ### 核心概念之 Plugins
 * 插件用于 bundle 文件的优化，资源管理和环境变量注入
 * 作用于整个构建过程
+
+### 常见的 Plugins 有哪些？
+|名称|描述|
+|---|----|
+|CommonsChunkPlugin|将chunks相同的模块代码提取成公共js|
+|CleanWebpackPlugin|清理构建目录|
+|ExtractTextWebpackPlugin|将 CSS 从bundle文件里提取成一个独立的 CSS 文件|
+|CopyWebpackPlugin|将文件或者文件夹拷贝构建输出的目录|
+|HtmlWebpackPlugin|创建 html 文件去承载输出的 bundle|
+|UglifyjsWebpackPlugin|压缩JS|
+|ZipWebpackPlugin|将打包出的资源生成的一个zip包|
