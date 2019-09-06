@@ -55,3 +55,7 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 ### Loaders 的用法
 * test 指定匹配规则
 * use 指定使用的 loader 名称
+
+### 核心概念之 Plugins
+* 插件用于 bundle 文件的优化，资源管理和环境变量注入
+* 作用于整个构建过程
