@@ -70,3 +70,8 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 |HtmlWebpackPlugin|创建 html 文件去承载输出的 bundle|
 |UglifyjsWebpackPlugin|压缩JS|
 |ZipWebpackPlugin|将打包出的资源生成的一个zip包|
+
+### 核心概念之 Mode
+* Mode 用来指定当前的构建环境是：production、development 还是 none
+* 设置 mode 可以使用 webpack 内置的函数，默认值为 production
+
