@@ -208,3 +208,7 @@ module.export = {
 * 修改 html-webpack-plugin，设置压缩参数
   * [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
+### 自动清理构建目录
+* 避免构建前每次都需要手动删除 dist
+* 使用 [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin)
+  * 默认删除 output 指定的目录
