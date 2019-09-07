@@ -4,6 +4,7 @@ import logo from './images/logo.png'
 
 export class Search extends React.Component {
   render() {
+    a = 1
     return <div className="search-text">请输入搜索内容: <img src={logo} /> </div>
   }
 }

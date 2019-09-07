@@ -46,7 +46,7 @@ module.exports = {
     filename: '[name]_[chunkhash:8].js',
     path: path.join(__dirname, 'dist')
   },
-  mode: 'production',
+  mode: 'none',
   module: {
     rules: [
       {
@@ -121,4 +121,5 @@ module.exports = {
     }),
     new CleanWebpackPlugin()
   ].concat(htmlWebpackPlugin),
+  devtool: 'inline-source-map'
 }
