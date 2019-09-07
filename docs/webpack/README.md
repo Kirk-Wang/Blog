@@ -236,3 +236,11 @@ module.export = {
 * 页面渲染时计算根元素的 font-size 值
   * 可以使用手淘的 [lib-flexible](https://github.com/amfe/lib-flexible) 库
 
+### 资源内联的意义
+* 代码层面
+  * 页面框架的初始化版本
+  * 上报相关打点
+  * css 内联避免页面闪动
+* 请求层面：减少 HTTP 网络请求
+  * 小图片或者字体内联(url-loader)
+
