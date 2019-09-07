@@ -206,5 +206,5 @@ module.export = {
 
 ### html 文件的压缩
 * 修改 html-webpack-plugin，设置压缩参数
-
+  * [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 
