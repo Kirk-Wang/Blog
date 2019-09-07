@@ -198,9 +198,13 @@ module.export = {
 
 ### JS 文件的压缩
 * 内置了 uglifyjs-webpack-plugin
+
 ### CSS 文件的压缩
 * 使用 optimize-css-assets-webpack-plugin
+  * [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin)
 * 同时使用 cssnano
 
+### html 文件的压缩
+* 修改 html-webpack-plugin，设置压缩参数
 
 
