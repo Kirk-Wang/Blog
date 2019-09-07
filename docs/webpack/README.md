@@ -245,10 +245,10 @@ module.export = {
   * 小图片或者字体内联(url-loader)
 
 ### HTML 和 JS 的内联
-* raw-loader 内联 html
-  * <script>${require('raw-loader!babel-loader!./meta.html')}</script>
+* raw-loader(0.5.1) 内联 html
+  * ${ require('raw-loader!./meta.html') }
 * raw-loader 内联 js
-  * <script>${require('raw-loader!babel-loader!../node_modules/lib-flexible')}</script>
+  * <script>${ require('raw-loader!../../node_modules/lib-flexible/flexible.js') }</script>
 
 ### CSS 内联
 * 方案一：借助 style-loader
