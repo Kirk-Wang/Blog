@@ -212,3 +212,16 @@ module.export = {
 * 避免构建前每次都需要手动删除 dist
 * 使用 [clean-webpack-plugin](https://github.com/johnagan/clean-webpack-plugin)
   * 默认删除 output 指定的目录
+
+### CSS3 的属性为什么需要前缀？
+* Trident(-ms)
+* Geko(-moz)
+* Webkit(-webkit)
+* Presto(-o)
+
+### PostCSS 插件 autoprefixer 自动补齐 CSS3 前缀
+* [https://github.com/postcss/postcss](https://github.com/postcss/postcss)
+* [https://postcss.org](https://postcss.org)
+* 使用 autoprefixer
+* 根据 Can I Use 规则(https://caniuse.com)
+
