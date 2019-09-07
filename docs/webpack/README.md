@@ -148,3 +148,5 @@ module.export = {
 * 使用 HotModuleReplacementPlugin 插件
 
 ### 热更新: 使用 webpack-dev-middleware
+* WDM 将 webpack 输出的文件传输给服务器
+* 适用于灵活的定制场景
