@@ -174,6 +174,7 @@ module.export = {
 
 ### CSS 的文件指纹设置
 * 设置 MiniCssExtractPlugin 的 filename, 使用 [contenthash]
+* [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
 
 ### 图片的文件指纹设置
 * 设置 file-loader 的name，使用 [hash]
@@ -188,6 +189,12 @@ module.export = {
 |[contenthash]|文件的内容hash, 默认是 md5 生成|
 |[hash]|文件的内容hash, 默认是 md5 生成|
 |[emoji]|一个随机的指代文件内容的 emoj|
+
+
+### 代码压缩
+* HTML压缩
+* CSS压缩
+* JS压缩
 
 
 
