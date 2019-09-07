@@ -158,3 +158,13 @@ module.export = {
 * Bundle Server: 提供文件在浏览器中的访问
 * HMR Runtime: 会被注入到浏览器，更新文件变化
 * bundle.js: 构建输出的文件
+
+### 什么是文件指纹
+* 打包后输出的文件名的后缀
+* 版本管理
+* 对于没有修改的文件，也可以继续使用
+
+### 文件指纹如何生成
+* Hash: 和整个项目的构建相关，只要项目文件有修改，整个项目构建的 hash 值就会更改
+* Chunkhash：和 webpack 打包的 chunk 有关，不同的 entry 会有不同的 chunkhash 值
+* Contenthash: 根据文件内容来定义 hash，文件内容不变，则 contenthash 不变 
