@@ -92,3 +92,9 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 * 增加 JSX 的 babel preset-react配置
   * [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react)
 
+### 资源解析：解析 CSS
+* css-loader 用于加载 .css 文件，并且转换成 commonjs 对象
+* style-loader 将样式通过 <style> 标签插入到 head 中
+* [style-loader](https://github.com/webpack-contrib/style-loader)
+* [css-loader](https://github.com/webpack-contrib/css-loader)
+
