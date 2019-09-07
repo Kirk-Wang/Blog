@@ -256,3 +256,13 @@ module.export = {
 
 ### 多页面应用(MPA)概念
 * 每一次页面跳转的时候，后台服务器都会返回一个新的 html 文档，这种类型的网站也就是多页网站，也叫做多页应用。
+
+### 多页面打包思路
+* 每个页面对应一个 entry，一个 html-webpack-plugin
+* 缺点：每次新增或删除页面需要改 webpack 配置
+
+### 多页面打包通用方案
+* 动态获取 entry 和设置 html-webpack-plugin 数量
+* 利用 glob.sync 
+  * [Glob](https://github.com/isaacs/node-glob)
+  * entry: glob.sync(path.join(__dirname, './src/*/index.js')),
