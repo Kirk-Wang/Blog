@@ -225,3 +225,14 @@ module.export = {
 * 使用 autoprefixer
 * 根据 Can I Use 规则[Can I Use](https://caniuse.com)
 
+### rem 是什么？
+* W3C 对 rem 的定义：font-size of the root element
+* rem 和 px 的对比
+  * rem 是相对单位
+  * px 是绝对单位
+
+### 移动端 CSS px 自动转换成 rem
+* 使用 [px2rem-loader](https://github.com/Jinjiang/px2rem-loader)
+* 页面渲染时计算根元素的 font-size 值
+  * 可以使用手淘的 [lib-flexible](https://github.com/amfe/lib-flexible) 库
+
