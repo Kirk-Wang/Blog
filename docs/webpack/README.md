@@ -123,3 +123,27 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
   * 在配置 webpack.config.js 中设置 watch:true
   * 唯一缺陷：每次需要手动刷新浏览器
 
+### 文件监听的原理分析
+* 轮询判断文件的最后编辑时间
+* 某个文件发生了变化，并不会立刻告诉监听者，而是先缓存起来，等 aggregateTimeout
+```js
+module.export = {
+  // 默认为 false, 也就是不监听
+  watch: true
+  // 只有开启监听模式，watchOptions 才有意义
+  watchOptions: {
+    //默认为空，不监听的文件或文件夹，支持正则匹配
+    ignored: /node_modules/,
+    //监听到变化后会等 300ms 再去执行，默认 300ms 
+    aggregateTimeout: 300,
+    // 判断文件是否发生变化是通过不停询问系统指定文件有没有变化实现的，默认每秒问 1000 次
+    poll: 1000
+  }
+}
+```
+
+### 热更新: webpack-dev-server
+* WDS 不刷新浏览器
+* WDS 不输出文件，而是放在内存中
+* 使用 HotModuleReplacementPlugin 插件
+

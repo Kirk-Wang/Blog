@@ -2,13 +2,12 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './search.less'
-import logo from './images/logo.png'
+import { Search } from './hot-update-Search'
 
-class Search extends React.Component {
-  render() {
-    return <div className="search-text">search text <img src={logo} /> </div>
-  }
+const rootEl = document.getElementById('root')
+ReactDOM.render(<Search/>, rootEl)
+if(module.hot) {
+  module.hot.accept("./hot-update-Search", function() {
+    ReactDOM.render(<Search/>, rootEl)
+  })
 }
-
-ReactDOM.render(<Search/>, document.getElementById('root'))
