@@ -266,3 +266,7 @@ module.export = {
 * 利用 glob.sync 
   * [Glob](https://github.com/isaacs/node-glob)
   * entry: glob.sync(path.join(__dirname, './src/*/index.js')),
+
+### 使用 sourcemap
+* 作用：通过 source map 定位到源码
+  * source map科普文：[JavaScript Source Map 详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
