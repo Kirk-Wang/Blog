@@ -168,3 +168,6 @@ module.export = {
 * Hash: 和整个项目的构建相关，只要项目文件有修改，整个项目构建的 hash 值就会更改
 * Chunkhash：和 webpack 打包的 chunk 有关，不同的 entry 会有不同的 chunkhash 值
 * Contenthash: 根据文件内容来定义 hash，文件内容不变，则 contenthash 不变 
+
+### JS 的文件指纹设置
+* 设置 output 的 filename, 使用 [chunkhash]
