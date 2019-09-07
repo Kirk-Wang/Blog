@@ -101,3 +101,5 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 ### 资源解析：解析 Less 和 Sass
 * [less-loader](https://github.com/webpack-contrib/less-loader)
   * The less-loader requires less as peerDependency.
+* [sass-loader](https://github.com/webpack-contrib/sass-loader)
+  * The sass-loader requires you to install either Node Sass or Dart Sass on your own (more documentation you can find below). 
