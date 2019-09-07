@@ -146,7 +146,15 @@ module.export = {
 * WDS 不刷新浏览器
 * WDS 不输出文件，而是放在内存中
 * 使用 HotModuleReplacementPlugin 插件
+* [hot-module-replacement](https://webpack.js.org/guides/hot-module-replacement/)
 
 ### 热更新: 使用 webpack-dev-middleware
 * WDM 将 webpack 输出的文件传输给服务器
 * 适用于灵活的定制场景
+
+### 热更新的原理分析
+* Webpack Compile: 将 JS 编译成 Bundle
+* HMR Server: 将热更新的文件输出给 HMR Runtime
+* Bundle Server: 提供文件在浏览器中的访问
+* HMR Runtime: 会被注入到浏览器，更新文件变化
+* bundle.js: 构建输出的文件
