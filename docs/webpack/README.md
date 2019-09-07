@@ -171,3 +171,23 @@ module.export = {
 
 ### JS 的文件指纹设置
 * 设置 output 的 filename, 使用 [chunkhash]
+
+### CSS 的文件指纹设置
+* 设置 MiniCssExtractPlugin 的 filename, 使用 [contenthash]
+
+### 图片的文件指纹设置
+* 设置 file-loader 的name，使用 [hash]
+
+|占位符名称|含义|
+|---|----|
+|[ext]|资源后缀名|
+|[name]|文件名称|
+|[path]|文件的相对路径|
+|[folder]|文件所在的文件夹|
+|[name]|文件名称|
+|[contenthash]|文件的内容hash, 默认是 md5 生成|
+|[hash]|文件的内容hash, 默认是 md5 生成|
+|[emoji]|一个随机的指代文件内容的 emoj|
+
+
+
