@@ -98,3 +98,6 @@ webpack 开箱即用只支持 JS 和 JSON 两种文件类型，通过 Loaders �
 * [style-loader](https://github.com/webpack-contrib/style-loader)
 * [css-loader](https://github.com/webpack-contrib/css-loader)
 
+### 资源解析：解析 Less 和 Sass
+* [less-loader](https://github.com/webpack-contrib/less-loader)
+  * The less-loader requires less as peerDependency.
