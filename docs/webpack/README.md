@@ -192,9 +192,15 @@ module.export = {
 
 
 ### 代码压缩
-* HTML压缩
-* CSS压缩
-* JS压缩
+* HTML 压缩
+* CSS 压缩
+* JS 压缩
+
+### JS 文件的压缩
+* 内置了 uglifyjs-webpack-plugin
+### CSS 文件的压缩
+* 使用 optimize-css-assets-webpack-plugin
+* 同时使用 cssnano
 
 
 
