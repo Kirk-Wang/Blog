@@ -223,5 +223,5 @@ module.export = {
 * [https://github.com/postcss/postcss](https://github.com/postcss/postcss)
 * [https://postcss.org](https://postcss.org)
 * 使用 autoprefixer
-* 根据 Can I Use 规则(https://caniuse.com)
+* 根据 Can I Use 规则[Can I Use](https://caniuse.com)
 
