@@ -244,3 +244,13 @@ module.export = {
 * 请求层面：减少 HTTP 网络请求
   * 小图片或者字体内联(url-loader)
 
+### HTML 和 JS 的内联
+* raw-loader 内联 html
+  * <script>${require('raw-loader!babel-loader!./meta.html')}</script>
+* raw-loader 内联 js
+  * <script>${require('raw-loader!babel-loader!../node_modules/lib-flexible')}</script>
+
+### CSS 内联
+* 方案一：借助 style-loader
+* 方案二：html-inline-css-webpack-plugin
+
