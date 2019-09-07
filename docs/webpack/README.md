@@ -147,3 +147,4 @@ module.export = {
 * WDS 不输出文件，而是放在内存中
 * 使用 HotModuleReplacementPlugin 插件
 
+### 热更新: 使用 webpack-dev-middleware
