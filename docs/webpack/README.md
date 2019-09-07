@@ -254,3 +254,5 @@ module.export = {
 * 方案一：借助 style-loader
 * 方案二：html-inline-css-webpack-plugin
 
+### 多页面应用(MPA)概念
+* 每一次页面跳转的时候，后台服务器都会返回一个新的 html 文档，这种类型的网站也就是多页网站，也叫做多页应用。
