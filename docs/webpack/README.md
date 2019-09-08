@@ -346,5 +346,11 @@ module.export = {
 * 必须是 ES6 语法，CJS 不支持
 * new webpack.optimize.ModuleConcatenationPlugin()--> webpack 4 production mode 默认开启
 
+### 代码分割的意义
+* 对于大型的 Web 应用来讲，将所有的代码都放在一个文件中显然是不够有效的，特别是当你的某些代码块是在某些特殊的时候才会被使用到。webpack 有个功能是将你的代码分割成 chunks (语块)，当代码运行到需要它们的时候再进行加载。
+* 适用场景
+  * 抽离相同代码到一个共享块
+  * 脚本懒加载，使得初始下载的代码更小
+
 
 
