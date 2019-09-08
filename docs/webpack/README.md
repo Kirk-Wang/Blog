@@ -371,6 +371,8 @@ module.export = {
 ### Webpack 与 ESLint 集成
 * 一开始就用了 ESLint
 * 使用 eslint-loader, 构建时检查 JS 规范
+* [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+* [eslint-loader](https://github.com/webpack-contrib/eslint-loader)
 
 
 
