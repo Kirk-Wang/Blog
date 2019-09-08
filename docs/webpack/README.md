@@ -352,5 +352,13 @@ module.export = {
   * 抽离相同代码到一个共享块
   * 脚本懒加载，使得初始下载的代码更小
 
+### 懒加载 JS 脚本的方式
+* CommonJS: require.entrue
+* ES6：动态 import (目前还没有原生支持，需要 babel 转换)
+
+### 如何使用动态 import?
+* 安装 babel 插件
+* [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import)
+
 
 
