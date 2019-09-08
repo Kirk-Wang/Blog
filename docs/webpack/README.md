@@ -360,5 +360,14 @@ module.export = {
 * 安装 babel 插件
 * [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import)
 
+### ESLint 如何执行落地？
+* 和 CI/CD 系统集成
+* 和 webpack 集成
+
+### 本地开发阶段增加 precommit 钩子
+* 安装 husky
+* 增加 npm script, 通过 lint-staged 增量检查修改的文件
+* 使用 eslint-loader, 构建时检查 JS 规范
+
 
 
