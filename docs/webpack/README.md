@@ -344,4 +344,7 @@ module.export = {
 ### Scope Hoisting 使用
 * webpack mode 为 production 默认开启
 * 必须是 ES6 语法，CJS 不支持
+* new webpack.optimize.ModuleConcatenationPlugin()--> webpack 4 production mode 默认开启
+
+
 
