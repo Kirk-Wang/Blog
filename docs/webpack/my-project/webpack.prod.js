@@ -20,7 +20,9 @@ const setMPA = () => {
     htmlWebpackPlugin.push(new HtmlWebpackPlugin({
       template: path.join(__dirname, `./src/${pageName}/index.html`),
       filename: `${pageName}.html`,
-      chunks: ['vendors', `${pageName}`],
+      chunks: [
+        // 'vendors', 
+        `${pageName}`],
       inject: true,
       minify: {
         html5: true,
@@ -121,30 +123,40 @@ module.exports = {
       cssProcessor: require('cssnano')
     }),
     new CleanWebpackPlugin(),
-    // new HtmlWebpackExternalsPlugin({
-    //   externals: [
-    //     {
-    //       module: 'react',
-    //       entry: '//11.url.cn/now/lib/16.2.0/react.min.js',
-    //       global: 'React',
-    //     },
-    //     {
-    //       module: 'react-dom',
-    //       entry: '//11.url.cn/now/lib/16.2.0/react-dom.min.js',
-    //       global: 'ReactDOM',
-    //     },
-    //   ]
-    // })
+    new HtmlWebpackExternalsPlugin({
+      externals: [
+        {
+          module: 'react',
+          entry: '//11.url.cn/now/lib/16.2.0/react.min.js',
+          global: 'React',
+        },
+        {
+          module: 'react-dom',
+          entry: '//11.url.cn/now/lib/16.2.0/react-dom.min.js',
+          global: 'ReactDOM',
+        },
+      ]
+    })
   ].concat(htmlWebpackPlugin),
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /(react|react-dom)/,
-          name: 'vendors',
-          chunks: 'all'
-        }
-      }
-    }
+    // splitChunks: {
+    //   cacheGroups: {
+    //     commons: {
+    //       test: /(react|react-dom)/,
+    //       name: 'vendors',
+    //       chunks: 'all'
+    //     }
+    //   }
+    // }
+    // splitChunks: {
+    //   minSize: 0,
+    //   cacheGroups: {
+    //     commons: {
+    //       name: 'commons',
+    //       chunks: 'all',
+    //       minChunks: 3
+    //     }
+    //   }
+    // }
   }
 }

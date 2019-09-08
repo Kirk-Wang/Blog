@@ -298,3 +298,13 @@ module.export = {
   * test: 匹配出需要分离的包
   * minChunks: 设置最小引用次数为 2 次
   * minSize：分离的包的体积大小（至少）
+
+### tree shaking(摇树优化)
+* 概念：1 个模块可能有多个方法，只要其中的某个方法使用到了
+* 则整个文件都会被打到 bundle 里面去，tree shaking 就是
+* 只把用到的方法打入 bundle，没用到的方法会 uglify 阶段被擦除掉
+
+* 使用：webpack 默认支持，在 .babelrc 里设置 modules：false 即可
+  * production mode 的情况下默认开启
+
+* 要求：必须是 ES6 的语法，CJS 的方式不支持
