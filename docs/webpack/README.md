@@ -341,4 +341,7 @@ module.export = {
 * 原理：将所有模块的代码按照引用顺序放在一个函数作用域里，然后适当的重命名一些变量以防止变量名的冲突
 * 对比：通过 scope hoisting 可以减少函数声明代码和内存开销
 
+### Scope Hoisting 使用
+* webpack mode 为 production 默认开启
+* 必须是 ES6 语法，CJS 不支持
 
