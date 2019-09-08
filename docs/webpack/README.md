@@ -367,6 +367,9 @@ module.export = {
 ### 本地开发阶段增加 precommit 钩子
 * 安装 husky
 * 增加 npm script, 通过 lint-staged 增量检查修改的文件
+
+### Webpack 与 ESLint 集成
+* 一开始就用了 ESLint
 * 使用 eslint-loader, 构建时检查 JS 规范
 
 
