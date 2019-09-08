@@ -20,7 +20,7 @@ const setMPA = () => {
     htmlWebpackPlugin.push(new HtmlWebpackPlugin({
       template: path.join(__dirname, `./src/${pageName}/index.html`),
       filename: `${pageName}.html`,
-      chunks: [`${pageName}`],
+      chunks: ['vendors', `${pageName}`],
       inject: true,
       minify: {
         html5: true,
@@ -47,7 +47,7 @@ module.exports = {
     filename: '[name]_[chunkhash:8].js',
     path: path.join(__dirname, 'dist')
   },
-  mode: 'none',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -121,20 +121,30 @@ module.exports = {
       cssProcessor: require('cssnano')
     }),
     new CleanWebpackPlugin(),
-    new HtmlWebpackExternalsPlugin({
-      externals: [
-        {
-          module: 'react',
-          entry: '//11.url.cn/now/lib/16.2.0/react.min.js',
-          global: 'React',
-        },
-        {
-          module: 'react-dom',
-          entry: '//11.url.cn/now/lib/16.2.0/react-dom.min.js',
-          global: 'ReactDOM',
-        },
-      ]
-    })
+    // new HtmlWebpackExternalsPlugin({
+    //   externals: [
+    //     {
+    //       module: 'react',
+    //       entry: '//11.url.cn/now/lib/16.2.0/react.min.js',
+    //       global: 'React',
+    //     },
+    //     {
+    //       module: 'react-dom',
+    //       entry: '//11.url.cn/now/lib/16.2.0/react-dom.min.js',
+    //       global: 'ReactDOM',
+    //     },
+    //   ]
+    // })
   ].concat(htmlWebpackPlugin),
-  devtool: 'inline-source-map'
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /(react|react-dom)/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  }
 }
