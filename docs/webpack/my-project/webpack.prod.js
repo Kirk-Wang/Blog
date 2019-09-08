@@ -1,6 +1,7 @@
 'use strict'
 
 const path = require('path')
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -49,7 +50,7 @@ module.exports = {
     filename: '[name]_[chunkhash:8].js',
     path: path.join(__dirname, 'dist')
   },
-  mode: 'production',
+  mode: 'none',
   module: {
     rules: [
       {
@@ -136,7 +137,8 @@ module.exports = {
           global: 'ReactDOM',
         },
       ]
-    })
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ].concat(htmlWebpackPlugin),
   optimization: {
     // splitChunks: {

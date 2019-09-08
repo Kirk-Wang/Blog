@@ -2,7 +2,6 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import '../../common'
 import { Search } from './hot-update-Search'
 
 const rootEl = document.getElementById('root')
