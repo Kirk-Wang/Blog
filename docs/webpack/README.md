@@ -283,3 +283,18 @@ module.export = {
 
 ### Source Map 类型
 [devtool](https://webpack.js.org/configuration/devtool/#devtool)
+
+### 基础库的分离
+* 思路：将 react、react-dom 基础包通过 cdn 引入，不打入 bundle 中
+* 方法：使用 [html-webpack-externals-plugin](https://github.com/mmiller42/html-webpack-externals-plugin)
+
+### 利用 SplitChunksPlugin 进行公共脚本分离
+* Webpack4 内置，替代 CommonsChunkPlugin 插件
+* chunks 参数说明
+  * async 异步引入的库进行分离（默认）
+  * initial 同步引入的库进行分离
+  * all 所有引入的库进行分离（推荐）
+* [SplitChunksPlugin](https://webpack.js.org/plugins/split-chunks-plugin/)
+  * test: 匹配出需要分离的包
+  * minChunks: 设置最小引用次数为 2 次
+  * minSize：分离的包的体积大小（至少）
