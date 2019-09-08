@@ -308,3 +308,8 @@ module.export = {
   * production mode 的情况下默认开启
 
 * 要求：必须是 ES6 的语法，CJS 的方式不支持
+
+### DCE(Elimination)
+* 代码不会被执行，不可到达
+* 代码执行结果不会被用到
+* 代码只会影响死变量（只写不读）
