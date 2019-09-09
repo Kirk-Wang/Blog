@@ -1219,3 +1219,9 @@ sudo lsof -n -P | grep :80
 ![ 1.8 effect 状态](./little-saga/building-your-own-redux-saga/images/1.8.png)
 
 ---------
+
+#### React 核心
+* [Scheduling in React](https://philippspiess.com/scheduling-in-react/)
+* [译: React 中的调度](https://juejin.im/post/5ca347306fb9a05e4c0e69e5)
+* [深入剖析 React Concurrent](https://zhuanlan.zhihu.com/p/60307571)
+* [React的调度-v16](http://que01.github.io/2019/08/28/v16-Scheduling-in-React/)
