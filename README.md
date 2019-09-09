@@ -1231,3 +1231,4 @@ sudo lsof -n -P | grep :80
 * [深入探究 eventloop 与浏览器渲染的时序问题](https://www.404forest.com/2017/07/18/how-javascript-actually-works-eventloop-and-uirendering/)
 * [你应该知道的requestIdleCallback](https://juejin.im/post/5ad71f39f265da239f07e862)
 * [React笔记大纲导航](http://que01.github.io/2019/06/17/react-table-of-react/)
+* [史上最全！图解浏览器的工作原理](https://www.infoq.cn/article/CS9-WZQlNR5h05HHDo1b)
