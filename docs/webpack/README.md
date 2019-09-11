@@ -380,6 +380,10 @@ module.export = {
 * 实现一个大整数加法库的打包
   * 需要打包压缩版和非压缩版
   * 支持 AMD/CJS/ESM 模块引入
+  * 可以直接通过 script 引入
+  * library: 指定库的全局变量
+  * libraryTarget: 支持库引入的方式
+  * [output.libraryTarget](https://webpack.js.org/configuration/output/#outputlibrarytarget)
 
 
 
