@@ -375,5 +375,12 @@ module.export = {
 * [eslint-loader](https://github.com/webpack-contrib/eslint-loader)
 * [babel-eslint](https://github.com/babel/babel-eslint)
 
+### Webpack 打包库和文件
+* webpack 除了可以用来打包应用，也可以用来打包 js
+* 实现一个大整数加法库的打包
+  * 需要打包压缩版和非压缩版
+  * 支持 AMD/CJS/ESM 模块引入
+
+
 
 
