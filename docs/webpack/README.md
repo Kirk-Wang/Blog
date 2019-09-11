@@ -386,6 +386,22 @@ module.export = {
   * [output.libraryTarget](https://webpack.js.org/configuration/output/#outputlibrarytarget)
   * [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin)
 
+### Webpack ssr 打包存在的问题
+* 浏览器的全局变量（Node.js 中没有 document, window)
+  * 组件适配：将不兼容的组件根据打包环境进行适配
+  * 请求适配：将 fetch 或者 ajax 发送请求的写法改成 isomorphic-fetch 或者 axios
+
+* 样式问题（Node.js 无法解析 css）
+  * 方案1：服务端打包通过 ignore-loader 忽略掉 CSS 解析
+  * 方案2：将 style-loader 替换成 isomorphic-style-loader
+
+### 如何解决样式不显示的问题
+* 使用打包出来的浏览器端 html 为模版
+* 设置占位符，动态插入组件
+
+### 首屏数据如何处理
+* 服务端获取数据
+* 替换占位符
 
 
 
