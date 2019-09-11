@@ -13,27 +13,31 @@ const setMPA = () => {
   const entry = {}
   const htmlWebpackPlugin = []
 
-  const entryFiles = glob.sync(path.join(__dirname, './src/*/index.js'))
+  const entryFiles = glob.sync(path.join(__dirname, './src/*/index-server.js'))
+
   entryFiles.map((entryFile) => {
-    const match = entryFile.match(/\/src\/(.+)\/index\.js$/)
+    const match = entryFile.match(/\/src\/(.+)\/index-server\.js$/)
     const pageName = match[1]
-    entry[pageName] = entryFile
-    htmlWebpackPlugin.push(new HtmlWebpackPlugin({
-      template: path.join(__dirname, `./src/${pageName}/index.html`),
-      filename: `${pageName}.html`,
-      chunks: [
-        // 'vendors', 
-        `${pageName}`],
-      inject: true,
-      minify: {
-        html5: true,
-        collapseWhitespace: true,
-        preserveLineBreaks: false,
-        minifyCSS: true,
-        minifyJS: true,
-        removeComments: false
-      }
-    }))
+    if (pageName) {
+      entry[pageName] = entryFile
+      htmlWebpackPlugin.push(new HtmlWebpackPlugin({
+        template: path.join(__dirname, `./src/${pageName}/index.html`),
+        filename: `${pageName}.html`,
+        chunks: [
+          // 'vendors', 
+          `${pageName}`],
+        inject: true,
+        minify: {
+          html5: true,
+          collapseWhitespace: true,
+          preserveLineBreaks: false,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: false
+        }
+      }))
+    }
+
   })
 
   return {
@@ -47,10 +51,11 @@ const { entry, htmlWebpackPlugin } = setMPA()
 module.exports = {
   entry: entry,
   output: {
-    filename: '[name]_[chunkhash:8].js',
-    path: path.join(__dirname, 'dist')
+    filename: '[name]-server.js',
+    path: path.join(__dirname, 'dist'),
+    libraryTarget: 'umd'
   },
-  mode: 'none',
+  mode: 'production',
   module: {
     rules: [
       {
