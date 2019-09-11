@@ -1,5 +1,5 @@
 {
-  "name": "large-number",
+  "name": "ev-large-number",
   "version": "1.0.0",
   "description": "large number",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "terser-webpack-plugin": "^2.0.1",
     "webpack": "^4.39.3",
