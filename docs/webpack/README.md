@@ -412,5 +412,11 @@ module.export = {
 |"normal"|true|标准输出|
 |"verbose"|none|全部输出|
 
+### 如何优化命令行的构建日志
+* 使用 [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin)
+  * success: 构建成功的日志提示
+  * warining：构建警告的日志提示
+  * error：构建报错的日志提示
+* stats 设置成 errors-only
 
 
