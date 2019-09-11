@@ -403,5 +403,14 @@ module.export = {
 * 服务端获取数据
 * 替换占位符
 
+### 统计信息 stats
+|Preset|Alternative|Description|
+|---|----|----|
+|"errors-only"|none|只在发生错误时输出|
+|"minimal"|none|只在发生错误或有新的编译时输出|
+|"none"|false|没有输出|
+|"normal"|true|标准输出|
+|"verbose"|none|全部输出|
+
 
 

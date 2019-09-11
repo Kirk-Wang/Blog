@@ -125,7 +125,8 @@ module.exports = {
   ].concat(htmlWebpackPlugin),
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
+    stats: 'errors-only'
   },
   devtool: 'source-map'
 }
