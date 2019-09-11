@@ -384,6 +384,7 @@ module.export = {
   * library: 指定库的全局变量
   * libraryTarget: 支持库引入的方式
   * [output.libraryTarget](https://webpack.js.org/configuration/output/#outputlibrarytarget)
+  * [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin)
 
 
 
