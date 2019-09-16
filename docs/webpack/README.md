@@ -421,4 +421,6 @@ module.export = {
   * error：构建报错的日志提示
 * stats 设置成 errors-only
 
-
+### 如何判断构建是否成功？
+* 在 CI/CD 的 pipline 或者发布系统需要知道当前的构建状态
+* 每次构建完成后输入 echo $? 获取错误码 
