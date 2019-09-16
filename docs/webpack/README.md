@@ -423,4 +423,10 @@ module.export = {
 
 ### 如何判断构建是否成功？
 * 在 CI/CD 的 pipline 或者发布系统需要知道当前的构建状态
-* 每次构建完成后输入 echo $? 获取错误码 
+* 每次构建完成后输入 echo $? 获取错误码
+
+### 构建异常和中断处理
+* webpack 4 之前的版本构建失败不会抛出错误码（error code）
+* Node.js 中的 process.exit 规范
+  * 0 表示成功完成，回调函数中，err 为 null
+  * 非 0 表示执行失败，回调函数中，err 不为 null，err.code 就是传给 exit 的数字
