@@ -464,3 +464,39 @@ module.export = {
 * 质量：冒烟测试、单元测试、测试覆盖率和CI
 
 ### 通过 webpack-merge 组合配置
+
+### 功能模块设计
+* 构建包功能设计
+  * 基础配置：WEBPACK.BASE.JS
+    * 资源解析
+      1. 解析 ES6
+      2. 解析 React
+      3. 解析 CSS
+      4. 解析 Less
+      5. 解析图片
+      6. 解析字体 
+    * 样式增强
+      * CSS 前缀补齐
+      * CSS px 转换成 rem 
+    * 目录清理
+    * 多页面打包
+    * 命令行信息显示优化
+    * 错误捕获和处理
+    * CSS 提取成一个单独的文件
+  * 开发阶段配置：WEBPACK.DEV.JS
+    * 代码热更新
+      1. CSS 热更新
+      2. JS 热更新
+    * sourcemap
+  * 生产阶段配置：WEBPACK.PROD.JS
+    * 代码压缩
+    * 文件指纹
+    * Tree Shaking
+    * Scope Hoisting
+    * 速度优化
+      * 基础包 CDN
+    * 体积优化
+      * 代码分割
+  * SSR 配置：WEBPACK.SSR.JS
+    * output 的 libraryTarget 设置
+    * CSS 解析 ignore
