@@ -500,3 +500,7 @@ module.export = {
   * SSR 配置：WEBPACK.SSR.JS
     * output 的 libraryTarget 设置
     * CSS 解析 ignore
+
+### 目录结构设计
+* lib 放置源代码
+* test 放置测试代码
