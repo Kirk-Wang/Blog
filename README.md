@@ -80,9 +80,17 @@
 * [7-名词解释](./redux-saga/7-glossary.md)
 <img src="./redux-saga/images/7-glossary.png" width="400" />
 
-channels-trans-table
+-------------------------------------
+### Redux-Saga 游戏编程
 
-![channels-trans-table](https://raw.githubusercontent.com/redux-saga/redux-saga/master/packages/core/src/internal/channels-trans-table.png)
+**利用 fork-model & channel 管理复杂的前端游戏逻辑(❤️Saga)**
+* 这里以 [shinima](https://github.com/shinima) 开源的 [battle-city](https://github.com/shinima/battle-city) 作为分析项目
+* 这个项目是由 Redux-Saga 深度驱动的，几乎涉及到了 Redux-Saga 使用的方方面面。
+* 虽然没有用 Canvas 渲染，但它诠释了一种不错的游戏前端逻辑开发的模式(fork-model & channel)。
+
+#### 状态模型分析，一切从建模开始^_^
+
+![battle-city-state-analysis](./redux-saga-game/images/battle-city-state-analysis.jpg)
 
 -------------------------------------
 ### React-Admin 相关文档
