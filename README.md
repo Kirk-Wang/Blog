@@ -843,7 +843,12 @@ sudo lsof -n -P | grep :80
 
 ---------
 
-#### 一些前端科技
+#### 这里主要探索同构的一些细节，以及大规模 Web 同构集群的搭建及监控
+
+
+
+-----------------------
+#### 一些文章
 * [Scheduling in React](https://philippspiess.com/scheduling-in-react/)
   * [ScheduleTron 3000](https://github.com/philipp-spiess/scheduletron3000)
 * [译: React 中的调度](https://juejin.im/post/5ca347306fb9a05e4c0e69e5)
