@@ -4,5 +4,5 @@
 
 ### Getting Started
 [Getting Started](https://facebook.github.io/react-native/docs/getting-started)
-  * [Expo](https://expo.io/)
+  * [Expo development tools](https://expo.io/tools)
 
