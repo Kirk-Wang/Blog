@@ -7,46 +7,54 @@ import {
 } from 'react-native';
 
 const cities = [
-"北京",
-"上海",
-"广州",
-"深圳",
-"重庆",
-"合肥",
-"南京",
-"苏州",
-"厦门",
-"成都",
-"武汉",
-"长沙",
-"东莞",
-"佛山",
-"宁波",
-"青岛",
-"郑州",
-"温州",
-"昆明",
-"无锡",
-"济南",
-"沈阳",
-"大连",
-"南宁",
-"天津",
-"福州",
-"西安",
-"杭州",
-"贵阳",
-"惠州",
-"金华",
-"南昌",
-"泉州",
-"石家庄",
-"太原",
-"中山",
-"珠海",
+  "北京",
+  "上海",
+  "广州",
+  "深圳",
+  "重庆",
+  "合肥",
+  "南京",
+  "苏州",
+  "厦门",
+  "成都",
+  "武汉",
+  "长沙",
+  "东莞",
+  "佛山",
+  "宁波",
+  "青岛",
+  "郑州",
+  "温州",
+  "昆明",
+  "无锡",
+  "济南",
+  "沈阳",
+  "大连",
+  "南宁",
+  "天津",
+  "福州",
+  "西安",
+  "杭州",
+  "贵阳",
+  "惠州",
+  "金华",
+  "南昌",
+  "泉州",
+  "石家庄",
+  "太原",
+  "中山",
+  "珠海",
 ]
 
 export default class DetailsScreen extends React.PureComponent {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLoading: false,
+      dataArray: cities
+    }
+  }
 
   renderItem(data) {
     return (
@@ -56,12 +64,33 @@ export default class DetailsScreen extends React.PureComponent {
     )
   }
 
+  loadData = () => {
+    this.setState({
+      isLoading: true,
+    })
+    const { dataArray } = this.state;
+    const newItem = dataArray[Math.ceil(Math.random() * 20)]
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+        dataArray: [
+          newItem,
+          ...dataArray
+        ]
+      })
+    }, 2000)
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <FlatList
-          data={cities}
-          renderItem = {(data) => this.renderItem(data)}
+          data={this.state.dataArray}
+          renderItem={(data) => this.renderItem(data)}
+          refreshing={this.state.isLoading}
+          onRefresh={() => {
+            this.loadData()
+          }}
         />
       </View>
     );
