@@ -22,4 +22,5 @@
   pod install
   cd ..
   ```
+  * [Docs-FlatList](https://facebook.github.io/react-native/docs/flatlist)
   * [React Navigation](https://reactnavigation.org/)
