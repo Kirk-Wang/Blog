@@ -7,4 +7,4 @@
   * [Expo development tools](https://expo.io/tools)
   * [Watchman](https://facebook.github.io/watchman/)
   * [Debugging](https://facebook.github.io/react-native/docs/debugging)
-
+  * [COCOAPODS](https://cocoapods.org/)
