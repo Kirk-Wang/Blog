@@ -69,7 +69,7 @@ export default class DetailsScreen extends React.PureComponent {
         isLoading: false,
         dataArray: [
           {
-            ...newItem,
+            text: newItem.text,
             key: `item${dataArray.length}`
           },
           ...dataArray
