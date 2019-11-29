@@ -22,5 +22,7 @@
   pod install
   cd ..
   ```
-  * [Docs-FlatList](https://facebook.github.io/react-native/docs/flatlist)
-  * [React Navigation](https://reactnavigation.org/)
+  * COMPONENTS
+    * [FlatList](https://facebook.github.io/react-native/docs/flatlist)
+    * [RefreshControl](https://facebook.github.io/react-native/docs/refreshcontrol)
+    * [React Navigation](https://reactnavigation.org/)
