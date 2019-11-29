@@ -68,14 +68,17 @@ export default class DetailsScreen extends React.PureComponent {
       this.setState({
         isLoading: false,
         dataArray: [
-          newItem,
+          {
+            ...newItem,
+            key: `item${dataArray.length}`
+          },
           ...dataArray
         ]
       })
     }, 2000)
   }
 
-  getIndiactor() {
+  _renderIndiactor() {
     return (
       <View style={styles.indicatorContainer}>
         <ActivityIndicator
@@ -119,7 +122,10 @@ export default class DetailsScreen extends React.PureComponent {
               }}
             />
           }
-          ListFooterComponent={()=>this.getIndiactor()}
+          ListFooterComponent={this._renderIndiactor}
+          onEndReached={() => {
+            this.loadData()
+          }}
         />
       </View>
     );
