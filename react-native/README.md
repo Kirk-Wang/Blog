@@ -16,7 +16,10 @@
   cd FlatList
   npx react-native run-ios
 
-  npm i react-navigation react-navigation-stack
+  npm i react-navigation react-navigation-stack react-native-reanimated react-native-screens
 
+  cd ios
+  pod install
+  cd ..
   ```
   * [React Navigation](https://reactnavigation.org/)
