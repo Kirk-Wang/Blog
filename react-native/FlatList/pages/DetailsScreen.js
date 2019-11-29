@@ -4,24 +4,25 @@ import {
   Text,
   FlatList,
   StyleSheet,
-  RefreshControl
+  RefreshControl,  
+  ActivityIndicator,
 } from 'react-native';
 
 const cities = [
   "北京",
   "上海",
-  "广州",
-  "深圳",
-  "重庆",
-  "合肥",
-  "南京",
-  "苏州",
-  "厦门",
-  "成都",
-  "武汉",
-  "长沙",
-  "东莞",
-  "佛山",
+  // "广州",
+  // "深圳",
+  // "重庆",
+  // "合肥",
+  // "南京",
+  // "苏州",
+  // "厦门",
+  // "成都",
+  // "武汉",
+  // "长沙",
+  // "东莞",
+  // "佛山",
   "宁波",
   "青岛",
   "郑州",
@@ -33,14 +34,14 @@ const cities = [
   "大连",
   "南宁",
   "天津",
-  "福州",
-  "西安",
-  "杭州",
-  "贵阳",
-  "惠州",
-  "金华",
-  "南昌",
-  "泉州",
+  // "福州",
+  // "西安",
+  // "杭州",
+  // "贵阳",
+  // "惠州",
+  // "金华",
+  // "南昌",
+  // "泉州",
   "石家庄",
   "太原",
   "中山",
@@ -53,16 +54,8 @@ export default class DetailsScreen extends React.PureComponent {
     super(props)
     this.state = {
       isLoading: false,
-      dataArray: cities
+      dataArray: cities.map((item, index) => ({text:item, key:`item${index}`}))
     }
-  }
-
-  renderItem(data) {
-    return (
-      <View style={styles.item}>
-        <Text style={styles.text}>{data.item}</Text>
-      </View>
-    )
   }
 
   loadData = () => {
@@ -82,12 +75,34 @@ export default class DetailsScreen extends React.PureComponent {
     }, 2000)
   }
 
+  getIndiactor() {
+    return (
+      <View style={styles.indicatorContainer}>
+        <ActivityIndicator
+          style={styles.indicator}
+          size={'large'}
+          color={'red'}
+          animating={true}
+        />
+        <Text>正在加载更多</Text>
+      </View>
+    )
+  }
+
+  _renderItem({item}) {
+    return (
+      <View style={styles.item}>
+        <Text style={styles.text}>{item.text}</Text>
+      </View>
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <FlatList
           data={this.state.dataArray}
-          renderItem={(data) => this.renderItem(data)}
+          renderItem={this._renderItem}
           // refreshing={this.state.isLoading}
           // onRefresh={() => {
           //   this.loadData()
@@ -104,6 +119,7 @@ export default class DetailsScreen extends React.PureComponent {
               }}
             />
           }
+          ListFooterComponent={()=>this.getIndiactor()}
         />
       </View>
     );
@@ -126,5 +142,11 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     fontSize: 20
+  },
+  indicatorContainer: {
+    alignItems: 'center'
+  },
+  indicator: {
+    margin: 10
   }
 });
