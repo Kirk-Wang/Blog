@@ -122,10 +122,10 @@ export default class DetailsScreen extends React.PureComponent {
               }}
             />
           }
-          ListFooterComponent={this._renderIndiactor}
-          onEndReached={() => {
-            this.loadData()
-          }}
+          // ListFooterComponent={this._renderIndiactor}
+          // onEndReached={() => {
+          //   this.loadData()
+          // }}
         />
       </View>
     );
