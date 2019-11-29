@@ -3,8 +3,20 @@
 
 
 ### Getting Started
-[Getting Started](https://facebook.github.io/react-native/docs/getting-started)
+* [Getting Started](https://facebook.github.io/react-native/docs/getting-started)
   * [Expo development tools](https://expo.io/tools)
   * [Watchman](https://facebook.github.io/watchman/)
   * [Debugging](https://facebook.github.io/react-native/docs/debugging)
   * [COCOAPODS](https://cocoapods.org/)
+
+### Examples
+* FlatList
+  ```sh
+  npx react-native init FlatList
+  cd FlatList
+  npx react-native run-ios
+
+  npm i react-navigation react-navigation-stack
+
+  ```
+  * [React Navigation](https://reactnavigation.org/)
