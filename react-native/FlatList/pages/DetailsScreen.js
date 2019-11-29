@@ -4,6 +4,7 @@ import {
   Text,
   FlatList,
   StyleSheet,
+  RefreshControl
 } from 'react-native';
 
 const cities = [
@@ -87,10 +88,22 @@ export default class DetailsScreen extends React.PureComponent {
         <FlatList
           data={this.state.dataArray}
           renderItem={(data) => this.renderItem(data)}
-          refreshing={this.state.isLoading}
-          onRefresh={() => {
-            this.loadData()
-          }}
+          // refreshing={this.state.isLoading}
+          // onRefresh={() => {
+          //   this.loadData()
+          // }}
+          refreshControl = {
+            <RefreshControl
+              title={'Loading'}
+              colors={['red']}
+              tintColor={'orange'}
+              titleColor={'red'}
+              refreshing={this.state.isLoading}
+              onRefresh ={() => {
+                this.loadData()
+              }}
+            />
+          }
         />
       </View>
     );
